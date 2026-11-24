@@ -1,0 +1,34 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/claudiomeniconi/iter/schema/norma.schema.json",
+  "title": "Corpus normativo di Iter Lab",
+  "description": "Indice delle norme che gli agenti possono citare. Una norma si cita solo se il testo dell'articolo è archiviato in data/norme/testi/<id>/.",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "required": ["id", "titolo", "livello", "url"],
+    "additionalProperties": false,
+    "properties": {
+      "id": { "type": "string", "pattern": "^[a-z0-9-]+$", "description": "Es. l-241-1990, lr-toscana-62-2018" },
+      "titolo": { "type": "string" },
+      "estremi": { "type": "string", "description": "Es. Legge 7 agosto 1990, n. 241" },
+      "livello": { "enum": ["ue", "costituzione", "stato", "regione", "comune_regolamento", "comune_atto"] },
+      "territorio": { "type": "string", "pattern": "^it(/[a-z0-9-]+)*$", "description": "Per norme regionali e comunali" },
+      "url": { "type": "string", "format": "uri", "description": "Fonte ufficiale, versione vigente" },
+      "articoli_rilevanti": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "required": ["articolo", "perche"],
+          "additionalProperties": false,
+          "properties": {
+            "articolo": { "type": "string" },
+            "perche": { "type": "string", "description": "Leva di semplificazione che l'articolo può aprire o chiudere (da verificare sul testo)" },
+            "archiviato": { "type": "boolean", "description": "true se il testo è in data/norme/testi/<id>/" }
+          }
+        }
+      },
+      "note": { "type": "string" }
+    }
+  }
+}

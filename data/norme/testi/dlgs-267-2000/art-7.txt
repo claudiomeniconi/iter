@@ -1,0 +1,8 @@
+# fonte: https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2000-08-18;267~art7
+# scaricato_il: 2026-11-24 (Normattiva, versione vigente)
+# sha256_normalizzato: a761942ac6a325b0f948dd934b3cd39917ad213d78587c08171739d84d32fb69
+
+Art. 7
+Regolamenti
+
+1. Nel rispetto dei principi fissati dalla legge e dello statuto, il comune e la provincia adottano regolamenti nelle materie di propria competenza ed in particolare per l'organizzazione e il funzionamento delle istituzioni e degli organismi di partecipazione, per il funzionamento degli organi e degli uffici e per l'esercizio delle funzioni.
