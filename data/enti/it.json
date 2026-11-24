@@ -25,5 +25,33 @@
     "tipo": "statale",
     "territorio": "it",
     "sito": "https://www.inail.it"
+  },
+  {
+    "id": "notaio",
+    "nome": "Notaio",
+    "tipo": "altro",
+    "territorio": "it",
+    "descrizione": "Pubblico ufficiale scelto dalle parti per atti come la cessione o l'affitto d'azienda."
+  },
+  {
+    "id": "centro-impiego",
+    "nome": "Centro per l'impiego (comunicazioni obbligatorie)",
+    "tipo": "regionale",
+    "territorio": "it",
+    "descrizione": "Riceve le comunicazioni di assunzione, proroga, trasformazione e cessazione dei rapporti di lavoro, tramite i portali regionali."
+  },
+  {
+    "id": "ordine-professionale",
+    "nome": "Ordine o collegio professionale",
+    "tipo": "altro",
+    "territorio": "it",
+    "descrizione": "L'ordine della propria professione, se è una professione regolamentata."
+  },
+  {
+    "id": "cassa-professionale",
+    "nome": "Cassa previdenziale della professione",
+    "tipo": "altro",
+    "territorio": "it",
+    "descrizione": "La cassa autonoma della professione, se esiste (es. Cassa Forense, Inarcassa)."
   }
 ]

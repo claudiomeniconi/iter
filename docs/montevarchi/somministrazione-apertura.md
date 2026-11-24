@@ -54,3 +54,36 @@ Per chi ha aperto un locale a Montevarchi negli ultimi anni:
 - [ ] Chiarire le domande aperte con il SUAP
 - [ ] Fare 2-3 interviste e 1 intervista a un professionista
 - [ ] Portare i passaggi da `bozza` a `verificato_ente`
+
+---
+
+# Altre procedure (bozza 0.1.0, 24/11/2026)
+
+## Rilevare un locale già aperto (subingresso)
+
+File: [`somministrazione-subingresso.json`](../../data/procedure/it/toscana/ar/montevarchi/somministrazione-subingresso.json)
+
+- Base: **art. 90 L.R. 62/2018**. Chi subentra presenta una **comunicazione** al SUAP entro 60 giorni dall'atto e comunque **prima di iniziare** a lavorare. Deve avere i requisiti degli artt. 11-12.
+- L'atto di cessione o affitto d'azienda va fatto per atto pubblico o scrittura privata autenticata. Il notaio lo deposita al Registro Imprese entro 30 giorni (art. 2556 c.c.).
+- La registrazione sanitaria va aggiornata con il nuovo titolare ([FAQ SUAP Lucca](https://comune.lucca.it/app/uploads/2023/05/FAQ.pdf) come riferimento di prassi toscana).
+
+Domande aperte per il SUAP:
+1. Su STAR, l'aggiornamento della notifica sanitaria è contestuale alla comunicazione di subingresso?
+2. Insegna e dehors del cedente: basta una voltura o serve una nuova domanda?
+
+## Aprire un secondo locale
+
+File: [`somministrazione-seconda-sede.json`](../../data/procedure/it/toscana/ar/montevarchi/somministrazione-seconda-sede.json)
+
+Ricalca l'apertura, senza la partita IVA e con la comunicazione dell'unità locale al Registro Imprese.
+
+Domande aperte:
+1. La stessa persona può fare da preposto in due locali contemporaneamente?
+2. Termine per la comunicazione dell'unità locale al REA.
+
+## Procedure nazionali collegate
+
+- [Assumere il primo dipendente](../../data/procedure/it/lavoro-primo-dipendente.json): comunicazione obbligatoria entro il giorno prima (L. 296/2006, art. 1, c. 1180), INPS, INAIL, sicurezza (D.Lgs. 81/2008), Libro unico.
+- [Aprire la partita IVA come professionista](../../data/procedure/it/lavoro-partita-iva-professionista.json): modello AA9/12 entro 30 giorni (art. 35 D.P.R. 633/1972), Gestione Separata INPS o cassa, albo, PEC, RC professionale, fattura elettronica.
+
+Queste due valgono in tutta Italia e compaiono anche nella pagina di Montevarchi. Vanno riviste con un consulente del lavoro e un commercialista.

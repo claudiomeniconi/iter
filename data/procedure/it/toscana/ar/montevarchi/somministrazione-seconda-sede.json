@@ -1,0 +1,620 @@
+{
+  "id": "montevarchi.somministrazione.seconda-sede",
+  "modello": "somministrazione.seconda-sede",
+  "titolo": "Aprire un secondo locale a Montevarchi",
+  "descrizione": "Hai già un bar, ristorante o pizzeria e vuoi aprire un secondo punto vendita nel Comune di Montevarchi con la stessa impresa. Bozza della Fase 0: ogni passaggio va confermato con il SUAP e con un professionista.",
+  "territorio": {
+    "livello": "comunale",
+    "nome": "Montevarchi (AR)",
+    "codice_istat": "051026",
+    "percorso": "it/toscana/ar/montevarchi"
+  },
+  "categoria": "impresa",
+  "stato": "bozza",
+  "versione": "0.1.0",
+  "ultima_verifica": "2026-11-24",
+  "domande": [
+    {
+      "id": "zona_tutelata",
+      "testo": "Il locale si trova in una zona tutelata individuata dal Comune?",
+      "tipo": "si_no"
+    },
+    {
+      "id": "servono_lavori",
+      "testo": "Servono lavori edilizi o un cambio di destinazione d'uso del locale?",
+      "tipo": "si_no"
+    },
+    {
+      "id": "prevenzione_incendi",
+      "testo": "Il locale rientra tra le attività soggette a prevenzione incendi (es. molte persone o impianti di cucina di grande potenza)?",
+      "tipo": "si_no"
+    },
+    {
+      "id": "insegna",
+      "testo": "Vuoi installare un'insegna?",
+      "tipo": "si_no"
+    },
+    {
+      "id": "dehors",
+      "testo": "Vuoi tavoli all'aperto su suolo pubblico (dehors)?",
+      "tipo": "si_no"
+    },
+    {
+      "id": "preposto_seconda_sede",
+      "testo": "Nel nuovo locale ci sarà una persona con il requisito professionale (tu o un preposto)?",
+      "tipo": "si_no"
+    }
+  ],
+  "enti": [
+    {
+      "id": "richiedente"
+    },
+    {
+      "id": "suap.051026"
+    },
+    {
+      "id": "comune.051026.edilizia"
+    },
+    {
+      "id": "asl.toscana-sud-est"
+    },
+    {
+      "id": "vvf.arezzo"
+    },
+    {
+      "id": "cciaa.arezzo-siena"
+    },
+    {
+      "id": "agenzia-entrate"
+    }
+  ],
+  "passaggi": [
+    {
+      "id": "requisiti_soggettivi",
+      "titolo": "Confermare i requisiti morali e professionali per il nuovo locale",
+      "tipo": "requisito",
+      "ente": "richiedente",
+      "attore": "richiedente",
+      "documenti_richiesti": [
+        {
+          "id": "attestato_requisito_professionale",
+          "nome": "Prova del requisito professionale (corso abilitante, esperienza biennale, diploma o REC)"
+        }
+      ],
+      "dipende_da": [],
+      "canale": "misto",
+      "fonti": [
+        {
+          "titolo": "L.R. Toscana 62/2018 - Codice del Commercio",
+          "verificata_il": "2026-11-24",
+          "url": "https://raccoltanormativa.consiglio.regione.toscana.it/class/download_doc.php?file_path=legge/2018/legge_2018_62_s1/legge_2018_62_s1_v1.pdf",
+          "riferimento": "artt. 11-12"
+        },
+        {
+          "titolo": "D.Lgs. 59/2010",
+          "verificata_il": "2026-11-24",
+          "riferimento": "art. 71",
+          "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2010-03-26;59~art71"
+        }
+      ],
+      "stato_verifica": "verificato_fonti",
+      "note": "Il requisito professionale può essere posseduto dal titolare o da un preposto. Il solo corso HACCP non basta."
+    },
+    {
+      "id": "corso_abilitante",
+      "titolo": "Nominare un preposto con il requisito professionale per il nuovo locale",
+      "tipo": "requisito",
+      "ente": "richiedente",
+      "attore": "richiedente",
+      "documenti_prodotti": [
+        {
+          "id": "nomina_preposto",
+          "nome": "Nomina del preposto"
+        }
+      ],
+      "costi": [],
+      "dipende_da": [],
+      "condizioni": [
+        {
+          "domanda": "preposto_seconda_sede",
+          "valore": false
+        }
+      ],
+      "canale": "misto",
+      "fonti": [
+        {
+          "titolo": "L.R. Toscana 62/2018 - Codice del Commercio",
+          "verificata_il": "2026-11-24",
+          "url": "https://raccoltanormativa.consiglio.regione.toscana.it/class/download_doc.php?file_path=legge/2018/legge_2018_62_s1/legge_2018_62_s1_v1.pdf",
+          "riferimento": "art. 12"
+        }
+      ],
+      "stato_verifica": "bozza",
+      "note": "Da verificare con il SUAP se la stessa persona può fare da preposto in due locali contemporaneamente."
+    },
+    {
+      "id": "verifica_locale",
+      "titolo": "Verificare che il locale sia idoneo (destinazione d'uso, agibilità, sorvegliabilità)",
+      "tipo": "requisito",
+      "ente": "comune.051026.edilizia",
+      "attore": "professionista",
+      "documenti_richiesti": [
+        {
+          "id": "planimetria_locale",
+          "nome": "Planimetria del locale"
+        }
+      ],
+      "dipende_da": [],
+      "canale": "misto",
+      "fonti": [
+        {
+          "titolo": "L.R. Toscana 62/2018 - Codice del Commercio",
+          "verificata_il": "2026-11-24",
+          "url": "https://raccoltanormativa.consiglio.regione.toscana.it/class/download_doc.php?file_path=legge/2018/legge_2018_62_s1/legge_2018_62_s1_v1.pdf",
+          "riferimento": "art. 48, commi 2 e 4; art. 50, comma 3"
+        },
+        {
+          "titolo": "D.M. Interno 564/1992 - sorvegliabilità dei locali",
+          "verificata_il": "2026-11-24"
+        }
+      ],
+      "stato_verifica": "bozza",
+      "note": "Serve conferma dal SUAP su quali destinazioni d'uso del Regolamento urbanistico ammettono la somministrazione."
+    },
+    {
+      "id": "pratica_edilizia",
+      "titolo": "Presentare la pratica edilizia per lavori o cambio d'uso",
+      "tipo": "presentazione",
+      "ente": "comune.051026.edilizia",
+      "attore": "professionista",
+      "documenti_prodotti": [
+        {
+          "id": "titolo_edilizio",
+          "nome": "Titolo edilizio (CILA, SCIA edilizia o permesso)"
+        }
+      ],
+      "dipende_da": [
+        "verifica_locale"
+      ],
+      "condizioni": [
+        {
+          "domanda": "servono_lavori",
+          "valore": true
+        }
+      ],
+      "canale": "online",
+      "fonti": [
+        {
+          "titolo": "Comune di Montevarchi - Modulistica edilizia",
+          "verificata_il": "2026-11-24",
+          "url": "https://www.sitmontevarchi.it/modulistica_edilizia"
+        }
+      ],
+      "stato_verifica": "bozza"
+    },
+    {
+      "id": "formazione_alimentaristi",
+      "titolo": "Formazione igienico-sanitaria del personale (alimentaristi)",
+      "tipo": "requisito",
+      "ente": "richiedente",
+      "attore": "richiedente",
+      "documenti_prodotti": [
+        {
+          "id": "attestato_haccp",
+          "nome": "Attestati di formazione per gli addetti"
+        }
+      ],
+      "dipende_da": [],
+      "canale": "misto",
+      "fonti": [
+        {
+          "titolo": "Reg. (CE) 852/2004 sull'igiene dei prodotti alimentari",
+          "verificata_il": "2026-11-24",
+          "url": "https://eur-lex.europa.eu/legal-content/IT/TXT/?uri=CELEX:32004R0852",
+          "riferimento": "Allegato II, capitolo XII"
+        }
+      ],
+      "stato_verifica": "bozza",
+      "note": "Da verificare la disciplina regionale toscana su durata e aggiornamento dei corsi."
+    },
+    {
+      "id": "piano_autocontrollo",
+      "titolo": "Predisporre il piano di autocontrollo HACCP",
+      "tipo": "requisito",
+      "ente": "richiedente",
+      "attore": "professionista",
+      "documenti_prodotti": [
+        {
+          "id": "piano_haccp",
+          "nome": "Manuale di autocontrollo HACCP"
+        }
+      ],
+      "dipende_da": [
+        "verifica_locale"
+      ],
+      "canale": "misto",
+      "fonti": [
+        {
+          "titolo": "Reg. (CE) 852/2004 sull'igiene dei prodotti alimentari",
+          "verificata_il": "2026-11-24",
+          "url": "https://eur-lex.europa.eu/legal-content/IT/TXT/?uri=CELEX:32004R0852",
+          "riferimento": "art. 5"
+        }
+      ],
+      "stato_verifica": "verificato_fonti"
+    },
+    {
+      "id": "impatto_acustico",
+      "titolo": "Documentazione di impatto acustico",
+      "tipo": "requisito",
+      "ente": "richiedente",
+      "attore": "professionista",
+      "documenti_prodotti": [
+        {
+          "id": "doc_impatto_acustico",
+          "nome": "Valutazione previsionale di impatto acustico o dichiarazione sostitutiva"
+        }
+      ],
+      "dipende_da": [
+        "verifica_locale"
+      ],
+      "canale": "misto",
+      "fonti": [
+        {
+          "titolo": "L. 447/1995",
+          "verificata_il": "2026-11-24",
+          "riferimento": "art. 8, comma 4"
+        },
+        {
+          "titolo": "D.P.R. 227/2011",
+          "verificata_il": "2026-11-24",
+          "riferimento": "art. 4"
+        }
+      ],
+      "stato_verifica": "bozza",
+      "note": "Per le attività a bassa rumorosità può bastare una dichiarazione sostitutiva; con musica o impianti rumorosi serve la valutazione di un tecnico competente. Da confermare con il SUAP."
+    },
+    {
+      "id": "prevenzione_incendi",
+      "titolo": "SCIA antincendio ai Vigili del Fuoco",
+      "tipo": "presentazione",
+      "ente": "vvf.arezzo",
+      "attore": "professionista",
+      "dipende_da": [
+        "verifica_locale"
+      ],
+      "condizioni": [
+        {
+          "domanda": "prevenzione_incendi",
+          "valore": true
+        }
+      ],
+      "canale": "online",
+      "fonti": [
+        {
+          "titolo": "D.P.R. 151/2011 - Regolamento di prevenzione incendi",
+          "verificata_il": "2026-11-24",
+          "riferimento": "Allegato I"
+        }
+      ],
+      "stato_verifica": "bozza",
+      "note": "Va presentata tramite il SUAP. Le soglie che fanno scattare l'obbligo vanno verificate caso per caso con un tecnico."
+    },
+    {
+      "id": "scia_somministrazione",
+      "titolo": "Presentare la SCIA di somministrazione al SUAP tramite STAR",
+      "tipo": "presentazione",
+      "ente": "suap.051026",
+      "attore": "richiedente",
+      "documenti_richiesti": [
+        {
+          "id": "attestato_requisito_professionale",
+          "nome": "Requisito professionale"
+        },
+        {
+          "id": "planimetria_locale",
+          "nome": "Planimetria del locale"
+        },
+        {
+          "id": "doc_impatto_acustico",
+          "nome": "Documentazione di impatto acustico"
+        }
+      ],
+      "documenti_prodotti": [
+        {
+          "id": "ricevuta_scia",
+          "nome": "Ricevuta SUAP della SCIA"
+        }
+      ],
+      "costi": [
+        {
+          "voce": "Diritti SUAP del Comune di Montevarchi"
+        },
+        {
+          "voce": "Imposta di bollo"
+        }
+      ],
+      "tempi": {
+        "previsto_giorni": 0,
+        "silenzio_assenso": false
+      },
+      "dipende_da": [
+        "requisiti_soggettivi",
+        "verifica_locale",
+        "formazione_alimentaristi",
+        "piano_autocontrollo",
+        "impatto_acustico"
+      ],
+      "condizioni": [
+        {
+          "domanda": "zona_tutelata",
+          "valore": false
+        }
+      ],
+      "canale": "online",
+      "fonti": [
+        {
+          "titolo": "L.R. Toscana 62/2018 - Codice del Commercio",
+          "verificata_il": "2026-11-24",
+          "url": "https://raccoltanormativa.consiglio.regione.toscana.it/class/download_doc.php?file_path=legge/2018/legge_2018_62_s1/legge_2018_62_s1_v1.pdf",
+          "riferimento": "art. 50, comma 1"
+        },
+        {
+          "titolo": "L. 241/1990",
+          "verificata_il": "2026-11-24",
+          "riferimento": "art. 19 (SCIA)",
+          "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:legge:1990-08-07;241~art19"
+        },
+        {
+          "titolo": "Elenco modulistica unica regionale in uso al 7 ottobre 2026",
+          "verificata_il": "2026-11-24",
+          "url": "https://www.regione.toscana.it/documents/d/guest/elenco-della-modulistica-unica-in-uso-al-7-ottobre-2026-pdf",
+          "riferimento": "SCIA per bar, ristoranti e altri esercizi di somministrazione (zone non tutelate) - d.d. 9698/2020"
+        },
+        {
+          "titolo": "Comune di Montevarchi - Accedere allo Sportello SUAP (STAR)",
+          "verificata_il": "2026-11-24",
+          "url": "https://www.comune.montevarchi.ar.it/servizi/servizio-dettaglio/2246471"
+        },
+        {
+          "titolo": "Comune di Montevarchi - Tariffe diritti SUAP",
+          "verificata_il": "2026-11-24",
+          "url": "https://www.comune.montevarchi.ar.it/documenti/2246544/tariffe-diritti-suap"
+        }
+      ],
+      "stato_verifica": "verificato_fonti",
+      "note": "Accesso a STAR con SPID, CIE o CNS. Con la SCIA l'attività può iniziare dalla data di presentazione. Importi dei diritti da leggere nel file del Comune."
+    },
+    {
+      "id": "autorizzazione_zona_tutelata",
+      "titolo": "Chiedere l'autorizzazione al SUAP (zona tutelata)",
+      "tipo": "autorizzazione",
+      "ente": "suap.051026",
+      "attore": "richiedente",
+      "documenti_prodotti": [
+        {
+          "id": "autorizzazione_somministrazione",
+          "nome": "Autorizzazione alla somministrazione"
+        }
+      ],
+      "dipende_da": [
+        "requisiti_soggettivi",
+        "verifica_locale",
+        "formazione_alimentaristi",
+        "piano_autocontrollo",
+        "impatto_acustico"
+      ],
+      "condizioni": [
+        {
+          "domanda": "zona_tutelata",
+          "valore": true
+        }
+      ],
+      "canale": "online",
+      "fonti": [
+        {
+          "titolo": "L.R. Toscana 62/2018 - Codice del Commercio",
+          "verificata_il": "2026-11-24",
+          "url": "https://raccoltanormativa.consiglio.regione.toscana.it/class/download_doc.php?file_path=legge/2018/legge_2018_62_s1/legge_2018_62_s1_v1.pdf",
+          "riferimento": "art. 50, comma 1"
+        },
+        {
+          "titolo": "Elenco modulistica unica regionale in uso al 7 ottobre 2026",
+          "verificata_il": "2026-11-24",
+          "url": "https://www.regione.toscana.it/documents/d/guest/elenco-della-modulistica-unica-in-uso-al-7-ottobre-2026-pdf",
+          "riferimento": "Domanda di autorizzazione per bar, ristoranti e altri esercizi di somministrazione (zona tutelata) - d.d. 1753/2023"
+        }
+      ],
+      "stato_verifica": "bozza",
+      "note": "Da verificare se Montevarchi ha individuato zone tutelate.",
+      "documenti_richiesti": []
+    },
+    {
+      "id": "notifica_sanitaria",
+      "titolo": "Notifica sanitaria per la registrazione dell'attività alimentare",
+      "tipo": "comunicazione",
+      "ente": "asl.toscana-sud-est",
+      "attore": "richiedente",
+      "documenti_richiesti": [
+        {
+          "id": "planimetria_locale",
+          "nome": "Planimetria del locale"
+        },
+        {
+          "id": "relazione_ciclo_produttivo",
+          "nome": "Relazione tecnica sul ciclo produttivo"
+        }
+      ],
+      "dipende_da": [
+        "piano_autocontrollo"
+      ],
+      "canale": "online",
+      "fonti": [
+        {
+          "titolo": "Reg. (CE) 852/2004 sull'igiene dei prodotti alimentari",
+          "verificata_il": "2026-11-24",
+          "url": "https://eur-lex.europa.eu/legal-content/IT/TXT/?uri=CELEX:32004R0852",
+          "riferimento": "art. 6"
+        },
+        {
+          "titolo": "Elenco modulistica unica regionale in uso al 7 ottobre 2026",
+          "verificata_il": "2026-11-24",
+          "url": "https://www.regione.toscana.it/documents/d/guest/elenco-della-modulistica-unica-in-uso-al-7-ottobre-2026-pdf",
+          "riferimento": "Notifica sanitaria ai fini della registrazione - Reg. CE 852/2004 - DGR 673/2024"
+        }
+      ],
+      "stato_verifica": "verificato_fonti",
+      "note": "Si presenta tramite il SUAP, che la inoltra alla ASL. Da verificare se su STAR è un modulo contestuale alla SCIA."
+    },
+    {
+      "id": "insegna",
+      "titolo": "Autorizzazione per l'insegna",
+      "tipo": "autorizzazione",
+      "ente": "suap.051026",
+      "attore": "richiedente",
+      "costi": [
+        {
+          "voce": "Canone unico patrimoniale (esposizione pubblicitaria)"
+        }
+      ],
+      "dipende_da": [
+        "verifica_locale"
+      ],
+      "condizioni": [
+        {
+          "domanda": "insegna",
+          "valore": true
+        }
+      ],
+      "canale": "online",
+      "fonti": [
+        {
+          "titolo": "Comune di Montevarchi - Piano degli impianti pubblicitari",
+          "verificata_il": "2026-11-24",
+          "url": "https://www.sitmontevarchi.it/piano_pubblicita"
+        }
+      ],
+      "stato_verifica": "bozza"
+    },
+    {
+      "id": "dehors",
+      "titolo": "Concessione di suolo pubblico per il dehors",
+      "tipo": "autorizzazione",
+      "ente": "suap.051026",
+      "attore": "richiedente",
+      "costi": [
+        {
+          "voce": "Canone unico patrimoniale (occupazione suolo pubblico)"
+        }
+      ],
+      "dipende_da": [
+        "scia_somministrazione"
+      ],
+      "condizioni": [
+        {
+          "domanda": "dehors",
+          "valore": true
+        }
+      ],
+      "canale": "online",
+      "fonti": [
+        {
+          "titolo": "Comune di Montevarchi - Regolamento manomissioni suolo pubblico",
+          "verificata_il": "2026-11-24",
+          "url": "https://www.sitmontevarchi.it/reg_man_suolo"
+        }
+      ],
+      "stato_verifica": "bozza",
+      "note": "Da trovare il regolamento comunale specifico su dehors e canone unico."
+    },
+    {
+      "id": "registratore_telematico",
+      "titolo": "Attivare un registratore telematico per il nuovo locale",
+      "tipo": "comunicazione",
+      "ente": "agenzia-entrate",
+      "attore": "professionista",
+      "dipende_da": [
+        "scia_somministrazione"
+      ],
+      "canale": "online",
+      "fonti": [
+        {
+          "titolo": "D.Lgs. 127/2015",
+          "verificata_il": "2026-11-24",
+          "riferimento": "art. 2"
+        }
+      ],
+      "stato_verifica": "bozza"
+    },
+    {
+      "id": "controlli_suap",
+      "titolo": "Controlli del Comune sulla SCIA",
+      "tipo": "controllo",
+      "ente": "suap.051026",
+      "attore": "ente",
+      "tempi": {
+        "previsto_giorni": 60
+      },
+      "dipende_da": [
+        "scia_somministrazione"
+      ],
+      "canale": "misto",
+      "fonti": [
+        {
+          "titolo": "L. 241/1990",
+          "verificata_il": "2026-11-24",
+          "riferimento": "art. 19 (SCIA)",
+          "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:legge:1990-08-07;241~art19"
+        }
+      ],
+      "stato_verifica": "verificato_fonti",
+      "note": "Entro 60 giorni il Comune può vietare la prosecuzione dell'attività se mancano i requisiti."
+    },
+    {
+      "id": "sopralluogo_asl",
+      "titolo": "Eventuale sopralluogo della ASL",
+      "tipo": "controllo",
+      "ente": "asl.toscana-sud-est",
+      "attore": "ente",
+      "dipende_da": [
+        "notifica_sanitaria"
+      ],
+      "canale": "sportello",
+      "fonti": [
+        {
+          "titolo": "Reg. (CE) 852/2004 sull'igiene dei prodotti alimentari",
+          "verificata_il": "2026-11-24",
+          "url": "https://eur-lex.europa.eu/legal-content/IT/TXT/?uri=CELEX:32004R0852",
+          "riferimento": "art. 6"
+        }
+      ],
+      "stato_verifica": "bozza"
+    },
+    {
+      "id": "unita_locale_rea",
+      "titolo": "Comunicare l'apertura dell'unità locale al Registro Imprese",
+      "tipo": "iscrizione",
+      "ente": "cciaa.arezzo-siena",
+      "attore": "professionista",
+      "documenti_prodotti": [
+        {
+          "id": "iscrizione_unita_locale",
+          "nome": "Unità locale registrata al REA"
+        }
+      ],
+      "dipende_da": [
+        "scia_somministrazione"
+      ],
+      "canale": "online",
+      "fonti": [
+        {
+          "titolo": "Camera di Commercio Arezzo-Siena - Registro Imprese",
+          "verificata_il": "2026-11-24",
+          "url": "https://www.as.camcom.it"
+        }
+      ],
+      "stato_verifica": "bozza",
+      "note": "Si fa con la Comunicazione Unica. Da verificare il termine esatto (di solito 30 giorni dall'apertura)."
+    }
+  ]
+}

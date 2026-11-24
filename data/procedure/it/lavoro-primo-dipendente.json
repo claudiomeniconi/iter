@@ -1,0 +1,283 @@
+{
+  "id": "it.lavoro.primo-dipendente",
+  "modello": "lavoro.primo-dipendente",
+  "titolo": "Assumere il primo dipendente",
+  "descrizione": "Gli adempimenti per un'impresa che assume per la prima volta un lavoratore subordinato. Valgono in tutta Italia; i contratti collettivi possono aggiungere obblighi. Bozza della Fase 0: da confermare con un consulente del lavoro.",
+  "territorio": {
+    "livello": "nazionale",
+    "nome": "Italia",
+    "percorso": "it"
+  },
+  "categoria": "lavoro",
+  "stato": "bozza",
+  "versione": "0.1.0",
+  "ultima_verifica": "2026-11-24",
+  "domande": [
+    {
+      "id": "sorveglianza_sanitaria",
+      "testo": "La mansione espone a rischi che richiedono la sorveglianza sanitaria (es. movimentazione carichi, videoterminale oltre 20 ore a settimana)?",
+      "tipo": "si_no"
+    }
+  ],
+  "enti": [
+    {
+      "id": "richiedente"
+    },
+    {
+      "id": "inps"
+    },
+    {
+      "id": "inail"
+    },
+    {
+      "id": "centro-impiego"
+    }
+  ],
+  "passaggi": [
+    {
+      "id": "scelta_contratto",
+      "titolo": "Scegliere tipo di contratto, CCNL e livello di inquadramento",
+      "tipo": "requisito",
+      "ente": "richiedente",
+      "attore": "professionista",
+      "dipende_da": [],
+      "canale": "misto",
+      "fonti": [
+        {
+          "titolo": "Ministero del Lavoro - Comunicazioni obbligatorie dei datori di lavoro",
+          "verificata_il": "2026-11-24",
+          "url": "https://www.lavoro.gov.it/sites/default/files/archivio-doc-pregressi/Documents/Resources/Lavoro/Area_Tematiche/Comunicazione/Comunicazioni_obbligatorie2007.pdf"
+        }
+      ],
+      "stato_verifica": "bozza",
+      "note": "La comunicazione di assunzione deve indicare tipo di contratto, qualifica e trattamento economico e normativo, di norma il CCNL e il livello."
+    },
+    {
+      "id": "posizione_inps",
+      "titolo": "Aprire la posizione contributiva dell'azienda all'INPS (matricola)",
+      "tipo": "iscrizione",
+      "ente": "inps",
+      "attore": "professionista",
+      "documenti_prodotti": [
+        {
+          "id": "matricola_inps",
+          "nome": "Matricola aziendale INPS"
+        }
+      ],
+      "dipende_da": [],
+      "canale": "online",
+      "fonti": [
+        {
+          "titolo": "INPS - iscrizione dell'azienda con dipendenti",
+          "verificata_il": "2026-11-24"
+        }
+      ],
+      "stato_verifica": "bozza",
+      "note": "Si può richiedere con la Comunicazione Unica al Registro Imprese."
+    },
+    {
+      "id": "posizione_inail",
+      "titolo": "Iscriversi all'INAIL (denuncia di esercizio)",
+      "tipo": "iscrizione",
+      "ente": "inail",
+      "attore": "professionista",
+      "documenti_prodotti": [
+        {
+          "id": "pat_inail",
+          "nome": "Posizione assicurativa territoriale (PAT)"
+        }
+      ],
+      "dipende_da": [],
+      "canale": "online",
+      "fonti": [
+        {
+          "titolo": "D.P.R. 1124/1965 - Testo unico infortuni sul lavoro",
+          "verificata_il": "2026-11-24",
+          "riferimento": "art. 12",
+          "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:presidente.repubblica:1965-06-30;1124~art12"
+        }
+      ],
+      "stato_verifica": "bozza",
+      "note": "Va fatta prima dell'inizio dell'attività con dipendenti. Si può fare con la Comunicazione Unica."
+    },
+    {
+      "id": "comunicazione_assunzione",
+      "titolo": "Inviare la comunicazione obbligatoria di assunzione (Unilav)",
+      "tipo": "comunicazione",
+      "ente": "centro-impiego",
+      "attore": "professionista",
+      "dipende_da": [
+        "scelta_contratto",
+        "posizione_inps",
+        "posizione_inail"
+      ],
+      "canale": "online",
+      "fonti": [
+        {
+          "titolo": "L. 296/2006",
+          "verificata_il": "2026-11-24",
+          "riferimento": "art. 1, comma 1180",
+          "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:legge:2006-12-27;296"
+        },
+        {
+          "titolo": "Ministero del Lavoro - Comunicazioni obbligatorie dei datori di lavoro",
+          "verificata_il": "2026-11-24",
+          "url": "https://www.lavoro.gov.it/sites/default/files/archivio-doc-pregressi/Documents/Resources/Lavoro/Area_Tematiche/Comunicazione/Comunicazioni_obbligatorie2007.pdf"
+        }
+      ],
+      "stato_verifica": "verificato_fonti",
+      "note": "Entro le 24 del giorno prima dell'inizio del rapporto, anche se festivo. Vale anche verso INPS e INAIL."
+    },
+    {
+      "id": "contratto_informativa",
+      "titolo": "Consegnare il contratto e l'informativa sulle condizioni di lavoro",
+      "tipo": "comunicazione",
+      "ente": "richiedente",
+      "attore": "richiedente",
+      "dipende_da": [
+        "scelta_contratto"
+      ],
+      "canale": "misto",
+      "fonti": [
+        {
+          "titolo": "D.Lgs. 152/1997, come modificato dal D.Lgs. 104/2022 (decreto trasparenza)",
+          "verificata_il": "2026-11-24",
+          "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:1997-05-26;152"
+        }
+      ],
+      "stato_verifica": "bozza"
+    },
+    {
+      "id": "valutazione_rischi",
+      "titolo": "Redigere il Documento di valutazione dei rischi (DVR)",
+      "tipo": "requisito",
+      "ente": "richiedente",
+      "attore": "professionista",
+      "documenti_prodotti": [
+        {
+          "id": "dvr",
+          "nome": "Documento di valutazione dei rischi"
+        }
+      ],
+      "dipende_da": [],
+      "canale": "misto",
+      "fonti": [
+        {
+          "titolo": "D.Lgs. 81/2008 - Testo unico sicurezza sul lavoro",
+          "verificata_il": "2026-11-24",
+          "riferimento": "artt. 17, 28 e 29",
+          "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2008-04-09;81"
+        }
+      ],
+      "stato_verifica": "bozza",
+      "note": "È un obbligo del datore di lavoro che non si può delegare."
+    },
+    {
+      "id": "nomina_rspp",
+      "titolo": "Nominare il responsabile del servizio di prevenzione e protezione (RSPP)",
+      "tipo": "requisito",
+      "ente": "richiedente",
+      "attore": "richiedente",
+      "dipende_da": [],
+      "canale": "misto",
+      "fonti": [
+        {
+          "titolo": "D.Lgs. 81/2008 - Testo unico sicurezza sul lavoro",
+          "verificata_il": "2026-11-24",
+          "riferimento": "artt. 17 e 34",
+          "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2008-04-09;81"
+        }
+      ],
+      "stato_verifica": "bozza",
+      "note": "Nelle piccole imprese può farlo il datore di lavoro stesso, dopo un apposito corso."
+    },
+    {
+      "id": "addetti_emergenze",
+      "titolo": "Designare gli addetti antincendio e primo soccorso",
+      "tipo": "requisito",
+      "ente": "richiedente",
+      "attore": "richiedente",
+      "dipende_da": [
+        "valutazione_rischi"
+      ],
+      "canale": "misto",
+      "fonti": [
+        {
+          "titolo": "D.Lgs. 81/2008 - Testo unico sicurezza sul lavoro",
+          "verificata_il": "2026-11-24",
+          "riferimento": "art. 18, comma 1, lettera b; artt. 43-46",
+          "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2008-04-09;81"
+        }
+      ],
+      "stato_verifica": "bozza"
+    },
+    {
+      "id": "medico_competente",
+      "titolo": "Nominare il medico competente e fare la visita preventiva",
+      "tipo": "controllo",
+      "ente": "richiedente",
+      "attore": "professionista",
+      "dipende_da": [
+        "valutazione_rischi"
+      ],
+      "condizioni": [
+        {
+          "domanda": "sorveglianza_sanitaria",
+          "valore": true
+        }
+      ],
+      "canale": "sportello",
+      "fonti": [
+        {
+          "titolo": "D.Lgs. 81/2008 - Testo unico sicurezza sul lavoro",
+          "verificata_il": "2026-11-24",
+          "riferimento": "art. 18, comma 1, lettera a; art. 41",
+          "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2008-04-09;81"
+        }
+      ],
+      "stato_verifica": "bozza"
+    },
+    {
+      "id": "formazione_sicurezza",
+      "titolo": "Formare il lavoratore su salute e sicurezza",
+      "tipo": "requisito",
+      "ente": "richiedente",
+      "attore": "professionista",
+      "dipende_da": [
+        "valutazione_rischi",
+        "comunicazione_assunzione"
+      ],
+      "canale": "misto",
+      "fonti": [
+        {
+          "titolo": "D.Lgs. 81/2008 - Testo unico sicurezza sul lavoro",
+          "verificata_il": "2026-11-24",
+          "riferimento": "artt. 36 e 37",
+          "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2008-04-09;81"
+        }
+      ],
+      "stato_verifica": "bozza"
+    },
+    {
+      "id": "libro_unico",
+      "titolo": "Istituire il Libro unico del lavoro e gestire le buste paga",
+      "tipo": "requisito",
+      "ente": "richiedente",
+      "attore": "professionista",
+      "dipende_da": [
+        "comunicazione_assunzione"
+      ],
+      "canale": "misto",
+      "fonti": [
+        {
+          "titolo": "D.L. 112/2008",
+          "verificata_il": "2026-11-24",
+          "riferimento": "art. 39",
+          "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legge:2008-06-25;112~art39"
+        }
+      ],
+      "stato_verifica": "bozza",
+      "note": "Ogni mese seguono busta paga, versamento dei contributi e delle ritenute e la denuncia mensile all'INPS."
+    }
+  ]
+}

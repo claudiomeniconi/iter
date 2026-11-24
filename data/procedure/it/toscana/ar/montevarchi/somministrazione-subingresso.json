@@ -1,0 +1,502 @@
+{
+  "id": "montevarchi.somministrazione.subingresso",
+  "modello": "somministrazione.subingresso",
+  "titolo": "Rilevare un bar, ristorante o pizzeria già aperto a Montevarchi",
+  "descrizione": "Subentrare in un esercizio di somministrazione esistente, comprandolo o prendendolo in affitto d'azienda. Bozza della Fase 0: ogni passaggio va confermato con il SUAP e con un professionista.",
+  "territorio": {
+    "livello": "comunale",
+    "nome": "Montevarchi (AR)",
+    "codice_istat": "051026",
+    "percorso": "it/toscana/ar/montevarchi"
+  },
+  "categoria": "impresa",
+  "stato": "bozza",
+  "versione": "0.1.0",
+  "ultima_verifica": "2026-11-24",
+  "domande": [
+    {
+      "id": "impresa_gia_attiva",
+      "testo": "Hai già un'impresa attiva (partita IVA e iscrizione al Registro Imprese)?",
+      "tipo": "si_no"
+    },
+    {
+      "id": "requisito_professionale",
+      "testo": "Tu (o un preposto) hai già un requisito professionale per la somministrazione?",
+      "tipo": "si_no"
+    },
+    {
+      "id": "cambi_locale",
+      "testo": "Prevedi lavori o cambi nell'organizzazione del locale e della cucina?",
+      "tipo": "si_no"
+    },
+    {
+      "id": "insegna_dehors",
+      "testo": "Il locale ha un'insegna o un dehors su suolo pubblico da intestare a te?",
+      "tipo": "si_no"
+    }
+  ],
+  "enti": [
+    {
+      "id": "richiedente"
+    },
+    {
+      "id": "notaio"
+    },
+    {
+      "id": "agenzia-entrate"
+    },
+    {
+      "id": "cciaa.arezzo-siena"
+    },
+    {
+      "id": "suap.051026"
+    },
+    {
+      "id": "asl.toscana-sud-est"
+    }
+  ],
+  "passaggi": [
+    {
+      "id": "requisiti_soggettivi",
+      "titolo": "Verificare i requisiti morali e professionali",
+      "tipo": "requisito",
+      "ente": "richiedente",
+      "attore": "richiedente",
+      "documenti_richiesti": [
+        {
+          "id": "attestato_requisito_professionale",
+          "nome": "Prova del requisito professionale (corso abilitante, esperienza biennale, diploma o REC)"
+        }
+      ],
+      "dipende_da": [],
+      "canale": "misto",
+      "fonti": [
+        {
+          "titolo": "L.R. Toscana 62/2018 - Codice del Commercio",
+          "verificata_il": "2026-11-24",
+          "riferimento": "art. 90, comma 5; artt. 11-12",
+          "url": "https://raccoltanormativa.consiglio.regione.toscana.it/class/download_doc.php?file_path=legge/2018/legge_2018_62_s1/legge_2018_62_s1_v1.pdf"
+        }
+      ],
+      "stato_verifica": "verificato_fonti",
+      "note": "Il subentrante deve avere i requisiti morali e professionali. Il requisito professionale può averlo un preposto."
+    },
+    {
+      "id": "corso_abilitante",
+      "titolo": "Frequentare il corso abilitante alla somministrazione",
+      "tipo": "requisito",
+      "ente": "richiedente",
+      "attore": "richiedente",
+      "documenti_prodotti": [
+        {
+          "id": "attestato_requisito_professionale",
+          "nome": "Attestato del corso abilitante"
+        }
+      ],
+      "costi": [
+        {
+          "voce": "Corso abilitante presso ente di formazione accreditato"
+        }
+      ],
+      "dipende_da": [],
+      "condizioni": [
+        {
+          "domanda": "requisito_professionale",
+          "valore": false
+        }
+      ],
+      "canale": "misto",
+      "fonti": [
+        {
+          "titolo": "L.R. Toscana 62/2018 - Codice del Commercio",
+          "verificata_il": "2026-11-24",
+          "url": "https://raccoltanormativa.consiglio.regione.toscana.it/class/download_doc.php?file_path=legge/2018/legge_2018_62_s1/legge_2018_62_s1_v1.pdf",
+          "riferimento": "art. 12"
+        }
+      ],
+      "stato_verifica": "bozza",
+      "note": "Da verificare durata e costo dei corsi riconosciuti dalla Regione Toscana disponibili in Valdarno."
+    },
+    {
+      "id": "verifica_attivita",
+      "titolo": "Controllare titoli e regolarità dell'attività che rilevi",
+      "tipo": "requisito",
+      "ente": "richiedente",
+      "attore": "professionista",
+      "documenti_richiesti": [
+        {
+          "id": "titolo_somministrazione_cedente",
+          "nome": "Titolo abilitativo del cedente (SCIA o autorizzazione)"
+        },
+        {
+          "id": "notifica_sanitaria_cedente",
+          "nome": "Registrazione sanitaria del cedente"
+        },
+        {
+          "id": "titolo_edilizio",
+          "nome": "Agibilità e conformità dei locali"
+        }
+      ],
+      "dipende_da": [],
+      "canale": "misto",
+      "fonti": [
+        {
+          "titolo": "L.R. Toscana 62/2018 - Codice del Commercio",
+          "verificata_il": "2026-11-24",
+          "riferimento": "art. 90",
+          "url": "https://raccoltanormativa.consiglio.regione.toscana.it/class/download_doc.php?file_path=legge/2018/legge_2018_62_s1/legge_2018_62_s1_v1.pdf"
+        }
+      ],
+      "stato_verifica": "bozza",
+      "note": "Prima di firmare conviene verificare con un professionista che titoli, agibilità, impianti e debiti dell'azienda siano in regola: con l'acquisto subentri anche in alcuni obblighi del cedente."
+    },
+    {
+      "id": "atto_cessione",
+      "titolo": "Firmare l'atto di cessione o di affitto d'azienda dal notaio",
+      "tipo": "presentazione",
+      "ente": "notaio",
+      "attore": "professionista",
+      "documenti_prodotti": [
+        {
+          "id": "atto_trasferimento",
+          "nome": "Atto di cessione o affitto d'azienda"
+        }
+      ],
+      "costi": [
+        {
+          "voce": "Onorario notarile"
+        },
+        {
+          "voce": "Imposta di registro e altre imposte sull'atto"
+        }
+      ],
+      "dipende_da": [
+        "requisiti_soggettivi",
+        "verifica_attivita"
+      ],
+      "canale": "sportello",
+      "fonti": [
+        {
+          "titolo": "Codice civile",
+          "verificata_il": "2026-11-24",
+          "riferimento": "art. 2556 (imprese soggette a registrazione)",
+          "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:regio.decreto:1942-03-16;262~art2556"
+        }
+      ],
+      "stato_verifica": "bozza",
+      "note": "Per le imprese soggette a registrazione il contratto va fatto per atto pubblico o scrittura privata autenticata."
+    },
+    {
+      "id": "deposito_registro_imprese",
+      "titolo": "Deposito dell'atto al Registro Imprese",
+      "tipo": "iscrizione",
+      "ente": "cciaa.arezzo-siena",
+      "attore": "professionista",
+      "tempi": {
+        "previsto_giorni": 30
+      },
+      "dipende_da": [
+        "atto_cessione"
+      ],
+      "canale": "online",
+      "fonti": [
+        {
+          "titolo": "Codice civile",
+          "verificata_il": "2026-11-24",
+          "riferimento": "art. 2556 (imprese soggette a registrazione)",
+          "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:regio.decreto:1942-03-16;262~art2556"
+        }
+      ],
+      "stato_verifica": "bozza",
+      "note": "Lo cura il notaio entro 30 giorni dall'atto."
+    },
+    {
+      "id": "registrazione_atto",
+      "titolo": "Registrazione dell'atto all'Agenzia delle Entrate",
+      "tipo": "pagamento",
+      "ente": "agenzia-entrate",
+      "attore": "professionista",
+      "dipende_da": [
+        "atto_cessione"
+      ],
+      "canale": "online",
+      "fonti": [
+        {
+          "titolo": "D.P.R. 131/1986 - Testo unico dell'imposta di registro",
+          "verificata_il": "2026-11-24",
+          "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:presidente.repubblica:1986-04-26;131"
+        }
+      ],
+      "stato_verifica": "bozza",
+      "note": "Di norma la cura il notaio, che riscuote le imposte dovute."
+    },
+    {
+      "id": "apertura_partita_iva",
+      "titolo": "Aprire la partita IVA e iscrivere l'impresa (Comunicazione Unica)",
+      "tipo": "iscrizione",
+      "ente": "cciaa.arezzo-siena",
+      "attore": "professionista",
+      "documenti_prodotti": [
+        {
+          "id": "partita_iva",
+          "nome": "Partita IVA"
+        },
+        {
+          "id": "iscrizione_registro_imprese",
+          "nome": "Iscrizione al Registro Imprese"
+        }
+      ],
+      "dipende_da": [
+        "requisiti_soggettivi"
+      ],
+      "canale": "online",
+      "fonti": [
+        {
+          "titolo": "D.L. 7/2007 - Comunicazione Unica",
+          "verificata_il": "2026-11-24",
+          "riferimento": "art. 9"
+        }
+      ],
+      "stato_verifica": "bozza",
+      "note": "La Comunicazione Unica raggiunge insieme Registro Imprese, Agenzia delle Entrate, INPS e INAIL. Da verificare l'ordine rispetto alla SCIA: in alcuni casi l'avvio attività al REA si comunica dopo la SCIA.",
+      "condizioni": [
+        {
+          "domanda": "impresa_gia_attiva",
+          "valore": false
+        }
+      ]
+    },
+    {
+      "id": "piano_autocontrollo",
+      "titolo": "Aggiornare il piano di autocontrollo HACCP a tuo nome",
+      "tipo": "requisito",
+      "ente": "richiedente",
+      "attore": "professionista",
+      "documenti_prodotti": [
+        {
+          "id": "piano_haccp",
+          "nome": "Manuale di autocontrollo HACCP"
+        }
+      ],
+      "dipende_da": [
+        "atto_cessione"
+      ],
+      "canale": "misto",
+      "fonti": [
+        {
+          "titolo": "Reg. (CE) 852/2004 sull'igiene dei prodotti alimentari",
+          "verificata_il": "2026-11-24",
+          "url": "https://eur-lex.europa.eu/legal-content/IT/TXT/?uri=CELEX:32004R0852",
+          "riferimento": "art. 5"
+        }
+      ],
+      "stato_verifica": "bozza"
+    },
+    {
+      "id": "formazione_alimentaristi",
+      "titolo": "Formazione igienico-sanitaria del personale (alimentaristi)",
+      "tipo": "requisito",
+      "ente": "richiedente",
+      "attore": "richiedente",
+      "documenti_prodotti": [
+        {
+          "id": "attestato_haccp",
+          "nome": "Attestati di formazione per gli addetti"
+        }
+      ],
+      "dipende_da": [],
+      "canale": "misto",
+      "fonti": [
+        {
+          "titolo": "Reg. (CE) 852/2004 sull'igiene dei prodotti alimentari",
+          "verificata_il": "2026-11-24",
+          "url": "https://eur-lex.europa.eu/legal-content/IT/TXT/?uri=CELEX:32004R0852",
+          "riferimento": "Allegato II, capitolo XII"
+        }
+      ],
+      "stato_verifica": "bozza",
+      "note": "Da verificare la disciplina regionale toscana su durata e aggiornamento dei corsi."
+    },
+    {
+      "id": "comunicazione_subingresso",
+      "titolo": "Comunicare il subingresso al SUAP tramite STAR",
+      "tipo": "comunicazione",
+      "ente": "suap.051026",
+      "attore": "richiedente",
+      "documenti_richiesti": [
+        {
+          "id": "atto_trasferimento",
+          "nome": "Estremi dell'atto di cessione o affitto"
+        },
+        {
+          "id": "attestato_requisito_professionale",
+          "nome": "Requisito professionale"
+        }
+      ],
+      "costi": [
+        {
+          "voce": "Diritti SUAP del Comune di Montevarchi"
+        }
+      ],
+      "tempi": {
+        "previsto_giorni": 60
+      },
+      "dipende_da": [
+        "atto_cessione",
+        "requisiti_soggettivi",
+        "apertura_partita_iva"
+      ],
+      "canale": "online",
+      "fonti": [
+        {
+          "titolo": "L.R. Toscana 62/2018 - Codice del Commercio",
+          "verificata_il": "2026-11-24",
+          "riferimento": "art. 90, commi 2, 5 e 6",
+          "url": "https://raccoltanormativa.consiglio.regione.toscana.it/class/download_doc.php?file_path=legge/2018/legge_2018_62_s1/legge_2018_62_s1_v1.pdf"
+        },
+        {
+          "titolo": "Elenco modulistica unica regionale in uso al 7 ottobre 2026",
+          "verificata_il": "2026-11-24",
+          "riferimento": "Comunicazione per il subingresso in attività - d.d. 10309/2026",
+          "url": "https://www.regione.toscana.it/documents/d/guest/elenco-della-modulistica-unica-in-uso-al-7-ottobre-2026-pdf"
+        },
+        {
+          "titolo": "Comune di Montevarchi - Accedere allo Sportello SUAP (STAR)",
+          "verificata_il": "2026-11-24",
+          "url": "https://www.comune.montevarchi.ar.it/servizi/servizio-dettaglio/2246471"
+        }
+      ],
+      "stato_verifica": "verificato_fonti",
+      "note": "Va presentata entro 60 giorni dall'atto e comunque prima di iniziare a lavorare come nuovo titolare."
+    },
+    {
+      "id": "aggiornamento_notifica_sanitaria",
+      "titolo": "Aggiornare la registrazione sanitaria con il nuovo titolare",
+      "tipo": "comunicazione",
+      "ente": "asl.toscana-sud-est",
+      "attore": "richiedente",
+      "dipende_da": [
+        "piano_autocontrollo"
+      ],
+      "canale": "online",
+      "fonti": [
+        {
+          "titolo": "Reg. (CE) 852/2004 sull'igiene dei prodotti alimentari",
+          "verificata_il": "2026-11-24",
+          "riferimento": "art. 6",
+          "url": "https://eur-lex.europa.eu/legal-content/IT/TXT/?uri=CELEX:32004R0852"
+        },
+        {
+          "titolo": "Elenco modulistica unica regionale in uso al 7 ottobre 2026",
+          "verificata_il": "2026-11-24",
+          "riferimento": "Notifica sanitaria ai fini della registrazione - Reg. CE 852/2004 - DGR 673/2024",
+          "url": "https://www.regione.toscana.it/documents/d/guest/elenco-della-modulistica-unica-in-uso-al-7-ottobre-2026-pdf"
+        },
+        {
+          "titolo": "Comune di Lucca - FAQ SUAP commercio (prassi toscana sul subingresso)",
+          "verificata_il": "2026-11-24",
+          "url": "https://comune.lucca.it/app/uploads/2023/05/FAQ.pdf"
+        }
+      ],
+      "stato_verifica": "bozza",
+      "note": "Si presenta tramite il SUAP insieme alla comunicazione di subingresso. Da verificare il modulo esatto su STAR."
+    },
+    {
+      "id": "verifica_modifiche_locale",
+      "titolo": "Pratiche per le modifiche al locale",
+      "tipo": "presentazione",
+      "ente": "suap.051026",
+      "attore": "professionista",
+      "dipende_da": [
+        "atto_cessione"
+      ],
+      "condizioni": [
+        {
+          "domanda": "cambi_locale",
+          "valore": true
+        }
+      ],
+      "canale": "online",
+      "fonti": [
+        {
+          "titolo": "L.R. Toscana 62/2018 - Codice del Commercio",
+          "verificata_il": "2026-11-24",
+          "riferimento": "art. 48, comma 2; art. 50",
+          "url": "https://raccoltanormativa.consiglio.regione.toscana.it/class/download_doc.php?file_path=legge/2018/legge_2018_62_s1/legge_2018_62_s1_v1.pdf"
+        }
+      ],
+      "stato_verifica": "bozza",
+      "note": "Lavori edilizi, nuovi impianti o una cucina diversa possono richiedere pratiche edilizie, aggiornamento dell'impatto acustico o della prevenzione incendi."
+    },
+    {
+      "id": "voltura_insegna_dehors",
+      "titolo": "Intestare a te insegna e concessione del dehors",
+      "tipo": "comunicazione",
+      "ente": "suap.051026",
+      "attore": "richiedente",
+      "costi": [
+        {
+          "voce": "Canone unico patrimoniale"
+        }
+      ],
+      "dipende_da": [
+        "comunicazione_subingresso"
+      ],
+      "condizioni": [
+        {
+          "domanda": "insegna_dehors",
+          "valore": true
+        }
+      ],
+      "canale": "online",
+      "fonti": [
+        {
+          "titolo": "Comune di Montevarchi - Piano degli impianti pubblicitari",
+          "verificata_il": "2026-11-24",
+          "url": "https://www.sitmontevarchi.it/piano_pubblicita"
+        }
+      ],
+      "stato_verifica": "bozza"
+    },
+    {
+      "id": "registratore_telematico",
+      "titolo": "Attivare il registratore telematico dei corrispettivi a tuo nome",
+      "tipo": "comunicazione",
+      "ente": "agenzia-entrate",
+      "attore": "professionista",
+      "dipende_da": [
+        "apertura_partita_iva",
+        "atto_cessione"
+      ],
+      "canale": "online",
+      "fonti": [
+        {
+          "titolo": "D.Lgs. 127/2015",
+          "verificata_il": "2026-11-24",
+          "riferimento": "art. 2"
+        }
+      ],
+      "stato_verifica": "bozza"
+    },
+    {
+      "id": "controlli_suap",
+      "titolo": "Verifiche del Comune sulla comunicazione",
+      "tipo": "controllo",
+      "ente": "suap.051026",
+      "attore": "ente",
+      "dipende_da": [
+        "comunicazione_subingresso"
+      ],
+      "canale": "misto",
+      "fonti": [
+        {
+          "titolo": "L.R. Toscana 62/2018 - Codice del Commercio",
+          "verificata_il": "2026-11-24",
+          "riferimento": "art. 90",
+          "url": "https://raccoltanormativa.consiglio.regione.toscana.it/class/download_doc.php?file_path=legge/2018/legge_2018_62_s1/legge_2018_62_s1_v1.pdf"
+        }
+      ],
+      "stato_verifica": "bozza"
+    }
+  ]
+}

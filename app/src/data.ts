@@ -75,5 +75,6 @@ export const CATEGORIE: Record<string, string> = {
   impresa: 'Impresa',
   cittadino: 'Cittadino',
   edilizia: 'Edilizia',
+  lavoro: 'Lavoro',
 }
 export const nomeCategoria = (c?: string) => (c ? (CATEGORIE[c] ?? c) : 'Altro')

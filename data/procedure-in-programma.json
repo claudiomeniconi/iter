@@ -1,21 +1,26 @@
 [
   {
-    "titolo": "Aprire una seconda sede della stessa attività",
+    "titolo": "Ampliare il locale o aggiungere un dehors",
     "categoria": "impresa",
     "territorio": "it/toscana/ar/montevarchi"
   },
   {
-    "titolo": "Assumere il primo dipendente",
+    "titolo": "Somministrare cibo e bevande durante una sagra o un evento",
     "categoria": "impresa",
-    "territorio": "it"
+    "territorio": "it/toscana/ar/montevarchi"
   },
   {
-    "titolo": "Aprire la partita IVA come libero professionista",
+    "titolo": "Chiudere o sospendere un'attività di somministrazione",
     "categoria": "impresa",
-    "territorio": "it"
+    "territorio": "it/toscana/ar/montevarchi"
   },
   {
-    "titolo": "Subentrare in un'attività esistente (subingresso)",
+    "titolo": "Aprire un negozio di vicinato",
+    "categoria": "impresa",
+    "territorio": "it/toscana/ar/montevarchi"
+  },
+  {
+    "titolo": "Aprire un'attività artigiana (es. officina, laboratorio)",
     "categoria": "impresa",
     "territorio": "it/toscana/ar/montevarchi"
   }

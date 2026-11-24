@@ -1,0 +1,265 @@
+{
+  "id": "it.lavoro.partita-iva-professionista",
+  "modello": "lavoro.partita-iva-professionista",
+  "titolo": "Aprire la partita IVA come libero professionista",
+  "descrizione": "Gli adempimenti per iniziare un'attività di lavoro autonomo come professionista, con o senza albo. Valgono in tutta Italia. Bozza della Fase 0: da confermare con un commercialista.",
+  "territorio": {
+    "livello": "nazionale",
+    "nome": "Italia",
+    "percorso": "it"
+  },
+  "categoria": "lavoro",
+  "stato": "bozza",
+  "versione": "0.1.0",
+  "ultima_verifica": "2026-11-24",
+  "domande": [
+    {
+      "id": "professione_ordinistica",
+      "testo": "La tua professione richiede l'iscrizione a un albo (es. avvocato, ingegnere, architetto)?",
+      "tipo": "si_no"
+    },
+    {
+      "id": "cassa_autonoma",
+      "testo": "La tua professione ha una cassa previdenziale propria?",
+      "tipo": "si_no"
+    }
+  ],
+  "enti": [
+    {
+      "id": "richiedente"
+    },
+    {
+      "id": "agenzia-entrate"
+    },
+    {
+      "id": "inps"
+    },
+    {
+      "id": "ordine-professionale"
+    },
+    {
+      "id": "cassa-professionale"
+    }
+  ],
+  "passaggi": [
+    {
+      "id": "scelta_codice_regime",
+      "titolo": "Scegliere il codice ATECO e il regime fiscale",
+      "tipo": "requisito",
+      "ente": "richiedente",
+      "attore": "professionista",
+      "dipende_da": [],
+      "canale": "misto",
+      "fonti": [
+        {
+          "titolo": "L. 190/2014 - regime forfettario",
+          "verificata_il": "2026-11-24",
+          "riferimento": "art. 1, commi 54-89",
+          "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:legge:2014-12-23;190"
+        }
+      ],
+      "stato_verifica": "bozza",
+      "note": "Il regime forfettario ha requisiti e limiti di ricavi che cambiano nel tempo: vanno verificati ogni anno."
+    },
+    {
+      "id": "iscrizione_albo",
+      "titolo": "Iscriversi all'albo professionale",
+      "tipo": "iscrizione",
+      "ente": "ordine-professionale",
+      "attore": "richiedente",
+      "dipende_da": [],
+      "condizioni": [
+        {
+          "domanda": "professione_ordinistica",
+          "valore": true
+        }
+      ],
+      "canale": "misto",
+      "fonti": [
+        {
+          "titolo": "Regolamento dell'ordine professionale di riferimento",
+          "verificata_il": "2026-11-24"
+        }
+      ],
+      "stato_verifica": "bozza"
+    },
+    {
+      "id": "dichiarazione_inizio_attivita",
+      "titolo": "Aprire la partita IVA con il modello AA9/12",
+      "tipo": "presentazione",
+      "ente": "agenzia-entrate",
+      "attore": "richiedente",
+      "documenti_prodotti": [
+        {
+          "id": "partita_iva",
+          "nome": "Partita IVA"
+        }
+      ],
+      "costi": [
+        {
+          "voce": "Presentazione diretta",
+          "min_euro": 0,
+          "max_euro": 0
+        }
+      ],
+      "tempi": {
+        "previsto_giorni": 0
+      },
+      "dipende_da": [
+        "scelta_codice_regime"
+      ],
+      "canale": "online",
+      "fonti": [
+        {
+          "titolo": "D.P.R. 633/1972",
+          "verificata_il": "2026-11-24",
+          "riferimento": "art. 35",
+          "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:presidente.repubblica:1972-10-26;633~art35"
+        },
+        {
+          "titolo": "Agenzia delle Entrate - Partita IVA persone fisiche (AA9/12)",
+          "verificata_il": "2026-11-24",
+          "url": "https://www.agenziaentrate.gov.it/portale/schede/istanze/aa9_11-apertura-variazione-chiusura-pf/quando-utilizzare"
+        }
+      ],
+      "stato_verifica": "bozza",
+      "note": "Va presentato entro 30 giorni dall'inizio dell'attività. Online, in ufficio o tramite un intermediario; il numero viene attribuito subito."
+    },
+    {
+      "id": "iscrizione_gestione_separata",
+      "titolo": "Iscriversi alla Gestione Separata INPS",
+      "tipo": "iscrizione",
+      "ente": "inps",
+      "attore": "richiedente",
+      "dipende_da": [
+        "dichiarazione_inizio_attivita"
+      ],
+      "condizioni": [
+        {
+          "domanda": "cassa_autonoma",
+          "valore": false
+        }
+      ],
+      "canale": "online",
+      "fonti": [
+        {
+          "titolo": "L. 335/1995",
+          "verificata_il": "2026-11-24",
+          "riferimento": "art. 2, comma 26",
+          "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:legge:1995-08-08;335"
+        },
+        {
+          "titolo": "INPS - Iscrizione liberi professionisti",
+          "verificata_il": "2026-11-24",
+          "url": "https://www.inps.it/it/it/dettaglio-scheda.it.schede-servizio-strumento.schede-servizi.iscrizione-liberi-professionisti-50169.iscrizione-liberi-professionisti.html"
+        }
+      ],
+      "stato_verifica": "verificato_fonti",
+      "note": "Domanda online sul sito INPS, servizio di iscrizione dei parasubordinati."
+    },
+    {
+      "id": "iscrizione_cassa",
+      "titolo": "Iscriversi alla cassa previdenziale della professione",
+      "tipo": "iscrizione",
+      "ente": "cassa-professionale",
+      "attore": "richiedente",
+      "dipende_da": [
+        "iscrizione_albo",
+        "dichiarazione_inizio_attivita"
+      ],
+      "condizioni": [
+        {
+          "domanda": "cassa_autonoma",
+          "valore": true
+        }
+      ],
+      "canale": "online",
+      "fonti": [
+        {
+          "titolo": "Regolamento della cassa di riferimento",
+          "verificata_il": "2026-11-24"
+        }
+      ],
+      "stato_verifica": "bozza"
+    },
+    {
+      "id": "domicilio_digitale",
+      "titolo": "Attivare la PEC e comunicarla all'ordine",
+      "tipo": "comunicazione",
+      "ente": "ordine-professionale",
+      "attore": "richiedente",
+      "dipende_da": [
+        "iscrizione_albo"
+      ],
+      "condizioni": [
+        {
+          "domanda": "professione_ordinistica",
+          "valore": true
+        }
+      ],
+      "canale": "online",
+      "fonti": [
+        {
+          "titolo": "D.L. 185/2008",
+          "verificata_il": "2026-11-24",
+          "riferimento": "art. 16, comma 7",
+          "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legge:2008-11-29;185~art16"
+        }
+      ],
+      "stato_verifica": "bozza",
+      "note": "I professionisti iscritti in albi devono avere un domicilio digitale, pubblicato nell'indice INI-PEC."
+    },
+    {
+      "id": "assicurazione_rc",
+      "titolo": "Stipulare l'assicurazione di responsabilità civile professionale",
+      "tipo": "requisito",
+      "ente": "richiedente",
+      "attore": "richiedente",
+      "dipende_da": [
+        "iscrizione_albo"
+      ],
+      "condizioni": [
+        {
+          "domanda": "professione_ordinistica",
+          "valore": true
+        }
+      ],
+      "canale": "misto",
+      "costi": [
+        {
+          "voce": "Premio assicurativo annuale"
+        }
+      ],
+      "fonti": [
+        {
+          "titolo": "D.P.R. 137/2012",
+          "verificata_il": "2026-11-24",
+          "riferimento": "art. 5",
+          "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:presidente.repubblica:2012-08-07;137~art5"
+        }
+      ],
+      "stato_verifica": "bozza"
+    },
+    {
+      "id": "fatturazione_elettronica",
+      "titolo": "Organizzarsi per la fatturazione elettronica",
+      "tipo": "requisito",
+      "ente": "agenzia-entrate",
+      "attore": "richiedente",
+      "dipende_da": [
+        "dichiarazione_inizio_attivita"
+      ],
+      "canale": "online",
+      "fonti": [
+        {
+          "titolo": "D.L. 36/2022",
+          "verificata_il": "2026-11-24",
+          "riferimento": "art. 18",
+          "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legge:2022-04-30;36~art18"
+        }
+      ],
+      "stato_verifica": "bozza",
+      "note": "Dal 2024 la fattura elettronica è obbligatoria anche per chi è in regime forfettario."
+    }
+  ]
+}
