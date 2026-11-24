@@ -1,0 +1,174 @@
+{
+  "id": "it.impresa.srl",
+  "modello": "impresa.srl",
+  "titolo": "Costituire una SRL o SRL semplificata",
+  "descrizione": "Costituzione di una società a responsabilità limitata, ordinaria o semplificata. Vale in tutta Italia. Bozza della Fase 0: ogni passaggio va confermato con l'ente competente o con un professionista.",
+  "territorio": {
+    "livello": "nazionale",
+    "nome": "Italia",
+    "percorso": "it"
+  },
+  "categoria": "lavoro",
+  "stato": "bozza",
+  "versione": "0.1.0",
+  "ultima_verifica": "2026-11-24",
+  "domande": [
+    {
+      "id": "semplificata",
+      "testo": "Vuoi una SRL semplificata (soci persone fisiche, statuto standard)?",
+      "tipo": "si_no"
+    }
+  ],
+  "enti": [
+    {
+      "id": "richiedente"
+    },
+    {
+      "id": "notaio"
+    },
+    {
+      "id": "cciaa.arezzo-siena"
+    },
+    {
+      "id": "suap.051026"
+    }
+  ],
+  "passaggi": [
+    {
+      "id": "patti_sociali",
+      "titolo": "Definire soci, quote, amministratori e capitale",
+      "tipo": "requisito",
+      "ente": "richiedente",
+      "attore": "professionista",
+      "dipende_da": [],
+      "canale": "misto",
+      "fonti": [
+        {
+          "titolo": "Codice civile",
+          "verificata_il": "2026-11-24",
+          "riferimento": "artt. 2463 e 2463-bis",
+          "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:regio.decreto:1942-03-16;262~art2463"
+        }
+      ],
+      "stato_verifica": "bozza"
+    },
+    {
+      "id": "versamento_capitale",
+      "titolo": "Versare il capitale sottoscritto",
+      "tipo": "pagamento",
+      "ente": "richiedente",
+      "attore": "richiedente",
+      "dipende_da": [
+        "patti_sociali"
+      ],
+      "canale": "online",
+      "fonti": [
+        {
+          "titolo": "Codice civile",
+          "verificata_il": "2026-11-24",
+          "riferimento": "art. 2464",
+          "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:regio.decreto:1942-03-16;262~art2464"
+        }
+      ],
+      "stato_verifica": "bozza"
+    },
+    {
+      "id": "atto_costitutivo",
+      "titolo": "Firmare l'atto costitutivo dal notaio",
+      "tipo": "presentazione",
+      "ente": "notaio",
+      "attore": "professionista",
+      "costi": [
+        {
+          "voce": "Onorario notarile (ridotto o assente per la SRL semplificata)"
+        },
+        {
+          "voce": "Imposta di registro, bolli e diritti"
+        }
+      ],
+      "dipende_da": [
+        "versamento_capitale"
+      ],
+      "canale": "online",
+      "fonti": [
+        {
+          "titolo": "Codice civile",
+          "verificata_il": "2026-11-24",
+          "riferimento": "art. 2463",
+          "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:regio.decreto:1942-03-16;262~art2463"
+        }
+      ],
+      "stato_verifica": "bozza",
+      "note": "Per la SRL semplificata lo statuto è un modello standard e non si pagano onorari notarili."
+    },
+    {
+      "id": "iscrizione_registro",
+      "titolo": "Iscrizione della società al Registro Imprese",
+      "tipo": "iscrizione",
+      "ente": "cciaa.arezzo-siena",
+      "attore": "professionista",
+      "tempi": {
+        "previsto_giorni": 20
+      },
+      "dipende_da": [
+        "atto_costitutivo"
+      ],
+      "canale": "online",
+      "fonti": [
+        {
+          "titolo": "Codice civile",
+          "verificata_il": "2026-11-24",
+          "riferimento": "art. 2330",
+          "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:regio.decreto:1942-03-16;262~art2330"
+        },
+        {
+          "titolo": "D.L. 7/2007 - Comunicazione Unica",
+          "verificata_il": "2026-11-24",
+          "riferimento": "art. 9",
+          "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legge:2007-01-31;7~art9"
+        }
+      ],
+      "stato_verifica": "bozza",
+      "note": "Il notaio deposita l'atto entro 20 giorni; con la Comunicazione Unica si ottengono anche partita IVA e posizioni INPS e INAIL."
+    },
+    {
+      "id": "libri_sociali",
+      "titolo": "Istituire libri sociali e contabilità",
+      "tipo": "requisito",
+      "ente": "richiedente",
+      "attore": "professionista",
+      "dipende_da": [
+        "iscrizione_registro"
+      ],
+      "canale": "misto",
+      "fonti": [
+        {
+          "titolo": "Codice civile",
+          "verificata_il": "2026-11-24",
+          "riferimento": "art. 2478",
+          "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:regio.decreto:1942-03-16;262~art2478"
+        }
+      ],
+      "stato_verifica": "bozza"
+    },
+    {
+      "id": "titolo_suap",
+      "titolo": "Ottenere il titolo per l'attività al SUAP, se serve",
+      "tipo": "presentazione",
+      "ente": "suap.051026",
+      "attore": "richiedente",
+      "dipende_da": [
+        "iscrizione_registro"
+      ],
+      "canale": "online",
+      "fonti": [
+        {
+          "titolo": "Comune di Montevarchi - Accedere allo Sportello SUAP (STAR)",
+          "verificata_il": "2026-11-24",
+          "url": "https://www.comune.montevarchi.ar.it/servizi/servizio-dettaglio/2246471"
+        }
+      ],
+      "stato_verifica": "bozza"
+    }
+  ]
+}

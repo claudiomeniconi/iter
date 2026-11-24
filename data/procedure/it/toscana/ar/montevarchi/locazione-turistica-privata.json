@@ -1,0 +1,172 @@
+{
+  "id": "montevarchi.turismo.locazione-privata",
+  "modello": "turismo.locazione-privata",
+  "titolo": "Affittare casa ai turisti come privato (locazione non imprenditoriale)",
+  "descrizione": "Locazione turistica di un immobile residenziale per periodi inferiori a 30 giorni, da parte di un privato non in forma d'impresa. Bozza della Fase 0: ogni passaggio va confermato con l'ente competente o con un professionista.",
+  "territorio": {
+    "livello": "comunale",
+    "nome": "Montevarchi (AR)",
+    "codice_istat": "051026",
+    "percorso": "it/toscana/ar/montevarchi"
+  },
+  "categoria": "cittadino",
+  "stato": "bozza",
+  "versione": "0.1.0",
+  "ultima_verifica": "2026-11-24",
+  "domande": [],
+  "enti": [
+    {
+      "id": "comune.051026.edilizia"
+    },
+    {
+      "id": "suap.051026"
+    },
+    {
+      "id": "richiedente"
+    },
+    {
+      "id": "ministero-turismo"
+    },
+    {
+      "id": "questura.arezzo"
+    },
+    {
+      "id": "agenzia-entrate"
+    }
+  ],
+  "passaggi": [
+    {
+      "id": "verifica_locale",
+      "titolo": "Verificare che l'immobile sia ammesso dal regolamento comunale",
+      "tipo": "requisito",
+      "ente": "comune.051026.edilizia",
+      "attore": "richiedente",
+      "dipende_da": [],
+      "canale": "misto",
+      "fonti": [
+        {
+          "titolo": "Camera di Commercio di Firenze - Locazioni turistiche in Toscana (L.R. 61/2024)",
+          "verificata_il": "2026-11-24",
+          "riferimento": "art. 60",
+          "url": "https://sni.unioncamere.it/sites/default/files/approfondimento/documenti/Locazioni_turistiche_firenze.pdf"
+        }
+      ],
+      "stato_verifica": "bozza"
+    },
+    {
+      "id": "comunicazione_comune",
+      "titolo": "Comunicare al Comune l'avvio della locazione turistica",
+      "tipo": "comunicazione",
+      "ente": "suap.051026",
+      "attore": "richiedente",
+      "dipende_da": [
+        "verifica_locale"
+      ],
+      "canale": "online",
+      "fonti": [
+        {
+          "titolo": "Camera di Commercio di Firenze - Locazioni turistiche in Toscana (L.R. 61/2024)",
+          "verificata_il": "2026-11-24",
+          "riferimento": "art. 60",
+          "url": "https://sni.unioncamere.it/sites/default/files/approfondimento/documenti/Locazioni_turistiche_firenze.pdf"
+        },
+        {
+          "titolo": "Regione Toscana - Modulistica unica per attività produttive ed edilizia",
+          "verificata_il": "2026-11-24",
+          "riferimento": "Locazione turistica non imprenditoriale - DGR 1333/2026",
+          "url": "https://www.regione.toscana.it/-/modulistica-unica-regionale-per-le-attivita-produttive-e-l-attivita-edilizia"
+        }
+      ],
+      "stato_verifica": "verificato_fonti",
+      "note": "Comunicazione telematica con dati dell'immobile, capienza, dotazioni e sicurezza. Sanzioni da 500 a 3.000 euro se manca o è inesatta."
+    },
+    {
+      "id": "sicurezza_impianti",
+      "titolo": "Dotare l'alloggio dei dispositivi di sicurezza",
+      "tipo": "requisito",
+      "ente": "richiedente",
+      "attore": "richiedente",
+      "dipende_da": [
+        "verifica_locale"
+      ],
+      "canale": "misto",
+      "fonti": [
+        {
+          "titolo": "D.L. 145/2023",
+          "verificata_il": "2026-11-24",
+          "riferimento": "art. 13-ter",
+          "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legge:2023-10-18;145~art13ter"
+        },
+        {
+          "titolo": "Camera di Commercio di Firenze - Locazioni turistiche in Toscana (L.R. 61/2024)",
+          "verificata_il": "2026-11-24",
+          "url": "https://sni.unioncamere.it/sites/default/files/approfondimento/documenti/Locazioni_turistiche_firenze.pdf"
+        }
+      ],
+      "stato_verifica": "bozza",
+      "note": "Rilevatori di gas e monossido di carbonio ed estintori."
+    },
+    {
+      "id": "cin",
+      "titolo": "Ottenere CIR regionale e CIN nazionale",
+      "tipo": "iscrizione",
+      "ente": "ministero-turismo",
+      "attore": "richiedente",
+      "dipende_da": [
+        "comunicazione_comune"
+      ],
+      "canale": "online",
+      "fonti": [
+        {
+          "titolo": "Camera di Commercio di Firenze - Locazioni turistiche in Toscana (L.R. 61/2024)",
+          "verificata_il": "2026-11-24",
+          "url": "https://sni.unioncamere.it/sites/default/files/approfondimento/documenti/Locazioni_turistiche_firenze.pdf"
+        }
+      ],
+      "stato_verifica": "verificato_fonti",
+      "note": "Prima il CIR dalla Regione, poi il CIN dalla banca dati del Ministero. Il CIN va esposto all'esterno e indicato in ogni annuncio."
+    },
+    {
+      "id": "alloggiati",
+      "titolo": "Registrarsi ad Alloggiati Web e comunicare gli ospiti",
+      "tipo": "comunicazione",
+      "ente": "questura.arezzo",
+      "attore": "richiedente",
+      "dipende_da": [
+        "cin"
+      ],
+      "canale": "online",
+      "fonti": [
+        {
+          "titolo": "R.D. 773/1931 - Testo unico delle leggi di pubblica sicurezza",
+          "verificata_il": "2026-11-24",
+          "riferimento": "art. 109",
+          "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:regio.decreto:1931-06-18;773"
+        }
+      ],
+      "stato_verifica": "bozza",
+      "note": "Ogni ospite va comunicato alla Questura entro 24 ore dall'arrivo."
+    },
+    {
+      "id": "tassazione",
+      "titolo": "Dichiarare i redditi (cedolare secca o IRPEF)",
+      "tipo": "comunicazione",
+      "ente": "agenzia-entrate",
+      "attore": "richiedente",
+      "dipende_da": [
+        "comunicazione_comune"
+      ],
+      "canale": "online",
+      "fonti": [
+        {
+          "titolo": "D.L. 50/2017",
+          "verificata_il": "2026-11-24",
+          "riferimento": "art. 4",
+          "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legge:2017-04-24;50~art4"
+        }
+      ],
+      "stato_verifica": "bozza",
+      "note": "Oltre un certo numero di appartamenti la legge presume l'attività d'impresa: da verificare."
+    }
+  ]
+}

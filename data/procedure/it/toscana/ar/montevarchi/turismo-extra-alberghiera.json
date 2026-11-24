@@ -1,0 +1,412 @@
+{
+  "id": "montevarchi.turismo.extra-alberghiera",
+  "modello": "turismo.extra-alberghiera",
+  "titolo": "Aprire un B&B, un affittacamere o una casa vacanze",
+  "descrizione": "Apertura di una struttura ricettiva extra-alberghiera a Montevarchi: affittacamere, bed and breakfast, case e appartamenti per vacanze, residenze d'epoca. Bozza della Fase 0: ogni passaggio va confermato con l'ente competente o con un professionista.",
+  "territorio": {
+    "livello": "comunale",
+    "nome": "Montevarchi (AR)",
+    "codice_istat": "051026",
+    "percorso": "it/toscana/ar/montevarchi"
+  },
+  "categoria": "impresa",
+  "stato": "bozza",
+  "versione": "0.1.0",
+  "ultima_verifica": "2026-11-24",
+  "domande": [
+    {
+      "id": "colazione",
+      "testo": "Offrirai la colazione (B&B)?",
+      "tipo": "si_no"
+    },
+    {
+      "id": "impresa_gia_attiva",
+      "testo": "Hai già un'impresa attiva (partita IVA e iscrizione al Registro Imprese)?",
+      "tipo": "si_no"
+    },
+    {
+      "id": "servono_lavori",
+      "testo": "Servono lavori edilizi o un cambio di destinazione d'uso?",
+      "tipo": "si_no"
+    },
+    {
+      "id": "insegna",
+      "testo": "Vuoi installare un'insegna?",
+      "tipo": "si_no"
+    }
+  ],
+  "enti": [
+    {
+      "id": "richiedente"
+    },
+    {
+      "id": "comune.051026.edilizia"
+    },
+    {
+      "id": "cciaa.arezzo-siena"
+    },
+    {
+      "id": "suap.051026"
+    },
+    {
+      "id": "asl.toscana-sud-est"
+    },
+    {
+      "id": "ministero-turismo"
+    },
+    {
+      "id": "questura.arezzo"
+    }
+  ],
+  "passaggi": [
+    {
+      "id": "requisiti_soggettivi",
+      "titolo": "Verificare i requisiti morali",
+      "tipo": "requisito",
+      "ente": "richiedente",
+      "attore": "richiedente",
+      "dipende_da": [],
+      "canale": "misto",
+      "fonti": [
+        {
+          "titolo": "L.R. Toscana 61/2024 - Testo unico del turismo (sintesi ANCI Toscana)",
+          "verificata_il": "2026-11-24",
+          "riferimento": "art. 50",
+          "url": "https://ancitoscana.it/wp-content/uploads/2025/04/7.2.25_TU-Turismo-Norme-strutture-ricettive.pdf"
+        },
+        {
+          "titolo": "R.D. 773/1931 - Testo unico delle leggi di pubblica sicurezza",
+          "verificata_il": "2026-11-24",
+          "riferimento": "artt. 11 e 92",
+          "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:regio.decreto:1931-06-18;773"
+        }
+      ],
+      "stato_verifica": "bozza",
+      "note": "Nelle società serve un gestore designato e si applicano i controlli antimafia."
+    },
+    {
+      "id": "verifica_locale",
+      "titolo": "Verificare destinazione d'uso turistico-ricettiva e requisiti dell'immobile",
+      "tipo": "requisito",
+      "ente": "comune.051026.edilizia",
+      "attore": "professionista",
+      "dipende_da": [],
+      "canale": "misto",
+      "fonti": [
+        {
+          "titolo": "L.R. Toscana 61/2024 - Testo unico del turismo (sintesi ANCI Toscana)",
+          "verificata_il": "2026-11-24",
+          "riferimento": "art. 41, commi 2-3",
+          "url": "https://ancitoscana.it/wp-content/uploads/2025/04/7.2.25_TU-Turismo-Norme-strutture-ricettive.pdf"
+        }
+      ],
+      "stato_verifica": "verificato_fonti",
+      "note": "Dal 1° luglio 2026 serve la destinazione d'uso turistico-ricettiva. Affittacamere e B&B: massimo 6 camere e 12 posti letto."
+    },
+    {
+      "id": "pratica_edilizia",
+      "titolo": "Presentare la pratica edilizia per lavori o cambio d'uso",
+      "tipo": "presentazione",
+      "ente": "comune.051026.edilizia",
+      "attore": "professionista",
+      "dipende_da": [
+        "verifica_locale"
+      ],
+      "condizioni": [
+        {
+          "domanda": "servono_lavori",
+          "valore": true
+        }
+      ],
+      "canale": "online",
+      "fonti": [
+        {
+          "titolo": "Regione Toscana - Modulistica unica per attività produttive ed edilizia",
+          "verificata_il": "2026-11-24",
+          "riferimento": "CILA, SCIA edilizia o permesso di costruire",
+          "url": "https://www.regione.toscana.it/-/modulistica-unica-regionale-per-le-attivita-produttive-e-l-attivita-edilizia"
+        }
+      ],
+      "stato_verifica": "bozza",
+      "note": "Vedi le procedure edilizie di Iter (CILA, SCIA edilizia)."
+    },
+    {
+      "id": "iscrizione_impresa",
+      "titolo": "Aprire la partita IVA e iscrivere l'impresa (Comunicazione Unica)",
+      "tipo": "iscrizione",
+      "ente": "cciaa.arezzo-siena",
+      "attore": "professionista",
+      "documenti_prodotti": [
+        {
+          "id": "partita_iva",
+          "nome": "Partita IVA"
+        },
+        {
+          "id": "iscrizione_registro_imprese",
+          "nome": "Iscrizione al Registro Imprese"
+        }
+      ],
+      "dipende_da": [
+        "requisiti_soggettivi"
+      ],
+      "condizioni": [
+        {
+          "domanda": "impresa_gia_attiva",
+          "valore": false
+        }
+      ],
+      "canale": "online",
+      "fonti": [
+        {
+          "titolo": "D.L. 7/2007 - Comunicazione Unica",
+          "verificata_il": "2026-11-24",
+          "riferimento": "art. 9",
+          "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legge:2007-01-31;7~art9"
+        }
+      ],
+      "stato_verifica": "bozza",
+      "note": "Vedi anche la procedura «Aprire una ditta individuale»."
+    },
+    {
+      "id": "piano_autocontrollo",
+      "titolo": "Piano di autocontrollo per la colazione",
+      "tipo": "requisito",
+      "ente": "richiedente",
+      "attore": "richiedente",
+      "dipende_da": [
+        "verifica_locale"
+      ],
+      "condizioni": [
+        {
+          "domanda": "colazione",
+          "valore": true
+        }
+      ],
+      "canale": "misto",
+      "fonti": [
+        {
+          "titolo": "Reg. (CE) 852/2004 sull'igiene dei prodotti alimentari",
+          "verificata_il": "2026-11-24",
+          "riferimento": "art. 5",
+          "url": "https://eur-lex.europa.eu/legal-content/IT/TXT/?uri=CELEX:32004R0852"
+        }
+      ],
+      "stato_verifica": "bozza"
+    },
+    {
+      "id": "scia_ricettiva",
+      "titolo": "Presentare la SCIA per la struttura extra-alberghiera",
+      "tipo": "presentazione",
+      "ente": "suap.051026",
+      "attore": "richiedente",
+      "documenti_richiesti": [],
+      "documenti_prodotti": [
+        {
+          "id": "ricevuta_scia_ricettiva",
+          "nome": "Ricevuta SUAP della SCIA"
+        }
+      ],
+      "costi": [
+        {
+          "voce": "Diritti SUAP del Comune di Montevarchi"
+        },
+        {
+          "voce": "Imposta di bollo"
+        }
+      ],
+      "tempi": {
+        "previsto_giorni": 0,
+        "silenzio_assenso": false
+      },
+      "dipende_da": [
+        "requisiti_soggettivi",
+        "verifica_locale",
+        "iscrizione_impresa"
+      ],
+      "canale": "online",
+      "fonti": [
+        {
+          "titolo": "L.R. Toscana 61/2024 - Testo unico del turismo (sintesi ANCI Toscana)",
+          "verificata_il": "2026-11-24",
+          "riferimento": "art. 48",
+          "url": "https://ancitoscana.it/wp-content/uploads/2025/04/7.2.25_TU-Turismo-Norme-strutture-ricettive.pdf"
+        },
+        {
+          "titolo": "Elenco modulistica unica regionale in uso al 7 ottobre 2026",
+          "verificata_il": "2026-11-24",
+          "riferimento": "SCIA per strutture ricettive extra alberghiere - d.d. 10309/2026",
+          "url": "https://www.regione.toscana.it/documents/d/guest/elenco-della-modulistica-unica-in-uso-al-7-ottobre-2026-pdf"
+        },
+        {
+          "titolo": "Comune di Montevarchi - Accedere allo Sportello SUAP (STAR)",
+          "verificata_il": "2026-11-24",
+          "url": "https://www.comune.montevarchi.ar.it/servizi/servizio-dettaglio/2246471"
+        },
+        {
+          "titolo": "Comune di Montevarchi - Tariffe diritti SUAP",
+          "verificata_il": "2026-11-24",
+          "url": "https://www.comune.montevarchi.ar.it/documenti/2246544/tariffe-diritti-suap"
+        }
+      ],
+      "stato_verifica": "verificato_fonti",
+      "note": "Si presenta online su STAR con SPID, CIE o CNS. Con la SCIA puoi iniziare dalla data di presentazione."
+    },
+    {
+      "id": "notifica_sanitaria",
+      "titolo": "Notifica sanitaria per la registrazione dell'attività alimentare",
+      "tipo": "comunicazione",
+      "ente": "asl.toscana-sud-est",
+      "attore": "richiedente",
+      "dipende_da": [
+        "scia_ricettiva",
+        "piano_autocontrollo"
+      ],
+      "condizioni": [
+        {
+          "domanda": "colazione",
+          "valore": true
+        }
+      ],
+      "canale": "online",
+      "fonti": [
+        {
+          "titolo": "Reg. (CE) 852/2004 sull'igiene dei prodotti alimentari",
+          "verificata_il": "2026-11-24",
+          "riferimento": "art. 6",
+          "url": "https://eur-lex.europa.eu/legal-content/IT/TXT/?uri=CELEX:32004R0852"
+        },
+        {
+          "titolo": "Elenco modulistica unica regionale in uso al 7 ottobre 2026",
+          "verificata_il": "2026-11-24",
+          "riferimento": "Notifica sanitaria ai fini della registrazione - DGR 673/2024",
+          "url": "https://www.regione.toscana.it/documents/d/guest/elenco-della-modulistica-unica-in-uso-al-7-ottobre-2026-pdf"
+        }
+      ],
+      "stato_verifica": "bozza",
+      "note": "Si presenta tramite il SUAP, che la inoltra alla ASL."
+    },
+    {
+      "id": "cin",
+      "titolo": "Ottenere CIR regionale e CIN nazionale",
+      "tipo": "iscrizione",
+      "ente": "ministero-turismo",
+      "attore": "richiedente",
+      "dipende_da": [
+        "scia_ricettiva"
+      ],
+      "canale": "online",
+      "fonti": [
+        {
+          "titolo": "Camera di Commercio di Firenze - Locazioni turistiche in Toscana (L.R. 61/2024)",
+          "verificata_il": "2026-11-24",
+          "url": "https://sni.unioncamere.it/sites/default/files/approfondimento/documenti/Locazioni_turistiche_firenze.pdf"
+        }
+      ],
+      "stato_verifica": "verificato_fonti",
+      "note": "Prima il CIR dalla Regione, poi il CIN dalla banca dati del Ministero. Il CIN va esposto all'esterno e indicato in ogni annuncio."
+    },
+    {
+      "id": "alloggiati",
+      "titolo": "Registrarsi ad Alloggiati Web e comunicare gli ospiti",
+      "tipo": "comunicazione",
+      "ente": "questura.arezzo",
+      "attore": "richiedente",
+      "dipende_da": [
+        "cin"
+      ],
+      "canale": "online",
+      "fonti": [
+        {
+          "titolo": "R.D. 773/1931 - Testo unico delle leggi di pubblica sicurezza",
+          "verificata_il": "2026-11-24",
+          "riferimento": "art. 109",
+          "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:regio.decreto:1931-06-18;773"
+        }
+      ],
+      "stato_verifica": "bozza",
+      "note": "Ogni ospite va comunicato alla Questura entro 24 ore dall'arrivo."
+    },
+    {
+      "id": "prezzi_periodi",
+      "titolo": "Esporre i prezzi e rispettare i periodi di apertura",
+      "tipo": "requisito",
+      "ente": "richiedente",
+      "attore": "richiedente",
+      "dipende_da": [
+        "scia_ricettiva"
+      ],
+      "canale": "misto",
+      "fonti": [
+        {
+          "titolo": "L.R. Toscana 61/2024 - Testo unico del turismo (sintesi ANCI Toscana)",
+          "verificata_il": "2026-11-24",
+          "riferimento": "artt. 49 e 73",
+          "url": "https://ancitoscana.it/wp-content/uploads/2025/04/7.2.25_TU-Turismo-Norme-strutture-ricettive.pdf"
+        }
+      ],
+      "stato_verifica": "verificato_fonti",
+      "note": "Apertura annuale di almeno 9 mesi o stagionale tra 3 e 9 mesi."
+    },
+    {
+      "id": "insegna",
+      "titolo": "Autorizzazione per l'insegna",
+      "tipo": "autorizzazione",
+      "ente": "suap.051026",
+      "attore": "richiedente",
+      "costi": [
+        {
+          "voce": "Canone unico patrimoniale (esposizione pubblicitaria)"
+        }
+      ],
+      "dipende_da": [
+        "scia_ricettiva"
+      ],
+      "condizioni": [
+        {
+          "domanda": "insegna",
+          "valore": true
+        }
+      ],
+      "canale": "online",
+      "fonti": [
+        {
+          "titolo": "Comune di Montevarchi - Piano degli impianti pubblicitari",
+          "verificata_il": "2026-11-24",
+          "url": "https://www.sitmontevarchi.it/piano_pubblicita"
+        },
+        {
+          "titolo": "D.Lgs. 285/1992 - Codice della strada",
+          "verificata_il": "2026-11-24",
+          "riferimento": "art. 23",
+          "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:1992-04-30;285"
+        }
+      ],
+      "stato_verifica": "bozza",
+      "note": "Vedi la procedura «Installare un'insegna»."
+    },
+    {
+      "id": "controlli_suap",
+      "titolo": "Controlli del Comune sulla SCIA",
+      "tipo": "controllo",
+      "ente": "suap.051026",
+      "attore": "ente",
+      "tempi": {
+        "previsto_giorni": 60
+      },
+      "dipende_da": [
+        "scia_ricettiva"
+      ],
+      "canale": "online",
+      "fonti": [
+        {
+          "titolo": "L. 241/1990",
+          "verificata_il": "2026-11-24",
+          "riferimento": "art. 19 (SCIA)",
+          "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:legge:1990-08-07;241~art19"
+        }
+      ],
+      "stato_verifica": "verificato_fonti",
+      "note": "Entro 60 giorni il Comune può vietare la prosecuzione se mancano i requisiti."
+    }
+  ]
+}

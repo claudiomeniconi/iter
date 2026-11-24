@@ -1,0 +1,169 @@
+{
+  "id": "montevarchi.spazi.insegna",
+  "modello": "spazi.insegna",
+  "titolo": "Installare un'insegna o un impianto pubblicitario",
+  "descrizione": "Autorizzazione per insegne d'esercizio, cartelli e altri mezzi pubblicitari a Montevarchi. Bozza della Fase 0: ogni passaggio va confermato con l'ente competente o con un professionista.",
+  "territorio": {
+    "livello": "comunale",
+    "nome": "Montevarchi (AR)",
+    "codice_istat": "051026",
+    "percorso": "it/toscana/ar/montevarchi"
+  },
+  "categoria": "impresa",
+  "stato": "bozza",
+  "versione": "0.1.0",
+  "ultima_verifica": "2026-11-24",
+  "domande": [
+    {
+      "id": "centro_storico",
+      "testo": "L'insegna è nel centro storico o su un edificio vincolato?",
+      "tipo": "si_no"
+    },
+    {
+      "id": "lungo_strada",
+      "testo": "È un cartello lungo una strada fuori dal centro abitato?",
+      "tipo": "si_no"
+    }
+  ],
+  "enti": [
+    {
+      "id": "richiedente"
+    },
+    {
+      "id": "soprintendenza.si-gr-ar"
+    },
+    {
+      "id": "suap.051026"
+    },
+    {
+      "id": "polizia-municipale.051026"
+    }
+  ],
+  "passaggi": [
+    {
+      "id": "progetto_insegna",
+      "titolo": "Preparare il bozzetto e verificare il Piano degli impianti pubblicitari",
+      "tipo": "requisito",
+      "ente": "richiedente",
+      "attore": "professionista",
+      "dipende_da": [],
+      "canale": "misto",
+      "fonti": [
+        {
+          "titolo": "Comune di Montevarchi - Piano degli impianti pubblicitari",
+          "verificata_il": "2026-11-24",
+          "url": "https://www.sitmontevarchi.it/piano_pubblicita"
+        }
+      ],
+      "stato_verifica": "bozza"
+    },
+    {
+      "id": "soprintendenza",
+      "titolo": "Autorizzazione della Soprintendenza",
+      "tipo": "autorizzazione",
+      "ente": "soprintendenza.si-gr-ar",
+      "attore": "professionista",
+      "dipende_da": [
+        "progetto_insegna"
+      ],
+      "condizioni": [
+        {
+          "domanda": "centro_storico",
+          "valore": true
+        }
+      ],
+      "canale": "online",
+      "fonti": [
+        {
+          "titolo": "D.Lgs. 42/2004",
+          "verificata_il": "2026-11-24",
+          "riferimento": "art. 49",
+          "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2004-01-22;42~art49"
+        }
+      ],
+      "stato_verifica": "bozza"
+    },
+    {
+      "id": "domanda_insegna",
+      "titolo": "Presentare la domanda di autorizzazione",
+      "tipo": "autorizzazione",
+      "ente": "suap.051026",
+      "attore": "richiedente",
+      "costi": [
+        {
+          "voce": "Imposta di bollo"
+        },
+        {
+          "voce": "Canone unico patrimoniale (esposizione pubblicitaria)"
+        }
+      ],
+      "dipende_da": [
+        "progetto_insegna"
+      ],
+      "canale": "online",
+      "fonti": [
+        {
+          "titolo": "D.Lgs. 285/1992 - Codice della strada",
+          "verificata_il": "2026-11-24",
+          "riferimento": "art. 23",
+          "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:1992-04-30;285"
+        },
+        {
+          "titolo": "L. 160/2019 - Canone unico patrimoniale",
+          "verificata_il": "2026-11-24",
+          "riferimento": "art. 1, commi 816-847",
+          "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:legge:2019-12-27;160"
+        }
+      ],
+      "stato_verifica": "bozza"
+    },
+    {
+      "id": "nulla_osta_strada",
+      "titolo": "Nulla osta dell'ente proprietario della strada",
+      "tipo": "autorizzazione",
+      "ente": "polizia-municipale.051026",
+      "attore": "ente",
+      "dipende_da": [
+        "domanda_insegna"
+      ],
+      "condizioni": [
+        {
+          "domanda": "lungo_strada",
+          "valore": true
+        }
+      ],
+      "canale": "online",
+      "fonti": [
+        {
+          "titolo": "D.Lgs. 285/1992 - Codice della strada",
+          "verificata_il": "2026-11-24",
+          "riferimento": "art. 23, comma 4",
+          "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:1992-04-30;285"
+        }
+      ],
+      "stato_verifica": "bozza"
+    },
+    {
+      "id": "installazione",
+      "titolo": "Installare l'insegna e pagare il canone ogni anno",
+      "tipo": "pagamento",
+      "ente": "suap.051026",
+      "attore": "richiedente",
+      "dipende_da": [
+        "domanda_insegna",
+        "soprintendenza",
+        "nulla_osta_strada"
+      ],
+      "canale": "online",
+      "fonti": [
+        {
+          "titolo": "L. 160/2019 - Canone unico patrimoniale",
+          "verificata_il": "2026-11-24",
+          "riferimento": "art. 1, commi 816-847",
+          "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:legge:2019-12-27;160"
+        }
+      ],
+      "stato_verifica": "bozza"
+    }
+  ]
+}

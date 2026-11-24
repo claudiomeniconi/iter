@@ -24,5 +24,25 @@
     "tipo": "comunale",
     "territorio": "it/toscana/ar/montevarchi",
     "sito": "https://www.sitmontevarchi.it/suap"
+  },
+  {
+    "id": "polizia-municipale.051026",
+    "nome": "Polizia Municipale di Montevarchi",
+    "tipo": "comunale",
+    "territorio": "it/toscana/ar/montevarchi"
+  },
+  {
+    "id": "cvlps.051026",
+    "nome": "Commissione comunale di vigilanza sui locali di pubblico spettacolo",
+    "tipo": "comunale",
+    "territorio": "it/toscana/ar/montevarchi",
+    "descrizione": "Verifica la sicurezza di locali e luoghi di spettacolo e intrattenimento."
+  },
+  {
+    "id": "comune.051026.demografici",
+    "nome": "Comune di Montevarchi - Servizi demografici",
+    "tipo": "comunale",
+    "territorio": "it/toscana/ar/montevarchi",
+    "sito": "https://www.comune.montevarchi.ar.it/servizi"
   }
 ]

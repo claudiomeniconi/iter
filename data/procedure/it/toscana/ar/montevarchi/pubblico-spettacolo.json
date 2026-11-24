@@ -1,0 +1,245 @@
+{
+  "id": "montevarchi.eventi.pubblico-spettacolo",
+  "modello": "eventi.pubblico-spettacolo",
+  "titolo": "Organizzare uno spettacolo o un evento pubblico",
+  "descrizione": "Licenza o SCIA per spettacoli e intrattenimenti aperti al pubblico (concerti, feste, serate danzanti) a Montevarchi. Bozza della Fase 0: ogni passaggio va confermato con l'ente competente o con un professionista.",
+  "territorio": {
+    "livello": "comunale",
+    "nome": "Montevarchi (AR)",
+    "codice_istat": "051026",
+    "percorso": "it/toscana/ar/montevarchi"
+  },
+  "categoria": "impresa",
+  "stato": "bozza",
+  "versione": "0.1.0",
+  "ultima_verifica": "2026-11-24",
+  "domande": [
+    {
+      "id": "oltre_200",
+      "testo": "Sono previste più di 200 persone?",
+      "tipo": "si_no"
+    },
+    {
+      "id": "strutture",
+      "testo": "Ci sono palchi, tribune o altre strutture allestite?",
+      "tipo": "si_no"
+    },
+    {
+      "id": "suolo_pubblico",
+      "testo": "L'evento è su suolo pubblico?",
+      "tipo": "si_no"
+    },
+    {
+      "id": "musica",
+      "testo": "C'è musica amplificata?",
+      "tipo": "si_no"
+    }
+  ],
+  "enti": [
+    {
+      "id": "richiedente"
+    },
+    {
+      "id": "cvlps.051026"
+    },
+    {
+      "id": "suap.051026"
+    }
+  ],
+  "passaggi": [
+    {
+      "id": "requisiti_soggettivi",
+      "titolo": "Verificare i requisiti morali",
+      "tipo": "requisito",
+      "ente": "richiedente",
+      "attore": "richiedente",
+      "dipende_da": [],
+      "canale": "misto",
+      "fonti": [
+        {
+          "titolo": "R.D. 773/1931 - Testo unico delle leggi di pubblica sicurezza",
+          "verificata_il": "2026-11-24",
+          "riferimento": "art. 11",
+          "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:regio.decreto:1931-06-18;773"
+        }
+      ],
+      "stato_verifica": "bozza"
+    },
+    {
+      "id": "progetto_sicurezza",
+      "titolo": "Preparare progetto e piano di sicurezza dell'evento",
+      "tipo": "requisito",
+      "ente": "richiedente",
+      "attore": "professionista",
+      "dipende_da": [],
+      "canale": "misto",
+      "fonti": [
+        {
+          "titolo": "D.M. Interno 19/08/1996 - Regola tecnica locali di pubblico spettacolo",
+          "verificata_il": "2026-11-24"
+        }
+      ],
+      "stato_verifica": "bozza"
+    },
+    {
+      "id": "parere_cvlps",
+      "titolo": "Parere della Commissione di vigilanza sui locali di pubblico spettacolo",
+      "tipo": "controllo",
+      "ente": "cvlps.051026",
+      "attore": "ente",
+      "dipende_da": [
+        "progetto_sicurezza"
+      ],
+      "condizioni": [
+        {
+          "domanda": "oltre_200",
+          "valore": true
+        }
+      ],
+      "canale": "online",
+      "fonti": [
+        {
+          "titolo": "R.D. 773/1931 - Testo unico delle leggi di pubblica sicurezza",
+          "verificata_il": "2026-11-24",
+          "riferimento": "art. 80",
+          "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:regio.decreto:1931-06-18;773"
+        },
+        {
+          "titolo": "D.P.R. 311/2001",
+          "verificata_il": "2026-11-24",
+          "riferimento": "art. 4",
+          "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:presidente.repubblica:2001-05-28;311~art4"
+        }
+      ],
+      "stato_verifica": "bozza",
+      "note": "Fino a 200 persone il parere può essere sostituito dalla relazione di un tecnico abilitato."
+    },
+    {
+      "id": "collaudo_strutture",
+      "titolo": "Certificati di corretto montaggio delle strutture",
+      "tipo": "requisito",
+      "ente": "richiedente",
+      "attore": "professionista",
+      "dipende_da": [
+        "progetto_sicurezza"
+      ],
+      "condizioni": [
+        {
+          "domanda": "strutture",
+          "valore": true
+        }
+      ],
+      "canale": "misto",
+      "fonti": [
+        {
+          "titolo": "D.M. Interno 19/08/1996",
+          "verificata_il": "2026-11-24"
+        }
+      ],
+      "stato_verifica": "bozza"
+    },
+    {
+      "id": "suolo_pubblico",
+      "titolo": "Concessione temporanea di suolo pubblico",
+      "tipo": "autorizzazione",
+      "ente": "suap.051026",
+      "attore": "richiedente",
+      "costi": [
+        {
+          "voce": "Canone unico patrimoniale"
+        }
+      ],
+      "dipende_da": [],
+      "condizioni": [
+        {
+          "domanda": "suolo_pubblico",
+          "valore": true
+        }
+      ],
+      "canale": "online",
+      "fonti": [
+        {
+          "titolo": "L. 160/2019 - Canone unico patrimoniale",
+          "verificata_il": "2026-11-24",
+          "riferimento": "art. 1, commi 816-847",
+          "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:legge:2019-12-27;160"
+        }
+      ],
+      "stato_verifica": "bozza"
+    },
+    {
+      "id": "deroga_rumore",
+      "titolo": "Deroga ai limiti di rumore",
+      "tipo": "autorizzazione",
+      "ente": "suap.051026",
+      "attore": "richiedente",
+      "dipende_da": [],
+      "condizioni": [
+        {
+          "domanda": "musica",
+          "valore": true
+        }
+      ],
+      "canale": "online",
+      "fonti": [
+        {
+          "titolo": "L. 447/1995",
+          "verificata_il": "2026-11-24",
+          "riferimento": "art. 6",
+          "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:legge:1995-10-26;447~art6"
+        }
+      ],
+      "stato_verifica": "bozza"
+    },
+    {
+      "id": "licenza",
+      "titolo": "Ottenere la licenza (o presentare la SCIA fino a 200 persone e conclusione entro le 24)",
+      "tipo": "autorizzazione",
+      "ente": "suap.051026",
+      "attore": "richiedente",
+      "dipende_da": [
+        "requisiti_soggettivi",
+        "parere_cvlps",
+        "collaudo_strutture",
+        "suolo_pubblico",
+        "deroga_rumore"
+      ],
+      "canale": "online",
+      "fonti": [
+        {
+          "titolo": "R.D. 773/1931 - Testo unico delle leggi di pubblica sicurezza",
+          "verificata_il": "2026-11-24",
+          "riferimento": "artt. 68 e 80",
+          "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:regio.decreto:1931-06-18;773"
+        }
+      ],
+      "stato_verifica": "bozza",
+      "note": "Per eventi fino a 200 partecipanti che si concludono entro le 24 dello stesso giorno basta una SCIA."
+    },
+    {
+      "id": "siae",
+      "titolo": "Permessi SIAE per la musica",
+      "tipo": "pagamento",
+      "ente": "richiedente",
+      "attore": "richiedente",
+      "dipende_da": [
+        "licenza"
+      ],
+      "condizioni": [
+        {
+          "domanda": "musica",
+          "valore": true
+        }
+      ],
+      "canale": "online",
+      "fonti": [
+        {
+          "titolo": "L. 633/1941 - Diritto d'autore",
+          "verificata_il": "2026-11-24",
+          "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:legge:1941-04-22;633"
+        }
+      ],
+      "stato_verifica": "bozza"
+    }
+  ]
+}

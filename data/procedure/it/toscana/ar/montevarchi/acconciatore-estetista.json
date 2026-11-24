@@ -1,0 +1,359 @@
+{
+  "id": "montevarchi.servizi.acconciatore-estetista",
+  "modello": "servizi.acconciatore-estetista",
+  "titolo": "Aprire un salone di acconciatore o un centro estetico",
+  "descrizione": "Apertura di un'attività di acconciatore o di estetista a Montevarchi, in negozio o presso il proprio domicilio. Bozza della Fase 0: ogni passaggio va confermato con l'ente competente o con un professionista.",
+  "territorio": {
+    "livello": "comunale",
+    "nome": "Montevarchi (AR)",
+    "codice_istat": "051026",
+    "percorso": "it/toscana/ar/montevarchi"
+  },
+  "categoria": "impresa",
+  "stato": "bozza",
+  "versione": "0.1.0",
+  "ultima_verifica": "2026-11-24",
+  "domande": [
+    {
+      "id": "abilitazione",
+      "testo": "Tu o un collaboratore avete già l'abilitazione professionale?",
+      "tipo": "si_no"
+    },
+    {
+      "id": "impresa_gia_attiva",
+      "testo": "Hai già un'impresa attiva (partita IVA e iscrizione al Registro Imprese)?",
+      "tipo": "si_no"
+    },
+    {
+      "id": "servono_lavori",
+      "testo": "Servono lavori edilizi o un cambio di destinazione d'uso?",
+      "tipo": "si_no"
+    },
+    {
+      "id": "insegna",
+      "testo": "Vuoi installare un'insegna?",
+      "tipo": "si_no"
+    }
+  ],
+  "enti": [
+    {
+      "id": "richiedente"
+    },
+    {
+      "id": "comune.051026.edilizia"
+    },
+    {
+      "id": "cciaa.arezzo-siena"
+    },
+    {
+      "id": "suap.051026"
+    }
+  ],
+  "passaggi": [
+    {
+      "id": "requisiti_soggettivi",
+      "titolo": "Verificare i requisiti morali",
+      "tipo": "requisito",
+      "ente": "richiedente",
+      "attore": "richiedente",
+      "dipende_da": [],
+      "canale": "misto",
+      "fonti": [
+        {
+          "titolo": "Comune di Arezzo - Vademecum acconciatori ed estetiste (prassi toscana)",
+          "verificata_il": "2026-11-24",
+          "url": "https://www.comune.arezzo.it/sites/default/files/vademecum_acconciatori_ed_estetiste_v1.0.pdf"
+        }
+      ],
+      "stato_verifica": "bozza"
+    },
+    {
+      "id": "abilitazione_professionale",
+      "titolo": "Ottenere l'abilitazione professionale (corso ed esame)",
+      "tipo": "requisito",
+      "ente": "richiedente",
+      "attore": "richiedente",
+      "dipende_da": [],
+      "condizioni": [
+        {
+          "domanda": "abilitazione",
+          "valore": false
+        }
+      ],
+      "canale": "misto",
+      "fonti": [
+        {
+          "titolo": "L. 174/2005 - Disciplina dell'attività di acconciatore",
+          "verificata_il": "2026-11-24",
+          "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:legge:2005-02-17;174"
+        },
+        {
+          "titolo": "L. 1/1990 - Disciplina dell'attività di estetista",
+          "verificata_il": "2026-11-24",
+          "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:legge:1990-01-04;1"
+        },
+        {
+          "titolo": "Comune di Arezzo - Vademecum acconciatori ed estetiste (prassi toscana)",
+          "verificata_il": "2026-11-24",
+          "url": "https://www.comune.arezzo.it/sites/default/files/vademecum_acconciatori_ed_estetiste_v1.0.pdf"
+        }
+      ],
+      "stato_verifica": "bozza"
+    },
+    {
+      "id": "responsabile_tecnico",
+      "titolo": "Designare il responsabile tecnico abilitato per la sede",
+      "tipo": "requisito",
+      "ente": "richiedente",
+      "attore": "richiedente",
+      "dipende_da": [
+        "requisiti_soggettivi"
+      ],
+      "canale": "misto",
+      "fonti": [
+        {
+          "titolo": "Comune di Arezzo - Vademecum acconciatori ed estetiste (prassi toscana)",
+          "verificata_il": "2026-11-24",
+          "url": "https://www.comune.arezzo.it/sites/default/files/vademecum_acconciatori_ed_estetiste_v1.0.pdf"
+        }
+      ],
+      "stato_verifica": "verificato_fonti",
+      "note": "In ogni sede deve esserci sempre almeno una persona abilitata: titolare, socio, familiare o dipendente."
+    },
+    {
+      "id": "verifica_locale",
+      "titolo": "Verificare che il locale sia idoneo (destinazione d'uso, agibilità, requisiti igienici)",
+      "tipo": "requisito",
+      "ente": "comune.051026.edilizia",
+      "attore": "professionista",
+      "documenti_richiesti": [
+        {
+          "id": "planimetria_locale",
+          "nome": "Planimetria del locale"
+        }
+      ],
+      "dipende_da": [],
+      "canale": "misto",
+      "fonti": [
+        {
+          "titolo": "L.R. Toscana 65/2014 - Norme per il governo del territorio",
+          "verificata_il": "2026-11-24",
+          "url": "https://raccoltanormativa.consiglio.regione.toscana.it/articolo?urndoc=urn:nir:regione.toscana:legge:2014-11-10;65"
+        },
+        {
+          "titolo": "Comune di Arezzo - Vademecum acconciatori ed estetiste (prassi toscana)",
+          "verificata_il": "2026-11-24",
+          "url": "https://www.comune.arezzo.it/sites/default/files/vademecum_acconciatori_ed_estetiste_v1.0.pdf"
+        }
+      ],
+      "stato_verifica": "bozza",
+      "note": "Serve una destinazione d'uso compatibile (di solito artigianale) e l'agibilità. L'attività a domicilio è ammessa con limiti di superficie e ingresso e bagno autonomi."
+    },
+    {
+      "id": "pratica_edilizia",
+      "titolo": "Presentare la pratica edilizia per lavori o cambio d'uso",
+      "tipo": "presentazione",
+      "ente": "comune.051026.edilizia",
+      "attore": "professionista",
+      "dipende_da": [
+        "verifica_locale"
+      ],
+      "condizioni": [
+        {
+          "domanda": "servono_lavori",
+          "valore": true
+        }
+      ],
+      "canale": "online",
+      "fonti": [
+        {
+          "titolo": "Regione Toscana - Modulistica unica per attività produttive ed edilizia",
+          "verificata_il": "2026-11-24",
+          "riferimento": "CILA, SCIA edilizia o permesso di costruire",
+          "url": "https://www.regione.toscana.it/-/modulistica-unica-regionale-per-le-attivita-produttive-e-l-attivita-edilizia"
+        }
+      ],
+      "stato_verifica": "bozza",
+      "note": "Vedi le procedure edilizie di Iter (CILA, SCIA edilizia)."
+    },
+    {
+      "id": "iscrizione_impresa",
+      "titolo": "Aprire la partita IVA e iscrivere l'impresa (Comunicazione Unica)",
+      "tipo": "iscrizione",
+      "ente": "cciaa.arezzo-siena",
+      "attore": "professionista",
+      "documenti_prodotti": [
+        {
+          "id": "partita_iva",
+          "nome": "Partita IVA"
+        },
+        {
+          "id": "iscrizione_registro_imprese",
+          "nome": "Iscrizione al Registro Imprese"
+        }
+      ],
+      "dipende_da": [
+        "requisiti_soggettivi"
+      ],
+      "condizioni": [
+        {
+          "domanda": "impresa_gia_attiva",
+          "valore": false
+        }
+      ],
+      "canale": "online",
+      "fonti": [
+        {
+          "titolo": "D.L. 7/2007 - Comunicazione Unica",
+          "verificata_il": "2026-11-24",
+          "riferimento": "art. 9",
+          "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legge:2007-01-31;7~art9"
+        }
+      ],
+      "stato_verifica": "bozza",
+      "note": "Vedi anche la procedura «Aprire una ditta individuale»."
+    },
+    {
+      "id": "scia_acconciatore_estetista",
+      "titolo": "Presentare la SCIA di acconciatore o estetista",
+      "tipo": "presentazione",
+      "ente": "suap.051026",
+      "attore": "richiedente",
+      "documenti_richiesti": [],
+      "documenti_prodotti": [
+        {
+          "id": "ricevuta_scia_acconciatore_estetista",
+          "nome": "Ricevuta SUAP della SCIA"
+        }
+      ],
+      "costi": [
+        {
+          "voce": "Diritti SUAP del Comune di Montevarchi"
+        },
+        {
+          "voce": "Imposta di bollo"
+        }
+      ],
+      "tempi": {
+        "previsto_giorni": 0,
+        "silenzio_assenso": false
+      },
+      "dipende_da": [
+        "responsabile_tecnico",
+        "verifica_locale",
+        "iscrizione_impresa"
+      ],
+      "canale": "online",
+      "fonti": [
+        {
+          "titolo": "Elenco modulistica unica regionale in uso al 7 ottobre 2026",
+          "verificata_il": "2026-11-24",
+          "riferimento": "SCIA per l'esercizio dell'attività di acconciatore e/o estetista - d.d. 13367/2019",
+          "url": "https://www.regione.toscana.it/documents/d/guest/elenco-della-modulistica-unica-in-uso-al-7-ottobre-2026-pdf"
+        },
+        {
+          "titolo": "Comune di Arezzo - Vademecum acconciatori ed estetiste (prassi toscana)",
+          "verificata_il": "2026-11-24",
+          "url": "https://www.comune.arezzo.it/sites/default/files/vademecum_acconciatori_ed_estetiste_v1.0.pdf"
+        },
+        {
+          "titolo": "Comune di Montevarchi - Accedere allo Sportello SUAP (STAR)",
+          "verificata_il": "2026-11-24",
+          "url": "https://www.comune.montevarchi.ar.it/servizi/servizio-dettaglio/2246471"
+        },
+        {
+          "titolo": "Comune di Montevarchi - Tariffe diritti SUAP",
+          "verificata_il": "2026-11-24",
+          "url": "https://www.comune.montevarchi.ar.it/documenti/2246544/tariffe-diritti-suap"
+        }
+      ],
+      "stato_verifica": "verificato_fonti",
+      "note": "Si presenta online su STAR con SPID, CIE o CNS. Con la SCIA puoi iniziare dalla data di presentazione."
+    },
+    {
+      "id": "albo_artigiani",
+      "titolo": "Iscriversi come impresa artigiana (se ne hai i requisiti)",
+      "tipo": "iscrizione",
+      "ente": "cciaa.arezzo-siena",
+      "attore": "professionista",
+      "dipende_da": [
+        "scia_acconciatore_estetista"
+      ],
+      "canale": "online",
+      "fonti": [
+        {
+          "titolo": "L.R. Toscana 53/2008 - Artigianato",
+          "verificata_il": "2026-11-24"
+        },
+        {
+          "titolo": "Comune di Arezzo - Vademecum acconciatori ed estetiste (prassi toscana)",
+          "verificata_il": "2026-11-24",
+          "url": "https://www.comune.arezzo.it/sites/default/files/vademecum_acconciatori_ed_estetiste_v1.0.pdf"
+        }
+      ],
+      "stato_verifica": "bozza",
+      "note": "Vedi la procedura «Iscriversi all'Albo delle imprese artigiane»."
+    },
+    {
+      "id": "insegna",
+      "titolo": "Autorizzazione per l'insegna",
+      "tipo": "autorizzazione",
+      "ente": "suap.051026",
+      "attore": "richiedente",
+      "costi": [
+        {
+          "voce": "Canone unico patrimoniale (esposizione pubblicitaria)"
+        }
+      ],
+      "dipende_da": [
+        "scia_acconciatore_estetista"
+      ],
+      "condizioni": [
+        {
+          "domanda": "insegna",
+          "valore": true
+        }
+      ],
+      "canale": "online",
+      "fonti": [
+        {
+          "titolo": "Comune di Montevarchi - Piano degli impianti pubblicitari",
+          "verificata_il": "2026-11-24",
+          "url": "https://www.sitmontevarchi.it/piano_pubblicita"
+        },
+        {
+          "titolo": "D.Lgs. 285/1992 - Codice della strada",
+          "verificata_il": "2026-11-24",
+          "riferimento": "art. 23",
+          "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:1992-04-30;285"
+        }
+      ],
+      "stato_verifica": "bozza",
+      "note": "Vedi la procedura «Installare un'insegna»."
+    },
+    {
+      "id": "controlli_suap",
+      "titolo": "Controlli del Comune sulla SCIA",
+      "tipo": "controllo",
+      "ente": "suap.051026",
+      "attore": "ente",
+      "tempi": {
+        "previsto_giorni": 60
+      },
+      "dipende_da": [
+        "scia_acconciatore_estetista"
+      ],
+      "canale": "online",
+      "fonti": [
+        {
+          "titolo": "L. 241/1990",
+          "verificata_il": "2026-11-24",
+          "riferimento": "art. 19 (SCIA)",
+          "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:legge:1990-08-07;241~art19"
+        }
+      ],
+      "stato_verifica": "verificato_fonti",
+      "note": "Entro 60 giorni il Comune può vietare la prosecuzione se mancano i requisiti."
+    }
+  ]
+}

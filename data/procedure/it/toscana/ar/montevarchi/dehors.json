@@ -1,0 +1,191 @@
+{
+  "id": "montevarchi.spazi.dehors",
+  "modello": "spazi.dehors",
+  "titolo": "Chiedere suolo pubblico per un dehors",
+  "descrizione": "Concessione di suolo pubblico per tavoli e sedie all'aperto di un bar o ristorante a Montevarchi. Bozza della Fase 0: ogni passaggio va confermato con l'ente competente o con un professionista.",
+  "territorio": {
+    "livello": "comunale",
+    "nome": "Montevarchi (AR)",
+    "codice_istat": "051026",
+    "percorso": "it/toscana/ar/montevarchi"
+  },
+  "categoria": "impresa",
+  "stato": "bozza",
+  "versione": "0.1.0",
+  "ultima_verifica": "2026-11-24",
+  "domande": [
+    {
+      "id": "centro_storico",
+      "testo": "Il locale è nel centro storico o in un'area vincolata?",
+      "tipo": "si_no"
+    },
+    {
+      "id": "strutture",
+      "testo": "Il dehors ha strutture fisse o coperture (pedane, gazebo)?",
+      "tipo": "si_no"
+    }
+  ],
+  "enti": [
+    {
+      "id": "richiedente"
+    },
+    {
+      "id": "soprintendenza.si-gr-ar"
+    },
+    {
+      "id": "comune.051026.edilizia"
+    },
+    {
+      "id": "suap.051026"
+    },
+    {
+      "id": "polizia-municipale.051026"
+    }
+  ],
+  "passaggi": [
+    {
+      "id": "progetto_dehors",
+      "titolo": "Preparare il progetto del dehors",
+      "tipo": "requisito",
+      "ente": "richiedente",
+      "attore": "professionista",
+      "dipende_da": [],
+      "canale": "misto",
+      "fonti": [
+        {
+          "titolo": "Comune di Arezzo - Vademecum somministrazione (FAQ 69-71, prassi toscana)",
+          "verificata_il": "2026-11-24",
+          "url": "https://www.comune.arezzo.it/sites/default/files/vademecum_esercizi_di_vicinato_e_somministrazione_v1.1.pdf"
+        }
+      ],
+      "stato_verifica": "bozza",
+      "note": "Sui marciapiedi va lasciato un passaggio libero per i pedoni. Da verificare le regole del regolamento di Montevarchi."
+    },
+    {
+      "id": "soprintendenza",
+      "titolo": "Autorizzazione della Soprintendenza",
+      "tipo": "autorizzazione",
+      "ente": "soprintendenza.si-gr-ar",
+      "attore": "professionista",
+      "dipende_da": [
+        "progetto_dehors"
+      ],
+      "condizioni": [
+        {
+          "domanda": "centro_storico",
+          "valore": true
+        }
+      ],
+      "canale": "online",
+      "fonti": [
+        {
+          "titolo": "D.Lgs. 42/2004 - Codice dei beni culturali",
+          "verificata_il": "2026-11-24",
+          "riferimento": "artt. 21 e 146",
+          "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2004-01-22;42"
+        }
+      ],
+      "stato_verifica": "bozza"
+    },
+    {
+      "id": "pratica_edilizia",
+      "titolo": "Titolo edilizio per strutture e coperture",
+      "tipo": "presentazione",
+      "ente": "comune.051026.edilizia",
+      "attore": "professionista",
+      "dipende_da": [
+        "progetto_dehors"
+      ],
+      "condizioni": [
+        {
+          "domanda": "strutture",
+          "valore": true
+        }
+      ],
+      "canale": "online",
+      "fonti": [
+        {
+          "titolo": "L.R. Toscana 65/2014 - Norme per il governo del territorio",
+          "verificata_il": "2026-11-24",
+          "url": "https://raccoltanormativa.consiglio.regione.toscana.it/articolo?urndoc=urn:nir:regione.toscana:legge:2014-11-10;65"
+        }
+      ],
+      "stato_verifica": "bozza"
+    },
+    {
+      "id": "domanda_concessione",
+      "titolo": "Chiedere la concessione di suolo pubblico",
+      "tipo": "autorizzazione",
+      "ente": "suap.051026",
+      "attore": "richiedente",
+      "costi": [
+        {
+          "voce": "Canone unico patrimoniale (occupazione)"
+        },
+        {
+          "voce": "Imposta di bollo"
+        }
+      ],
+      "dipende_da": [
+        "progetto_dehors"
+      ],
+      "canale": "online",
+      "fonti": [
+        {
+          "titolo": "L. 160/2019 - Canone unico patrimoniale",
+          "verificata_il": "2026-11-24",
+          "riferimento": "art. 1, commi 816-847",
+          "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:legge:2019-12-27;160"
+        },
+        {
+          "titolo": "Comune di Montevarchi - Catalogo dei servizi",
+          "verificata_il": "2026-11-24",
+          "url": "https://www.comune.montevarchi.ar.it/servizi"
+        }
+      ],
+      "stato_verifica": "bozza"
+    },
+    {
+      "id": "parere_pm",
+      "titolo": "Parere della Polizia Municipale sulla viabilità",
+      "tipo": "controllo",
+      "ente": "polizia-municipale.051026",
+      "attore": "ente",
+      "dipende_da": [
+        "domanda_concessione"
+      ],
+      "canale": "online",
+      "fonti": [
+        {
+          "titolo": "D.Lgs. 285/1992 - Codice della strada",
+          "verificata_il": "2026-11-24",
+          "riferimento": "art. 20",
+          "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:1992-04-30;285"
+        }
+      ],
+      "stato_verifica": "bozza"
+    },
+    {
+      "id": "rilascio",
+      "titolo": "Rilascio della concessione e pagamento del canone",
+      "tipo": "autorizzazione",
+      "ente": "suap.051026",
+      "attore": "ente",
+      "dipende_da": [
+        "parere_pm",
+        "soprintendenza",
+        "pratica_edilizia"
+      ],
+      "canale": "online",
+      "fonti": [
+        {
+          "titolo": "L. 160/2019 - Canone unico patrimoniale",
+          "verificata_il": "2026-11-24",
+          "riferimento": "art. 1, commi 816-847",
+          "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:legge:2019-12-27;160"
+        }
+      ],
+      "stato_verifica": "bozza"
+    }
+  ]
+}

@@ -25,5 +25,24 @@
     "tipo": "regionale",
     "territorio": "it/toscana",
     "sito": "https://www.regione.toscana.it"
+  },
+  {
+    "id": "questura.arezzo",
+    "nome": "Questura di Arezzo",
+    "tipo": "sicurezza",
+    "territorio": "it/toscana/ar"
+  },
+  {
+    "id": "arpat",
+    "nome": "ARPAT - Agenzia regionale per la protezione ambientale della Toscana",
+    "tipo": "regionale",
+    "territorio": "it/toscana",
+    "sito": "https://www.arpat.toscana.it"
+  },
+  {
+    "id": "soprintendenza.si-gr-ar",
+    "nome": "Soprintendenza Archeologia, Belle Arti e Paesaggio per le province di Siena, Grosseto e Arezzo",
+    "tipo": "statale",
+    "territorio": "it/toscana"
   }
 ]

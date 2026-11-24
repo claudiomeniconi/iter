@@ -1,0 +1,132 @@
+{
+  "id": "montevarchi.cittadino.carta-identita",
+  "modello": "cittadino.carta-identita",
+  "titolo": "Richiedere la carta d'identità elettronica",
+  "descrizione": "Rilascio o rinnovo della carta d'identità elettronica (CIE) all'ufficio anagrafe di Montevarchi. Bozza della Fase 0: ogni passaggio va confermato con l'ente competente o con un professionista.",
+  "territorio": {
+    "livello": "comunale",
+    "nome": "Montevarchi (AR)",
+    "codice_istat": "051026",
+    "percorso": "it/toscana/ar/montevarchi"
+  },
+  "categoria": "cittadino",
+  "stato": "bozza",
+  "versione": "0.1.0",
+  "ultima_verifica": "2026-11-24",
+  "domande": [
+    {
+      "id": "minorenne",
+      "testo": "La carta è per un minorenne?",
+      "tipo": "si_no"
+    }
+  ],
+  "enti": [
+    {
+      "id": "comune.051026.demografici"
+    },
+    {
+      "id": "richiedente"
+    },
+    {
+      "id": "ministero-interno"
+    }
+  ],
+  "passaggi": [
+    {
+      "id": "prenotazione",
+      "titolo": "Prenotare l'appuntamento",
+      "tipo": "comunicazione",
+      "ente": "comune.051026.demografici",
+      "attore": "richiedente",
+      "dipende_da": [],
+      "canale": "online",
+      "fonti": [
+        {
+          "titolo": "Ministero dell'Interno - Carta d'identità elettronica",
+          "verificata_il": "2026-11-24",
+          "url": "https://www.cartaidentita.interno.gov.it"
+        }
+      ],
+      "stato_verifica": "bozza",
+      "note": "Prenotazione sul portale ministeriale o direttamente con il Comune."
+    },
+    {
+      "id": "sportello",
+      "titolo": "Presentarsi allo sportello con foto e vecchio documento",
+      "tipo": "presentazione",
+      "ente": "comune.051026.demografici",
+      "attore": "richiedente",
+      "documenti_richiesti": [
+        {
+          "id": "fototessera",
+          "nome": "Fototessera recente"
+        },
+        {
+          "id": "vecchio_documento",
+          "nome": "Vecchio documento o denuncia di smarrimento"
+        }
+      ],
+      "costi": [
+        {
+          "voce": "Corrispettivo CIE più diritti comunali"
+        }
+      ],
+      "dipende_da": [
+        "prenotazione"
+      ],
+      "canale": "online",
+      "fonti": [
+        {
+          "titolo": "Ministero dell'Interno - Carta d'identità elettronica",
+          "verificata_il": "2026-11-24",
+          "url": "https://www.cartaidentita.interno.gov.it"
+        }
+      ],
+      "stato_verifica": "bozza"
+    },
+    {
+      "id": "assenso_genitori",
+      "titolo": "Assenso di entrambi i genitori per il valido per l'espatrio",
+      "tipo": "requisito",
+      "ente": "richiedente",
+      "attore": "richiedente",
+      "dipende_da": [],
+      "condizioni": [
+        {
+          "domanda": "minorenne",
+          "valore": true
+        }
+      ],
+      "canale": "misto",
+      "fonti": [
+        {
+          "titolo": "Ministero dell'Interno - Carta d'identità elettronica",
+          "verificata_il": "2026-11-24",
+          "url": "https://www.cartaidentita.interno.gov.it"
+        }
+      ],
+      "stato_verifica": "bozza"
+    },
+    {
+      "id": "consegna",
+      "titolo": "Ricevere la carta per posta o ritirarla",
+      "tipo": "attesa",
+      "ente": "ministero-interno",
+      "attore": "ente",
+      "dipende_da": [
+        "sportello",
+        "assenso_genitori"
+      ],
+      "canale": "online",
+      "fonti": [
+        {
+          "titolo": "Ministero dell'Interno - Carta d'identità elettronica",
+          "verificata_il": "2026-11-24",
+          "url": "https://www.cartaidentita.interno.gov.it"
+        }
+      ],
+      "stato_verifica": "bozza",
+      "note": "La carta viene prodotta dal Poligrafico dello Stato e consegnata in pochi giorni lavorativi."
+    }
+  ]
+}

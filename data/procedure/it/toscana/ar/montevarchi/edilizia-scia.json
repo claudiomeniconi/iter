@@ -1,0 +1,224 @@
+{
+  "id": "montevarchi.edilizia.scia",
+  "modello": "edilizia.scia",
+  "titolo": "Ristrutturazioni e altri lavori con SCIA edilizia",
+  "descrizione": "Segnalazione certificata di inizio attività edilizia per interventi come la ristrutturazione edilizia conservativa o la manutenzione straordinaria su parti strutturali. Bozza della Fase 0: ogni passaggio va confermato con l'ente competente o con un professionista.",
+  "territorio": {
+    "livello": "comunale",
+    "nome": "Montevarchi (AR)",
+    "codice_istat": "051026",
+    "percorso": "it/toscana/ar/montevarchi"
+  },
+  "categoria": "edilizia",
+  "stato": "bozza",
+  "versione": "0.1.0",
+  "ultima_verifica": "2026-11-24",
+  "domande": [
+    {
+      "id": "vincolo",
+      "testo": "L'immobile è in zona con vincolo paesaggistico o è un bene culturale?",
+      "tipo": "si_no"
+    },
+    {
+      "id": "strutturale",
+      "testo": "I lavori toccano parti strutturali dell'edificio?",
+      "tipo": "si_no"
+    }
+  ],
+  "enti": [
+    {
+      "id": "richiedente"
+    },
+    {
+      "id": "comune.051026.edilizia"
+    },
+    {
+      "id": "regione.toscana"
+    },
+    {
+      "id": "agenzia-entrate"
+    }
+  ],
+  "passaggi": [
+    {
+      "id": "incarico_tecnico",
+      "titolo": "Incaricare un progettista e un direttore dei lavori",
+      "tipo": "requisito",
+      "ente": "richiedente",
+      "attore": "professionista",
+      "dipende_da": [],
+      "canale": "misto",
+      "fonti": [
+        {
+          "titolo": "L.R. Toscana 65/2014 - Norme per il governo del territorio",
+          "verificata_il": "2026-11-24",
+          "riferimento": "art. 135",
+          "url": "https://raccoltanormativa.consiglio.regione.toscana.it/articolo?urndoc=urn:nir:regione.toscana:legge:2014-11-10;65"
+        },
+        {
+          "titolo": "D.P.R. 380/2001 - Testo unico dell'edilizia",
+          "verificata_il": "2026-11-24",
+          "riferimento": "art. 22",
+          "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:presidente.repubblica:2001-06-06;380"
+        }
+      ],
+      "stato_verifica": "bozza"
+    },
+    {
+      "id": "autorizzazione_paesaggistica",
+      "titolo": "Ottenere l'autorizzazione paesaggistica",
+      "tipo": "autorizzazione",
+      "ente": "comune.051026.edilizia",
+      "attore": "professionista",
+      "dipende_da": [
+        "incarico_tecnico"
+      ],
+      "condizioni": [
+        {
+          "domanda": "vincolo",
+          "valore": true
+        }
+      ],
+      "canale": "online",
+      "fonti": [
+        {
+          "titolo": "D.Lgs. 42/2004",
+          "verificata_il": "2026-11-24",
+          "riferimento": "art. 146",
+          "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2004-01-22;42~art146"
+        }
+      ],
+      "stato_verifica": "bozza"
+    },
+    {
+      "id": "deposito_sismico",
+      "titolo": "Deposito o autorizzazione sismica al Genio Civile",
+      "tipo": "presentazione",
+      "ente": "regione.toscana",
+      "attore": "professionista",
+      "dipende_da": [
+        "incarico_tecnico"
+      ],
+      "condizioni": [
+        {
+          "domanda": "strutturale",
+          "valore": true
+        }
+      ],
+      "canale": "online",
+      "fonti": [
+        {
+          "titolo": "D.P.R. 380/2001 - Testo unico dell'edilizia",
+          "verificata_il": "2026-11-24",
+          "riferimento": "artt. 93-94",
+          "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:presidente.repubblica:2001-06-06;380"
+        },
+        {
+          "titolo": "L.R. Toscana 65/2014 - Norme per il governo del territorio",
+          "verificata_il": "2026-11-24",
+          "riferimento": "artt. 167-170",
+          "url": "https://raccoltanormativa.consiglio.regione.toscana.it/articolo?urndoc=urn:nir:regione.toscana:legge:2014-11-10;65"
+        }
+      ],
+      "stato_verifica": "bozza"
+    },
+    {
+      "id": "scia_edilizia",
+      "titolo": "Presentare la SCIA edilizia con la relazione asseverata",
+      "tipo": "presentazione",
+      "ente": "comune.051026.edilizia",
+      "attore": "professionista",
+      "costi": [
+        {
+          "voce": "Diritti di segreteria comunali"
+        },
+        {
+          "voce": "Contributo di costruzione, se dovuto"
+        }
+      ],
+      "tempi": {
+        "previsto_giorni": 30
+      },
+      "dipende_da": [
+        "incarico_tecnico",
+        "autorizzazione_paesaggistica",
+        "deposito_sismico"
+      ],
+      "canale": "online",
+      "fonti": [
+        {
+          "titolo": "Regione Toscana - Modulistica unica per attività produttive ed edilizia",
+          "verificata_il": "2026-11-24",
+          "riferimento": "SCIA edilizia - Allegato H, d.d. 23162/2025; Relazione - Allegato C, d.d. 21980/2026",
+          "url": "https://www.regione.toscana.it/-/modulistica-unica-regionale-per-le-attivita-produttive-e-l-attivita-edilizia"
+        },
+        {
+          "titolo": "L.R. Toscana 65/2014 - Norme per il governo del territorio",
+          "verificata_il": "2026-11-24",
+          "riferimento": "art. 135",
+          "url": "https://raccoltanormativa.consiglio.regione.toscana.it/articolo?urndoc=urn:nir:regione.toscana:legge:2014-11-10;65"
+        }
+      ],
+      "stato_verifica": "verificato_fonti",
+      "note": "Il Comune controlla entro 30 giorni. Moduli disponibili su STAR."
+    },
+    {
+      "id": "fine_lavori",
+      "titolo": "Comunicare la fine lavori e depositare lo stato finale",
+      "tipo": "comunicazione",
+      "ente": "comune.051026.edilizia",
+      "attore": "professionista",
+      "dipende_da": [
+        "scia_edilizia"
+      ],
+      "canale": "online",
+      "fonti": [
+        {
+          "titolo": "Regione Toscana - Modulistica unica per attività produttive ed edilizia",
+          "verificata_il": "2026-11-24",
+          "riferimento": "Comunicazione di fine lavori - d.d. 1754/2023; Deposito stato finale - d.d. 23162/2025",
+          "url": "https://www.regione.toscana.it/-/modulistica-unica-regionale-per-le-attivita-produttive-e-l-attivita-edilizia"
+        }
+      ],
+      "stato_verifica": "bozza"
+    },
+    {
+      "id": "agibilita",
+      "titolo": "Attestare l'agibilità, se l'intervento la richiede",
+      "tipo": "presentazione",
+      "ente": "comune.051026.edilizia",
+      "attore": "professionista",
+      "dipende_da": [
+        "fine_lavori"
+      ],
+      "canale": "online",
+      "fonti": [
+        {
+          "titolo": "Regione Toscana - Modulistica unica per attività produttive ed edilizia",
+          "verificata_il": "2026-11-24",
+          "riferimento": "Attestazione asseverata di agibilità - d.d. 21980/2026",
+          "url": "https://www.regione.toscana.it/-/modulistica-unica-regionale-per-le-attivita-produttive-e-l-attivita-edilizia"
+        }
+      ],
+      "stato_verifica": "bozza"
+    },
+    {
+      "id": "variazione_catastale",
+      "titolo": "Aggiornare il catasto",
+      "tipo": "comunicazione",
+      "ente": "agenzia-entrate",
+      "attore": "professionista",
+      "dipende_da": [
+        "fine_lavori"
+      ],
+      "canale": "online",
+      "fonti": [
+        {
+          "titolo": "Agenzia delle Entrate - Territorio (DOCFA)",
+          "verificata_il": "2026-11-24"
+        }
+      ],
+      "stato_verifica": "bozza"
+    }
+  ]
+}

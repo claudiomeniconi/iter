@@ -1,0 +1,124 @@
+{
+  "id": "montevarchi.edilizia.agibilita",
+  "modello": "edilizia.agibilita",
+  "titolo": "Attestare l'agibilità di un immobile",
+  "descrizione": "Attestazione asseverata di agibilità dopo nuove costruzioni, ristrutturazioni o interventi che incidono su sicurezza, igiene o impianti. Bozza della Fase 0: ogni passaggio va confermato con l'ente competente o con un professionista.",
+  "territorio": {
+    "livello": "comunale",
+    "nome": "Montevarchi (AR)",
+    "codice_istat": "051026",
+    "percorso": "it/toscana/ar/montevarchi"
+  },
+  "categoria": "edilizia",
+  "stato": "bozza",
+  "versione": "0.1.0",
+  "ultima_verifica": "2026-11-24",
+  "domande": [],
+  "enti": [
+    {
+      "id": "comune.051026.edilizia"
+    },
+    {
+      "id": "richiedente"
+    },
+    {
+      "id": "agenzia-entrate"
+    }
+  ],
+  "passaggi": [
+    {
+      "id": "fine_lavori",
+      "titolo": "Avere comunicato la fine dei lavori",
+      "tipo": "comunicazione",
+      "ente": "comune.051026.edilizia",
+      "attore": "professionista",
+      "dipende_da": [],
+      "canale": "online",
+      "fonti": [
+        {
+          "titolo": "Regione Toscana - Modulistica unica per attività produttive ed edilizia",
+          "verificata_il": "2026-11-24",
+          "riferimento": "Comunicazione di fine lavori - d.d. 1754/2023",
+          "url": "https://www.regione.toscana.it/-/modulistica-unica-regionale-per-le-attivita-produttive-e-l-attivita-edilizia"
+        }
+      ],
+      "stato_verifica": "bozza"
+    },
+    {
+      "id": "certificazioni",
+      "titolo": "Raccogliere collaudi e certificazioni",
+      "tipo": "requisito",
+      "ente": "richiedente",
+      "attore": "professionista",
+      "dipende_da": [
+        "fine_lavori"
+      ],
+      "canale": "misto",
+      "fonti": [
+        {
+          "titolo": "L.R. Toscana 65/2014 - Norme per il governo del territorio",
+          "verificata_il": "2026-11-24",
+          "riferimento": "art. 149",
+          "url": "https://raccoltanormativa.consiglio.regione.toscana.it/articolo?urndoc=urn:nir:regione.toscana:legge:2014-11-10;65"
+        },
+        {
+          "titolo": "D.P.R. 380/2001 - Testo unico dell'edilizia",
+          "verificata_il": "2026-11-24",
+          "riferimento": "art. 24",
+          "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:presidente.repubblica:2001-06-06;380"
+        }
+      ],
+      "stato_verifica": "bozza",
+      "note": "Collaudo statico, dichiarazioni di conformità degli impianti, aggiornamento catastale, requisiti energetici."
+    },
+    {
+      "id": "variazione_catastale",
+      "titolo": "Aggiornare il catasto",
+      "tipo": "comunicazione",
+      "ente": "agenzia-entrate",
+      "attore": "professionista",
+      "dipende_da": [
+        "fine_lavori"
+      ],
+      "canale": "online",
+      "fonti": [
+        {
+          "titolo": "Agenzia delle Entrate - Territorio (DOCFA)",
+          "verificata_il": "2026-11-24"
+        }
+      ],
+      "stato_verifica": "bozza"
+    },
+    {
+      "id": "attestazione",
+      "titolo": "Depositare l'attestazione asseverata di agibilità",
+      "tipo": "presentazione",
+      "ente": "comune.051026.edilizia",
+      "attore": "professionista",
+      "tempi": {
+        "previsto_giorni": 0
+      },
+      "dipende_da": [
+        "certificazioni",
+        "variazione_catastale"
+      ],
+      "canale": "online",
+      "fonti": [
+        {
+          "titolo": "Regione Toscana - Modulistica unica per attività produttive ed edilizia",
+          "verificata_il": "2026-11-24",
+          "riferimento": "Attestazione asseverata di agibilità - Allegato A, d.d. 21980/2026",
+          "url": "https://www.regione.toscana.it/-/modulistica-unica-regionale-per-le-attivita-produttive-e-l-attivita-edilizia"
+        },
+        {
+          "titolo": "L.R. Toscana 65/2014 - Norme per il governo del territorio",
+          "verificata_il": "2026-11-24",
+          "riferimento": "art. 149",
+          "url": "https://raccoltanormativa.consiglio.regione.toscana.it/articolo?urndoc=urn:nir:regione.toscana:legge:2014-11-10;65"
+        }
+      ],
+      "stato_verifica": "verificato_fonti",
+      "note": "L'immobile è utilizzabile dalla data di deposito; il Comune può fare controlli a campione."
+    }
+  ]
+}

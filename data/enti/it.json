@@ -53,5 +53,17 @@
     "tipo": "altro",
     "territorio": "it",
     "descrizione": "La cassa autonoma della professione, se esiste (es. Cassa Forense, Inarcassa)."
+  },
+  {
+    "id": "ministero-turismo",
+    "nome": "Ministero del Turismo (Banca dati strutture e CIN)",
+    "tipo": "statale",
+    "territorio": "it"
+  },
+  {
+    "id": "ministero-interno",
+    "nome": "Ministero dell'Interno",
+    "tipo": "statale",
+    "territorio": "it"
   }
 ]

@@ -1,0 +1,165 @@
+{
+  "id": "montevarchi.cittadino.cambio-residenza",
+  "modello": "cittadino.cambio-residenza",
+  "titolo": "Dichiarare il cambio di residenza",
+  "descrizione": "Trasferimento della residenza a Montevarchi da un altro comune o dall'estero, o cambio di indirizzo all'interno del Comune. Bozza della Fase 0: ogni passaggio va confermato con l'ente competente o con un professionista.",
+  "territorio": {
+    "livello": "comunale",
+    "nome": "Montevarchi (AR)",
+    "codice_istat": "051026",
+    "percorso": "it/toscana/ar/montevarchi"
+  },
+  "categoria": "cittadino",
+  "stato": "bozza",
+  "versione": "0.1.0",
+  "ultima_verifica": "2026-11-24",
+  "domande": [
+    {
+      "id": "da_estero",
+      "testo": "Arrivi dall'estero?",
+      "tipo": "si_no"
+    }
+  ],
+  "enti": [
+    {
+      "id": "comune.051026.demografici"
+    },
+    {
+      "id": "polizia-municipale.051026"
+    },
+    {
+      "id": "richiedente"
+    }
+  ],
+  "passaggi": [
+    {
+      "id": "dichiarazione",
+      "titolo": "Presentare la dichiarazione di residenza",
+      "tipo": "comunicazione",
+      "ente": "comune.051026.demografici",
+      "attore": "richiedente",
+      "documenti_richiesti": [
+        {
+          "id": "documento_identita",
+          "nome": "Documento d'identità"
+        },
+        {
+          "id": "titolo_abitativo",
+          "nome": "Titolo di occupazione dell'abitazione (proprietà, affitto, comodato)"
+        }
+      ],
+      "dipende_da": [],
+      "canale": "online",
+      "fonti": [
+        {
+          "titolo": "Comune di Montevarchi - Catalogo dei servizi",
+          "verificata_il": "2026-11-24",
+          "riferimento": "Dichiarare il Cambio di residenza",
+          "url": "https://www.comune.montevarchi.ar.it/servizi"
+        },
+        {
+          "titolo": "D.P.R. 223/1989 - Regolamento anagrafico",
+          "verificata_il": "2026-11-24",
+          "riferimento": "art. 13",
+          "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:presidente.repubblica:1989-05-30;223~art13"
+        }
+      ],
+      "stato_verifica": "bozza",
+      "note": "Si può presentare online, via PEC o allo sportello."
+    },
+    {
+      "id": "registrazione",
+      "titolo": "Registrazione del cambio da parte dell'ufficio anagrafe",
+      "tipo": "iscrizione",
+      "ente": "comune.051026.demografici",
+      "attore": "ente",
+      "tempi": {
+        "previsto_giorni": 2
+      },
+      "dipende_da": [
+        "dichiarazione"
+      ],
+      "canale": "online",
+      "fonti": [
+        {
+          "titolo": "D.L. 5/2012",
+          "verificata_il": "2026-11-24",
+          "riferimento": "art. 5",
+          "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legge:2012-02-09;5~art5"
+        }
+      ],
+      "stato_verifica": "bozza",
+      "note": "L'iscrizione è registrata entro 2 giorni lavorativi, con effetto dalla data della dichiarazione."
+    },
+    {
+      "id": "accertamento",
+      "titolo": "Accertamento della Polizia Municipale all'indirizzo",
+      "tipo": "controllo",
+      "ente": "polizia-municipale.051026",
+      "attore": "ente",
+      "tempi": {
+        "previsto_giorni": 45
+      },
+      "dipende_da": [
+        "registrazione"
+      ],
+      "canale": "online",
+      "fonti": [
+        {
+          "titolo": "D.L. 5/2012",
+          "verificata_il": "2026-11-24",
+          "riferimento": "art. 5",
+          "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legge:2012-02-09;5~art5"
+        }
+      ],
+      "stato_verifica": "bozza",
+      "note": "Se entro 45 giorni non arriva un esito negativo, la residenza si considera confermata."
+    },
+    {
+      "id": "permesso_soggiorno",
+      "titolo": "Registrare il permesso di soggiorno, se cittadino straniero",
+      "tipo": "comunicazione",
+      "ente": "comune.051026.demografici",
+      "attore": "richiedente",
+      "dipende_da": [
+        "dichiarazione"
+      ],
+      "condizioni": [
+        {
+          "domanda": "da_estero",
+          "valore": true
+        }
+      ],
+      "canale": "online",
+      "fonti": [
+        {
+          "titolo": "Comune di Montevarchi - Catalogo dei servizi",
+          "verificata_il": "2026-11-24",
+          "riferimento": "Registrazione permesso di soggiorno",
+          "url": "https://www.comune.montevarchi.ar.it/servizi"
+        }
+      ],
+      "stato_verifica": "bozza"
+    },
+    {
+      "id": "aggiornamenti",
+      "titolo": "Aggiornare patente, libretti e TARI",
+      "tipo": "comunicazione",
+      "ente": "richiedente",
+      "attore": "richiedente",
+      "dipende_da": [
+        "registrazione"
+      ],
+      "canale": "online",
+      "fonti": [
+        {
+          "titolo": "Comune di Montevarchi - Catalogo dei servizi",
+          "verificata_il": "2026-11-24",
+          "url": "https://www.comune.montevarchi.ar.it/servizi"
+        }
+      ],
+      "stato_verifica": "bozza",
+      "note": "Patente e libretti si aggiornano in automatico; la TARI va dichiarata al Comune."
+    }
+  ]
+}

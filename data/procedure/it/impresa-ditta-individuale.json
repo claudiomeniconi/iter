@@ -1,0 +1,249 @@
+{
+  "id": "it.impresa.ditta-individuale",
+  "modello": "impresa.ditta-individuale",
+  "titolo": "Aprire una ditta individuale",
+  "descrizione": "Avvio di un'impresa individuale: partita IVA, iscrizione al Registro Imprese, posizioni previdenziali. Vale in tutta Italia. Bozza della Fase 0: ogni passaggio va confermato con l'ente competente o con un professionista.",
+  "territorio": {
+    "livello": "nazionale",
+    "nome": "Italia",
+    "percorso": "it"
+  },
+  "categoria": "lavoro",
+  "stato": "bozza",
+  "versione": "0.1.0",
+  "ultima_verifica": "2026-11-24",
+  "domande": [
+    {
+      "id": "artigiano",
+      "testo": "L'attività è artigiana?",
+      "tipo": "si_no"
+    },
+    {
+      "id": "commerciante",
+      "testo": "L'attività è commerciale (commercio, somministrazione, turismo)?",
+      "tipo": "si_no"
+    },
+    {
+      "id": "serve_scia",
+      "testo": "L'attività richiede una SCIA o un'autorizzazione al SUAP?",
+      "tipo": "si_no"
+    }
+  ],
+  "enti": [
+    {
+      "id": "richiedente"
+    },
+    {
+      "id": "cciaa.arezzo-siena"
+    },
+    {
+      "id": "suap.051026"
+    },
+    {
+      "id": "inps"
+    }
+  ],
+  "passaggi": [
+    {
+      "id": "firma_pec",
+      "titolo": "Dotarsi di firma digitale e PEC (domicilio digitale)",
+      "tipo": "requisito",
+      "ente": "richiedente",
+      "attore": "richiedente",
+      "dipende_da": [],
+      "canale": "misto",
+      "fonti": [
+        {
+          "titolo": "D.L. 76/2020",
+          "verificata_il": "2026-11-24",
+          "riferimento": "art. 37",
+          "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legge:2020-07-16;76~art37"
+        }
+      ],
+      "stato_verifica": "bozza",
+      "note": "Ogni impresa deve avere un domicilio digitale iscritto al Registro Imprese."
+    },
+    {
+      "id": "scelta_ateco",
+      "titolo": "Scegliere attività (codice ATECO) e regime fiscale",
+      "tipo": "requisito",
+      "ente": "richiedente",
+      "attore": "professionista",
+      "dipende_da": [],
+      "canale": "misto",
+      "fonti": [
+        {
+          "titolo": "L. 190/2014 - regime forfettario",
+          "verificata_il": "2026-11-24",
+          "riferimento": "art. 1, commi 54-89",
+          "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:legge:2014-12-23;190"
+        }
+      ],
+      "stato_verifica": "bozza"
+    },
+    {
+      "id": "comunicazione_unica",
+      "titolo": "Inviare la Comunicazione Unica",
+      "tipo": "iscrizione",
+      "ente": "cciaa.arezzo-siena",
+      "attore": "professionista",
+      "documenti_prodotti": [
+        {
+          "id": "partita_iva",
+          "nome": "Partita IVA"
+        },
+        {
+          "id": "iscrizione_registro_imprese",
+          "nome": "Iscrizione al Registro Imprese"
+        }
+      ],
+      "costi": [
+        {
+          "voce": "Diritti di segreteria e imposta di bollo della Camera di Commercio"
+        },
+        {
+          "voce": "Diritto annuale"
+        }
+      ],
+      "dipende_da": [
+        "firma_pec",
+        "scelta_ateco"
+      ],
+      "canale": "online",
+      "fonti": [
+        {
+          "titolo": "D.L. 7/2007 - Comunicazione Unica",
+          "verificata_il": "2026-11-24",
+          "riferimento": "art. 9",
+          "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legge:2007-01-31;7~art9"
+        }
+      ],
+      "stato_verifica": "bozza",
+      "note": "Un solo invio raggiunge Registro Imprese, Agenzia delle Entrate, INPS e INAIL."
+    },
+    {
+      "id": "titolo_suap",
+      "titolo": "Ottenere il titolo per l'attività al SUAP",
+      "tipo": "presentazione",
+      "ente": "suap.051026",
+      "attore": "richiedente",
+      "dipende_da": [
+        "comunicazione_unica"
+      ],
+      "condizioni": [
+        {
+          "domanda": "serve_scia",
+          "valore": true
+        }
+      ],
+      "canale": "online",
+      "fonti": [
+        {
+          "titolo": "Comune di Montevarchi - Accedere allo Sportello SUAP (STAR)",
+          "verificata_il": "2026-11-24",
+          "url": "https://www.comune.montevarchi.ar.it/servizi/servizio-dettaglio/2246471"
+        }
+      ],
+      "stato_verifica": "bozza",
+      "note": "Vedi la procedura specifica dell'attività in Iter."
+    },
+    {
+      "id": "inizio_attivita_rea",
+      "titolo": "Comunicare l'inizio attività al REA",
+      "tipo": "comunicazione",
+      "ente": "cciaa.arezzo-siena",
+      "attore": "professionista",
+      "tempi": {
+        "previsto_giorni": 30
+      },
+      "dipende_da": [
+        "comunicazione_unica",
+        "titolo_suap"
+      ],
+      "canale": "online",
+      "fonti": [
+        {
+          "titolo": "D.L. 7/2007 - Comunicazione Unica",
+          "verificata_il": "2026-11-24",
+          "riferimento": "art. 9",
+          "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legge:2007-01-31;7~art9"
+        }
+      ],
+      "stato_verifica": "bozza",
+      "note": "Se l'impresa è stata iscritta come inattiva, l'avvio va denunciato entro 30 giorni."
+    },
+    {
+      "id": "inps_artigiani_commercianti",
+      "titolo": "Iscrizione alla gestione INPS artigiani",
+      "tipo": "iscrizione",
+      "ente": "inps",
+      "attore": "ente",
+      "dipende_da": [
+        "inizio_attivita_rea"
+      ],
+      "condizioni": [
+        {
+          "domanda": "artigiano",
+          "valore": true
+        }
+      ],
+      "canale": "online",
+      "fonti": [
+        {
+          "titolo": "L. 443/1985",
+          "verificata_il": "2026-11-24",
+          "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:legge:1985-08-08;443"
+        }
+      ],
+      "stato_verifica": "bozza"
+    },
+    {
+      "id": "inps_commercianti",
+      "titolo": "Iscrizione alla gestione INPS commercianti",
+      "tipo": "iscrizione",
+      "ente": "inps",
+      "attore": "ente",
+      "dipende_da": [
+        "inizio_attivita_rea"
+      ],
+      "condizioni": [
+        {
+          "domanda": "commerciante",
+          "valore": true
+        }
+      ],
+      "canale": "online",
+      "fonti": [
+        {
+          "titolo": "INPS - Gestione commercianti",
+          "verificata_il": "2026-11-24"
+        }
+      ],
+      "stato_verifica": "bozza"
+    },
+    {
+      "id": "albo_artigiani",
+      "titolo": "Iscrizione all'Albo delle imprese artigiane",
+      "tipo": "iscrizione",
+      "ente": "cciaa.arezzo-siena",
+      "attore": "professionista",
+      "dipende_da": [
+        "comunicazione_unica"
+      ],
+      "condizioni": [
+        {
+          "domanda": "artigiano",
+          "valore": true
+        }
+      ],
+      "canale": "online",
+      "fonti": [
+        {
+          "titolo": "L.R. Toscana 53/2008",
+          "verificata_il": "2026-11-24"
+        }
+      ],
+      "stato_verifica": "bozza"
+    }
+  ]
+}

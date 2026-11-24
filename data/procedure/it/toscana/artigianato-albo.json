@@ -1,0 +1,95 @@
+{
+  "id": "toscana.artigianato.albo",
+  "modello": "artigianato.albo",
+  "titolo": "Iscriversi all'Albo delle imprese artigiane",
+  "descrizione": "Riconoscimento della qualifica di impresa artigiana in Toscana, che dà accesso alla previdenza artigiani e ad agevolazioni dedicate. Bozza della Fase 0: ogni passaggio va confermato con l'ente competente o con un professionista.",
+  "territorio": {
+    "livello": "regionale",
+    "nome": "Toscana",
+    "percorso": "it/toscana"
+  },
+  "categoria": "impresa",
+  "stato": "bozza",
+  "versione": "0.1.0",
+  "ultima_verifica": "2026-11-24",
+  "domande": [],
+  "enti": [
+    {
+      "id": "richiedente"
+    },
+    {
+      "id": "cciaa.arezzo-siena"
+    },
+    {
+      "id": "inps"
+    }
+  ],
+  "passaggi": [
+    {
+      "id": "requisiti_artigiani",
+      "titolo": "Verificare i requisiti di impresa artigiana",
+      "tipo": "requisito",
+      "ente": "richiedente",
+      "attore": "professionista",
+      "dipende_da": [],
+      "canale": "misto",
+      "fonti": [
+        {
+          "titolo": "L. 443/1985 - Legge quadro per l'artigianato",
+          "verificata_il": "2026-11-24",
+          "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:legge:1985-08-08;443"
+        },
+        {
+          "titolo": "L.R. Toscana 53/2008 - Norme in materia di artigianato",
+          "verificata_il": "2026-11-24"
+        }
+      ],
+      "stato_verifica": "bozza",
+      "note": "Il titolare deve lavorare personalmente e in modo prevalente nell'impresa; ci sono limiti al numero di dipendenti per settore."
+    },
+    {
+      "id": "comunicazione_unica",
+      "titolo": "Chiedere l'iscrizione all'Albo con la Comunicazione Unica",
+      "tipo": "iscrizione",
+      "ente": "cciaa.arezzo-siena",
+      "attore": "professionista",
+      "dipende_da": [
+        "requisiti_artigiani"
+      ],
+      "canale": "online",
+      "fonti": [
+        {
+          "titolo": "D.L. 7/2007 - Comunicazione Unica",
+          "verificata_il": "2026-11-24",
+          "riferimento": "art. 9",
+          "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legge:2007-01-31;7~art9"
+        },
+        {
+          "titolo": "L.R. Toscana 53/2008",
+          "verificata_il": "2026-11-24"
+        }
+      ],
+      "stato_verifica": "bozza"
+    },
+    {
+      "id": "previdenza_artigiani",
+      "titolo": "Iscrizione alla gestione artigiani INPS",
+      "tipo": "iscrizione",
+      "ente": "inps",
+      "attore": "ente",
+      "dipende_da": [
+        "comunicazione_unica"
+      ],
+      "canale": "online",
+      "fonti": [
+        {
+          "titolo": "L. 443/1985",
+          "verificata_il": "2026-11-24",
+          "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:legge:1985-08-08;443"
+        }
+      ],
+      "stato_verifica": "bozza",
+      "note": "Avviene di norma in automatico dopo l'iscrizione all'Albo."
+    }
+  ]
+}

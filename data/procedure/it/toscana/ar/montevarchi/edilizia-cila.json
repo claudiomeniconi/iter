@@ -1,0 +1,204 @@
+{
+  "id": "montevarchi.edilizia.cila",
+  "modello": "edilizia.cila",
+  "titolo": "Lavori interni e manutenzione straordinaria con CILA",
+  "descrizione": "Comunicazione di inizio lavori asseverata per interventi come manutenzione straordinaria senza parti strutturali, modifiche interne e frazionamenti senza cambio d'uso. Bozza della Fase 0: ogni passaggio va confermato con l'ente competente o con un professionista.",
+  "territorio": {
+    "livello": "comunale",
+    "nome": "Montevarchi (AR)",
+    "codice_istat": "051026",
+    "percorso": "it/toscana/ar/montevarchi"
+  },
+  "categoria": "edilizia",
+  "stato": "bozza",
+  "versione": "0.1.0",
+  "ultima_verifica": "2026-11-24",
+  "domande": [
+    {
+      "id": "vincolo",
+      "testo": "L'immobile è in zona con vincolo paesaggistico o è un bene culturale?",
+      "tipo": "si_no"
+    },
+    {
+      "id": "strutturale",
+      "testo": "I lavori toccano parti strutturali dell'edificio?",
+      "tipo": "si_no"
+    }
+  ],
+  "enti": [
+    {
+      "id": "richiedente"
+    },
+    {
+      "id": "comune.051026.edilizia"
+    },
+    {
+      "id": "regione.toscana"
+    },
+    {
+      "id": "agenzia-entrate"
+    }
+  ],
+  "passaggi": [
+    {
+      "id": "incarico_tecnico",
+      "titolo": "Incaricare un tecnico abilitato e verificare il tipo di intervento",
+      "tipo": "requisito",
+      "ente": "richiedente",
+      "attore": "professionista",
+      "dipende_da": [],
+      "canale": "misto",
+      "fonti": [
+        {
+          "titolo": "L.R. Toscana 65/2014 - Norme per il governo del territorio",
+          "verificata_il": "2026-11-24",
+          "riferimento": "art. 136",
+          "url": "https://raccoltanormativa.consiglio.regione.toscana.it/articolo?urndoc=urn:nir:regione.toscana:legge:2014-11-10;65"
+        },
+        {
+          "titolo": "D.P.R. 380/2001 - Testo unico dell'edilizia",
+          "verificata_il": "2026-11-24",
+          "riferimento": "art. 6-bis",
+          "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:presidente.repubblica:2001-06-06;380"
+        }
+      ],
+      "stato_verifica": "bozza"
+    },
+    {
+      "id": "autorizzazione_paesaggistica",
+      "titolo": "Ottenere l'autorizzazione paesaggistica",
+      "tipo": "autorizzazione",
+      "ente": "comune.051026.edilizia",
+      "attore": "professionista",
+      "dipende_da": [
+        "incarico_tecnico"
+      ],
+      "condizioni": [
+        {
+          "domanda": "vincolo",
+          "valore": true
+        }
+      ],
+      "canale": "online",
+      "fonti": [
+        {
+          "titolo": "D.Lgs. 42/2004",
+          "verificata_il": "2026-11-24",
+          "riferimento": "art. 146",
+          "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2004-01-22;42~art146"
+        }
+      ],
+      "stato_verifica": "bozza"
+    },
+    {
+      "id": "deposito_sismico",
+      "titolo": "Deposito o autorizzazione sismica al Genio Civile",
+      "tipo": "presentazione",
+      "ente": "regione.toscana",
+      "attore": "professionista",
+      "dipende_da": [
+        "incarico_tecnico"
+      ],
+      "condizioni": [
+        {
+          "domanda": "strutturale",
+          "valore": true
+        }
+      ],
+      "canale": "online",
+      "fonti": [
+        {
+          "titolo": "D.P.R. 380/2001 - Testo unico dell'edilizia",
+          "verificata_il": "2026-11-24",
+          "riferimento": "artt. 93-94",
+          "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:presidente.repubblica:2001-06-06;380"
+        },
+        {
+          "titolo": "L.R. Toscana 65/2014 - Norme per il governo del territorio",
+          "verificata_il": "2026-11-24",
+          "riferimento": "artt. 167-170",
+          "url": "https://raccoltanormativa.consiglio.regione.toscana.it/articolo?urndoc=urn:nir:regione.toscana:legge:2014-11-10;65"
+        }
+      ],
+      "stato_verifica": "bozza"
+    },
+    {
+      "id": "cila",
+      "titolo": "Presentare la CILA",
+      "tipo": "comunicazione",
+      "ente": "comune.051026.edilizia",
+      "attore": "professionista",
+      "costi": [
+        {
+          "voce": "Diritti di segreteria comunali"
+        },
+        {
+          "voce": "Parcella del tecnico"
+        }
+      ],
+      "tempi": {
+        "previsto_giorni": 0
+      },
+      "dipende_da": [
+        "incarico_tecnico",
+        "autorizzazione_paesaggistica",
+        "deposito_sismico"
+      ],
+      "canale": "online",
+      "fonti": [
+        {
+          "titolo": "Regione Toscana - Modulistica unica per attività produttive ed edilizia",
+          "verificata_il": "2026-11-24",
+          "riferimento": "CILA - Allegato D, d.d. 23162/2025",
+          "url": "https://www.regione.toscana.it/-/modulistica-unica-regionale-per-le-attivita-produttive-e-l-attivita-edilizia"
+        },
+        {
+          "titolo": "L.R. Toscana 65/2014 - Norme per il governo del territorio",
+          "verificata_il": "2026-11-24",
+          "riferimento": "art. 136",
+          "url": "https://raccoltanormativa.consiglio.regione.toscana.it/articolo?urndoc=urn:nir:regione.toscana:legge:2014-11-10;65"
+        }
+      ],
+      "stato_verifica": "verificato_fonti",
+      "note": "I lavori possono iniziare dalla presentazione."
+    },
+    {
+      "id": "fine_lavori",
+      "titolo": "Comunicare la fine lavori e depositare lo stato finale",
+      "tipo": "comunicazione",
+      "ente": "comune.051026.edilizia",
+      "attore": "professionista",
+      "dipende_da": [
+        "cila"
+      ],
+      "canale": "online",
+      "fonti": [
+        {
+          "titolo": "Regione Toscana - Modulistica unica per attività produttive ed edilizia",
+          "verificata_il": "2026-11-24",
+          "riferimento": "Deposito dello stato finale delle opere soggette a CILA - DGR 63/2023",
+          "url": "https://www.regione.toscana.it/-/modulistica-unica-regionale-per-le-attivita-produttive-e-l-attivita-edilizia"
+        }
+      ],
+      "stato_verifica": "bozza"
+    },
+    {
+      "id": "variazione_catastale",
+      "titolo": "Aggiornare il catasto se cambia la planimetria",
+      "tipo": "comunicazione",
+      "ente": "agenzia-entrate",
+      "attore": "professionista",
+      "dipende_da": [
+        "fine_lavori"
+      ],
+      "canale": "online",
+      "fonti": [
+        {
+          "titolo": "Agenzia delle Entrate - Territorio (DOCFA)",
+          "verificata_il": "2026-11-24"
+        }
+      ],
+      "stato_verifica": "bozza"
+    }
+  ]
+}

@@ -1,0 +1,239 @@
+{
+  "id": "montevarchi.somministrazione.temporanea",
+  "modello": "somministrazione.temporanea",
+  "titolo": "Somministrare cibo e bevande durante una sagra, una festa o un evento",
+  "descrizione": "Somministrazione temporanea di alimenti e bevande in occasione di manifestazioni, a Montevarchi. Bozza della Fase 0: ogni passaggio va confermato con l'ente competente o con un professionista.",
+  "territorio": {
+    "livello": "comunale",
+    "nome": "Montevarchi (AR)",
+    "codice_istat": "051026",
+    "percorso": "it/toscana/ar/montevarchi"
+  },
+  "categoria": "impresa",
+  "stato": "bozza",
+  "versione": "0.1.0",
+  "ultima_verifica": "2026-11-24",
+  "domande": [
+    {
+      "id": "evento_pubblico",
+      "testo": "Ci sono anche spettacoli, musica dal vivo o intrattenimento aperti al pubblico?",
+      "tipo": "si_no"
+    },
+    {
+      "id": "suolo_pubblico",
+      "testo": "L'evento si svolge su suolo pubblico?",
+      "tipo": "si_no"
+    }
+  ],
+  "enti": [
+    {
+      "id": "richiedente"
+    },
+    {
+      "id": "suap.051026"
+    },
+    {
+      "id": "asl.toscana-sud-est"
+    }
+  ],
+  "passaggi": [
+    {
+      "id": "requisiti_soggettivi",
+      "titolo": "Verificare i requisiti morali",
+      "tipo": "requisito",
+      "ente": "richiedente",
+      "attore": "richiedente",
+      "dipende_da": [],
+      "canale": "misto",
+      "fonti": [
+        {
+          "titolo": "L.R. Toscana 62/2018 - Codice del Commercio",
+          "verificata_il": "2026-11-24",
+          "riferimento": "art. 11",
+          "url": "https://raccoltanormativa.consiglio.regione.toscana.it/class/download_doc.php?file_path=legge/2018/legge_2018_62_s1/legge_2018_62_s1_v1.pdf"
+        }
+      ],
+      "stato_verifica": "bozza",
+      "note": "Per la somministrazione temporanea si richiedono i requisiti morali; il requisito professionale non è di norma richiesto. Da confermare con il SUAP."
+    },
+    {
+      "id": "formazione_alimentaristi",
+      "titolo": "Formazione igienico-sanitaria di chi maneggia gli alimenti",
+      "tipo": "requisito",
+      "ente": "richiedente",
+      "attore": "richiedente",
+      "dipende_da": [],
+      "canale": "misto",
+      "fonti": [
+        {
+          "titolo": "Reg. (CE) 852/2004 sull'igiene dei prodotti alimentari",
+          "verificata_il": "2026-11-24",
+          "riferimento": "Allegato II, capitolo XII",
+          "url": "https://eur-lex.europa.eu/legal-content/IT/TXT/?uri=CELEX:32004R0852"
+        }
+      ],
+      "stato_verifica": "bozza"
+    },
+    {
+      "id": "suolo_pubblico",
+      "titolo": "Chiedere la concessione temporanea di suolo pubblico",
+      "tipo": "autorizzazione",
+      "ente": "suap.051026",
+      "attore": "richiedente",
+      "costi": [
+        {
+          "voce": "Canone unico patrimoniale"
+        }
+      ],
+      "dipende_da": [],
+      "condizioni": [
+        {
+          "domanda": "suolo_pubblico",
+          "valore": true
+        }
+      ],
+      "canale": "online",
+      "fonti": [
+        {
+          "titolo": "L. 160/2019 - Canone unico patrimoniale",
+          "verificata_il": "2026-11-24",
+          "riferimento": "art. 1, commi 816-847",
+          "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:legge:2019-12-27;160"
+        }
+      ],
+      "stato_verifica": "bozza"
+    },
+    {
+      "id": "pubblico_spettacolo",
+      "titolo": "Licenza o SCIA per il pubblico spettacolo",
+      "tipo": "autorizzazione",
+      "ente": "suap.051026",
+      "attore": "richiedente",
+      "dipende_da": [],
+      "condizioni": [
+        {
+          "domanda": "evento_pubblico",
+          "valore": true
+        }
+      ],
+      "canale": "online",
+      "fonti": [
+        {
+          "titolo": "R.D. 773/1931 - Testo unico delle leggi di pubblica sicurezza",
+          "verificata_il": "2026-11-24",
+          "riferimento": "artt. 68 e 80",
+          "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:regio.decreto:1931-06-18;773"
+        }
+      ],
+      "stato_verifica": "bozza",
+      "note": "Vedi la procedura «Organizzare uno spettacolo o un evento pubblico»."
+    },
+    {
+      "id": "scia_temporanea",
+      "titolo": "Presentare la SCIA di somministrazione temporanea",
+      "tipo": "presentazione",
+      "ente": "suap.051026",
+      "attore": "richiedente",
+      "documenti_richiesti": [],
+      "documenti_prodotti": [
+        {
+          "id": "ricevuta_scia_temporanea",
+          "nome": "Ricevuta SUAP della SCIA"
+        }
+      ],
+      "costi": [
+        {
+          "voce": "Diritti SUAP del Comune di Montevarchi"
+        },
+        {
+          "voce": "Imposta di bollo"
+        }
+      ],
+      "tempi": {
+        "previsto_giorni": 0,
+        "silenzio_assenso": false
+      },
+      "dipende_da": [
+        "requisiti_soggettivi",
+        "formazione_alimentaristi"
+      ],
+      "canale": "online",
+      "fonti": [
+        {
+          "titolo": "L.R. Toscana 62/2018 - Codice del Commercio",
+          "verificata_il": "2026-11-24",
+          "url": "https://raccoltanormativa.consiglio.regione.toscana.it/class/download_doc.php?file_path=legge/2018/legge_2018_62_s1/legge_2018_62_s1_v1.pdf"
+        },
+        {
+          "titolo": "Elenco modulistica unica regionale in uso al 7 ottobre 2026",
+          "verificata_il": "2026-11-24",
+          "riferimento": "SCIA per esercizi di somministrazione temporanea di alimenti e bevande - d.d. 13367/2019",
+          "url": "https://www.regione.toscana.it/documents/d/guest/elenco-della-modulistica-unica-in-uso-al-7-ottobre-2026-pdf"
+        },
+        {
+          "titolo": "Comune di Montevarchi - Accedere allo Sportello SUAP (STAR)",
+          "verificata_il": "2026-11-24",
+          "url": "https://www.comune.montevarchi.ar.it/servizi/servizio-dettaglio/2246471"
+        },
+        {
+          "titolo": "Comune di Montevarchi - Tariffe diritti SUAP",
+          "verificata_il": "2026-11-24",
+          "url": "https://www.comune.montevarchi.ar.it/documenti/2246544/tariffe-diritti-suap"
+        }
+      ],
+      "stato_verifica": "bozza",
+      "note": "Va presentata prima dell'evento. Vale solo per la durata della manifestazione."
+    },
+    {
+      "id": "notifica_sanitaria",
+      "titolo": "Notifica sanitaria per la registrazione dell'attività alimentare",
+      "tipo": "comunicazione",
+      "ente": "asl.toscana-sud-est",
+      "attore": "richiedente",
+      "dipende_da": [
+        "scia_temporanea"
+      ],
+      "canale": "online",
+      "fonti": [
+        {
+          "titolo": "Reg. (CE) 852/2004 sull'igiene dei prodotti alimentari",
+          "verificata_il": "2026-11-24",
+          "riferimento": "art. 6",
+          "url": "https://eur-lex.europa.eu/legal-content/IT/TXT/?uri=CELEX:32004R0852"
+        },
+        {
+          "titolo": "Elenco modulistica unica regionale in uso al 7 ottobre 2026",
+          "verificata_il": "2026-11-24",
+          "riferimento": "Notifica sanitaria ai fini della registrazione - DGR 673/2024",
+          "url": "https://www.regione.toscana.it/documents/d/guest/elenco-della-modulistica-unica-in-uso-al-7-ottobre-2026-pdf"
+        }
+      ],
+      "stato_verifica": "bozza",
+      "note": "Si presenta tramite il SUAP, che la inoltra alla ASL."
+    },
+    {
+      "id": "controlli_suap",
+      "titolo": "Controlli del Comune sulla SCIA",
+      "tipo": "controllo",
+      "ente": "suap.051026",
+      "attore": "ente",
+      "tempi": {
+        "previsto_giorni": 60
+      },
+      "dipende_da": [
+        "scia_temporanea"
+      ],
+      "canale": "online",
+      "fonti": [
+        {
+          "titolo": "L. 241/1990",
+          "verificata_il": "2026-11-24",
+          "riferimento": "art. 19 (SCIA)",
+          "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:legge:1990-08-07;241~art19"
+        }
+      ],
+      "stato_verifica": "verificato_fonti",
+      "note": "Entro 60 giorni il Comune può vietare la prosecuzione se mancano i requisiti."
+    }
+  ]
+}
