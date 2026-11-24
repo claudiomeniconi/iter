@@ -302,6 +302,18 @@
             "$ref": "#/$defs/fonte"
           }
         },
+        "livello_fonte": {
+          "enum": [
+            "ue",
+            "stato",
+            "regione",
+            "comune_regolamento",
+            "comune_atto",
+            "prassi",
+            "non_trovato"
+          ],
+          "description": "Livello della norma che impone il passaggio: dice subito chi può toglierlo o snellirlo (Iter Lab). prassi = richiesto dall'ufficio senza norma che lo imponga; non_trovato = base normativa non ancora individuata"
+        },
         "stato_verifica": {
           "enum": [
             "bozza",

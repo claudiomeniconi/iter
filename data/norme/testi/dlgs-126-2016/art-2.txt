@@ -1,0 +1,48 @@
+# fonte: https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2016-06-30;126~art2
+# scaricato_il: 2026-11-24 (Normattiva, versione vigente)
+# sha256_normalizzato: 32ff11eb309c41a37d438a7d7c95670dcecaf78a97f7d83088e7318a7e9f241b
+
+Art. 2
+Informazione di cittadini e imprese
+
+1. Le amministrazioni statali, con decreto del Ministro competente, di concerto con il Ministro delegato per la semplificazione e la pubblica amministrazione, sentita la Conferenza unificata di cui all'articolo 8 del decreto legislativo 28 agosto 1997, n. 281, adottano moduli unificati e standardizzati che definiscono esaustivamente, per tipologia di procedimento, i contenuti tipici e la relativa organizzazione dei dati delle istanze, delle segnalazioni e delle comunicazioni di cui ai decreti da adottare ai sensi dell'articolo 5 della legge n. 124 del 2015, nonché della documentazione da allegare. I suddetti moduli prevedono, tra l'altro, la possibilità del privato di indicare l'eventuale domicilio digitale per le comunicazioni con l'amministrazione. Per la presentazione di istanze, segnalazioni o comunicazioni alle amministrazioni regionali o locali, con riferimento all'edilizia e all'avvio di attività produttive, i suddetti moduli sono adottati, in attuazione del principio di leale collaborazione, in sede di Conferenza unificata di cui all'articolo 8 del decreto legislativo n. 281 del 1997, con accordi ai sensi dell'articolo 9 dello stesso decreto legislativo o con intese ai sensi della legge 5 giugno 2003, n. 131, tenendo conto delle specifiche normative regionali.
+
+2. Fermi restando gli obblighi di cui al decreto legislativo 14 marzo 2013, n. 33, le pubbliche amministrazioni destinatarie delle istanze, segnalazioni e comunicazioni pubblicano sul proprio sito istituzionale i moduli di cui al comma 1. In relazione alla tipologia del procedimento, nei casi in cui la documentazione debba essere individuata dall'amministrazione procedente ovvero fino all'adozione dei moduli di cui al comma 1, le medesime pubbliche amministrazioni pubblicano sul proprio sito istituzionale l'elenco degli stati, qualità personali e fatti oggetto di dichiarazione sostitutiva, di certificazione o di atto di notorietà, nonché delle attestazioni e asseverazioni dei tecnici abilitati o delle dichiarazioni di conformità dell'agenzia delle imprese, necessari a corredo della segnalazione, indicando le norme che ne prevedono la produzione.
+
+3. Fermi restando i rimedi previsti dal decreto legislativo n. 33 del 2013, qualora gli enti locali non provvedano alla pubblicazione dei documenti di cui al presente articolo, le regioni, anche su segnalazione del cittadino, assegnano agli enti interessati un congruo termine per provvedere, decorso inutilmente il quale adottano le misure sostitutive, nel rispetto della disciplina statale e regionale applicabile nella relativa materia. In caso di inadempienza della regione si provvede in via sostitutiva ai sensi dell'articolo 8 della legge n. 131 del 2003.
+
+4. L'amministrazione può chiedere all'interessato informazioni o documenti solo in caso di mancata corrispondenza del contenuto dell'istanza, segnalazione o comunicazione e dei relativi allegati a quanto indicato nel comma 2. È vietata ogni richiesta di informazioni o documenti ulteriori rispetto a quelli indicati ai sensi del comma 2, nonché di documenti in possesso di una pubblica amministrazione.
+
+5. Ferme restando le sanzioni previste dal decreto legislativo n. 33 del 2013, la mancata pubblicazione delle informazioni e dei documenti di cui al presente articolo e la richiesta di integrazioni documentali non corrispondenti alle informazioni e ai documenti pubblicati costituiscono illecito disciplinare punibile con la sospensione dal servizio con privazione della retribuzione da tre giorni a sei mesi.
+
+Note all'art. 2:
+- Per l'art. 8 del decreto legislativo 28 agosto 1997, n. 281, vedasi nelle note alle premesse.
+- Per l'art. 5 della legge 7 agosto 2015, n. 124, vedasi nelle note alle premesse.
+- Si riporta il testo dell'art. 9 del citato decreto legislativo 28 agosto 1997, n. 281:
+«Art. 9 (Funzioni). - 1. La Conferenza unificata assume deliberazioni, promuove e sancisce intese ed accordi, esprime pareri, designa rappresentanti in relazione alle materie ed ai compiti di interesse comune alle regioni, alle province, ai comuni e alle comunità montane.
+2. La Conferenza unificata è comunque competente in tutti i casi in cui regioni, province, comuni e comunità montane ovvero la Conferenza Stato-regioni e la Conferenza Stato-città ed autonomie locali debbano esprimersi su un medesimo oggetto. In particolare la Conferenza unificata:
+a) esprime parere:
+1) sul disegno di legge finanziaria e sui disegni di legge collegati;
+2) sul documento di programmazione economica e finanziaria;
+3) sugli schemi di decreto legislativo adottati in base all'art. 1 della legge 15 marzo 1997, n. 59;
+b) promuove e sancisce intese tra Governo, regioni, province, comuni e comunità montane. Nel caso di mancata intesa o di urgenza si applicano le disposizioni di cui all'art. 3, commi 3 e 4;
+c) promuove e sancisce accordi tra Governo, regioni, province, comuni e comunità montane, al fine di coordinare l'esercizio delle rispettive competenze e svolgere in collaborazione attività di interesse comune;
+d) acquisisce le designazioni dei rappresentanti delle autonomie locali indicati, rispettivamente, dai presidenti delle regioni e province autonome di Trento e di Bolzano, dall'ANCI, dall'UPI e dall'UNCEM nei casi previsti dalla legge;
+e) assicura lo scambio di dati e informazioni tra Governo, regioni, province, comuni e comunità montane nei casi di sua competenza, anche attraverso l'approvazione di protocolli di intesa tra le amministrazioni centrali e locali secondo le modalità di cui all'art. 6;
+f) è consultata sulle linee generali delle politiche del personale pubblico e sui processi di riorganizzazione e mobilità del personale connessi al conferimento di funzioni e compiti alle regioni ed agli enti locali;
+g) esprime gli indirizzi per l'attività dell'Agenzia per i servizi sanitari regionali.
+3. Il Presidente del Consiglio dei ministri può sottoporre alla Conferenza unificata, anche su richiesta delle autonomie regionali e locali, ogni altro oggetto di preminente interesse comune delle regioni, delle province, dei comuni e delle comunità montane.
+4. Ferma restando la necessità dell'assenso del Governo per l'adozione delle deliberazioni di competenza della Conferenza unificata, l'assenso delle regioni, delle province, dei comuni e delle comunità montane è assunto con il consenso distinto dei membri dei due gruppi delle autonomie che compongono, rispettivamente, la Conferenza Stato-regioni e la Conferenza Stato-città ed autonomie locali. L'assenso è espresso di regola all'unanimità dei membri dei due predetti gruppi. Ove questa non sia raggiunta l'assenso è espresso dalla maggioranza dei rappresentanti di ciascuno dei due gruppi.
+5. La Conferenza Stato-città ed autonomie locali ha compiti di:
+a) coordinamento nei rapporti tra lo Stato e le autonomie locali;
+b) studio, informazione e confronto nelle problematiche connesse agli indirizzi di politica generale che possono incidere sulle funzioni proprie o delegate di province e comuni e comunità montane.
+6. La Conferenza Stato-città ed autonomie locali, in particolare, è sede di discussione ed esame:
+a) dei problemi relativi all'ordinamento ed al funzionamento degli enti locali, compresi gli aspetti relativi alle politiche finanziarie e di bilancio, alle risorse umane e strumentali, nonché delle iniziative legislative e degli atti generali di governo a ciò attinenti;
+b) dei problemi relativi alle attività di gestione ed erogazione dei servizi pubblici;
+c) di ogni altro problema connesso con gli scopi di cui al presente comma che venga sottoposto, anche su richiesta del Presidente dell'ANCI, dell'UPI e dell'UNCEM, al parere della Conferenza dal Presidente del Consiglio dei ministri o dal Presidente delegato.
+7. La Conferenza Stato-città ed autonomie locali ha inoltre il compito di favorire:
+a) l'informazione e le iniziative per il miglioramento dell'efficienza dei servizi pubblici locali;
+b) la promozione di accordi o contratti di programma ai sensi dell'art. 12 della legge 23 dicembre 1992, n. 498;
+c) le attività relative alla organizzazione di manifestazioni che coinvolgono più comuni o province da celebrare in ambito nazionale.».
+- La legge 5 giugno 2003, n. 131 (Disposizioni per l'adeguamento dell'ordinamento della Repubblica alla Legge costituzionale 18 ottobre 2001, n. 3), è pubblicata nella Gazzetta Ufficiale 10 giugno 2003, n. 132.
+- Il decreto legislativo 14 marzo 2013, n. 33 (Riordino della disciplina riguardante il diritto di accesso civico e gli obblighi di pubblicità, trasparenza e diffusione di informazioni da parte delle pubbliche amministrazioni), è pubblicato nella Gazzetta Ufficiale il 5 aprile 2013, n. 80.

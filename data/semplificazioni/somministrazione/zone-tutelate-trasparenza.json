@@ -1,0 +1,81 @@
+{
+  "id": "valdarno.somministrazione.zone-tutelate-trasparenza",
+  "titolo": "Bar: ogni comune dice chiaramente se ha zone tutelate",
+  "sintesi": "Per aprire un bar basta la SCIA, ma nelle zone tutelate eventualmente individuate dal comune serve un'autorizzazione. Nessuno dei comuni del Valdarno mappati dice sul sito se queste zone esistono. Il SUAP deve già informare sugli adempimenti e indicare quando si può partire subito. La proposta: una riga sulla pagina SUAP di ogni comune con l'atto che individua le zone, oppure la dichiarazione che non ce ne sono.",
+  "procedura": {
+    "modello": "somministrazione.apertura",
+    "ambito": ["it/toscana"],
+    "procedure_id": ["montevarchi.somministrazione.apertura"]
+  },
+  "indizio": {
+    "tipo": "passaggio_senza_base_normativa",
+    "descrizione": "La domanda 'zona_tutelata' del percorso guidato non ha una fonte comunale in nessuno dei comuni mappati: chi apre non sa se basta la SCIA."
+  },
+  "diff": [
+    {
+      "passaggio": "autorizzazione_zona_tutelata",
+      "azione": "chiarisci",
+      "descrizione": "Il SUAP pubblica se esistono zone tutelate per la somministrazione e con quale atto.",
+      "prima": "Chi apre deve chiedere all'ufficio o a un professionista se il locale è in zona tutelata.",
+      "dopo": "La risposta è sulla pagina SUAP, con il link all'atto e alla mappa."
+    }
+  ],
+  "catena_normativa": [
+    {
+      "norma": "lr-toscana-62-2018",
+      "articolo": "art. 50, comma 1",
+      "livello": "regione",
+      "effetto": "impone",
+      "citazione": "L'apertura e il trasferimento di sede sono soggetti ad autorizzazione rilasciata dal SUAP competente per territorio nelle zone soggette a tutela eventualmente individuate dal comune ai sensi dell' articolo 64, comma 3, del d.lgs. 59/2010.",
+      "verificata_il": "2026-11-24",
+      "citazione_controllata": true
+    },
+    {
+      "norma": "dlgs-59-2010",
+      "articolo": "art. 64, comma 3",
+      "livello": "stato",
+      "effetto": "consente",
+      "citazione": "i comuni, limitatamente alle zone del territorio da sottoporre a tutela, adottano provvedimenti di programmazione delle aperture degli esercizi di somministrazione di alimenti e bevande al pubblico di cui al comma 1",
+      "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2010-03-26;59~art64",
+      "verificata_il": "2026-11-24",
+      "citazione_controllata": true
+    },
+    {
+      "norma": "dpr-160-2010",
+      "articolo": "art. 4, comma 3, lett. a)",
+      "livello": "stato",
+      "effetto": "impone",
+      "citazione": "agli adempimenti necessari per lo svolgimento delle attività di cui all'articolo 2, comma 1, indicando altresì quelle per le quali è consentito l'immediato avvio dell'intervento;",
+      "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.del.presidente.della.repubblica:2010-09-07;160~art4",
+      "verificata_il": "2026-11-24",
+      "citazione_controllata": true,
+      "commento": "Il SUAP deve già informare su quando si può partire subito (SCIA) e quando no (autorizzazione in zona tutelata)."
+    }
+  ],
+  "livello_competente": "A_prassi",
+  "strumento": "Aggiornamento della pagina SUAP del comune a cura del responsabile, con il link all'atto che individua le zone tutelate o la dichiarazione che non ce ne sono.",
+  "verdetto_giuridico": {
+    "esito": "fattibile",
+    "motivazione": "Si tratta di informare su un regime già previsto dalla legge regionale; l'obbligo di informazione del SUAP sugli adempimenti e sull'avvio immediato è già nel D.P.R. 160/2010."
+  },
+  "conseguenze": [
+    {
+      "obiezione": "Se il comune non ha mai deciso, dichiararlo può aprire una discussione politica sull'opportunità di individuare zone tutelate.",
+      "ambito": "altro",
+      "gravita": "bassa",
+      "contromisura": "La scheda chiede solo trasparenza sullo stato attuale, non di creare o togliere zone."
+    }
+  ],
+  "impatto": {
+    "ipotesi": [
+      "Elimina una domanda all'ufficio o al professionista prima di scegliere il locale.",
+      "Riduce il rischio di presentare una SCIA dove serve un'autorizzazione."
+    ]
+  },
+  "revisioni": [
+    { "revisore": "agente:giurista", "ruolo": "agente", "esito": "commento", "motivazione": "Primo giro manuale in sessione.", "data": "2026-11-24" }
+  ],
+  "stato": "in_verifica",
+  "creata_il": "2026-11-24",
+  "note": "Nasce dalla proposta 5 dell'analisi 'Aprire un bar nel Valdarno'."
+}

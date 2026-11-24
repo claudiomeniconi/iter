@@ -1,0 +1,81 @@
+{
+  "id": "pratomagno.suap.pagopa",
+  "titolo": "SUAP associato del Pratomagno: diritti pagabili con pagoPA invece del bonifico",
+  "sintesi": "Nel SUAP associato dell'Unione dei Comuni del Pratomagno i diritti si pagano con un bonifico all'Unione; negli altri comuni del Valdarno con pagoPA. Il Codice dell'amministrazione digitale obbliga le amministrazioni ad accettare i pagamenti elettronici tramite la piattaforma nazionale. La proposta: attivare pagoPA anche per i diritti SUAP dell'Unione.",
+  "procedura": {
+    "modello": "somministrazione.apertura",
+    "ambito": ["it/toscana/ar/castelfranco-piandisco", "it/toscana/ar/loro-ciuffenna", "it/toscana/ar/castiglion-fibocchi"]
+  },
+  "indizio": {
+    "tipo": "canale_non_digitale",
+    "descrizione": "Censimento SUAP Valdarno del 24/11/2026: l'Unione del Pratomagno chiede il pagamento con bonifico; Cavriglia, Terranuova, San Giovanni e Figline e Incisa usano pagoPA."
+  },
+  "diff": [
+    {
+      "passaggio": "scia_somministrazione",
+      "azione": "digitalizza",
+      "descrizione": "Pagamento dei diritti SUAP con avviso pagoPA generato dalla pratica.",
+      "prima": "Bonifico all'Unione con causale scritta a mano e ricevuta da allegare.",
+      "dopo": "Avviso pagoPA, ricevuta automatica collegata alla pratica."
+    }
+  ],
+  "catena_normativa": [
+    {
+      "norma": "dlgs-82-2005",
+      "articolo": "art. 5, comma 1",
+      "livello": "stato",
+      "effetto": "impone",
+      "citazione": "I soggetti di cui all'articolo 2, comma 2, sono obbligati ad accettare, tramite la piattaforma di cui al comma 2, i pagamenti spettanti a qualsiasi titolo attraverso sistemi di pagamento elettronico",
+      "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2005-03-07;82~art5",
+      "verificata_il": "2026-11-24",
+      "citazione_controllata": true,
+      "commento": "Da verificare che le unioni di comuni rientrino tra i soggetti dell'art. 2, comma 2 del CAD (testo non ancora archiviato)."
+    },
+    {
+      "norma": "dpr-160-2010",
+      "articolo": "art. 4, comma 5",
+      "livello": "stato",
+      "effetto": "consente",
+      "citazione": "I comuni possono esercitare le funzioni inerenti al SUAP in forma singola o associata tra loro, o in convenzione con le camere di commercio.",
+      "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.del.presidente.della.repubblica:2010-09-07;160~art4",
+      "verificata_il": "2026-11-24",
+      "citazione_controllata": true
+    }
+  ],
+  "livello_competente": "A_prassi",
+  "strumento": "Decisione organizzativa del responsabile del SUAP associato e del servizio finanziario dell'Unione (attivazione del servizio di pagamento su pagoPA).",
+  "verdetto_giuridico": {
+    "esito": "fattibile_con_condizioni",
+    "motivazione": "Non serve cambiare norme: si tratta di applicare un obbligo già previsto dal CAD.",
+    "condizioni": [
+      "Verificare sul testo dell'art. 2, comma 2 del CAD che l'Unione sia soggetta all'obbligo.",
+      "Verificare se l'Unione è già aderente a pagoPA per altri servizi (in quel caso basta configurare un nuovo servizio)."
+    ]
+  },
+  "conseguenze": [
+    {
+      "obiezione": "Costi e tempi di configurazione del servizio per un ente piccolo.",
+      "ambito": "costi_ente",
+      "gravita": "bassa",
+      "contromisura": "Usare l'intermediario tecnologico già adottato dai comuni dell'Unione o quello regionale."
+    }
+  ],
+  "impatto": {
+    "ipotesi": [
+      "Meno errori di causale e meno pratiche sospese per ricevuta mancante: da misurare con il SUAP."
+    ]
+  },
+  "precedenti": [
+    {
+      "ente": "Comune di Cavriglia",
+      "descrizione": "Diritti SUAP pagati con pagoPA.",
+      "fonte": { "titolo": "SUAP - Sportello unico attività produttive", "url": "https://www.comune.cavriglia.ar.it/come-fare-per/suap-sportello-unico-attivita-produttive.html", "verificata_il": "2026-11-24" }
+    }
+  ],
+  "revisioni": [
+    { "revisore": "agente:giurista", "ruolo": "agente", "esito": "commento", "motivazione": "Primo giro manuale in sessione.", "data": "2026-11-24" }
+  ],
+  "stato": "in_verifica",
+  "creata_il": "2026-11-24",
+  "note": "Nasce dalla proposta 2 dell'analisi 'Aprire un bar nel Valdarno'."
+}

@@ -1,0 +1,237 @@
+[
+  {
+    "id": "costituzione",
+    "titolo": "Costituzione della Repubblica Italiana",
+    "livello": "costituzione",
+    "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:costituzione:1947-12-27",
+    "articoli_rilevanti": [
+      {
+        "articolo": "art. 117",
+        "perche": "Riparto di competenze Stato-Regioni (commercio, governo del territorio, salute, concorrenza) e potestà regolamentare degli enti locali",
+        "archiviato": true
+      },
+      {
+        "articolo": "art. 118",
+        "perche": "Funzioni amministrative ai comuni, sussidiarietà",
+        "archiviato": true
+      }
+    ]
+  },
+  {
+    "id": "l-241-1990",
+    "titolo": "Nuove norme in materia di procedimento amministrativo",
+    "estremi": "Legge 7 agosto 1990, n. 241",
+    "livello": "stato",
+    "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:legge:1990-08-07;241",
+    "articoli_rilevanti": [
+      {
+        "articolo": "art. 2",
+        "perche": "Termini di conclusione del procedimento",
+        "archiviato": true
+      },
+      {
+        "articolo": "art. 14-14-quinquies",
+        "perche": "Conferenza di servizi: pareri in parallelo invece che in serie (archiviato solo l'art. 14)",
+        "archiviato": false
+      },
+      {
+        "articolo": "art. 18",
+        "perche": "Autocertificazione e acquisizione d'ufficio di documenti già in possesso della PA",
+        "archiviato": true
+      },
+      {
+        "articolo": "art. 19",
+        "perche": "SCIA: regime, controlli successivi, divieto di aggravare",
+        "archiviato": true
+      },
+      {
+        "articolo": "art. 19-bis",
+        "perche": "Concentrazione dei regimi: un'unica SCIA allo sportello, che la trasmette agli altri enti",
+        "archiviato": true
+      },
+      {
+        "articolo": "art. 20",
+        "perche": "Silenzio assenso",
+        "archiviato": true
+      },
+      {
+        "articolo": "art. 29",
+        "perche": "Livelli essenziali delle prestazioni: limiti per Regioni ed enti locali",
+        "archiviato": true
+      }
+    ]
+  },
+  {
+    "id": "dpr-445-2000",
+    "titolo": "Testo unico sulla documentazione amministrativa",
+    "estremi": "D.P.R. 28 dicembre 2000, n. 445",
+    "livello": "stato",
+    "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.del.presidente.della.repubblica:2000-12-28;445",
+    "articoli_rilevanti": [
+      {
+        "articolo": "art. 43",
+        "perche": "Accertamenti d'ufficio: la PA non chiede documenti che può acquisire da sé",
+        "archiviato": true
+      },
+      {
+        "articolo": "artt. 46-47",
+        "perche": "Dichiarazioni sostitutive di certificazione e di atto notorio",
+        "archiviato": true
+      }
+    ]
+  },
+  {
+    "id": "dpr-160-2010",
+    "titolo": "Regolamento per la semplificazione e il riordino della disciplina sullo sportello unico per le attività produttive",
+    "estremi": "D.P.R. 7 settembre 2010, n. 160",
+    "livello": "stato",
+    "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.del.presidente.della.repubblica:2010-09-07;160",
+    "articoli_rilevanti": [
+      {
+        "articolo": "art. 2",
+        "perche": "Il SUAP come unico punto di accesso; rapporti con gli altri enti",
+        "archiviato": true
+      },
+      {
+        "articolo": "art. 4",
+        "perche": "Funzioni del SUAP, trasmissione agli enti coinvolti, diritti e spese",
+        "archiviato": true
+      },
+      {
+        "articolo": "art. 5",
+        "perche": "Procedimento automatizzato (SCIA)",
+        "archiviato": true
+      }
+    ]
+  },
+  {
+    "id": "dlgs-126-2016",
+    "titolo": "Attuazione della delega in materia di segnalazione certificata di inizio attività (SCIA)",
+    "estremi": "D.Lgs. 30 giugno 2016, n. 126",
+    "livello": "stato",
+    "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2016-06-30;126",
+    "articoli_rilevanti": [
+      {
+        "articolo": "art. 2",
+        "perche": "Moduli unificati e standardizzati; limiti alla richiesta di informazioni e documenti ulteriori",
+        "archiviato": true
+      }
+    ]
+  },
+  {
+    "id": "dlgs-222-2016",
+    "titolo": "Individuazione di procedimenti oggetto di autorizzazione, SCIA, silenzio assenso e comunicazione",
+    "estremi": "D.Lgs. 25 novembre 2016, n. 222",
+    "livello": "stato",
+    "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2016-11-25;222",
+    "articoli_rilevanti": [
+      {
+        "articolo": "Tabella A",
+        "perche": "Regime amministrativo di ogni attività (es. somministrazione: SCIA o autorizzazione in zone tutelate)",
+        "archiviato": false
+      }
+    ]
+  },
+  {
+    "id": "dlgs-82-2005",
+    "titolo": "Codice dell'amministrazione digitale (CAD)",
+    "estremi": "D.Lgs. 7 marzo 2005, n. 82",
+    "livello": "stato",
+    "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2005-03-07;82",
+    "articoli_rilevanti": [
+      {
+        "articolo": "art. 5",
+        "perche": "Pagamenti elettronici verso la PA tramite pagoPA",
+        "archiviato": true
+      },
+      {
+        "articolo": "art. 50-ter",
+        "perche": "Piattaforma digitale nazionale dati: principio once only",
+        "archiviato": true
+      }
+    ]
+  },
+  {
+    "id": "dlgs-267-2000",
+    "titolo": "Testo unico delle leggi sull'ordinamento degli enti locali (TUEL)",
+    "estremi": "D.Lgs. 18 agosto 2000, n. 267",
+    "livello": "stato",
+    "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2000-08-18;267",
+    "articoli_rilevanti": [
+      {
+        "articolo": "art. 7",
+        "perche": "Potestà regolamentare del comune",
+        "archiviato": true
+      },
+      {
+        "articolo": "artt. 42 e 48",
+        "perche": "Competenze di consiglio e giunta: chi adotta regolamenti e tariffe",
+        "archiviato": true
+      }
+    ]
+  },
+  {
+    "id": "dlgs-59-2010",
+    "titolo": "Attuazione della direttiva 2006/123/CE relativa ai servizi nel mercato interno",
+    "estremi": "D.Lgs. 26 marzo 2010, n. 59",
+    "livello": "stato",
+    "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2010-03-26;59",
+    "articoli_rilevanti": [
+      {
+        "articolo": "art. 64",
+        "perche": "Somministrazione: regime e zone tutelate",
+        "archiviato": true
+      },
+      {
+        "articolo": "art. 71",
+        "perche": "Requisiti morali e professionali",
+        "archiviato": true
+      }
+    ]
+  },
+  {
+    "id": "dir-2006-123-ce",
+    "titolo": "Direttiva relativa ai servizi nel mercato interno",
+    "estremi": "Direttiva 2006/123/CE",
+    "livello": "ue",
+    "url": "https://eur-lex.europa.eu/legal-content/IT/TXT/?uri=CELEX:32006L0123",
+    "articoli_rilevanti": [
+      {
+        "articolo": "artt. 5-6 e 9-13",
+        "perche": "Semplificazione, sportello unico, regimi di autorizzazione giustificati e proporzionati",
+        "archiviato": false
+      }
+    ]
+  },
+  {
+    "id": "lr-toscana-62-2018",
+    "titolo": "Codice del Commercio",
+    "estremi": "Legge regionale Toscana 23 novembre 2018, n. 62",
+    "livello": "regione",
+    "territorio": "it/toscana",
+    "url": "https://raccoltanormativa.consiglio.regione.toscana.it/class/download_doc.php?file_path=legge/2018/legge_2018_62_s1/legge_2018_62_s1_v1.pdf",
+    "articoli_rilevanti": [
+      {
+        "articolo": "artt. 11-12",
+        "perche": "Requisiti morali e professionali",
+        "archiviato": true
+      },
+      {
+        "articolo": "art. 43",
+        "perche": "Piano e regolamento comunali",
+        "archiviato": true
+      },
+      {
+        "articolo": "artt. 47-54",
+        "perche": "Somministrazione: esercizio, requisiti dei locali, abilitazione, attività stagionali e temporanee",
+        "archiviato": true
+      },
+      {
+        "articolo": "art. 90",
+        "perche": "Subingresso",
+        "archiviato": true
+      }
+    ],
+    "note": "Archiviato il testo ORIGINARIO (PDF v1, 23/11/2018): prima della revisione umana confrontarlo con il testo vigente."
+  }
+]

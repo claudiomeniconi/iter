@@ -1,0 +1,107 @@
+{
+  "id": "valdarno.somministrazione.planimetria-una-volta",
+  "titolo": "Bar: la planimetria del locale si consegna una volta sola",
+  "sintesi": "Nella mappatura del bar la planimetria del locale compare tre volte: per verificare il locale, nella SCIA e nella notifica sanitaria all'ASL. La legge vieta di chiedere documenti che una pubblica amministrazione ha già e obbliga lo sportello a girare la SCIA agli altri enti. La proposta: il SUAP chiede la planimetria una volta, allegata alla SCIA unica, e la trasmette all'ASL.",
+  "procedura": {
+    "modello": "somministrazione.apertura",
+    "ambito": ["it/toscana"],
+    "procedure_id": ["montevarchi.somministrazione.apertura"]
+  },
+  "indizio": {
+    "tipo": "documento_duplicato",
+    "descrizione": "Il documento 'planimetria_locale' è richiesto in tre passaggi della procedura di Montevarchi (verifica del locale, SCIA, notifica sanitaria). Passaggi ancora in bozza: va confermato con il SUAP che la richiesta tripla avvenga davvero."
+  },
+  "diff": [
+    {
+      "passaggio": "notifica_sanitaria",
+      "azione": "acquisisci_d_ufficio",
+      "descrizione": "La planimetria allegata alla SCIA unica viene trasmessa dal SUAP all'ASL insieme alla notifica; non si carica una seconda volta.",
+      "prima": "Planimetria allegata sia alla SCIA sia alla notifica sanitaria.",
+      "dopo": "Planimetria allegata una volta alla SCIA unica; il SUAP la inoltra all'ASL."
+    }
+  ],
+  "catena_normativa": [
+    {
+      "norma": "dlgs-126-2016",
+      "articolo": "art. 2, comma 4",
+      "livello": "stato",
+      "effetto": "vieta",
+      "citazione": "È vietata ogni richiesta di informazioni o documenti ulteriori rispetto a quelli indicati ai sensi del comma 2, nonché di documenti in possesso di una pubblica amministrazione.",
+      "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2016-06-30;126~art2",
+      "verificata_il": "2026-11-24",
+      "citazione_controllata": true
+    },
+    {
+      "norma": "l-241-1990",
+      "articolo": "art. 19-bis, comma 2",
+      "livello": "stato",
+      "effetto": "impone",
+      "citazione": "L'amministrazione che riceve la SCIA la trasmette immediatamente alle altre amministrazioni interessate",
+      "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:legge:1990-08-07;241~art19bis",
+      "verificata_il": "2026-11-24",
+      "citazione_controllata": true
+    },
+    {
+      "norma": "l-241-1990",
+      "articolo": "art. 18, comma 2",
+      "livello": "stato",
+      "effetto": "impone",
+      "citazione": "I documenti attestanti atti, fatti, qualità e stati soggettivi, necessari per l'istruttoria del procedimento, sono acquisiti d'ufficio quando sono in possesso dell'amministrazione procedente, ovvero sono detenuti, istituzionalmente, da altre pubbliche amministrazioni.",
+      "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:legge:1990-08-07;241~art18",
+      "verificata_il": "2026-11-24",
+      "citazione_controllata": true
+    },
+    {
+      "norma": "dpr-160-2010",
+      "articolo": "art. 5, comma 4",
+      "livello": "stato",
+      "effetto": "impone",
+      "citazione": "trasmette immediatamente in via telematica la segnalazione e i relativi allegati alle amministrazioni e agli uffici competenti",
+      "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.del.presidente.della.repubblica:2010-09-07;160~art5",
+      "verificata_il": "2026-11-24",
+      "citazione_controllata": true,
+      "commento": "Gli allegati della SCIA, planimetria compresa, arrivano già all'ASL tramite il SUAP."
+    },
+    {
+      "norma": "dpr-445-2000",
+      "articolo": "art. 43, comma 1",
+      "livello": "stato",
+      "effetto": "impone",
+      "citazione": "Le amministrazioni pubbliche e i gestori di pubblici servizi sono tenuti ad acquisire d'ufficio le informazioni oggetto delle dichiarazioni sostitutive di cui agli articoli 46 e 47, nonché tutti i dati e i documenti che siano in possesso delle pubbliche amministrazioni",
+      "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.del.presidente.della.repubblica:2000-12-28;445~art43",
+      "verificata_il": "2026-11-24",
+      "citazione_controllata": true
+    }
+  ],
+  "livello_competente": "A_prassi",
+  "strumento": "Istruzione operativa del responsabile SUAP (cosa si chiede e cosa si inoltra); se il doppio caricamento dipende dai moduli STAR, segnalazione alla Regione Toscana per correggere il modulo.",
+  "verdetto_giuridico": {
+    "esito": "fattibile_con_condizioni",
+    "motivazione": "Il divieto di chiedere documenti già in possesso della PA (D.Lgs. 126/2016, art. 2, c. 4) e l'obbligo del SUAP di trasmettere SCIA e allegati agli enti competenti (L. 241/1990, art. 19-bis; D.P.R. 160/2010, art. 5) rendono la seconda richiesta della stessa planimetria non necessaria.",
+    "condizioni": [
+      "Confermare con SUAP e ASL che oggi la planimetria venga davvero chiesta più volte, e da chi.",
+      "Se la richiesta doppia è nei moduli regionali di STAR, il livello competente diventa la Regione (D)."
+    ]
+  },
+  "conseguenze": [
+    {
+      "obiezione": "L'ASL può aver bisogno di una planimetria con contenuti diversi (layout delle attrezzature, flussi) rispetto a quella urbanistica.",
+      "ambito": "salute",
+      "gravita": "media",
+      "contromisura": "Un'unica planimetria che riporti già i contenuti richiesti dall'ASL, indicati nella modulistica; nessuna riduzione dei controlli sanitari."
+    }
+  ],
+  "impatto": {
+    "documenti_in_meno": 1,
+    "ipotesi": [
+      "Una planimetria in meno da preparare e caricare per pratica.",
+      "Il risparmio in tempo e in parcelle del tecnico va stimato con un professionista."
+    ]
+  },
+  "revisioni": [
+    { "revisore": "agente:giurista", "ruolo": "agente", "esito": "commento", "motivazione": "Primo giro manuale in sessione.", "data": "2026-11-24" }
+  ],
+  "stato": "in_verifica",
+  "creata_il": "2026-11-24",
+  "note": "Nasce dal collo di bottiglia 2 e dalla proposta 3 dell'analisi 'Aprire un bar nel Valdarno'. Rispetto a quella proposta, la catena normativa mostra che una parte si può fare a livello di SUAP senza aspettare la Regione."
+}

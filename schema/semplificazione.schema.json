@@ -1,0 +1,431 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/claudiomeniconi/iter/schema/semplificazione.schema.json",
+  "title": "Proposta di semplificazione (Iter Lab)",
+  "description": "Una scheda del laboratorio: cosa cambia in una procedura, quale norma lo consente, chi può adottarlo, con quale atto, cosa comporta e quanto fa risparmiare.",
+  "type": "object",
+  "required": [
+    "id",
+    "titolo",
+    "procedura",
+    "indizio",
+    "diff",
+    "catena_normativa",
+    "livello_competente",
+    "strumento",
+    "stato",
+    "creata_il"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9_.-]+$"
+    },
+    "titolo": {
+      "type": "string",
+      "description": "La semplificazione in una frase, es. 'Acquisire d'ufficio la visura camerale invece di chiederla'"
+    },
+    "sintesi": {
+      "type": "string",
+      "description": "Spiegazione in linguaggio semplice per la scheda pubblica"
+    },
+    "procedura": {
+      "type": "object",
+      "required": [
+        "modello",
+        "ambito"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "modello": {
+          "type": "string",
+          "description": "Famiglia della procedura, es. somministrazione.apertura"
+        },
+        "ambito": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string",
+            "pattern": "^it(/[a-z0-9-]+)*$"
+          },
+          "description": "Percorsi dei territori in cui la proposta si applica (un comune, più comuni o it/toscana per la base regionale)"
+        },
+        "procedure_id": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "id delle procedure di Iter analizzate"
+        }
+      }
+    },
+    "indizio": {
+      "type": "object",
+      "required": [
+        "tipo",
+        "descrizione"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "tipo": {
+          "enum": [
+            "documento_duplicato",
+            "dato_gia_in_possesso_pa",
+            "passaggi_in_serie",
+            "tempo_reale_oltre_norma",
+            "passaggio_senza_base_normativa",
+            "differenza_tra_comuni",
+            "canale_non_digitale",
+            "costo_sproporzionato",
+            "segnalazione_utenti",
+            "altro"
+          ]
+        },
+        "descrizione": {
+          "type": "string"
+        }
+      }
+    },
+    "diff": {
+      "type": "array",
+      "minItems": 1,
+      "description": "Cosa cambia, passaggio per passaggio",
+      "items": {
+        "type": "object",
+        "required": [
+          "passaggio",
+          "azione",
+          "descrizione"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "passaggio": {
+            "type": "string",
+            "description": "id del passaggio nella procedura di Iter"
+          },
+          "azione": {
+            "enum": [
+              "elimina",
+              "unisci",
+              "parallelizza",
+              "digitalizza",
+              "acquisisci_d_ufficio",
+              "riduci_documenti",
+              "riduci_tempi",
+              "riduci_costi",
+              "cambia_regime",
+              "chiarisci",
+              "altro"
+            ]
+          },
+          "descrizione": {
+            "type": "string"
+          },
+          "prima": {
+            "type": "string"
+          },
+          "dopo": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "catena_normativa": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "#/$defs/anello"
+      }
+    },
+    "livello_competente": {
+      "enum": [
+        "A_prassi",
+        "B_atto_ente",
+        "C_regolamento_comunale",
+        "D_regione",
+        "E_stato_ue"
+      ],
+      "description": "Livello più basso che può adottare la proposta. A = prassi del SUAP o del dirigente; B = determina, delibera di giunta, accordo tra enti; C = regolamento del consiglio comunale; D = Regione; E = Stato o UE"
+    },
+    "strumento": {
+      "type": "string",
+      "description": "Atto concreto necessario, es. 'istruzione operativa del responsabile SUAP'"
+    },
+    "verdetto_giuridico": {
+      "type": "object",
+      "required": [
+        "esito",
+        "motivazione"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "esito": {
+          "enum": [
+            "fattibile",
+            "fattibile_con_condizioni",
+            "non_fattibile_al_livello",
+            "da_chiarire"
+          ]
+        },
+        "motivazione": {
+          "type": "string"
+        },
+        "condizioni": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "conseguenze": {
+      "type": "array",
+      "description": "Obiezioni della controprova (avvocato del diavolo) e contromisure",
+      "items": {
+        "type": "object",
+        "required": [
+          "obiezione",
+          "gravita"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "obiezione": {
+            "type": "string"
+          },
+          "ambito": {
+            "enum": [
+              "salute",
+              "sicurezza",
+              "ambiente",
+              "paesaggio",
+              "controlli",
+              "contenzioso",
+              "responsabilita_funzionario",
+              "altri_enti",
+              "costi_ente",
+              "entrate_ente",
+              "privacy",
+              "altro"
+            ]
+          },
+          "gravita": {
+            "enum": [
+              "bassa",
+              "media",
+              "alta",
+              "bloccante"
+            ]
+          },
+          "contromisura": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "impatto": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "giorni_risparmiati": {
+          "$ref": "#/$defs/intervallo"
+        },
+        "documenti_in_meno": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "passaggi_in_meno": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "euro_risparmiati": {
+          "$ref": "#/$defs/intervallo"
+        },
+        "ore_ufficio_risparmiate": {
+          "$ref": "#/$defs/intervallo"
+        },
+        "pratiche_anno": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "Volume annuo stimato della pratica nell'ambito"
+        },
+        "ipotesi": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "precedenti": {
+      "type": "array",
+      "description": "Enti che già applicano la semplificazione",
+      "items": {
+        "type": "object",
+        "required": [
+          "ente",
+          "descrizione",
+          "fonte"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "ente": {
+            "type": "string"
+          },
+          "descrizione": {
+            "type": "string"
+          },
+          "fonte": {
+            "$ref": "procedura.schema.json#/$defs/fonte"
+          }
+        }
+      }
+    },
+    "revisioni": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "revisore",
+          "ruolo",
+          "esito",
+          "data"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "revisore": {
+            "type": "string",
+            "description": "Nome, oppure 'agente:<nome>' per un agente"
+          },
+          "ruolo": {
+            "enum": [
+              "agente",
+              "professionista",
+              "giurista",
+              "ente",
+              "coordinatore"
+            ]
+          },
+          "esito": {
+            "enum": [
+              "approvata",
+              "modifiche_richieste",
+              "respinta",
+              "commento"
+            ]
+          },
+          "motivazione": {
+            "type": "string"
+          },
+          "data": {
+            "type": "string",
+            "format": "date"
+          }
+        }
+      }
+    },
+    "stato": {
+      "enum": [
+        "candidata",
+        "in_verifica",
+        "in_revisione",
+        "anteprima_ente",
+        "pubblicata",
+        "adottata",
+        "respinta",
+        "superata",
+        "archiviata"
+      ]
+    },
+    "creata_il": {
+      "type": "string",
+      "format": "date"
+    },
+    "aggiornata_il": {
+      "type": "string",
+      "format": "date"
+    },
+    "note": {
+      "type": "string"
+    }
+  },
+  "$defs": {
+    "intervallo": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "min": {
+          "type": "number",
+          "minimum": 0
+        },
+        "max": {
+          "type": "number",
+          "minimum": 0
+        }
+      }
+    },
+    "anello": {
+      "type": "object",
+      "description": "Un anello della catena normativa: una norma, cosa dice (citazione testuale) e che effetto ha sulla proposta",
+      "required": [
+        "norma",
+        "livello",
+        "effetto"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "norma": {
+          "type": "string",
+          "description": "id nel corpus data/norme/indice.json, es. l-241-1990"
+        },
+        "articolo": {
+          "type": "string",
+          "description": "Es. art. 18, comma 2"
+        },
+        "livello": {
+          "enum": [
+            "ue",
+            "costituzione",
+            "stato",
+            "regione",
+            "comune_regolamento",
+            "comune_atto",
+            "prassi"
+          ]
+        },
+        "effetto": {
+          "enum": [
+            "impone",
+            "consente",
+            "vieta",
+            "rinvia",
+            "limita"
+          ]
+        },
+        "citazione": {
+          "type": "string",
+          "description": "Testo esatto della norma, copiato dal testo archiviato in data/norme/testi/<norma>/. Obbligatoria da 'in_revisione' in poi: scripts/valida_lab.py controlla che compaia nel testo archiviato."
+        },
+        "url": {
+          "type": "string",
+          "format": "uri"
+        },
+        "vigente_al": {
+          "type": "string",
+          "format": "date"
+        },
+        "verificata_il": {
+          "type": "string",
+          "format": "date"
+        },
+        "citazione_controllata": {
+          "type": "boolean",
+          "description": "true se il verificatore ha trovato la citazione nel testo archiviato"
+        },
+        "commento": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}

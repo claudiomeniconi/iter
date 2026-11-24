@@ -1,0 +1,145 @@
+{
+  "id": "valdarno.somministrazione.scia-unica-diritti-per-pratica",
+  "titolo": "Bar: una sola pratica e un solo diritto SUAP per SCIA e notifica sanitaria",
+  "sintesi": "Chi apre un bar deve presentare la SCIA e la notifica sanitaria. La legge dice che si presenta un'unica SCIA allo sportello, che poi la gira agli altri enti. Alcuni comuni del Valdarno però fanno pagare i diritti SUAP per ogni endoprocedimento, così la stessa pratica costa da 30 a circa 90 euro a seconda del comune. La proposta: un solo diritto per pratica, fissato dalla giunta.",
+  "procedura": {
+    "modello": "somministrazione.apertura",
+    "ambito": [
+      "it/toscana/ar/san-giovanni-valdarno",
+      "it/toscana/ar/cavriglia",
+      "it/toscana/ar/terranuova-bracciolini",
+      "it/toscana/ar/castelfranco-piandisco",
+      "it/toscana/ar/loro-ciuffenna"
+    ],
+    "procedure_id": ["montevarchi.somministrazione.apertura"]
+  },
+  "indizio": {
+    "tipo": "differenza_tra_comuni",
+    "descrizione": "Tariffari SUAP pubblicati: Figline e Incisa 30 euro per pratica; Terranuova 40 euro per SCIA più 10 per endoprocedimento; Unione del Pratomagno 40 più 20 per endoprocedimento; Cavriglia 40 e San Giovanni 45 per endoprocedimento. Dati del censimento Valdarno del 24/11/2026, da confermare con gli uffici."
+  },
+  "diff": [
+    {
+      "passaggio": "scia_somministrazione",
+      "azione": "riduci_costi",
+      "descrizione": "I diritti di istruttoria SUAP si pagano una volta per pratica (SCIA unica con notifica sanitaria allegata), non per ogni endoprocedimento.",
+      "prima": "Diritti calcolati per endoprocedimento: SCIA e notifica sanitaria pagano due volte.",
+      "dopo": "Un solo diritto per la SCIA unica; restano a parte i diritti degli altri enti previsti dalle loro norme (es. ASL)."
+    }
+  ],
+  "catena_normativa": [
+    {
+      "norma": "lr-toscana-62-2018",
+      "articolo": "art. 48, comma 3",
+      "livello": "regione",
+      "effetto": "impone",
+      "citazione": "L’attività di somministrazione di alimenti e bevande , compresa quella di cui all’articolo 51, è soggetta a notifica sanitaria ai sensi del reg. (CE) n. 852/2004.",
+      "url": "https://raccoltanormativa.consiglio.regione.toscana.it/class/download_doc.php?file_path=legge/2018/legge_2018_62_s1/legge_2018_62_s1_v1.pdf",
+      "verificata_il": "2026-11-24",
+      "citazione_controllata": true,
+      "commento": "La notifica sanitaria è obbligatoria: la proposta non la elimina. Testo originario della legge: verificare la versione vigente."
+    },
+    {
+      "norma": "lr-toscana-62-2018",
+      "articolo": "art. 50, comma 1",
+      "livello": "regione",
+      "effetto": "impone",
+      "citazione": "L’apertura, l'ampliamento e il trasferimento di sede degli esercizi di somministrazione di alimenti e bevande sono soggetti a SCIA, ai sensi dell' articolo 19 bis della l. 241/1990, da presentare al SUAP competente per territorio.",
+      "verificata_il": "2026-11-24",
+      "citazione_controllata": true,
+      "commento": "La legge regionale richiama espressamente l'art. 19-bis, cioè la SCIA unica."
+    },
+    {
+      "norma": "l-241-1990",
+      "articolo": "art. 19-bis, comma 2",
+      "livello": "stato",
+      "effetto": "impone",
+      "citazione": "Se per lo svolgimento di un'attività soggetta a SCIA sono necessarie altre SCIA, comunicazioni, attestazioni, asseverazioni e notifiche, l'interessato presenta un'unica SCIA allo sportello di cui al comma 1.",
+      "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:legge:1990-08-07;241~art19bis",
+      "verificata_il": "2026-11-24",
+      "citazione_controllata": true,
+      "commento": "Notifica sanitaria e SCIA formano per legge un'unica pratica: è la base per un diritto unico."
+    },
+    {
+      "norma": "dpr-160-2010",
+      "articolo": "art. 4, comma 13",
+      "livello": "stato",
+      "effetto": "rinvia",
+      "citazione": "il responsabile del SUAP pone a carico dell'interessato il pagamento delle spese e dei diritti previsti da disposizioni di leggi statali e regionali vigenti, nelle misure ivi stabilite, compresi i diritti e le spese previsti a favore degli altri uffici comunali, secondo i regolamenti comunali",
+      "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.del.presidente.della.repubblica:2010-09-07;160~art4",
+      "verificata_il": "2026-11-24",
+      "citazione_controllata": true,
+      "commento": "La misura dei diritti comunali è decisa dal comune: nessuna norma statale impone il calcolo per endoprocedimento."
+    },
+    {
+      "norma": "dlgs-267-2000",
+      "articolo": "art. 42, comma 2, lett. f)",
+      "livello": "stato",
+      "effetto": "limita",
+      "citazione": "istituzione e ordinamento dei tributi, con esclusione della determinazione delle relative aliquote; disciplina generale delle tariffe per la fruizione dei beni e dei servizi;",
+      "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2000-08-18;267~art42",
+      "verificata_il": "2026-11-24",
+      "citazione_controllata": true,
+      "commento": "Al consiglio spetta la disciplina generale delle tariffe; la misura dei singoli importi è di norma fissata dalla giunta (competenza residuale, art. 48). Se il criterio 'per endoprocedimento' è scritto nel regolamento SUAP (come pare a San Giovanni Valdarno), serve una modifica del regolamento in consiglio."
+    },
+    {
+      "norma": "dlgs-267-2000",
+      "articolo": "art. 48, comma 2",
+      "livello": "stato",
+      "effetto": "consente",
+      "citazione": "La giunta compie tutti gli atti rientranti ai sensi dell'articolo 107, commi 1 e 2, nelle funzioni degli organi di governo, che non siano riservati dalla legge al consiglio",
+      "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2000-08-18;267~art48",
+      "verificata_il": "2026-11-24",
+      "citazione_controllata": true
+    }
+  ],
+  "livello_competente": "B_atto_ente",
+  "strumento": "Delibera di giunta che ridetermina i diritti SUAP per pratica; modifica del regolamento SUAP in consiglio dove il criterio per endoprocedimento è nel regolamento.",
+  "verdetto_giuridico": {
+    "esito": "fattibile_con_condizioni",
+    "motivazione": "La notifica sanitaria resta obbligatoria (L.R. 62/2018, art. 48), ma per legge confluisce in un'unica SCIA (L. 241/1990, art. 19-bis; L.R. 62/2018, art. 50). La misura dei diritti SUAP è decisa dal comune (D.P.R. 160/2010, art. 4, c. 13), quindi passare a un diritto per pratica è una scelta tariffaria del comune.",
+    "condizioni": [
+      "Verificare con ogni SUAP come conta gli endoprocedimenti in una pratica bar su STAR.",
+      "Verificare in quale atto è fissato il criterio di calcolo (delibera di giunta o regolamento SUAP).",
+      "Non tocca i diritti e le tariffe di altri enti (es. ASL), che seguono le loro norme."
+    ]
+  },
+  "conseguenze": [
+    {
+      "obiezione": "Minori entrate per il comune: i diritti coprono il costo dell'istruttoria.",
+      "ambito": "entrate_ente",
+      "gravita": "media",
+      "contromisura": "Fissare il diritto unico in modo da coprire il costo medio della pratica; il confronto con Figline e Incisa (30 euro per pratica) dà un riferimento."
+    },
+    {
+      "obiezione": "Una pratica con molti endoprocedimenti (es. bar con dehors, insegna e lavori) costa all'ufficio più di una semplice.",
+      "ambito": "costi_ente",
+      "gravita": "bassa",
+      "contromisura": "Diritto unico per la SCIA di apertura; restano separati i procedimenti autonomi come suolo pubblico e insegne."
+    }
+  ],
+  "impatto": {
+    "euro_risparmiati": { "min": 0, "max": 45 },
+    "ipotesi": [
+      "Pratica bar con due endoprocedimenti (SCIA e notifica sanitaria).",
+      "Risparmio massimo a San Giovanni Valdarno: da 90 a 45 euro. Zero dove il calcolo è già per pratica.",
+      "Numero di pratiche l'anno non ancora noto: da chiedere ai SUAP."
+    ]
+  },
+  "precedenti": [
+    {
+      "ente": "Comune di Figline e Incisa Valdarno",
+      "descrizione": "Diritti SUAP di 30 euro per ciascuna pratica.",
+      "fonte": {
+        "titolo": "Ufficio Sportello ai cittadini e alle imprese",
+        "url": "https://www.comunefiv.it/amministrazione/unita_organizzativa/ufficio-sportello-ai-cittadini-e-alle-imprese/",
+        "verificata_il": "2026-11-24"
+      }
+    }
+  ],
+  "revisioni": [
+    { "revisore": "agente:giurista", "ruolo": "agente", "esito": "commento", "motivazione": "Primo giro manuale in sessione: catena normativa costruita su testi archiviati.", "data": "2026-11-24" }
+  ],
+  "stato": "in_verifica",
+  "creata_il": "2026-11-24",
+  "note": "Nasce dalla proposta 1 dell'analisi 'Aprire un bar nel Valdarno' (thread Valdarno). Prima scheda del laboratorio."
+}
