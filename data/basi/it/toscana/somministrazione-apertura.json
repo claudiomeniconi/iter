@@ -492,10 +492,16 @@
           "verificata_il": "2026-11-24",
           "url": "https://www.regione.toscana.it/documents/d/guest/elenco-della-modulistica-unica-in-uso-al-7-ottobre-2026-pdf",
           "riferimento": "Notifica sanitaria ai fini della registrazione - Reg. CE 852/2004 - DGR 673/2024"
+        },
+        {
+          "titolo": "L. 241/1990 - Procedimento amministrativo",
+          "riferimento": "art. 19-bis, comma 2 (SCIA unica)",
+          "verificata_il": "2026-11-24",
+          "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:legge:1990-08-07;241"
         }
       ],
       "stato_verifica": "verificato_fonti",
-      "note": "Si presenta tramite il SUAP, che la inoltra alla ASL. Da verificare se su STAR è un modulo contestuale alla SCIA."
+      "note": "Si presenta insieme alla SCIA come SCIA unica allo sportello (L. 241/1990 art. 19-bis c. 2), che la inoltra alla ASL. Da verificare come STAR la conta ai fini dei diritti SUAP."
     },
     {
       "id": "insegna",
