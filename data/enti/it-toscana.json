@@ -1,0 +1,29 @@
+[
+  {
+    "id": "asl.toscana-sud-est",
+    "nome": "Azienda USL Toscana sud est",
+    "tipo": "sanitario",
+    "territorio": "it/toscana",
+    "sito": "https://www.uslsudest.toscana.it"
+  },
+  {
+    "id": "vvf.arezzo",
+    "nome": "Comando Vigili del Fuoco di Arezzo",
+    "tipo": "sicurezza",
+    "territorio": "it/toscana/ar"
+  },
+  {
+    "id": "cciaa.arezzo-siena",
+    "nome": "Camera di Commercio Arezzo-Siena",
+    "tipo": "camerale",
+    "territorio": "it/toscana/ar",
+    "sito": "https://www.as.camcom.it"
+  },
+  {
+    "id": "regione.toscana",
+    "nome": "Regione Toscana",
+    "tipo": "regionale",
+    "territorio": "it/toscana",
+    "sito": "https://www.regione.toscana.it"
+  }
+]

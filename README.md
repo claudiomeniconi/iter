@@ -51,22 +51,43 @@ Il piano dettagliato è in [`docs/piano.md`](docs/piano.md).
 
 ```
 iter/
+├── app/                            # interfaccia web (Vite + React + React Flow)
 ├── data/
-│   └── procedure/
-│       ├── _template.json          # modello vuoto di una procedura
-│       └── it/toscana/ar/montevarchi/
-│           └── somministrazione-apertura.json
+│   ├── enti/                       # registro unico degli enti, un file per territorio
+│   ├── territori/it.json           # albero Italia > regioni > province > comuni
+│   ├── procedure/
+│   │   ├── _template.json          # modello vuoto di una procedura
+│   │   └── it/toscana/ar/montevarchi/
+│   │       └── somministrazione-apertura.json
+│   └── procedure-in-programma.json # procedure che vogliamo mappare
 ├── docs/
 │   ├── montevarchi/                # note di lavoro, fonti e domande aperte
-│   ├── piano.md                    # piano del progetto e fasi
-│   └── modello-dati.md             # descrizione del modello dati
-├── schema/
-│   └── procedura.schema.json       # JSON Schema delle procedure
-├── LICENSE
+│   ├── piano.md
+│   └── modello-dati.md
+├── schema/                         # JSON Schema di procedure, enti e territori
+├── scripts/valida.py               # controlla schemi e riferimenti incrociati
+├── avvia-iter.command              # avvio con doppio clic su macOS
 └── README.md
 ```
 
-Le procedure sono organizzate per territorio: `it/<regione>/<provincia>/<comune>/`. Le procedure nazionali andranno in `it/_nazionale/`, quelle regionali in `it/<regione>/_regionale/`.
+Le procedure sono organizzate per territorio: `it/<regione>/<provincia>/<comune>/`. Una procedura definita a un livello vale anche per tutti i territori sotto: una procedura nazionale compare in ogni comune.
+
+Gli enti stanno in un registro unico (`data/enti`) e le procedure li richiamano per identificativo, così lo stesso ufficio ha gli stessi contatti in ogni procedura. Il campo `modello` lega la stessa procedura in territori diversi, per poterli confrontare.
+
+### Aggiungere un comune o una procedura
+
+1. Aggiungi il comune in `data/territori/it.json`.
+2. Aggiungi i suoi enti in `data/enti/` (es. `suap.<codice ISTAT>`).
+3. Copia `data/procedure/_template.json` nella cartella del comune e compilalo.
+4. Controlla con `python3 scripts/valida.py`.
+
+## Avviare l'app
+
+Su macOS: doppio clic su `avvia-iter.command`. Altrimenti:
+
+```bash
+cd app && npm install && npm run dev
+```
 
 ## Stack previsto
 

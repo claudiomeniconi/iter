@@ -1,13 +1,16 @@
 {
   "id": "montevarchi.somministrazione.apertura",
+  "modello": "somministrazione.apertura",
   "titolo": "Aprire un bar, ristorante o pizzeria a Montevarchi",
   "descrizione": "Apertura di un nuovo esercizio di somministrazione di alimenti e bevande (bar, ristorante, pizzeria) nel Comune di Montevarchi. Bozza della Fase 0: ogni passaggio va confermato con il SUAP e con un professionista.",
   "territorio": {
     "livello": "comunale",
     "nome": "Montevarchi (AR)",
-    "codice_istat": "051026"
+    "codice_istat": "051026",
+    "percorso": "it/toscana/ar/montevarchi"
   },
   "categoria": "impresa",
+  "stato": "bozza",
   "versione": "0.1.0",
   "ultima_verifica": "2026-11-24",
   "domande": [
@@ -44,38 +47,28 @@
   ],
   "enti": [
     {
-      "id": "richiedente",
-      "nome": "Richiedente (titolare o legale rappresentante)"
+      "id": "richiedente"
     },
     {
-      "id": "suap_montevarchi",
-      "nome": "SUAP - Comune di Montevarchi",
-      "sito": "https://www.comune.montevarchi.ar.it/unit%C3%A0-organizzative/2365133/ufficio-servizio-sviluppo-economico-suap"
+      "id": "suap.051026"
     },
     {
-      "id": "comune_edilizia",
-      "nome": "Comune di Montevarchi - Edilizia e urbanistica",
-      "sito": "https://www.sitmontevarchi.it/suap"
+      "id": "comune.051026.edilizia"
     },
     {
-      "id": "asl_tse",
-      "nome": "Azienda USL Toscana sud est"
+      "id": "asl.toscana-sud-est"
     },
     {
-      "id": "vvf_arezzo",
-      "nome": "Comando Vigili del Fuoco di Arezzo"
+      "id": "vvf.arezzo"
     },
     {
-      "id": "cciaa",
-      "nome": "Camera di Commercio Arezzo-Siena"
+      "id": "cciaa.arezzo-siena"
     },
     {
-      "id": "agenzia_entrate",
-      "nome": "Agenzia delle Entrate"
+      "id": "agenzia-entrate"
     },
     {
-      "id": "inps",
-      "nome": "INPS"
+      "id": "inps"
     }
   ],
   "passaggi": [
@@ -150,7 +143,7 @@
       "id": "verifica_locale",
       "titolo": "Verificare che il locale sia idoneo (destinazione d'uso, agibilità, sorvegliabilità)",
       "tipo": "requisito",
-      "ente": "comune_edilizia",
+      "ente": "comune.051026.edilizia",
       "attore": "professionista",
       "documenti_richiesti": [
         {
@@ -179,7 +172,7 @@
       "id": "pratica_edilizia",
       "titolo": "Presentare la pratica edilizia per lavori o cambio d'uso",
       "tipo": "presentazione",
-      "ente": "comune_edilizia",
+      "ente": "comune.051026.edilizia",
       "attore": "professionista",
       "documenti_prodotti": [
         {
@@ -292,7 +285,7 @@
       "id": "prevenzione_incendi",
       "titolo": "SCIA antincendio ai Vigili del Fuoco",
       "tipo": "presentazione",
-      "ente": "vvf_arezzo",
+      "ente": "vvf.arezzo",
       "attore": "professionista",
       "dipende_da": [
         "verifica_locale"
@@ -318,7 +311,7 @@
       "id": "apertura_partita_iva",
       "titolo": "Aprire la partita IVA e iscrivere l'impresa (Comunicazione Unica)",
       "tipo": "iscrizione",
-      "ente": "cciaa",
+      "ente": "cciaa.arezzo-siena",
       "attore": "professionista",
       "documenti_prodotti": [
         {
@@ -348,7 +341,7 @@
       "id": "scia_somministrazione",
       "titolo": "Presentare la SCIA di somministrazione al SUAP tramite STAR",
       "tipo": "presentazione",
-      "ente": "suap_montevarchi",
+      "ente": "suap.051026",
       "attore": "richiedente",
       "documenti_richiesti": [
         {
@@ -438,7 +431,7 @@
       "id": "autorizzazione_zona_tutelata",
       "titolo": "Chiedere l'autorizzazione al SUAP (zona tutelata)",
       "tipo": "autorizzazione",
-      "ente": "suap_montevarchi",
+      "ente": "suap.051026",
       "attore": "richiedente",
       "documenti_prodotti": [
         {
@@ -482,7 +475,7 @@
       "id": "notifica_sanitaria",
       "titolo": "Notifica sanitaria per la registrazione dell'attività alimentare",
       "tipo": "comunicazione",
-      "ente": "asl_tse",
+      "ente": "asl.toscana-sud-est",
       "attore": "richiedente",
       "documenti_richiesti": [
         {
@@ -519,7 +512,7 @@
       "id": "insegna",
       "titolo": "Autorizzazione per l'insegna",
       "tipo": "autorizzazione",
-      "ente": "suap_montevarchi",
+      "ente": "suap.051026",
       "attore": "richiedente",
       "costi": [
         {
@@ -549,7 +542,7 @@
       "id": "dehors",
       "titolo": "Concessione di suolo pubblico per il dehors",
       "tipo": "autorizzazione",
-      "ente": "suap_montevarchi",
+      "ente": "suap.051026",
       "attore": "richiedente",
       "costi": [
         {
@@ -580,7 +573,7 @@
       "id": "registratore_telematico",
       "titolo": "Attivare il registratore telematico dei corrispettivi",
       "tipo": "comunicazione",
-      "ente": "agenzia_entrate",
+      "ente": "agenzia-entrate",
       "attore": "professionista",
       "dipende_da": [
         "apertura_partita_iva"
@@ -599,7 +592,7 @@
       "id": "controlli_suap",
       "titolo": "Controlli del Comune sulla SCIA",
       "tipo": "controllo",
-      "ente": "suap_montevarchi",
+      "ente": "suap.051026",
       "attore": "ente",
       "tempi": {
         "previsto_giorni": 60
@@ -623,7 +616,7 @@
       "id": "sopralluogo_asl",
       "titolo": "Eventuale sopralluogo della ASL",
       "tipo": "controllo",
-      "ente": "asl_tse",
+      "ente": "asl.toscana-sud-est",
       "attore": "ente",
       "dipende_da": [
         "notifica_sanitaria"

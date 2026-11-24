@@ -23,20 +23,44 @@ export type Passaggio = {
 }
 
 export type Domanda = { id: string; testo: string; tipo: 'si_no' | 'scelta' | 'numero'; opzioni?: string[] }
-export type Ente = { id: string; nome: string; sito?: string }
+
+export type TipoEnte = 'richiedente' | 'comunale' | 'regionale' | 'sanitario' | 'sicurezza' | 'camerale' | 'statale' | 'altro'
+export type Ente = {
+  id: string
+  nome: string
+  tipo: TipoEnte
+  descrizione?: string
+  territorio?: string
+  sito?: string
+  contatti?: { indirizzo?: string; telefono?: string; email?: string; pec?: string; orari?: string }
+  fonte?: Fonte
+}
 
 export type Procedura = {
   id: string
+  modello: string
   titolo: string
   descrizione?: string
-  territorio: { livello: string; nome: string; codice_istat?: string }
+  territorio: { livello: string; nome: string; codice_istat?: string; percorso: string }
   categoria?: string
+  stato?: 'bozza' | 'pubblicata' | 'archiviata'
   versione: string
   ultima_verifica: string
   domande?: Domanda[]
-  enti: Ente[]
+  enti: { id: string }[]
   passaggi: Passaggio[]
 }
+
+export type NodoTerritorio = {
+  id: string
+  nome: string
+  livello: 'nazionale' | 'regionale' | 'provinciale' | 'comunale'
+  codice_istat?: string
+  figli?: NodoTerritorio[]
+}
+export type Territorio = NodoTerritorio & { percorso: string; padri: Territorio[] }
+
+export type InProgramma = { titolo: string; categoria?: string; territorio: string }
 
 export type Risposte = Record<string, unknown>
 /** attivo: si applica; possibile: dipende da una risposta non data; escluso: non si applica */

@@ -1,0 +1,42 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/claudiomeniconi/iter/schema/territorio.schema.json",
+  "title": "Albero dei territori",
+  "$ref": "#/$defs/nodo",
+  "$defs": {
+    "nodo": {
+      "type": "object",
+      "required": [
+        "id",
+        "nome",
+        "livello"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[a-z0-9-]+$"
+        },
+        "nome": {
+          "type": "string"
+        },
+        "livello": {
+          "enum": [
+            "nazionale",
+            "regionale",
+            "provinciale",
+            "comunale"
+          ]
+        },
+        "codice_istat": {
+          "type": "string"
+        },
+        "figli": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/nodo"
+          }
+        }
+      }
+    }
+  }
+}

@@ -5,6 +5,7 @@
   "type": "object",
   "required": [
     "id",
+    "modello",
     "titolo",
     "territorio",
     "versione",
@@ -17,6 +18,10 @@
       "type": "string",
       "pattern": "^[a-z0-9_.-]+$"
     },
+    "modello": {
+      "type": "string",
+      "description": "Famiglia della procedura, uguale in tutti i territori (es. somministrazione.apertura). Serve a confrontare lo stesso iter tra comuni diversi."
+    },
     "titolo": {
       "type": "string"
     },
@@ -27,7 +32,8 @@
       "type": "object",
       "required": [
         "livello",
-        "nome"
+        "nome",
+        "percorso"
       ],
       "properties": {
         "livello": {
@@ -43,11 +49,23 @@
         },
         "codice_istat": {
           "type": "string"
+        },
+        "percorso": {
+          "type": "string",
+          "pattern": "^it(/[a-z0-9-]+)*$",
+          "description": "Percorso nell'albero dei territori, es. it/toscana/ar/montevarchi"
         }
       }
     },
     "categoria": {
       "type": "string"
+    },
+    "stato": {
+      "enum": [
+        "bozza",
+        "pubblicata",
+        "archiviata"
+      ]
     },
     "versione": {
       "type": "string"
@@ -90,22 +108,15 @@
     },
     "enti": {
       "type": "array",
+      "description": "Riferimenti al registro enti in data/enti",
       "items": {
         "type": "object",
         "required": [
-          "id",
-          "nome"
+          "id"
         ],
         "properties": {
           "id": {
             "type": "string"
-          },
-          "nome": {
-            "type": "string"
-          },
-          "sito": {
-            "type": "string",
-            "format": "uri"
           }
         }
       }
@@ -191,7 +202,7 @@
         },
         "ente": {
           "type": "string",
-          "description": "id di un elemento di enti"
+          "description": "id di un ente del registro data/enti"
         },
         "attore": {
           "enum": [

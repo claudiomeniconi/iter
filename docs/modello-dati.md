@@ -2,19 +2,27 @@
 
 Una **procedura** è un grafo orientato di **passaggi**. Lo schema formale è in [`../schema/procedura.schema.json`](../schema/procedura.schema.json).
 
+## Organizzazione
+
+- **Territori** (`data/territori/it.json`): albero Italia > regioni > province > comuni. Ogni nodo ha un percorso, es. `it/toscana/ar/montevarchi`.
+- **Enti** (`data/enti/*.json`): registro unico, con tipo, territorio, contatti e fonte. Identificativi stabili, es. `suap.051026` (codice ISTAT del comune).
+- **Procedure** (`data/procedure/<percorso>/*.json`): richiamano gli enti per identificativo. Una procedura vale nel suo territorio e in tutti quelli sotto.
+
 ## Procedura
 
 | Campo | Tipo | Descrizione |
 |---|---|---|
 | `id` | stringa | Identificativo unico, es. `montevarchi.somministrazione.apertura` |
+| `modello` | stringa | Famiglia della procedura, uguale in ogni territorio, es. `somministrazione.apertura`. Serve a confrontare i comuni |
+| `stato` | enum | `bozza`, `pubblicata`, `archiviata` |
 | `titolo` | stringa | Nome leggibile |
 | `descrizione` | stringa | A cosa serve la procedura |
-| `territorio` | oggetto | Livello (`nazionale`, `regionale`, `provinciale`, `comunale`) e codice ISTAT |
+| `territorio` | oggetto | Livello, nome, codice ISTAT e `percorso` nell'albero dei territori |
 | `categoria` | stringa | Es. `impresa`, `cittadino`, `edilizia` |
 | `versione` | stringa | Versione dei dati (semver) |
 | `ultima_verifica` | data | Ultima volta che l'intera procedura è stata verificata |
 | `domande` | lista | Domande del percorso guidato che attivano o escludono passaggi |
-| `enti` | lista | Enti coinvolti |
+| `enti` | lista | Identificativi degli enti coinvolti, dal registro `data/enti` |
 | `passaggi` | lista | I nodi del grafo |
 
 ## Passaggio
@@ -24,7 +32,8 @@ Una **procedura** è un grafo orientato di **passaggi**. Lo schema formale è in
 | `id` | stringa | Identificativo unico dentro la procedura |
 | `titolo` | stringa | Azione da compiere, es. "Presentare la SCIA al SUAP" |
 | `tipo` | enum | `presentazione`, `autorizzazione`, `pagamento`, `requisito`, `iscrizione`, `comunicazione`, `controllo`, `attesa` |
-| `ente` | riferimento | Chi gestisce il passaggio |
+| `ente` | riferimento | Chi gestisce il passaggio (identificativo del registro enti) |
+| `stato_verifica` | enum | `bozza`, `verificato_fonti`, `verificato_ente` |
 | `attore` | enum | Chi agisce: `richiedente`, `professionista`, `ente` |
 | `documenti_richiesti` | lista | Cosa va presentato |
 | `documenti_prodotti` | lista | Cosa si ottiene |

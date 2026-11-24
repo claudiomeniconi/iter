@@ -1,0 +1,29 @@
+[
+  {
+    "id": "richiedente",
+    "nome": "Richiedente",
+    "tipo": "richiedente",
+    "descrizione": "Il titolare o legale rappresentante dell'impresa, da solo o con i suoi professionisti."
+  },
+  {
+    "id": "agenzia-entrate",
+    "nome": "Agenzia delle Entrate",
+    "tipo": "statale",
+    "territorio": "it",
+    "sito": "https://www.agenziaentrate.gov.it"
+  },
+  {
+    "id": "inps",
+    "nome": "INPS",
+    "tipo": "statale",
+    "territorio": "it",
+    "sito": "https://www.inps.it"
+  },
+  {
+    "id": "inail",
+    "nome": "INAIL",
+    "tipo": "statale",
+    "territorio": "it",
+    "sito": "https://www.inail.it"
+  }
+]

@@ -1,0 +1,27 @@
+{
+  "id": "it",
+  "nome": "Italia",
+  "livello": "nazionale",
+  "figli": [
+    {
+      "id": "toscana",
+      "nome": "Toscana",
+      "livello": "regionale",
+      "figli": [
+        {
+          "id": "ar",
+          "nome": "Arezzo",
+          "livello": "provinciale",
+          "figli": [
+            {
+              "id": "montevarchi",
+              "nome": "Montevarchi",
+              "livello": "comunale",
+              "codice_istat": "051026"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

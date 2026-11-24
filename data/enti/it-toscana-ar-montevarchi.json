@@ -1,0 +1,28 @@
+[
+  {
+    "id": "suap.051026",
+    "nome": "SUAP - Comune di Montevarchi",
+    "tipo": "comunale",
+    "territorio": "it/toscana/ar/montevarchi",
+    "sito": "https://www.comune.montevarchi.ar.it/unit%C3%A0-organizzative/2365133/ufficio-servizio-sviluppo-economico-suap",
+    "contatti": {
+      "indirizzo": "Piazza Varchi 5, 52025 Montevarchi (AR)",
+      "telefono": "055 9108343, 055 9108209, 055 9108219",
+      "email": "protocollomtv@comune.montevarchi.ar.it",
+      "pec": "comune.montevarchi@postacert.toscana.it",
+      "orari": "Su appuntamento: martedì 15-17, giovedì e venerdì 10-13. Telefono: lun, mar, mer, ven 10-12:30; gio 15-17"
+    },
+    "fonte": {
+      "titolo": "Pagina ufficio SUAP del Comune di Montevarchi",
+      "url": "https://www.comune.montevarchi.ar.it/unit%C3%A0-organizzative/2365133/ufficio-servizio-sviluppo-economico-suap",
+      "verificata_il": "2026-11-24"
+    }
+  },
+  {
+    "id": "comune.051026.edilizia",
+    "nome": "Comune di Montevarchi - Edilizia e urbanistica",
+    "tipo": "comunale",
+    "territorio": "it/toscana/ar/montevarchi",
+    "sito": "https://www.sitmontevarchi.it/suap"
+  }
+]

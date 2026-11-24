@@ -1,0 +1,87 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/claudiomeniconi/iter/schema/enti.schema.json",
+  "title": "Registro enti Iter",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "required": [
+      "id",
+      "nome",
+      "tipo"
+    ],
+    "properties": {
+      "id": {
+        "type": "string",
+        "pattern": "^[a-z0-9.-]+$",
+        "description": "Stabile e unico in tutta Italia, es. suap.051026 (codice ISTAT del comune)"
+      },
+      "nome": {
+        "type": "string"
+      },
+      "tipo": {
+        "enum": [
+          "richiedente",
+          "comunale",
+          "regionale",
+          "sanitario",
+          "sicurezza",
+          "camerale",
+          "statale",
+          "altro"
+        ]
+      },
+      "descrizione": {
+        "type": "string"
+      },
+      "territorio": {
+        "type": "string",
+        "pattern": "^it(/[a-z0-9-]+)*$"
+      },
+      "sito": {
+        "type": "string",
+        "format": "uri"
+      },
+      "contatti": {
+        "type": "object",
+        "properties": {
+          "indirizzo": {
+            "type": "string"
+          },
+          "telefono": {
+            "type": "string"
+          },
+          "email": {
+            "type": "string"
+          },
+          "pec": {
+            "type": "string"
+          },
+          "orari": {
+            "type": "string"
+          }
+        }
+      },
+      "fonte": {
+        "type": "object",
+        "required": [
+          "titolo",
+          "verificata_il"
+        ],
+        "properties": {
+          "titolo": {
+            "type": "string"
+          },
+          "url": {
+            "type": "string",
+            "format": "uri"
+          },
+          "verificata_il": {
+            "type": "string",
+            "format": "date"
+          }
+        }
+      }
+    }
+  }
+}
