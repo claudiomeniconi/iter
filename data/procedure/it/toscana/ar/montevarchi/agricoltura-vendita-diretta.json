@@ -1,0 +1,101 @@
+{
+  "id": "montevarchi.agricoltura.vendita-diretta",
+  "modello": "agricoltura.vendita-diretta",
+  "titolo": "Vendere direttamente i propri prodotti agricoli",
+  "descrizione": "Vendita diretta dei prodotti della propria azienda agricola, in azienda, in un locale o su aree pubbliche. Bozza della Fase 0: ogni passaggio va confermato con l'ente competente o con un professionista.",
+  "territorio": {
+    "livello": "comunale",
+    "nome": "Montevarchi (AR)",
+    "codice_istat": "051026",
+    "percorso": "it/toscana/ar/montevarchi"
+  },
+  "categoria": "impresa",
+  "stato": "bozza",
+  "versione": "0.1.0",
+  "ultima_verifica": "2026-11-24",
+  "domande": [
+    {
+      "id": "area_pubblica",
+      "testo": "Venderai su area pubblica o in un locale aperto al pubblico?",
+      "tipo": "si_no"
+    }
+  ],
+  "enti": [
+    {
+      "id": "richiedente"
+    },
+    {
+      "id": "suap.051026"
+    },
+    {
+      "id": "asl.toscana-sud-est"
+    }
+  ],
+  "passaggi": [
+    {
+      "id": "imprenditore_agricolo",
+      "titolo": "Essere imprenditore agricolo iscritto al Registro Imprese",
+      "tipo": "requisito",
+      "ente": "richiedente",
+      "attore": "richiedente",
+      "dipende_da": [],
+      "canale": "misto",
+      "fonti": [
+        {
+          "titolo": "D.Lgs. 228/2001",
+          "verificata_il": "2026-11-24",
+          "riferimento": "art. 4",
+          "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2001-05-18;228~art4"
+        }
+      ],
+      "stato_verifica": "bozza"
+    },
+    {
+      "id": "comunicazione",
+      "titolo": "Comunicare l'avvio della vendita al Comune",
+      "tipo": "comunicazione",
+      "ente": "suap.051026",
+      "attore": "richiedente",
+      "dipende_da": [
+        "imprenditore_agricolo"
+      ],
+      "condizioni": [
+        {
+          "domanda": "area_pubblica",
+          "valore": true
+        }
+      ],
+      "canale": "online",
+      "fonti": [
+        {
+          "titolo": "D.Lgs. 228/2001",
+          "verificata_il": "2026-11-24",
+          "riferimento": "art. 4",
+          "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2001-05-18;228~art4"
+        }
+      ],
+      "stato_verifica": "bozza",
+      "note": "Per la vendita in azienda non serve comunicazione. Modulo da cercare su STAR."
+    },
+    {
+      "id": "notifica_sanitaria",
+      "titolo": "Notifica sanitaria se trasformi o vendi alimenti",
+      "tipo": "comunicazione",
+      "ente": "asl.toscana-sud-est",
+      "attore": "richiedente",
+      "dipende_da": [
+        "imprenditore_agricolo"
+      ],
+      "canale": "online",
+      "fonti": [
+        {
+          "titolo": "Reg. (CE) 852/2004 sull'igiene dei prodotti alimentari",
+          "verificata_il": "2026-11-24",
+          "riferimento": "art. 6",
+          "url": "https://eur-lex.europa.eu/legal-content/IT/TXT/?uri=CELEX:32004R0852"
+        }
+      ],
+      "stato_verifica": "bozza"
+    }
+  ]
+}

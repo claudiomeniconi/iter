@@ -1,0 +1,105 @@
+{
+  "id": "montevarchi.cittadino.asilo-nido",
+  "modello": "cittadino.asilo-nido",
+  "titolo": "Iscrivere un bambino all'asilo nido",
+  "descrizione": "Iscrizione ai nidi comunali, con graduatoria e tariffe in base all'ISEE. Bozza della Fase 0: ogni passaggio va confermato con l'ente competente o con un professionista.",
+  "territorio": {
+    "livello": "comunale",
+    "nome": "Montevarchi (AR)",
+    "codice_istat": "051026",
+    "percorso": "it/toscana/ar/montevarchi"
+  },
+  "categoria": "cittadino",
+  "stato": "bozza",
+  "versione": "0.1.0",
+  "ultima_verifica": "2026-11-24",
+  "domande": [],
+  "enti": [
+    {
+      "id": "comune.051026.istruzione"
+    },
+    {
+      "id": "inps"
+    },
+    {
+      "id": "asl.toscana-sud-est"
+    }
+  ],
+  "passaggi": [
+    {
+      "id": "domanda",
+      "titolo": "Presentare la domanda di iscrizione nel periodo del bando",
+      "tipo": "presentazione",
+      "ente": "comune.051026.istruzione",
+      "attore": "richiedente",
+      "dipende_da": [],
+      "canale": "online",
+      "fonti": [
+        {
+          "titolo": "Comune di Montevarchi - Catalogo dei servizi",
+          "verificata_il": "2026-11-24",
+          "riferimento": "Richiedere l'iscrizione all'asilo nido",
+          "url": "https://www.comune.montevarchi.ar.it/servizi"
+        }
+      ],
+      "stato_verifica": "bozza"
+    },
+    {
+      "id": "isee",
+      "titolo": "Presentare l'ISEE per la tariffa",
+      "tipo": "requisito",
+      "ente": "inps",
+      "attore": "richiedente",
+      "dipende_da": [],
+      "canale": "misto",
+      "fonti": [
+        {
+          "titolo": "D.P.C.M. 159/2013 - ISEE",
+          "verificata_il": "2026-11-24"
+        }
+      ],
+      "stato_verifica": "bozza"
+    },
+    {
+      "id": "vaccini",
+      "titolo": "Rispettare gli obblighi vaccinali",
+      "tipo": "requisito",
+      "ente": "asl.toscana-sud-est",
+      "attore": "richiedente",
+      "dipende_da": [],
+      "canale": "misto",
+      "fonti": [
+        {
+          "titolo": "D.L. 73/2017",
+          "verificata_il": "2026-11-24",
+          "riferimento": "art. 3",
+          "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legge:2017-06-07;73~art3"
+        }
+      ],
+      "stato_verifica": "bozza",
+      "note": "Per i servizi educativi 0-6 anni le vaccinazioni obbligatorie sono un requisito di accesso."
+    },
+    {
+      "id": "graduatoria",
+      "titolo": "Graduatoria e accettazione del posto",
+      "tipo": "attesa",
+      "ente": "comune.051026.istruzione",
+      "attore": "ente",
+      "dipende_da": [
+        "domanda",
+        "isee",
+        "vaccini"
+      ],
+      "canale": "online",
+      "fonti": [
+        {
+          "titolo": "Comune di Montevarchi - Catalogo dei servizi",
+          "verificata_il": "2026-11-24",
+          "riferimento": "Richiedere l'iscrizione all'asilo nido",
+          "url": "https://www.comune.montevarchi.ar.it/servizi"
+        }
+      ],
+      "stato_verifica": "bozza"
+    }
+  ]
+}

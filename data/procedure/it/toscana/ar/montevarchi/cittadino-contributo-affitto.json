@@ -1,0 +1,89 @@
+{
+  "id": "montevarchi.cittadino.contributo-affitto",
+  "modello": "cittadino.contributo-affitto",
+  "titolo": "Richiedere il contributo affitto",
+  "descrizione": "Contributo a integrazione del canone di locazione per famiglie con ISEE basso, tramite bando comunale. Bozza della Fase 0: ogni passaggio va confermato con l'ente competente o con un professionista.",
+  "territorio": {
+    "livello": "comunale",
+    "nome": "Montevarchi (AR)",
+    "codice_istat": "051026",
+    "percorso": "it/toscana/ar/montevarchi"
+  },
+  "categoria": "cittadino",
+  "stato": "bozza",
+  "versione": "0.1.0",
+  "ultima_verifica": "2026-11-24",
+  "domande": [],
+  "enti": [
+    {
+      "id": "inps"
+    },
+    {
+      "id": "comune.051026.sociale"
+    }
+  ],
+  "passaggi": [
+    {
+      "id": "isee",
+      "titolo": "Avere un ISEE valido",
+      "tipo": "requisito",
+      "ente": "inps",
+      "attore": "richiedente",
+      "dipende_da": [],
+      "canale": "misto",
+      "fonti": [
+        {
+          "titolo": "D.P.C.M. 159/2013 - ISEE",
+          "verificata_il": "2026-11-24"
+        }
+      ],
+      "stato_verifica": "bozza"
+    },
+    {
+      "id": "domanda",
+      "titolo": "Presentare la domanda al bando comunale",
+      "tipo": "presentazione",
+      "ente": "comune.051026.sociale",
+      "attore": "richiedente",
+      "dipende_da": [
+        "isee"
+      ],
+      "canale": "online",
+      "fonti": [
+        {
+          "titolo": "Comune di Montevarchi - Catalogo dei servizi",
+          "verificata_il": "2026-11-24",
+          "riferimento": "Richiedere il contributo affitto",
+          "url": "https://www.comune.montevarchi.ar.it/servizi"
+        },
+        {
+          "titolo": "L. 431/1998",
+          "verificata_il": "2026-11-24",
+          "riferimento": "art. 11",
+          "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:legge:1998-12-09;431~art11"
+        }
+      ],
+      "stato_verifica": "bozza"
+    },
+    {
+      "id": "graduatoria",
+      "titolo": "Graduatoria ed erogazione",
+      "tipo": "attesa",
+      "ente": "comune.051026.sociale",
+      "attore": "ente",
+      "dipende_da": [
+        "domanda"
+      ],
+      "canale": "online",
+      "fonti": [
+        {
+          "titolo": "Comune di Montevarchi - Catalogo dei servizi",
+          "verificata_il": "2026-11-24",
+          "riferimento": "Richiedere il contributo affitto",
+          "url": "https://www.comune.montevarchi.ar.it/servizi"
+        }
+      ],
+      "stato_verifica": "bozza"
+    }
+  ]
+}

@@ -44,5 +44,18 @@
     "nome": "Soprintendenza Archeologia, Belle Arti e Paesaggio per le province di Siena, Grosseto e Arezzo",
     "tipo": "statale",
     "territorio": "it/toscana"
+  },
+  {
+    "id": "genio-civile.valdarno",
+    "nome": "Regione Toscana - Genio Civile Valdarno Superiore",
+    "tipo": "regionale",
+    "territorio": "it/toscana"
+  },
+  {
+    "id": "artea",
+    "nome": "ARTEA - Agenzia regionale per le erogazioni in agricoltura",
+    "tipo": "regionale",
+    "territorio": "it/toscana",
+    "sito": "https://www.artea.toscana.it"
   }
 ]

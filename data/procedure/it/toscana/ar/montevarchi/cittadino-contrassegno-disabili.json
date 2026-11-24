@@ -1,0 +1,88 @@
+{
+  "id": "montevarchi.cittadino.contrassegno-disabili",
+  "modello": "cittadino.contrassegno-disabili",
+  "titolo": "Permesso di parcheggio per persone con disabilità",
+  "descrizione": "Contrassegno europeo per la sosta e la circolazione dei veicoli al servizio di persone con disabilità. Bozza della Fase 0: ogni passaggio va confermato con l'ente competente o con un professionista.",
+  "territorio": {
+    "livello": "comunale",
+    "nome": "Montevarchi (AR)",
+    "codice_istat": "051026",
+    "percorso": "it/toscana/ar/montevarchi"
+  },
+  "categoria": "cittadino",
+  "stato": "bozza",
+  "versione": "0.1.0",
+  "ultima_verifica": "2026-11-24",
+  "domande": [],
+  "enti": [
+    {
+      "id": "asl.toscana-sud-est"
+    },
+    {
+      "id": "polizia-municipale.051026"
+    }
+  ],
+  "passaggi": [
+    {
+      "id": "certificato",
+      "titolo": "Ottenere la certificazione medica dall'ASL",
+      "tipo": "requisito",
+      "ente": "asl.toscana-sud-est",
+      "attore": "richiedente",
+      "dipende_da": [],
+      "canale": "misto",
+      "fonti": [
+        {
+          "titolo": "D.P.R. 495/1992",
+          "verificata_il": "2026-11-24",
+          "riferimento": "art. 381"
+        }
+      ],
+      "stato_verifica": "bozza"
+    },
+    {
+      "id": "domanda",
+      "titolo": "Presentare la domanda al Comune",
+      "tipo": "presentazione",
+      "ente": "polizia-municipale.051026",
+      "attore": "richiedente",
+      "dipende_da": [
+        "certificato"
+      ],
+      "canale": "online",
+      "fonti": [
+        {
+          "titolo": "Comune di Montevarchi - Catalogo dei servizi",
+          "verificata_il": "2026-11-24",
+          "riferimento": "Richiesta permesso per parcheggio invalidi",
+          "url": "https://www.comune.montevarchi.ar.it/servizi"
+        },
+        {
+          "titolo": "D.P.R. 495/1992",
+          "verificata_il": "2026-11-24",
+          "riferimento": "art. 381"
+        }
+      ],
+      "stato_verifica": "bozza"
+    },
+    {
+      "id": "rilascio",
+      "titolo": "Rilascio del contrassegno",
+      "tipo": "autorizzazione",
+      "ente": "polizia-municipale.051026",
+      "attore": "ente",
+      "dipende_da": [
+        "domanda"
+      ],
+      "canale": "online",
+      "fonti": [
+        {
+          "titolo": "D.P.R. 495/1992",
+          "verificata_il": "2026-11-24",
+          "riferimento": "art. 381"
+        }
+      ],
+      "stato_verifica": "bozza"
+    }
+  ]
+}

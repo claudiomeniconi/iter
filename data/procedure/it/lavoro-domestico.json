@@ -1,0 +1,86 @@
+{
+  "id": "it.lavoro.domestico",
+  "modello": "lavoro.domestico",
+  "titolo": "Assumere una colf o una badante",
+  "descrizione": "Assunzione di un lavoratore domestico da parte di una famiglia. Vale in tutta Italia. Bozza della Fase 0: ogni passaggio va confermato con l'ente competente o con un professionista.",
+  "territorio": {
+    "livello": "nazionale",
+    "nome": "Italia",
+    "percorso": "it"
+  },
+  "categoria": "cittadino",
+  "stato": "bozza",
+  "versione": "0.1.0",
+  "ultima_verifica": "2026-11-24",
+  "domande": [],
+  "enti": [
+    {
+      "id": "richiedente"
+    },
+    {
+      "id": "inps"
+    }
+  ],
+  "passaggi": [
+    {
+      "id": "contratto",
+      "titolo": "Concordare il contratto secondo il CCNL lavoro domestico",
+      "tipo": "requisito",
+      "ente": "richiedente",
+      "attore": "richiedente",
+      "dipende_da": [],
+      "canale": "misto",
+      "fonti": [
+        {
+          "titolo": "CCNL lavoro domestico",
+          "verificata_il": "2026-11-24"
+        }
+      ],
+      "stato_verifica": "bozza"
+    },
+    {
+      "id": "comunicazione_inps",
+      "titolo": "Comunicare l'assunzione all'INPS",
+      "tipo": "comunicazione",
+      "ente": "inps",
+      "attore": "richiedente",
+      "dipende_da": [
+        "contratto"
+      ],
+      "canale": "online",
+      "fonti": [
+        {
+          "titolo": "L. 296/2006",
+          "verificata_il": "2026-11-24",
+          "riferimento": "art. 1, comma 1180",
+          "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:legge:2006-12-27;296"
+        },
+        {
+          "titolo": "INPS - Formalizzare l'assunzione di un lavoratore domestico",
+          "verificata_il": "2026-11-24",
+          "url": "https://www.inps.it/it/it/dettaglio-scheda.it.schede-servizio-strumento.schede-servizi.formalizzare-l-assunzione-di-un-lavoratore-domestico.html"
+        }
+      ],
+      "stato_verifica": "bozza",
+      "note": "Entro le 24 del giorno precedente l'inizio, online sul sito INPS."
+    },
+    {
+      "id": "contributi",
+      "titolo": "Pagare i contributi ogni trimestre",
+      "tipo": "pagamento",
+      "ente": "inps",
+      "attore": "richiedente",
+      "dipende_da": [
+        "comunicazione_inps"
+      ],
+      "canale": "online",
+      "fonti": [
+        {
+          "titolo": "INPS - Lavoratori domestici",
+          "verificata_il": "2026-11-24"
+        }
+      ],
+      "stato_verifica": "bozza"
+    }
+  ]
+}

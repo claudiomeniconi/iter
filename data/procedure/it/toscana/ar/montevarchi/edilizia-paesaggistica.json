@@ -1,0 +1,141 @@
+{
+  "id": "montevarchi.edilizia.paesaggistica",
+  "modello": "edilizia.paesaggistica",
+  "titolo": "Chiedere l'autorizzazione paesaggistica",
+  "descrizione": "Autorizzazione per interventi su immobili o aree sottoposti a vincolo paesaggistico. Bozza della Fase 0: ogni passaggio va confermato con l'ente competente o con un professionista.",
+  "territorio": {
+    "livello": "comunale",
+    "nome": "Montevarchi (AR)",
+    "codice_istat": "051026",
+    "percorso": "it/toscana/ar/montevarchi"
+  },
+  "categoria": "edilizia",
+  "stato": "bozza",
+  "versione": "0.1.0",
+  "ultima_verifica": "2026-11-24",
+  "domande": [
+    {
+      "id": "semplificata",
+      "testo": "L'intervento è di lieve entità (procedura semplificata)?",
+      "tipo": "si_no"
+    }
+  ],
+  "enti": [
+    {
+      "id": "richiedente"
+    },
+    {
+      "id": "comune.051026.edilizia"
+    },
+    {
+      "id": "soprintendenza.si-gr-ar"
+    }
+  ],
+  "passaggi": [
+    {
+      "id": "relazione",
+      "titolo": "Preparare la relazione paesaggistica",
+      "tipo": "requisito",
+      "ente": "richiedente",
+      "attore": "professionista",
+      "dipende_da": [],
+      "canale": "misto",
+      "fonti": [
+        {
+          "titolo": "D.P.C.M. 12/12/2005 - Relazione paesaggistica",
+          "verificata_il": "2026-11-24"
+        }
+      ],
+      "stato_verifica": "bozza"
+    },
+    {
+      "id": "domanda",
+      "titolo": "Presentare la domanda al Comune",
+      "tipo": "autorizzazione",
+      "ente": "comune.051026.edilizia",
+      "attore": "professionista",
+      "dipende_da": [
+        "relazione"
+      ],
+      "canale": "online",
+      "fonti": [
+        {
+          "titolo": "D.Lgs. 42/2004",
+          "verificata_il": "2026-11-24",
+          "riferimento": "art. 146",
+          "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2004-01-22;42~art146"
+        }
+      ],
+      "stato_verifica": "bozza"
+    },
+    {
+      "id": "commissione",
+      "titolo": "Parere della Commissione comunale per il paesaggio",
+      "tipo": "controllo",
+      "ente": "comune.051026.edilizia",
+      "attore": "ente",
+      "dipende_da": [
+        "domanda"
+      ],
+      "canale": "online",
+      "fonti": [
+        {
+          "titolo": "D.Lgs. 42/2004",
+          "verificata_il": "2026-11-24",
+          "riferimento": "art. 148",
+          "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2004-01-22;42~art148"
+        }
+      ],
+      "stato_verifica": "bozza"
+    },
+    {
+      "id": "soprintendenza",
+      "titolo": "Parere vincolante della Soprintendenza",
+      "tipo": "controllo",
+      "ente": "soprintendenza.si-gr-ar",
+      "attore": "ente",
+      "tempi": {
+        "previsto_giorni": 45
+      },
+      "dipende_da": [
+        "commissione"
+      ],
+      "canale": "online",
+      "fonti": [
+        {
+          "titolo": "D.Lgs. 42/2004",
+          "verificata_il": "2026-11-24",
+          "riferimento": "art. 146, comma 8",
+          "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2004-01-22;42~art146"
+        }
+      ],
+      "stato_verifica": "bozza",
+      "note": "Nella procedura semplificata (D.P.R. 31/2017) i termini sono più brevi."
+    },
+    {
+      "id": "rilascio",
+      "titolo": "Rilascio dell'autorizzazione",
+      "tipo": "autorizzazione",
+      "ente": "comune.051026.edilizia",
+      "attore": "ente",
+      "dipende_da": [
+        "soprintendenza"
+      ],
+      "canale": "online",
+      "fonti": [
+        {
+          "titolo": "D.Lgs. 42/2004",
+          "verificata_il": "2026-11-24",
+          "riferimento": "art. 146",
+          "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2004-01-22;42~art146"
+        },
+        {
+          "titolo": "D.P.R. 31/2017",
+          "verificata_il": "2026-11-24",
+          "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:presidente.repubblica:2017-02-13;31"
+        }
+      ],
+      "stato_verifica": "bozza"
+    }
+  ]
+}

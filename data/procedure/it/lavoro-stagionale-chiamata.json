@@ -1,0 +1,118 @@
+{
+  "id": "it.lavoro.stagionale-chiamata",
+  "modello": "lavoro.stagionale-chiamata",
+  "titolo": "Assumere un lavoratore stagionale o a chiamata",
+  "descrizione": "Contratto a termine stagionale o contratto di lavoro intermittente. Vale in tutta Italia. Bozza della Fase 0: ogni passaggio va confermato con l'ente competente o con un professionista.",
+  "territorio": {
+    "livello": "nazionale",
+    "nome": "Italia",
+    "percorso": "it"
+  },
+  "categoria": "lavoro",
+  "stato": "bozza",
+  "versione": "0.1.0",
+  "ultima_verifica": "2026-11-24",
+  "domande": [
+    {
+      "id": "chiamata",
+      "testo": "È un contratto a chiamata (intermittente)?",
+      "tipo": "si_no"
+    }
+  ],
+  "enti": [
+    {
+      "id": "richiedente"
+    },
+    {
+      "id": "centro-impiego"
+    },
+    {
+      "id": "ministero-lavoro"
+    }
+  ],
+  "passaggi": [
+    {
+      "id": "scelta",
+      "titolo": "Scegliere il contratto e verificare i limiti del CCNL",
+      "tipo": "requisito",
+      "ente": "richiedente",
+      "attore": "professionista",
+      "dipende_da": [],
+      "canale": "misto",
+      "fonti": [
+        {
+          "titolo": "D.Lgs. 81/2015",
+          "verificata_il": "2026-11-24",
+          "riferimento": "artt. 13-18 e 19-29",
+          "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2015-06-15;81"
+        }
+      ],
+      "stato_verifica": "bozza"
+    },
+    {
+      "id": "comunicazione",
+      "titolo": "Comunicazione obbligatoria di assunzione",
+      "tipo": "comunicazione",
+      "ente": "centro-impiego",
+      "attore": "professionista",
+      "dipende_da": [
+        "scelta"
+      ],
+      "canale": "online",
+      "fonti": [
+        {
+          "titolo": "L. 296/2006",
+          "verificata_il": "2026-11-24",
+          "riferimento": "art. 1, comma 1180",
+          "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:legge:2006-12-27;296"
+        }
+      ],
+      "stato_verifica": "bozza"
+    },
+    {
+      "id": "chiamate",
+      "titolo": "Comunicare ogni chiamata prima dell'inizio della prestazione",
+      "tipo": "comunicazione",
+      "ente": "ministero-lavoro",
+      "attore": "richiedente",
+      "dipende_da": [
+        "comunicazione"
+      ],
+      "condizioni": [
+        {
+          "domanda": "chiamata",
+          "valore": true
+        }
+      ],
+      "canale": "online",
+      "fonti": [
+        {
+          "titolo": "D.Lgs. 81/2015",
+          "verificata_il": "2026-11-24",
+          "riferimento": "art. 15",
+          "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2015-06-15;81~art15"
+        }
+      ],
+      "stato_verifica": "bozza"
+    },
+    {
+      "id": "sicurezza",
+      "titolo": "Formazione e sicurezza come per ogni dipendente",
+      "tipo": "requisito",
+      "ente": "richiedente",
+      "attore": "professionista",
+      "dipende_da": [
+        "comunicazione"
+      ],
+      "canale": "misto",
+      "fonti": [
+        {
+          "titolo": "D.Lgs. 81/2008",
+          "verificata_il": "2026-11-24",
+          "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2008-04-09;81"
+        }
+      ],
+      "stato_verifica": "bozza"
+    }
+  ]
+}

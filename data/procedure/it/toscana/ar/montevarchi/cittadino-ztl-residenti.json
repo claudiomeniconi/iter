@@ -1,0 +1,91 @@
+{
+  "id": "montevarchi.cittadino.ztl-residenti",
+  "modello": "cittadino.ztl-residenti",
+  "titolo": "Permesso ZTL per i residenti nel centro storico",
+  "descrizione": "Permesso per i residenti nella zona a traffico limitato. Bozza della Fase 0: ogni passaggio va confermato con l'ente competente o con un professionista.",
+  "territorio": {
+    "livello": "comunale",
+    "nome": "Montevarchi (AR)",
+    "codice_istat": "051026",
+    "percorso": "it/toscana/ar/montevarchi"
+  },
+  "categoria": "cittadino",
+  "stato": "bozza",
+  "versione": "0.1.0",
+  "ultima_verifica": "2026-11-24",
+  "domande": [],
+  "enti": [
+    {
+      "id": "richiedente"
+    },
+    {
+      "id": "polizia-municipale.051026"
+    }
+  ],
+  "passaggi": [
+    {
+      "id": "requisiti",
+      "titolo": "Verificare di rientrare tra gli aventi diritto",
+      "tipo": "requisito",
+      "ente": "richiedente",
+      "attore": "richiedente",
+      "dipende_da": [],
+      "canale": "misto",
+      "fonti": [
+        {
+          "titolo": "Comune di Montevarchi - Catalogo dei servizi",
+          "verificata_il": "2026-11-24",
+          "riferimento": "Richiedere permesso per residenti nel centro storico - ZTL",
+          "url": "https://www.comune.montevarchi.ar.it/servizi"
+        }
+      ],
+      "stato_verifica": "bozza"
+    },
+    {
+      "id": "domanda",
+      "titolo": "Presentare la domanda con i dati del veicolo",
+      "tipo": "presentazione",
+      "ente": "polizia-municipale.051026",
+      "attore": "richiedente",
+      "dipende_da": [
+        "requisiti"
+      ],
+      "canale": "online",
+      "fonti": [
+        {
+          "titolo": "Comune di Montevarchi - Catalogo dei servizi",
+          "verificata_il": "2026-11-24",
+          "riferimento": "Richiedere permesso per residenti nel centro storico - ZTL",
+          "url": "https://www.comune.montevarchi.ar.it/servizi"
+        },
+        {
+          "titolo": "D.Lgs. 285/1992 - Codice della strada",
+          "verificata_il": "2026-11-24",
+          "riferimento": "art. 7",
+          "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:1992-04-30;285"
+        }
+      ],
+      "stato_verifica": "bozza"
+    },
+    {
+      "id": "rilascio",
+      "titolo": "Rilascio del permesso e pagamento",
+      "tipo": "autorizzazione",
+      "ente": "polizia-municipale.051026",
+      "attore": "ente",
+      "dipende_da": [
+        "domanda"
+      ],
+      "canale": "online",
+      "fonti": [
+        {
+          "titolo": "Comune di Montevarchi - Catalogo dei servizi",
+          "verificata_il": "2026-11-24",
+          "riferimento": "Richiedere permesso per residenti nel centro storico - ZTL",
+          "url": "https://www.comune.montevarchi.ar.it/servizi"
+        }
+      ],
+      "stato_verifica": "bozza"
+    }
+  ]
+}

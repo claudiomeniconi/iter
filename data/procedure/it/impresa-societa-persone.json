@@ -1,0 +1,125 @@
+{
+  "id": "it.impresa.societa-persone",
+  "modello": "impresa.societa-persone",
+  "titolo": "Costituire una SNC o una SAS",
+  "descrizione": "Costituzione di una società di persone: società in nome collettivo o in accomandita semplice. Vale in tutta Italia. Bozza della Fase 0: ogni passaggio va confermato con l'ente competente o con un professionista.",
+  "territorio": {
+    "livello": "nazionale",
+    "nome": "Italia",
+    "percorso": "it"
+  },
+  "categoria": "lavoro",
+  "stato": "bozza",
+  "versione": "0.1.0",
+  "ultima_verifica": "2026-11-24",
+  "domande": [],
+  "enti": [
+    {
+      "id": "richiedente"
+    },
+    {
+      "id": "notaio"
+    },
+    {
+      "id": "cciaa.arezzo-siena"
+    },
+    {
+      "id": "inps"
+    }
+  ],
+  "passaggi": [
+    {
+      "id": "patti",
+      "titolo": "Definire soci, conferimenti e amministrazione",
+      "tipo": "requisito",
+      "ente": "richiedente",
+      "attore": "professionista",
+      "dipende_da": [],
+      "canale": "misto",
+      "fonti": [
+        {
+          "titolo": "Codice civile",
+          "verificata_il": "2026-11-24",
+          "riferimento": "artt. 2291 e 2313",
+          "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:regio.decreto:1942-03-16;262~art2291"
+        }
+      ],
+      "stato_verifica": "bozza"
+    },
+    {
+      "id": "atto",
+      "titolo": "Firmare l'atto costitutivo (atto pubblico o scrittura privata autenticata)",
+      "tipo": "presentazione",
+      "ente": "notaio",
+      "attore": "professionista",
+      "costi": [
+        {
+          "voce": "Onorario notarile"
+        },
+        {
+          "voce": "Imposta di registro e bolli"
+        }
+      ],
+      "dipende_da": [
+        "patti"
+      ],
+      "canale": "online",
+      "fonti": [
+        {
+          "titolo": "Codice civile",
+          "verificata_il": "2026-11-24",
+          "riferimento": "art. 2296",
+          "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:regio.decreto:1942-03-16;262~art2296"
+        }
+      ],
+      "stato_verifica": "bozza"
+    },
+    {
+      "id": "iscrizione",
+      "titolo": "Iscrizione al Registro Imprese con la Comunicazione Unica",
+      "tipo": "iscrizione",
+      "ente": "cciaa.arezzo-siena",
+      "attore": "professionista",
+      "tempi": {
+        "previsto_giorni": 30
+      },
+      "dipende_da": [
+        "atto"
+      ],
+      "canale": "online",
+      "fonti": [
+        {
+          "titolo": "Codice civile",
+          "verificata_il": "2026-11-24",
+          "riferimento": "art. 2296",
+          "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:regio.decreto:1942-03-16;262~art2296"
+        },
+        {
+          "titolo": "D.L. 7/2007 - Comunicazione Unica",
+          "verificata_il": "2026-11-24",
+          "riferimento": "art. 9",
+          "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legge:2007-01-31;7~art9"
+        }
+      ],
+      "stato_verifica": "bozza"
+    },
+    {
+      "id": "inps_soci",
+      "titolo": "Iscrizione dei soci lavoratori a INPS artigiani o commercianti",
+      "tipo": "iscrizione",
+      "ente": "inps",
+      "attore": "ente",
+      "dipende_da": [
+        "iscrizione"
+      ],
+      "canale": "online",
+      "fonti": [
+        {
+          "titolo": "INPS - Gestioni artigiani e commercianti",
+          "verificata_il": "2026-11-24"
+        }
+      ],
+      "stato_verifica": "bozza"
+    }
+  ]
+}

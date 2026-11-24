@@ -1,0 +1,121 @@
+{
+  "id": "montevarchi.edilizia.fine-lavori",
+  "modello": "edilizia.fine-lavori",
+  "titolo": "Comunicare la fine dei lavori",
+  "descrizione": "Comunicazione di fine lavori e deposito dello stato finale per interventi edilizi. Bozza della Fase 0: ogni passaggio va confermato con l'ente competente o con un professionista.",
+  "territorio": {
+    "livello": "comunale",
+    "nome": "Montevarchi (AR)",
+    "codice_istat": "051026",
+    "percorso": "it/toscana/ar/montevarchi"
+  },
+  "categoria": "edilizia",
+  "stato": "bozza",
+  "versione": "0.1.0",
+  "ultima_verifica": "2026-11-24",
+  "domande": [
+    {
+      "id": "cila",
+      "testo": "I lavori erano con CILA?",
+      "tipo": "si_no"
+    }
+  ],
+  "enti": [
+    {
+      "id": "comune.051026.edilizia"
+    },
+    {
+      "id": "agenzia-entrate"
+    }
+  ],
+  "passaggi": [
+    {
+      "id": "comunicazione_fine",
+      "titolo": "Presentare la comunicazione di fine lavori",
+      "tipo": "comunicazione",
+      "ente": "comune.051026.edilizia",
+      "attore": "professionista",
+      "dipende_da": [],
+      "canale": "online",
+      "fonti": [
+        {
+          "titolo": "Regione Toscana - Modulistica unica per attività produttive ed edilizia",
+          "verificata_il": "2026-11-24",
+          "riferimento": "Comunicazione di fine lavori - Allegato A, d.d. 1754/2023",
+          "url": "https://www.regione.toscana.it/-/modulistica-unica-regionale-per-le-attivita-produttive-e-l-attivita-edilizia"
+        }
+      ],
+      "stato_verifica": "verificato_fonti"
+    },
+    {
+      "id": "stato_finale_pdc",
+      "titolo": "Depositare lo stato finale (permesso di costruire o SCIA)",
+      "tipo": "presentazione",
+      "ente": "comune.051026.edilizia",
+      "attore": "professionista",
+      "dipende_da": [
+        "comunicazione_fine"
+      ],
+      "condizioni": [
+        {
+          "domanda": "cila",
+          "valore": false
+        }
+      ],
+      "canale": "online",
+      "fonti": [
+        {
+          "titolo": "Regione Toscana - Modulistica unica per attività produttive ed edilizia",
+          "verificata_il": "2026-11-24",
+          "riferimento": "Allegato B, d.d. 23162/2025",
+          "url": "https://www.regione.toscana.it/-/modulistica-unica-regionale-per-le-attivita-produttive-e-l-attivita-edilizia"
+        }
+      ],
+      "stato_verifica": "verificato_fonti"
+    },
+    {
+      "id": "stato_finale_cila",
+      "titolo": "Depositare lo stato finale delle opere con CILA",
+      "tipo": "presentazione",
+      "ente": "comune.051026.edilizia",
+      "attore": "professionista",
+      "dipende_da": [
+        "comunicazione_fine"
+      ],
+      "condizioni": [
+        {
+          "domanda": "cila",
+          "valore": true
+        }
+      ],
+      "canale": "online",
+      "fonti": [
+        {
+          "titolo": "Regione Toscana - Modulistica unica per attività produttive ed edilizia",
+          "verificata_il": "2026-11-24",
+          "riferimento": "Allegato C, DGR 63/2023",
+          "url": "https://www.regione.toscana.it/-/modulistica-unica-regionale-per-le-attivita-produttive-e-l-attivita-edilizia"
+        }
+      ],
+      "stato_verifica": "verificato_fonti"
+    },
+    {
+      "id": "catasto",
+      "titolo": "Aggiornare il catasto se necessario",
+      "tipo": "comunicazione",
+      "ente": "agenzia-entrate",
+      "attore": "professionista",
+      "dipende_da": [
+        "comunicazione_fine"
+      ],
+      "canale": "online",
+      "fonti": [
+        {
+          "titolo": "Agenzia delle Entrate - Territorio (DOCFA)",
+          "verificata_il": "2026-11-24"
+        }
+      ],
+      "stato_verifica": "bozza"
+    }
+  ]
+}

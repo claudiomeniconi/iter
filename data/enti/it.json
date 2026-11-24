@@ -65,5 +65,12 @@
     "nome": "Ministero dell'Interno",
     "tipo": "statale",
     "territorio": "it"
+  },
+  {
+    "id": "ministero-lavoro",
+    "nome": "Ministero del Lavoro e delle politiche sociali",
+    "tipo": "statale",
+    "territorio": "it",
+    "sito": "https://www.lavoro.gov.it"
   }
 ]

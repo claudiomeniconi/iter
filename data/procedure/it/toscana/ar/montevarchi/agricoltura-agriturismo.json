@@ -1,0 +1,314 @@
+{
+  "id": "montevarchi.agricoltura.agriturismo",
+  "modello": "agricoltura.agriturismo",
+  "titolo": "Aprire un agriturismo",
+  "descrizione": "Avvio di attività agrituristica (ospitalità, ristorazione, attività ricreative) da parte di un'azienda agricola. Bozza della Fase 0: ogni passaggio va confermato con l'ente competente o con un professionista.",
+  "territorio": {
+    "livello": "comunale",
+    "nome": "Montevarchi (AR)",
+    "codice_istat": "051026",
+    "percorso": "it/toscana/ar/montevarchi"
+  },
+  "categoria": "impresa",
+  "stato": "bozza",
+  "versione": "0.1.0",
+  "ultima_verifica": "2026-11-24",
+  "domande": [
+    {
+      "id": "ristorazione",
+      "testo": "Offrirai pasti o degustazioni?",
+      "tipo": "si_no"
+    },
+    {
+      "id": "servono_lavori",
+      "testo": "Servono lavori edilizi o un cambio di destinazione d'uso?",
+      "tipo": "si_no"
+    }
+  ],
+  "enti": [
+    {
+      "id": "richiedente"
+    },
+    {
+      "id": "artea"
+    },
+    {
+      "id": "comune.051026.edilizia"
+    },
+    {
+      "id": "suap.051026"
+    },
+    {
+      "id": "asl.toscana-sud-est"
+    },
+    {
+      "id": "ministero-turismo"
+    },
+    {
+      "id": "questura.arezzo"
+    }
+  ],
+  "passaggi": [
+    {
+      "id": "iap",
+      "titolo": "Verificare la qualifica di imprenditore agricolo e la prevalenza agricola",
+      "tipo": "requisito",
+      "ente": "richiedente",
+      "attore": "professionista",
+      "dipende_da": [],
+      "canale": "misto",
+      "fonti": [
+        {
+          "titolo": "L.R. Toscana 30/2003 - Disciplina delle attività agrituristiche",
+          "verificata_il": "2026-11-24"
+        },
+        {
+          "titolo": "L. 96/2006 - Disciplina dell'agriturismo",
+          "verificata_il": "2026-11-24",
+          "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:legge:2006-02-20;96"
+        }
+      ],
+      "stato_verifica": "bozza"
+    },
+    {
+      "id": "relazione_agrituristica",
+      "titolo": "Preparare la relazione agrituristica con ARTEA",
+      "tipo": "presentazione",
+      "ente": "artea",
+      "attore": "professionista",
+      "dipende_da": [
+        "iap"
+      ],
+      "canale": "online",
+      "fonti": [
+        {
+          "titolo": "L.R. Toscana 30/2003",
+          "verificata_il": "2026-11-24"
+        }
+      ],
+      "stato_verifica": "bozza"
+    },
+    {
+      "id": "verifica_locale",
+      "titolo": "Verificare idoneità degli edifici aziendali",
+      "tipo": "requisito",
+      "ente": "comune.051026.edilizia",
+      "attore": "professionista",
+      "dipende_da": [],
+      "canale": "misto",
+      "fonti": [
+        {
+          "titolo": "L.R. Toscana 30/2003",
+          "verificata_il": "2026-11-24"
+        },
+        {
+          "titolo": "L.R. Toscana 65/2014 - Norme per il governo del territorio",
+          "verificata_il": "2026-11-24",
+          "url": "https://raccoltanormativa.consiglio.regione.toscana.it/articolo?urndoc=urn:nir:regione.toscana:legge:2014-11-10;65"
+        }
+      ],
+      "stato_verifica": "bozza"
+    },
+    {
+      "id": "pratica_edilizia",
+      "titolo": "Presentare la pratica edilizia per lavori o cambio d'uso",
+      "tipo": "presentazione",
+      "ente": "comune.051026.edilizia",
+      "attore": "professionista",
+      "dipende_da": [
+        "verifica_locale"
+      ],
+      "condizioni": [
+        {
+          "domanda": "servono_lavori",
+          "valore": true
+        }
+      ],
+      "canale": "online",
+      "fonti": [
+        {
+          "titolo": "Regione Toscana - Modulistica unica per attività produttive ed edilizia",
+          "verificata_il": "2026-11-24",
+          "riferimento": "CILA, SCIA edilizia o permesso di costruire",
+          "url": "https://www.regione.toscana.it/-/modulistica-unica-regionale-per-le-attivita-produttive-e-l-attivita-edilizia"
+        }
+      ],
+      "stato_verifica": "bozza",
+      "note": "Vedi le procedure edilizie di Iter (CILA, SCIA edilizia)."
+    },
+    {
+      "id": "piano_autocontrollo",
+      "titolo": "Piano di autocontrollo HACCP",
+      "tipo": "requisito",
+      "ente": "richiedente",
+      "attore": "professionista",
+      "dipende_da": [
+        "verifica_locale"
+      ],
+      "condizioni": [
+        {
+          "domanda": "ristorazione",
+          "valore": true
+        }
+      ],
+      "canale": "misto",
+      "fonti": [
+        {
+          "titolo": "Reg. (CE) 852/2004 sull'igiene dei prodotti alimentari",
+          "verificata_il": "2026-11-24",
+          "riferimento": "art. 5",
+          "url": "https://eur-lex.europa.eu/legal-content/IT/TXT/?uri=CELEX:32004R0852"
+        }
+      ],
+      "stato_verifica": "bozza"
+    },
+    {
+      "id": "scia_agriturismo",
+      "titolo": "Presentare la SCIA di agriturismo",
+      "tipo": "presentazione",
+      "ente": "suap.051026",
+      "attore": "richiedente",
+      "documenti_richiesti": [],
+      "documenti_prodotti": [
+        {
+          "id": "ricevuta_scia_agriturismo",
+          "nome": "Ricevuta SUAP della SCIA"
+        }
+      ],
+      "costi": [
+        {
+          "voce": "Diritti SUAP del Comune di Montevarchi"
+        },
+        {
+          "voce": "Imposta di bollo"
+        }
+      ],
+      "tempi": {
+        "previsto_giorni": 0,
+        "silenzio_assenso": false
+      },
+      "dipende_da": [
+        "relazione_agrituristica",
+        "verifica_locale"
+      ],
+      "canale": "online",
+      "fonti": [
+        {
+          "titolo": "Elenco modulistica unica regionale in uso al 7 ottobre 2026",
+          "verificata_il": "2026-11-24",
+          "riferimento": "SCIA per l'esercizio di attività di agriturismo - d.d. 21979/2026",
+          "url": "https://www.regione.toscana.it/documents/d/guest/elenco-della-modulistica-unica-in-uso-al-7-ottobre-2026-pdf"
+        },
+        {
+          "titolo": "Comune di Montevarchi - Accedere allo Sportello SUAP (STAR)",
+          "verificata_il": "2026-11-24",
+          "url": "https://www.comune.montevarchi.ar.it/servizi/servizio-dettaglio/2246471"
+        },
+        {
+          "titolo": "Comune di Montevarchi - Tariffe diritti SUAP",
+          "verificata_il": "2026-11-24",
+          "url": "https://www.comune.montevarchi.ar.it/documenti/2246544/tariffe-diritti-suap"
+        }
+      ],
+      "stato_verifica": "bozza",
+      "note": "Si presenta online su STAR con SPID, CIE o CNS. Con la SCIA puoi iniziare dalla data di presentazione."
+    },
+    {
+      "id": "notifica_sanitaria",
+      "titolo": "Notifica sanitaria per la registrazione dell'attività alimentare",
+      "tipo": "comunicazione",
+      "ente": "asl.toscana-sud-est",
+      "attore": "richiedente",
+      "dipende_da": [
+        "scia_agriturismo",
+        "piano_autocontrollo"
+      ],
+      "condizioni": [
+        {
+          "domanda": "ristorazione",
+          "valore": true
+        }
+      ],
+      "canale": "online",
+      "fonti": [
+        {
+          "titolo": "Reg. (CE) 852/2004 sull'igiene dei prodotti alimentari",
+          "verificata_il": "2026-11-24",
+          "riferimento": "art. 6",
+          "url": "https://eur-lex.europa.eu/legal-content/IT/TXT/?uri=CELEX:32004R0852"
+        },
+        {
+          "titolo": "Elenco modulistica unica regionale in uso al 7 ottobre 2026",
+          "verificata_il": "2026-11-24",
+          "riferimento": "Notifica sanitaria ai fini della registrazione - DGR 673/2024",
+          "url": "https://www.regione.toscana.it/documents/d/guest/elenco-della-modulistica-unica-in-uso-al-7-ottobre-2026-pdf"
+        }
+      ],
+      "stato_verifica": "bozza",
+      "note": "Si presenta tramite il SUAP, che la inoltra alla ASL."
+    },
+    {
+      "id": "cin",
+      "titolo": "Ottenere CIR e CIN",
+      "tipo": "iscrizione",
+      "ente": "ministero-turismo",
+      "attore": "richiedente",
+      "dipende_da": [
+        "scia_agriturismo"
+      ],
+      "canale": "online",
+      "fonti": [
+        {
+          "titolo": "Camera di Commercio di Firenze - Locazioni turistiche in Toscana (L.R. 61/2024)",
+          "verificata_il": "2026-11-24",
+          "url": "https://sni.unioncamere.it/sites/default/files/approfondimento/documenti/Locazioni_turistiche_firenze.pdf"
+        }
+      ],
+      "stato_verifica": "bozza"
+    },
+    {
+      "id": "alloggiati",
+      "titolo": "Registrarsi ad Alloggiati Web",
+      "tipo": "comunicazione",
+      "ente": "questura.arezzo",
+      "attore": "richiedente",
+      "dipende_da": [
+        "scia_agriturismo"
+      ],
+      "canale": "online",
+      "fonti": [
+        {
+          "titolo": "R.D. 773/1931 - Testo unico delle leggi di pubblica sicurezza",
+          "verificata_il": "2026-11-24",
+          "riferimento": "art. 109",
+          "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:regio.decreto:1931-06-18;773"
+        }
+      ],
+      "stato_verifica": "bozza"
+    },
+    {
+      "id": "controlli_suap",
+      "titolo": "Controlli del Comune sulla SCIA",
+      "tipo": "controllo",
+      "ente": "suap.051026",
+      "attore": "ente",
+      "tempi": {
+        "previsto_giorni": 60
+      },
+      "dipende_da": [
+        "scia_agriturismo"
+      ],
+      "canale": "online",
+      "fonti": [
+        {
+          "titolo": "L. 241/1990",
+          "verificata_il": "2026-11-24",
+          "riferimento": "art. 19 (SCIA)",
+          "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:legge:1990-08-07;241~art19"
+        }
+      ],
+      "stato_verifica": "verificato_fonti",
+      "note": "Entro 60 giorni il Comune può vietare la prosecuzione se mancano i requisiti."
+    }
+  ]
+}

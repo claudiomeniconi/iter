@@ -1,0 +1,237 @@
+{
+  "id": "montevarchi.edilizia.permesso-costruire",
+  "modello": "edilizia.permesso-costruire",
+  "titolo": "Chiedere il permesso di costruire",
+  "descrizione": "Permesso di costruire per nuove costruzioni, ristrutturazioni urbanistiche e ristrutturazioni edilizie ricostruttive. Bozza della Fase 0: ogni passaggio va confermato con l'ente competente o con un professionista.",
+  "territorio": {
+    "livello": "comunale",
+    "nome": "Montevarchi (AR)",
+    "codice_istat": "051026",
+    "percorso": "it/toscana/ar/montevarchi"
+  },
+  "categoria": "edilizia",
+  "stato": "bozza",
+  "versione": "0.1.0",
+  "ultima_verifica": "2026-11-24",
+  "domande": [
+    {
+      "id": "vincolo",
+      "testo": "L'immobile è in zona con vincolo paesaggistico o è un bene culturale?",
+      "tipo": "si_no"
+    },
+    {
+      "id": "strutturale",
+      "testo": "Ci sono opere strutturali?",
+      "tipo": "si_no"
+    }
+  ],
+  "enti": [
+    {
+      "id": "richiedente"
+    },
+    {
+      "id": "comune.051026.edilizia"
+    },
+    {
+      "id": "genio-civile.valdarno"
+    }
+  ],
+  "passaggi": [
+    {
+      "id": "progetto",
+      "titolo": "Far preparare il progetto da un tecnico abilitato",
+      "tipo": "requisito",
+      "ente": "richiedente",
+      "attore": "professionista",
+      "dipende_da": [],
+      "canale": "misto",
+      "fonti": [
+        {
+          "titolo": "L.R. Toscana 65/2014 - Norme per il governo del territorio",
+          "verificata_il": "2026-11-24",
+          "riferimento": "art. 134",
+          "url": "https://raccoltanormativa.consiglio.regione.toscana.it/articolo?urndoc=urn:nir:regione.toscana:legge:2014-11-10;65"
+        },
+        {
+          "titolo": "D.P.R. 380/2001 - Testo unico dell'edilizia",
+          "verificata_il": "2026-11-24",
+          "riferimento": "art. 10",
+          "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:presidente.repubblica:2001-06-06;380"
+        }
+      ],
+      "stato_verifica": "bozza"
+    },
+    {
+      "id": "autorizzazione_paesaggistica",
+      "titolo": "Autorizzazione paesaggistica",
+      "tipo": "autorizzazione",
+      "ente": "comune.051026.edilizia",
+      "attore": "professionista",
+      "dipende_da": [
+        "progetto"
+      ],
+      "condizioni": [
+        {
+          "domanda": "vincolo",
+          "valore": true
+        }
+      ],
+      "canale": "online",
+      "fonti": [
+        {
+          "titolo": "D.Lgs. 42/2004",
+          "verificata_il": "2026-11-24",
+          "riferimento": "art. 146",
+          "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2004-01-22;42~art146"
+        }
+      ],
+      "stato_verifica": "bozza"
+    },
+    {
+      "id": "domanda_pdc",
+      "titolo": "Presentare la domanda di permesso di costruire",
+      "tipo": "autorizzazione",
+      "ente": "comune.051026.edilizia",
+      "attore": "professionista",
+      "costi": [
+        {
+          "voce": "Diritti di segreteria"
+        },
+        {
+          "voce": "Contributo di costruzione"
+        }
+      ],
+      "dipende_da": [
+        "progetto"
+      ],
+      "canale": "online",
+      "fonti": [
+        {
+          "titolo": "Regione Toscana - Modulistica unica per attività produttive ed edilizia",
+          "verificata_il": "2026-11-24",
+          "riferimento": "Permesso di costruire - Allegato C, d.d. 23162/2025; Relazione - Allegato B, d.d. 21980/2026",
+          "url": "https://www.regione.toscana.it/-/modulistica-unica-regionale-per-le-attivita-produttive-e-l-attivita-edilizia"
+        },
+        {
+          "titolo": "L.R. Toscana 65/2014 - Norme per il governo del territorio",
+          "verificata_il": "2026-11-24",
+          "riferimento": "art. 142",
+          "url": "https://raccoltanormativa.consiglio.regione.toscana.it/articolo?urndoc=urn:nir:regione.toscana:legge:2014-11-10;65"
+        }
+      ],
+      "stato_verifica": "verificato_fonti"
+    },
+    {
+      "id": "istruttoria",
+      "titolo": "Istruttoria comunale e rilascio del permesso",
+      "tipo": "autorizzazione",
+      "ente": "comune.051026.edilizia",
+      "attore": "ente",
+      "tempi": {
+        "previsto_giorni": 60
+      },
+      "dipende_da": [
+        "domanda_pdc",
+        "autorizzazione_paesaggistica"
+      ],
+      "canale": "online",
+      "fonti": [
+        {
+          "titolo": "D.P.R. 380/2001 - Testo unico dell'edilizia",
+          "verificata_il": "2026-11-24",
+          "riferimento": "art. 20",
+          "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:presidente.repubblica:2001-06-06;380"
+        }
+      ],
+      "stato_verifica": "bozza",
+      "note": "Termini di legge per l'istruttoria; possono essere sospesi per richieste di integrazioni."
+    },
+    {
+      "id": "deposito_sismico",
+      "titolo": "Deposito o autorizzazione sismica",
+      "tipo": "presentazione",
+      "ente": "genio-civile.valdarno",
+      "attore": "professionista",
+      "dipende_da": [
+        "istruttoria"
+      ],
+      "condizioni": [
+        {
+          "domanda": "strutturale",
+          "valore": true
+        }
+      ],
+      "canale": "online",
+      "fonti": [
+        {
+          "titolo": "D.P.R. 380/2001 - Testo unico dell'edilizia",
+          "verificata_il": "2026-11-24",
+          "riferimento": "artt. 93-94",
+          "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:presidente.repubblica:2001-06-06;380"
+        }
+      ],
+      "stato_verifica": "bozza"
+    },
+    {
+      "id": "inizio_lavori",
+      "titolo": "Comunicare l'inizio dei lavori",
+      "tipo": "comunicazione",
+      "ente": "comune.051026.edilizia",
+      "attore": "professionista",
+      "dipende_da": [
+        "istruttoria",
+        "deposito_sismico"
+      ],
+      "canale": "online",
+      "fonti": [
+        {
+          "titolo": "Regione Toscana - Modulistica unica per attività produttive ed edilizia",
+          "verificata_il": "2026-11-24",
+          "riferimento": "Comunicazione di inizio lavori - Allegato A, DGR 63/2023",
+          "url": "https://www.regione.toscana.it/-/modulistica-unica-regionale-per-le-attivita-produttive-e-l-attivita-edilizia"
+        }
+      ],
+      "stato_verifica": "verificato_fonti"
+    },
+    {
+      "id": "fine_lavori",
+      "titolo": "Comunicare la fine dei lavori e depositare lo stato finale",
+      "tipo": "comunicazione",
+      "ente": "comune.051026.edilizia",
+      "attore": "professionista",
+      "dipende_da": [
+        "inizio_lavori"
+      ],
+      "canale": "online",
+      "fonti": [
+        {
+          "titolo": "Regione Toscana - Modulistica unica per attività produttive ed edilizia",
+          "verificata_il": "2026-11-24",
+          "riferimento": "d.d. 1754/2023; d.d. 23162/2025",
+          "url": "https://www.regione.toscana.it/-/modulistica-unica-regionale-per-le-attivita-produttive-e-l-attivita-edilizia"
+        }
+      ],
+      "stato_verifica": "bozza"
+    },
+    {
+      "id": "agibilita",
+      "titolo": "Attestare l'agibilità",
+      "tipo": "presentazione",
+      "ente": "comune.051026.edilizia",
+      "attore": "professionista",
+      "dipende_da": [
+        "fine_lavori"
+      ],
+      "canale": "online",
+      "fonti": [
+        {
+          "titolo": "Regione Toscana - Modulistica unica per attività produttive ed edilizia",
+          "verificata_il": "2026-11-24",
+          "riferimento": "Attestazione asseverata di agibilità - d.d. 21980/2026",
+          "url": "https://www.regione.toscana.it/-/modulistica-unica-regionale-per-le-attivita-produttive-e-l-attivita-edilizia"
+        }
+      ],
+      "stato_verifica": "bozza"
+    }
+  ]
+}

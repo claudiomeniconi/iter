@@ -1,0 +1,95 @@
+{
+  "id": "montevarchi.cittadino.accesso-atti",
+  "modello": "cittadino.accesso-atti",
+  "titolo": "Chiedere l'accesso agli atti del Comune",
+  "descrizione": "Accesso documentale, civico e generalizzato a documenti e dati del Comune. Bozza della Fase 0: ogni passaggio va confermato con l'ente competente o con un professionista.",
+  "territorio": {
+    "livello": "comunale",
+    "nome": "Montevarchi (AR)",
+    "codice_istat": "051026",
+    "percorso": "it/toscana/ar/montevarchi"
+  },
+  "categoria": "cittadino",
+  "stato": "bozza",
+  "versione": "0.1.0",
+  "ultima_verifica": "2026-11-24",
+  "domande": [],
+  "enti": [
+    {
+      "id": "richiedente"
+    },
+    {
+      "id": "comune.051026.segreteria"
+    }
+  ],
+  "passaggi": [
+    {
+      "id": "tipo_accesso",
+      "titolo": "Scegliere il tipo di accesso",
+      "tipo": "requisito",
+      "ente": "richiedente",
+      "attore": "richiedente",
+      "dipende_da": [],
+      "canale": "misto",
+      "fonti": [
+        {
+          "titolo": "Comune di Montevarchi - Catalogo dei servizi",
+          "verificata_il": "2026-11-24",
+          "riferimento": "Richiedere l'Accesso civico, l'Accesso generalizzato e l'Accesso documentale",
+          "url": "https://www.comune.montevarchi.ar.it/servizi"
+        }
+      ],
+      "stato_verifica": "bozza",
+      "note": "Documentale (L. 241/1990) se hai un interesse diretto; civico e generalizzato (D.Lgs. 33/2013) per tutti."
+    },
+    {
+      "id": "istanza",
+      "titolo": "Presentare l'istanza",
+      "tipo": "presentazione",
+      "ente": "comune.051026.segreteria",
+      "attore": "richiedente",
+      "dipende_da": [
+        "tipo_accesso"
+      ],
+      "canale": "online",
+      "fonti": [
+        {
+          "titolo": "L. 241/1990",
+          "verificata_il": "2026-11-24",
+          "riferimento": "art. 22",
+          "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:legge:1990-08-07;241~art22"
+        },
+        {
+          "titolo": "D.Lgs. 33/2013",
+          "verificata_il": "2026-11-24",
+          "riferimento": "art. 5",
+          "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2013-03-14;33~art5"
+        }
+      ],
+      "stato_verifica": "bozza"
+    },
+    {
+      "id": "risposta",
+      "titolo": "Risposta del Comune",
+      "tipo": "attesa",
+      "ente": "comune.051026.segreteria",
+      "attore": "ente",
+      "tempi": {
+        "previsto_giorni": 30
+      },
+      "dipende_da": [
+        "istanza"
+      ],
+      "canale": "online",
+      "fonti": [
+        {
+          "titolo": "D.Lgs. 33/2013",
+          "verificata_il": "2026-11-24",
+          "riferimento": "art. 5, comma 6",
+          "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2013-03-14;33~art5"
+        }
+      ],
+      "stato_verifica": "bozza"
+    }
+  ]
+}

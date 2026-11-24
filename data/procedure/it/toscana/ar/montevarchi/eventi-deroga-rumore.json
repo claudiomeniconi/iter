@@ -1,0 +1,97 @@
+{
+  "id": "montevarchi.eventi.deroga-rumore",
+  "modello": "eventi.deroga-rumore",
+  "titolo": "Chiedere una deroga ai limiti di rumore",
+  "descrizione": "Autorizzazione in deroga per attività rumorose temporanee: concerti, feste, cantieri. Bozza della Fase 0: ogni passaggio va confermato con l'ente competente o con un professionista.",
+  "territorio": {
+    "livello": "comunale",
+    "nome": "Montevarchi (AR)",
+    "codice_istat": "051026",
+    "percorso": "it/toscana/ar/montevarchi"
+  },
+  "categoria": "impresa",
+  "stato": "bozza",
+  "versione": "0.1.0",
+  "ultima_verifica": "2026-11-24",
+  "domande": [
+    {
+      "id": "cantiere",
+      "testo": "È per un cantiere edile?",
+      "tipo": "si_no"
+    }
+  ],
+  "enti": [
+    {
+      "id": "richiedente"
+    },
+    {
+      "id": "suap.051026"
+    },
+    {
+      "id": "arpat"
+    }
+  ],
+  "passaggi": [
+    {
+      "id": "valutazione",
+      "titolo": "Descrivere attività, orari e sorgenti di rumore",
+      "tipo": "requisito",
+      "ente": "richiedente",
+      "attore": "professionista",
+      "dipende_da": [],
+      "canale": "misto",
+      "fonti": [
+        {
+          "titolo": "L. 447/1995",
+          "verificata_il": "2026-11-24",
+          "riferimento": "art. 6",
+          "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:legge:1995-10-26;447~art6"
+        }
+      ],
+      "stato_verifica": "bozza",
+      "note": "Da verificare il regolamento comunale delle attività rumorose."
+    },
+    {
+      "id": "domanda",
+      "titolo": "Presentare la domanda di deroga al Comune",
+      "tipo": "autorizzazione",
+      "ente": "suap.051026",
+      "attore": "richiedente",
+      "dipende_da": [
+        "valutazione"
+      ],
+      "canale": "online",
+      "fonti": [
+        {
+          "titolo": "L. 447/1995",
+          "verificata_il": "2026-11-24",
+          "riferimento": "art. 6",
+          "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:legge:1995-10-26;447~art6"
+        },
+        {
+          "titolo": "L.R. Toscana 89/1998 - Inquinamento acustico",
+          "verificata_il": "2026-11-24"
+        }
+      ],
+      "stato_verifica": "bozza"
+    },
+    {
+      "id": "parere_arpat",
+      "titolo": "Eventuale parere ARPAT",
+      "tipo": "controllo",
+      "ente": "arpat",
+      "attore": "ente",
+      "dipende_da": [
+        "domanda"
+      ],
+      "canale": "online",
+      "fonti": [
+        {
+          "titolo": "L.R. Toscana 89/1998",
+          "verificata_il": "2026-11-24"
+        }
+      ],
+      "stato_verifica": "bozza"
+    }
+  ]
+}

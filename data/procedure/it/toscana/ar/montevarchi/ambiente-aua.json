@@ -1,0 +1,152 @@
+{
+  "id": "montevarchi.ambiente.aua",
+  "modello": "ambiente.aua",
+  "titolo": "Ottenere l'Autorizzazione unica ambientale (AUA)",
+  "descrizione": "Un unico titolo per scarichi, emissioni in atmosfera, impatto acustico e altri titoli ambientali delle piccole imprese. Bozza della Fase 0: ogni passaggio va confermato con l'ente competente o con un professionista.",
+  "territorio": {
+    "livello": "comunale",
+    "nome": "Montevarchi (AR)",
+    "codice_istat": "051026",
+    "percorso": "it/toscana/ar/montevarchi"
+  },
+  "categoria": "impresa",
+  "stato": "bozza",
+  "versione": "0.1.0",
+  "ultima_verifica": "2026-11-24",
+  "domande": [
+    {
+      "id": "scarichi",
+      "testo": "Hai scarichi di acque reflue industriali?",
+      "tipo": "si_no"
+    },
+    {
+      "id": "emissioni",
+      "testo": "Hai emissioni in atmosfera?",
+      "tipo": "si_no"
+    }
+  ],
+  "enti": [
+    {
+      "id": "richiedente"
+    },
+    {
+      "id": "suap.051026"
+    },
+    {
+      "id": "regione.toscana"
+    },
+    {
+      "id": "arpat"
+    }
+  ],
+  "passaggi": [
+    {
+      "id": "ricognizione",
+      "titolo": "Individuare i titoli ambientali necessari",
+      "tipo": "requisito",
+      "ente": "richiedente",
+      "attore": "professionista",
+      "dipende_da": [],
+      "canale": "misto",
+      "fonti": [
+        {
+          "titolo": "D.P.R. 59/2013",
+          "verificata_il": "2026-11-24",
+          "riferimento": "art. 3",
+          "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:presidente.repubblica:2013-03-13;59~art3"
+        }
+      ],
+      "stato_verifica": "bozza"
+    },
+    {
+      "id": "domanda_aua",
+      "titolo": "Presentare la domanda di AUA al SUAP",
+      "tipo": "autorizzazione",
+      "ente": "suap.051026",
+      "attore": "professionista",
+      "tempi": {
+        "previsto_giorni": 90
+      },
+      "dipende_da": [
+        "ricognizione"
+      ],
+      "canale": "online",
+      "fonti": [
+        {
+          "titolo": "D.P.R. 59/2013",
+          "verificata_il": "2026-11-24",
+          "riferimento": "art. 4",
+          "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:presidente.repubblica:2013-03-13;59~art4"
+        }
+      ],
+      "stato_verifica": "bozza",
+      "note": "La Regione adotta l'AUA e il SUAP la rilascia. Termini di 90 o 120 giorni secondo i casi."
+    },
+    {
+      "id": "parere_gestore",
+      "titolo": "Parere del gestore del servizio idrico",
+      "tipo": "controllo",
+      "ente": "regione.toscana",
+      "attore": "ente",
+      "dipende_da": [
+        "domanda_aua"
+      ],
+      "condizioni": [
+        {
+          "domanda": "scarichi",
+          "valore": true
+        }
+      ],
+      "canale": "online",
+      "fonti": [
+        {
+          "titolo": "D.P.R. 59/2013",
+          "verificata_il": "2026-11-24",
+          "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:presidente.repubblica:2013-03-13;59"
+        }
+      ],
+      "stato_verifica": "bozza"
+    },
+    {
+      "id": "istruttoria_arpat",
+      "titolo": "Istruttoria tecnica ARPAT",
+      "tipo": "controllo",
+      "ente": "arpat",
+      "attore": "ente",
+      "dipende_da": [
+        "domanda_aua"
+      ],
+      "canale": "online",
+      "fonti": [
+        {
+          "titolo": "D.P.R. 59/2013",
+          "verificata_il": "2026-11-24",
+          "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:presidente.repubblica:2013-03-13;59"
+        }
+      ],
+      "stato_verifica": "bozza"
+    },
+    {
+      "id": "adozione",
+      "titolo": "Adozione dell'AUA da parte della Regione e rilascio dal SUAP",
+      "tipo": "autorizzazione",
+      "ente": "regione.toscana",
+      "attore": "ente",
+      "dipende_da": [
+        "parere_gestore",
+        "istruttoria_arpat"
+      ],
+      "canale": "online",
+      "fonti": [
+        {
+          "titolo": "D.P.R. 59/2013",
+          "verificata_il": "2026-11-24",
+          "riferimento": "art. 4",
+          "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:presidente.repubblica:2013-03-13;59~art4"
+        }
+      ],
+      "stato_verifica": "bozza",
+      "note": "Dura 15 anni."
+    }
+  ]
+}

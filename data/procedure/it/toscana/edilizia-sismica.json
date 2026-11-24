@@ -1,0 +1,135 @@
+{
+  "id": "toscana.edilizia.sismica",
+  "modello": "edilizia.sismica",
+  "titolo": "Deposito o autorizzazione sismica",
+  "descrizione": "Deposito del progetto strutturale o autorizzazione sismica al Genio Civile per lavori su strutture in Toscana. Bozza della Fase 0: ogni passaggio va confermato con l'ente competente o con un professionista.",
+  "territorio": {
+    "livello": "regionale",
+    "nome": "Toscana",
+    "percorso": "it/toscana"
+  },
+  "categoria": "edilizia",
+  "stato": "bozza",
+  "versione": "0.1.0",
+  "ultima_verifica": "2026-11-24",
+  "domande": [
+    {
+      "id": "alta_sismicita",
+      "testo": "Il comune è in zona ad alta sismicità o l'intervento richiede autorizzazione?",
+      "tipo": "si_no"
+    }
+  ],
+  "enti": [
+    {
+      "id": "richiedente"
+    },
+    {
+      "id": "genio-civile.valdarno"
+    }
+  ],
+  "passaggi": [
+    {
+      "id": "progetto_strutturale",
+      "titolo": "Progetto strutturale firmato da un ingegnere o architetto",
+      "tipo": "requisito",
+      "ente": "richiedente",
+      "attore": "professionista",
+      "dipende_da": [],
+      "canale": "misto",
+      "fonti": [
+        {
+          "titolo": "D.P.R. 380/2001 - Testo unico dell'edilizia",
+          "verificata_il": "2026-11-24",
+          "riferimento": "art. 93",
+          "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:presidente.repubblica:2001-06-06;380"
+        }
+      ],
+      "stato_verifica": "bozza"
+    },
+    {
+      "id": "deposito",
+      "titolo": "Depositare il progetto al Genio Civile",
+      "tipo": "presentazione",
+      "ente": "genio-civile.valdarno",
+      "attore": "professionista",
+      "dipende_da": [
+        "progetto_strutturale"
+      ],
+      "condizioni": [
+        {
+          "domanda": "alta_sismicita",
+          "valore": false
+        }
+      ],
+      "canale": "online",
+      "fonti": [
+        {
+          "titolo": "D.P.R. 380/2001 - Testo unico dell'edilizia",
+          "verificata_il": "2026-11-24",
+          "riferimento": "art. 93",
+          "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:presidente.repubblica:2001-06-06;380"
+        },
+        {
+          "titolo": "L.R. Toscana 65/2014 - Norme per il governo del territorio",
+          "verificata_il": "2026-11-24",
+          "riferimento": "art. 169",
+          "url": "https://raccoltanormativa.consiglio.regione.toscana.it/articolo?urndoc=urn:nir:regione.toscana:legge:2014-11-10;65"
+        }
+      ],
+      "stato_verifica": "bozza"
+    },
+    {
+      "id": "autorizzazione",
+      "titolo": "Chiedere l'autorizzazione sismica",
+      "tipo": "autorizzazione",
+      "ente": "genio-civile.valdarno",
+      "attore": "professionista",
+      "dipende_da": [
+        "progetto_strutturale"
+      ],
+      "condizioni": [
+        {
+          "domanda": "alta_sismicita",
+          "valore": true
+        }
+      ],
+      "canale": "online",
+      "fonti": [
+        {
+          "titolo": "D.P.R. 380/2001 - Testo unico dell'edilizia",
+          "verificata_il": "2026-11-24",
+          "riferimento": "art. 94",
+          "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:presidente.repubblica:2001-06-06;380"
+        },
+        {
+          "titolo": "L.R. Toscana 65/2014 - Norme per il governo del territorio",
+          "verificata_il": "2026-11-24",
+          "riferimento": "art. 167",
+          "url": "https://raccoltanormativa.consiglio.regione.toscana.it/articolo?urndoc=urn:nir:regione.toscana:legge:2014-11-10;65"
+        }
+      ],
+      "stato_verifica": "bozza"
+    },
+    {
+      "id": "collaudo",
+      "titolo": "Collaudo statico a fine lavori",
+      "tipo": "controllo",
+      "ente": "richiedente",
+      "attore": "professionista",
+      "dipende_da": [
+        "deposito",
+        "autorizzazione"
+      ],
+      "canale": "online",
+      "fonti": [
+        {
+          "titolo": "D.P.R. 380/2001 - Testo unico dell'edilizia",
+          "verificata_il": "2026-11-24",
+          "riferimento": "art. 67",
+          "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:presidente.repubblica:2001-06-06;380"
+        }
+      ],
+      "stato_verifica": "bozza"
+    }
+  ]
+}

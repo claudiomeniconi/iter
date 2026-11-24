@@ -44,5 +44,29 @@
     "tipo": "comunale",
     "territorio": "it/toscana/ar/montevarchi",
     "sito": "https://www.comune.montevarchi.ar.it/servizi"
+  },
+  {
+    "id": "comune.051026.tributi",
+    "nome": "Comune di Montevarchi - Ufficio tributi",
+    "tipo": "comunale",
+    "territorio": "it/toscana/ar/montevarchi"
+  },
+  {
+    "id": "comune.051026.istruzione",
+    "nome": "Comune di Montevarchi - Servizi educativi e scolastici",
+    "tipo": "comunale",
+    "territorio": "it/toscana/ar/montevarchi"
+  },
+  {
+    "id": "comune.051026.sociale",
+    "nome": "Comune di Montevarchi - Servizi sociali",
+    "tipo": "comunale",
+    "territorio": "it/toscana/ar/montevarchi"
+  },
+  {
+    "id": "comune.051026.segreteria",
+    "nome": "Comune di Montevarchi - Segreteria generale e URP",
+    "tipo": "comunale",
+    "territorio": "it/toscana/ar/montevarchi"
   }
 ]

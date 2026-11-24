@@ -1,0 +1,126 @@
+{
+  "id": "it.impresa.chiusura-partita-iva",
+  "modello": "impresa.chiusura-partita-iva",
+  "titolo": "Chiudere la partita IVA",
+  "descrizione": "Cessazione dell'attività di un professionista o di un'impresa individuale. Vale in tutta Italia. Bozza della Fase 0: ogni passaggio va confermato con l'ente competente o con un professionista.",
+  "territorio": {
+    "livello": "nazionale",
+    "nome": "Italia",
+    "percorso": "it"
+  },
+  "categoria": "lavoro",
+  "stato": "bozza",
+  "versione": "0.1.0",
+  "ultima_verifica": "2026-11-24",
+  "domande": [
+    {
+      "id": "impresa",
+      "testo": "Sei iscritto al Registro Imprese?",
+      "tipo": "si_no"
+    }
+  ],
+  "enti": [
+    {
+      "id": "cciaa.arezzo-siena"
+    },
+    {
+      "id": "agenzia-entrate"
+    },
+    {
+      "id": "inps"
+    }
+  ],
+  "passaggi": [
+    {
+      "id": "chiusura_registro",
+      "titolo": "Cancellarsi dal Registro Imprese con la Comunicazione Unica",
+      "tipo": "iscrizione",
+      "ente": "cciaa.arezzo-siena",
+      "attore": "professionista",
+      "dipende_da": [],
+      "condizioni": [
+        {
+          "domanda": "impresa",
+          "valore": true
+        }
+      ],
+      "canale": "online",
+      "fonti": [
+        {
+          "titolo": "D.L. 7/2007 - Comunicazione Unica",
+          "verificata_il": "2026-11-24",
+          "riferimento": "art. 9",
+          "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legge:2007-01-31;7~art9"
+        }
+      ],
+      "stato_verifica": "bozza"
+    },
+    {
+      "id": "chiusura_iva",
+      "titolo": "Chiudere la partita IVA con il modello AA9/12",
+      "tipo": "comunicazione",
+      "ente": "agenzia-entrate",
+      "attore": "richiedente",
+      "tempi": {
+        "previsto_giorni": 30
+      },
+      "dipende_da": [],
+      "condizioni": [
+        {
+          "domanda": "impresa",
+          "valore": false
+        }
+      ],
+      "canale": "online",
+      "fonti": [
+        {
+          "titolo": "D.P.R. 633/1972",
+          "verificata_il": "2026-11-24",
+          "riferimento": "art. 35",
+          "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:presidente.repubblica:1972-10-26;633~art35"
+        }
+      ],
+      "stato_verifica": "bozza",
+      "note": "Entro 30 giorni dalla cessazione."
+    },
+    {
+      "id": "inps",
+      "titolo": "Chiudere la posizione previdenziale",
+      "tipo": "comunicazione",
+      "ente": "inps",
+      "attore": "richiedente",
+      "dipende_da": [
+        "chiusura_registro",
+        "chiusura_iva"
+      ],
+      "canale": "online",
+      "fonti": [
+        {
+          "titolo": "INPS",
+          "verificata_il": "2026-11-24"
+        }
+      ],
+      "stato_verifica": "bozza"
+    },
+    {
+      "id": "ultime_dichiarazioni",
+      "titolo": "Presentare le ultime dichiarazioni fiscali",
+      "tipo": "comunicazione",
+      "ente": "agenzia-entrate",
+      "attore": "professionista",
+      "dipende_da": [
+        "chiusura_iva",
+        "chiusura_registro"
+      ],
+      "canale": "online",
+      "fonti": [
+        {
+          "titolo": "D.P.R. 633/1972",
+          "verificata_il": "2026-11-24",
+          "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:presidente.repubblica:1972-10-26;633"
+        }
+      ],
+      "stato_verifica": "bozza"
+    }
+  ]
+}

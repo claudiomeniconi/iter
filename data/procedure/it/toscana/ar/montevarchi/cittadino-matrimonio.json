@@ -1,0 +1,124 @@
+{
+  "id": "montevarchi.cittadino.matrimonio",
+  "modello": "cittadino.matrimonio",
+  "titolo": "Sposarsi con rito civile o religioso",
+  "descrizione": "Pubblicazioni e celebrazione del matrimonio civile o concordatario a Montevarchi. Bozza della Fase 0: ogni passaggio va confermato con l'ente competente o con un professionista.",
+  "territorio": {
+    "livello": "comunale",
+    "nome": "Montevarchi (AR)",
+    "codice_istat": "051026",
+    "percorso": "it/toscana/ar/montevarchi"
+  },
+  "categoria": "cittadino",
+  "stato": "bozza",
+  "versione": "0.1.0",
+  "ultima_verifica": "2026-11-24",
+  "domande": [
+    {
+      "id": "civile",
+      "testo": "È un matrimonio civile?",
+      "tipo": "si_no"
+    }
+  ],
+  "enti": [
+    {
+      "id": "comune.051026.demografici"
+    }
+  ],
+  "passaggi": [
+    {
+      "id": "pubblicazioni",
+      "titolo": "Chiedere le pubblicazioni di matrimonio",
+      "tipo": "comunicazione",
+      "ente": "comune.051026.demografici",
+      "attore": "richiedente",
+      "dipende_da": [],
+      "canale": "online",
+      "fonti": [
+        {
+          "titolo": "Comune di Montevarchi - Catalogo dei servizi",
+          "verificata_il": "2026-11-24",
+          "riferimento": "Matrimonio Civile e Religioso",
+          "url": "https://www.comune.montevarchi.ar.it/servizi"
+        },
+        {
+          "titolo": "Codice civile",
+          "verificata_il": "2026-11-24",
+          "riferimento": "art. 93",
+          "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:regio.decreto:1942-03-16;262~art93"
+        }
+      ],
+      "stato_verifica": "bozza"
+    },
+    {
+      "id": "affissione",
+      "titolo": "Affissione delle pubblicazioni per 8 giorni",
+      "tipo": "attesa",
+      "ente": "comune.051026.demografici",
+      "attore": "ente",
+      "tempi": {
+        "previsto_giorni": 8
+      },
+      "dipende_da": [
+        "pubblicazioni"
+      ],
+      "canale": "online",
+      "fonti": [
+        {
+          "titolo": "D.P.R. 396/2000 - Ordinamento dello stato civile",
+          "verificata_il": "2026-11-24",
+          "riferimento": "art. 55",
+          "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:presidente.repubblica:2000-11-03;396~art55"
+        }
+      ],
+      "stato_verifica": "bozza"
+    },
+    {
+      "id": "sala",
+      "titolo": "Prenotare la sala per il rito civile",
+      "tipo": "presentazione",
+      "ente": "comune.051026.demografici",
+      "attore": "richiedente",
+      "dipende_da": [
+        "pubblicazioni"
+      ],
+      "condizioni": [
+        {
+          "domanda": "civile",
+          "valore": true
+        }
+      ],
+      "canale": "online",
+      "fonti": [
+        {
+          "titolo": "Comune di Montevarchi - Catalogo dei servizi",
+          "verificata_il": "2026-11-24",
+          "riferimento": "Richiedere l'utilizzo di una Sala per Matrimonio Civile",
+          "url": "https://www.comune.montevarchi.ar.it/servizi"
+        }
+      ],
+      "stato_verifica": "bozza"
+    },
+    {
+      "id": "celebrazione",
+      "titolo": "Celebrazione entro 180 giorni dalle pubblicazioni",
+      "tipo": "attesa",
+      "ente": "comune.051026.demografici",
+      "attore": "ente",
+      "dipende_da": [
+        "affissione",
+        "sala"
+      ],
+      "canale": "online",
+      "fonti": [
+        {
+          "titolo": "Codice civile",
+          "verificata_il": "2026-11-24",
+          "riferimento": "art. 99",
+          "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:regio.decreto:1942-03-16;262~art99"
+        }
+      ],
+      "stato_verifica": "bozza"
+    }
+  ]
+}

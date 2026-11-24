@@ -1,0 +1,110 @@
+{
+  "id": "montevarchi.edilizia.passo-carrabile",
+  "modello": "edilizia.passo-carrabile",
+  "titolo": "Chiedere un passo carrabile",
+  "descrizione": "Autorizzazione per un accesso carrabile da una strada comunale, con cartello e canone. Bozza della Fase 0: ogni passaggio va confermato con l'ente competente o con un professionista.",
+  "territorio": {
+    "livello": "comunale",
+    "nome": "Montevarchi (AR)",
+    "codice_istat": "051026",
+    "percorso": "it/toscana/ar/montevarchi"
+  },
+  "categoria": "edilizia",
+  "stato": "bozza",
+  "versione": "0.1.0",
+  "ultima_verifica": "2026-11-24",
+  "domande": [
+    {
+      "id": "opere",
+      "testo": "Servono lavori (abbassamento marciapiede, cancello)?",
+      "tipo": "si_no"
+    }
+  ],
+  "enti": [
+    {
+      "id": "polizia-municipale.051026"
+    },
+    {
+      "id": "comune.051026.edilizia"
+    }
+  ],
+  "passaggi": [
+    {
+      "id": "domanda",
+      "titolo": "Presentare la domanda di passo carrabile",
+      "tipo": "autorizzazione",
+      "ente": "polizia-municipale.051026",
+      "attore": "richiedente",
+      "dipende_da": [],
+      "canale": "online",
+      "fonti": [
+        {
+          "titolo": "D.Lgs. 285/1992 - Codice della strada",
+          "verificata_il": "2026-11-24",
+          "riferimento": "art. 22",
+          "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:1992-04-30;285"
+        },
+        {
+          "titolo": "D.P.R. 495/1992 - Regolamento del Codice della strada",
+          "verificata_il": "2026-11-24",
+          "riferimento": "art. 46"
+        }
+      ],
+      "stato_verifica": "bozza"
+    },
+    {
+      "id": "lavori",
+      "titolo": "Titolo edilizio per le opere",
+      "tipo": "presentazione",
+      "ente": "comune.051026.edilizia",
+      "attore": "professionista",
+      "dipende_da": [
+        "domanda"
+      ],
+      "condizioni": [
+        {
+          "domanda": "opere",
+          "valore": true
+        }
+      ],
+      "canale": "online",
+      "fonti": [
+        {
+          "titolo": "L.R. Toscana 65/2014 - Norme per il governo del territorio",
+          "verificata_il": "2026-11-24",
+          "url": "https://raccoltanormativa.consiglio.regione.toscana.it/articolo?urndoc=urn:nir:regione.toscana:legge:2014-11-10;65"
+        }
+      ],
+      "stato_verifica": "bozza"
+    },
+    {
+      "id": "rilascio",
+      "titolo": "Rilascio, cartello e pagamento del canone",
+      "tipo": "autorizzazione",
+      "ente": "polizia-municipale.051026",
+      "attore": "ente",
+      "costi": [
+        {
+          "voce": "Canone unico patrimoniale"
+        },
+        {
+          "voce": "Cartello"
+        }
+      ],
+      "dipende_da": [
+        "domanda",
+        "lavori"
+      ],
+      "canale": "online",
+      "fonti": [
+        {
+          "titolo": "L. 160/2019 - Canone unico patrimoniale",
+          "verificata_il": "2026-11-24",
+          "riferimento": "art. 1, commi 816-847",
+          "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:legge:2019-12-27;160"
+        }
+      ],
+      "stato_verifica": "bozza"
+    }
+  ]
+}

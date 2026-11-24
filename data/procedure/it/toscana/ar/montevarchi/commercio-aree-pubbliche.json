@@ -1,0 +1,204 @@
+{
+  "id": "montevarchi.commercio.aree-pubbliche",
+  "modello": "commercio.aree-pubbliche",
+  "titolo": "Vendere nei mercati o come ambulante (commercio su aree pubbliche)",
+  "descrizione": "Commercio su aree pubbliche con posteggio nei mercati o in forma itinerante. Bozza della Fase 0: ogni passaggio va confermato con l'ente competente o con un professionista.",
+  "territorio": {
+    "livello": "comunale",
+    "nome": "Montevarchi (AR)",
+    "codice_istat": "051026",
+    "percorso": "it/toscana/ar/montevarchi"
+  },
+  "categoria": "impresa",
+  "stato": "bozza",
+  "versione": "0.1.0",
+  "ultima_verifica": "2026-11-24",
+  "domande": [
+    {
+      "id": "impresa_gia_attiva",
+      "testo": "Hai già un'impresa attiva (partita IVA e iscrizione al Registro Imprese)?",
+      "tipo": "si_no"
+    },
+    {
+      "id": "posteggio",
+      "testo": "Vuoi un posteggio fisso in un mercato?",
+      "tipo": "si_no"
+    },
+    {
+      "id": "alimentare",
+      "testo": "Venderai alimenti?",
+      "tipo": "si_no"
+    }
+  ],
+  "enti": [
+    {
+      "id": "richiedente"
+    },
+    {
+      "id": "cciaa.arezzo-siena"
+    },
+    {
+      "id": "suap.051026"
+    },
+    {
+      "id": "asl.toscana-sud-est"
+    }
+  ],
+  "passaggi": [
+    {
+      "id": "requisiti_soggettivi",
+      "titolo": "Verificare i requisiti morali e professionali",
+      "tipo": "requisito",
+      "ente": "richiedente",
+      "attore": "richiedente",
+      "dipende_da": [],
+      "canale": "misto",
+      "fonti": [
+        {
+          "titolo": "L.R. Toscana 62/2018 - Codice del Commercio",
+          "verificata_il": "2026-11-24",
+          "riferimento": "artt. 11-12",
+          "url": "https://raccoltanormativa.consiglio.regione.toscana.it/class/download_doc.php?file_path=legge/2018/legge_2018_62_s1/legge_2018_62_s1_v1.pdf"
+        }
+      ],
+      "stato_verifica": "bozza",
+      "note": "Il requisito professionale serve solo per gli alimenti."
+    },
+    {
+      "id": "iscrizione_impresa",
+      "titolo": "Aprire la partita IVA e iscrivere l'impresa (Comunicazione Unica)",
+      "tipo": "iscrizione",
+      "ente": "cciaa.arezzo-siena",
+      "attore": "professionista",
+      "documenti_prodotti": [
+        {
+          "id": "partita_iva",
+          "nome": "Partita IVA"
+        },
+        {
+          "id": "iscrizione_registro_imprese",
+          "nome": "Iscrizione al Registro Imprese"
+        }
+      ],
+      "dipende_da": [
+        "requisiti_soggettivi"
+      ],
+      "condizioni": [
+        {
+          "domanda": "impresa_gia_attiva",
+          "valore": false
+        }
+      ],
+      "canale": "online",
+      "fonti": [
+        {
+          "titolo": "D.L. 7/2007 - Comunicazione Unica",
+          "verificata_il": "2026-11-24",
+          "riferimento": "art. 9",
+          "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legge:2007-01-31;7~art9"
+        }
+      ],
+      "stato_verifica": "bozza",
+      "note": "Vedi anche la procedura «Aprire una ditta individuale»."
+    },
+    {
+      "id": "bando_posteggio",
+      "titolo": "Partecipare al bando comunale per l'assegnazione del posteggio",
+      "tipo": "presentazione",
+      "ente": "suap.051026",
+      "attore": "richiedente",
+      "dipende_da": [
+        "requisiti_soggettivi",
+        "iscrizione_impresa"
+      ],
+      "condizioni": [
+        {
+          "domanda": "posteggio",
+          "valore": true
+        }
+      ],
+      "canale": "online",
+      "fonti": [
+        {
+          "titolo": "L.R. Toscana 62/2018 - Codice del Commercio",
+          "verificata_il": "2026-11-24",
+          "url": "https://raccoltanormativa.consiglio.regione.toscana.it/class/download_doc.php?file_path=legge/2018/legge_2018_62_s1/legge_2018_62_s1_v1.pdf"
+        },
+        {
+          "titolo": "Comune di Montevarchi - Catalogo dei servizi",
+          "verificata_il": "2026-11-24",
+          "url": "https://www.comune.montevarchi.ar.it/servizi"
+        }
+      ],
+      "stato_verifica": "bozza"
+    },
+    {
+      "id": "titolo",
+      "titolo": "Ottenere l'autorizzazione o presentare la SCIA per il commercio su aree pubbliche",
+      "tipo": "autorizzazione",
+      "ente": "suap.051026",
+      "attore": "richiedente",
+      "dipende_da": [
+        "requisiti_soggettivi",
+        "iscrizione_impresa",
+        "bando_posteggio"
+      ],
+      "canale": "online",
+      "fonti": [
+        {
+          "titolo": "L.R. Toscana 62/2018 - Codice del Commercio",
+          "verificata_il": "2026-11-24",
+          "url": "https://raccoltanormativa.consiglio.regione.toscana.it/class/download_doc.php?file_path=legge/2018/legge_2018_62_s1/legge_2018_62_s1_v1.pdf"
+        }
+      ],
+      "stato_verifica": "bozza",
+      "note": "Il modulo non compare nell'elenco regionale consultato: da cercare su STAR."
+    },
+    {
+      "id": "notifica_sanitaria",
+      "titolo": "Notifica sanitaria per il banco alimentare",
+      "tipo": "comunicazione",
+      "ente": "asl.toscana-sud-est",
+      "attore": "richiedente",
+      "dipende_da": [
+        "titolo"
+      ],
+      "condizioni": [
+        {
+          "domanda": "alimentare",
+          "valore": true
+        }
+      ],
+      "canale": "online",
+      "fonti": [
+        {
+          "titolo": "Reg. (CE) 852/2004 sull'igiene dei prodotti alimentari",
+          "verificata_il": "2026-11-24",
+          "riferimento": "art. 6",
+          "url": "https://eur-lex.europa.eu/legal-content/IT/TXT/?uri=CELEX:32004R0852"
+        }
+      ],
+      "stato_verifica": "bozza"
+    },
+    {
+      "id": "regolarita_contributiva",
+      "titolo": "Mantenere la regolarità contributiva (controlli comunali)",
+      "tipo": "controllo",
+      "ente": "suap.051026",
+      "attore": "ente",
+      "dipende_da": [
+        "titolo"
+      ],
+      "canale": "online",
+      "fonti": [
+        {
+          "titolo": "L.R. Toscana 62/2018 - Codice del Commercio",
+          "verificata_il": "2026-11-24",
+          "riferimento": "art. 93",
+          "url": "https://raccoltanormativa.consiglio.regione.toscana.it/class/download_doc.php?file_path=legge/2018/legge_2018_62_s1/legge_2018_62_s1_v1.pdf"
+        }
+      ],
+      "stato_verifica": "bozza"
+    }
+  ]
+}

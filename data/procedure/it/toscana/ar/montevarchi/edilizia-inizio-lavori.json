@@ -1,0 +1,89 @@
+{
+  "id": "montevarchi.edilizia.inizio-lavori",
+  "modello": "edilizia.inizio-lavori",
+  "titolo": "Comunicare l'inizio dei lavori (permesso di costruire)",
+  "descrizione": "Comunicazione dell'inizio dei lavori autorizzati con permesso di costruire. Bozza della Fase 0: ogni passaggio va confermato con l'ente competente o con un professionista.",
+  "territorio": {
+    "livello": "comunale",
+    "nome": "Montevarchi (AR)",
+    "codice_istat": "051026",
+    "percorso": "it/toscana/ar/montevarchi"
+  },
+  "categoria": "edilizia",
+  "stato": "bozza",
+  "versione": "0.1.0",
+  "ultima_verifica": "2026-11-24",
+  "domande": [],
+  "enti": [
+    {
+      "id": "richiedente"
+    },
+    {
+      "id": "asl.toscana-sud-est"
+    },
+    {
+      "id": "comune.051026.edilizia"
+    }
+  ],
+  "passaggi": [
+    {
+      "id": "permesso",
+      "titolo": "Avere il permesso di costruire e gli altri atti necessari",
+      "tipo": "requisito",
+      "ente": "richiedente",
+      "attore": "richiedente",
+      "dipende_da": [],
+      "canale": "misto",
+      "fonti": [
+        {
+          "titolo": "L.R. Toscana 65/2014 - Norme per il governo del territorio",
+          "verificata_il": "2026-11-24",
+          "url": "https://raccoltanormativa.consiglio.regione.toscana.it/articolo?urndoc=urn:nir:regione.toscana:legge:2014-11-10;65"
+        }
+      ],
+      "stato_verifica": "bozza"
+    },
+    {
+      "id": "notifica_preliminare",
+      "titolo": "Notifica preliminare del cantiere, se dovuta",
+      "tipo": "comunicazione",
+      "ente": "asl.toscana-sud-est",
+      "attore": "professionista",
+      "dipende_da": [
+        "permesso"
+      ],
+      "canale": "online",
+      "fonti": [
+        {
+          "titolo": "D.Lgs. 81/2008",
+          "verificata_il": "2026-11-24",
+          "riferimento": "art. 99",
+          "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2008-04-09;81~art99"
+        }
+      ],
+      "stato_verifica": "bozza"
+    },
+    {
+      "id": "comunicazione",
+      "titolo": "Presentare la comunicazione di inizio lavori",
+      "tipo": "comunicazione",
+      "ente": "comune.051026.edilizia",
+      "attore": "professionista",
+      "dipende_da": [
+        "permesso",
+        "notifica_preliminare"
+      ],
+      "canale": "online",
+      "fonti": [
+        {
+          "titolo": "Regione Toscana - Modulistica unica per attività produttive ed edilizia",
+          "verificata_il": "2026-11-24",
+          "riferimento": "Allegato A, DGR 63/2023",
+          "url": "https://www.regione.toscana.it/-/modulistica-unica-regionale-per-le-attivita-produttive-e-l-attivita-edilizia"
+        }
+      ],
+      "stato_verifica": "verificato_fonti",
+      "note": "Indica impresa esecutrice, direttore dei lavori e DURC."
+    }
+  ]
+}
