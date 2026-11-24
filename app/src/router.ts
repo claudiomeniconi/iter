@@ -1,14 +1,22 @@
 import { useEffect, useState } from 'react'
 
 export type Rotta =
+  | { pagina: 'home' }
+  | { pagina: 'cerca'; q: string; categoria?: string }
   | { pagina: 'procedure'; territorio: string }
   | { pagina: 'procedura'; id: string }
   | { pagina: 'enti' }
   | { pagina: 'ente'; id: string }
 
 function leggi(): Rotta {
-  const parti = decodeURIComponent(location.hash.replace(/^#\/?/, '')).split('/').filter(Boolean)
+  const [percorso, query = ''] = location.hash.replace(/^#\/?/, '').split('?')
+  const parti = decodeURIComponent(percorso).split('/').filter(Boolean)
+  const params = new URLSearchParams(query)
   switch (parti[0]) {
+    case 'cerca':
+      return { pagina: 'cerca', q: params.get('q') ?? '', categoria: params.get('categoria') ?? undefined }
+    case 'procedure':
+      return { pagina: 'procedure', territorio: 'it' }
     case 'procedura':
       return { pagina: 'procedura', id: parti.slice(1).join('/') }
     case 'enti':
@@ -16,11 +24,14 @@ function leggi(): Rotta {
     case 'territorio':
       return { pagina: 'procedure', territorio: parti.slice(1).join('/') || 'it' }
     default:
-      return { pagina: 'procedure', territorio: 'it' }
+      return { pagina: 'home' }
   }
 }
 
 export const link = {
+  home: () => '#/',
+  cerca: (q: string) => `#/cerca?q=${encodeURIComponent(q)}`,
+  cercaCategoria: (c: string) => `#/cerca?categoria=${encodeURIComponent(c)}`,
   territorio: (p: string) => `#/territorio/${p}`,
   procedura: (id: string) => `#/procedura/${id}`,
   enti: () => '#/enti',

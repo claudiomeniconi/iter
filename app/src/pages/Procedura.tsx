@@ -329,7 +329,7 @@ export default function PaginaProcedura({ id }: { id: string }) {
       <div className="vuoto-pagina">
         <h1>Procedura non trovata</h1>
         <p>
-          Nessuna procedura ha l'identificativo «{id}». <a href="#/">Torna all'elenco delle procedure</a>.
+          Nessuna procedura ha l'identificativo «{id}». <a href="#/procedure">Torna all'elenco delle procedure</a>.
         </p>
       </div>
     )
