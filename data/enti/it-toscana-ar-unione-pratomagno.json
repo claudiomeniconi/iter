@@ -1,0 +1,22 @@
+[
+  {
+    "id": "suap.unione-pratomagno",
+    "nome": "SUAP associato - Unione dei Comuni del Pratomagno",
+    "tipo": "comunale",
+    "territorio": "it/toscana/ar",
+    "descrizione": "Sportello unico associato per Castelfranco Piandiscò, Castiglion Fibocchi e Loro Ciuffenna. Pratiche solo tramite STAR.",
+    "sito": "https://www.unionepratomagno.it/uffici/sportello-unico-attivita-produttive-associato",
+    "contatti": {
+      "indirizzo": "Via Perugia 2/A, 52024 Loro Ciuffenna (AR)",
+      "telefono": "055 9170228, 055 9170246",
+      "email": "suap@unionepratomagno.it",
+      "pec": "suap@pec.unionepratomagno.ar.it",
+      "orari": "Su appuntamento: martedì 9-13, giovedì 15-17:30"
+    },
+    "fonte": {
+      "titolo": "Unione dei Comuni del Pratomagno - Sportello unico attività produttive associato",
+      "verificata_il": "2026-11-24",
+      "url": "https://www.unionepratomagno.it/uffici/sportello-unico-attivita-produttive-associato"
+    }
+  }
+]

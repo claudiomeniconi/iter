@@ -1,13 +1,12 @@
 {
-  "id": "montevarchi.edilizia.scia",
+  "id": "toscana.base.edilizia.scia",
   "modello": "edilizia.scia",
   "titolo": "Ristrutturazioni e altri lavori con SCIA edilizia",
   "descrizione": "Segnalazione certificata di inizio attività edilizia per interventi come la ristrutturazione edilizia conservativa o la manutenzione straordinaria su parti strutturali. Bozza della Fase 0: ogni passaggio va confermato con l'ente competente o con un professionista.",
   "territorio": {
-    "livello": "comunale",
-    "nome": "Montevarchi (AR)",
-    "codice_istat": "051026",
-    "percorso": "it/toscana/ar/montevarchi"
+    "livello": "regionale",
+    "nome": "Toscana",
+    "percorso": "it/toscana"
   },
   "categoria": "edilizia",
   "stato": "bozza",
@@ -30,7 +29,7 @@
       "id": "richiedente"
     },
     {
-      "id": "comune.051026.edilizia"
+      "id": "@edilizia"
     },
     {
       "id": "regione.toscana"
@@ -68,7 +67,7 @@
       "id": "autorizzazione_paesaggistica",
       "titolo": "Ottenere l'autorizzazione paesaggistica",
       "tipo": "autorizzazione",
-      "ente": "comune.051026.edilizia",
+      "ente": "@edilizia",
       "attore": "professionista",
       "dipende_da": [
         "incarico_tecnico"
@@ -126,7 +125,7 @@
       "id": "scia_edilizia",
       "titolo": "Presentare la SCIA edilizia con la relazione asseverata",
       "tipo": "presentazione",
-      "ente": "comune.051026.edilizia",
+      "ente": "@edilizia",
       "attore": "professionista",
       "costi": [
         {
@@ -166,7 +165,7 @@
       "id": "fine_lavori",
       "titolo": "Comunicare la fine lavori e depositare lo stato finale",
       "tipo": "comunicazione",
-      "ente": "comune.051026.edilizia",
+      "ente": "@edilizia",
       "attore": "professionista",
       "dipende_da": [
         "scia_edilizia"
@@ -186,7 +185,7 @@
       "id": "agibilita",
       "titolo": "Attestare l'agibilità, se l'intervento la richiede",
       "tipo": "presentazione",
-      "ente": "comune.051026.edilizia",
+      "ente": "@edilizia",
       "attore": "professionista",
       "dipende_da": [
         "fine_lavori"

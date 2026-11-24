@@ -1,0 +1,32 @@
+[
+  {
+    "id": "suap.051039",
+    "nome": "SUAP - Comune di Terranuova Bracciolini",
+    "tipo": "comunale",
+    "territorio": "it/toscana/ar/terranuova-bracciolini",
+    "sito": "https://comune.terranuova-bracciolini.ar.it/unit%C3%A0-organizzative/3033606/suap",
+    "contatti": {
+      "indirizzo": "Piazza della Repubblica 16, 52028 Terranuova Bracciolini (AR)",
+      "telefono": "055 9194729",
+      "email": "suap@comune.terranuova-bracciolini.ar.it",
+      "pec": "suap.terranuovabracciolini@pec.it"
+    },
+    "fonte": {
+      "titolo": "Comune di Terranuova Bracciolini - Accedere a SUAP, FAQ",
+      "verificata_il": "2026-11-24",
+      "url": "https://comune.terranuova-bracciolini.ar.it/servizi/servizio-dettaglio/2926080"
+    }
+  },
+  {
+    "id": "comune.051039.edilizia",
+    "nome": "Comune di Terranuova Bracciolini - Edilizia e urbanistica",
+    "tipo": "comunale",
+    "territorio": "it/toscana/ar/terranuova-bracciolini"
+  },
+  {
+    "id": "polizia-municipale.051039",
+    "nome": "Polizia Municipale di Terranuova Bracciolini",
+    "tipo": "comunale",
+    "territorio": "it/toscana/ar/terranuova-bracciolini"
+  }
+]

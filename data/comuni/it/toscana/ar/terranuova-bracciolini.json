@@ -1,0 +1,233 @@
+{
+  "id": "terranuova-bracciolini",
+  "nome": "Terranuova Bracciolini",
+  "nome_esteso": "Terranuova Bracciolini (AR)",
+  "codice_istat": "051039",
+  "percorso": "it/toscana/ar/terranuova-bracciolini",
+  "ruoli": {
+    "@suap": "suap.051039",
+    "@edilizia": "comune.051039.edilizia",
+    "@polizia-municipale": "polizia-municipale.051039",
+    "@asl": "asl.toscana-sud-est",
+    "@cciaa": "cciaa.arezzo-siena",
+    "@vvf": "vvf.arezzo",
+    "@questura": "questura.arezzo",
+    "@soprintendenza": "soprintendenza.si-gr-ar"
+  },
+  "sportello": {
+    "ente": "suap.051039",
+    "canale": "STAR (portale regionale)",
+    "pagamento": "PagoPA",
+    "fonti": [
+      {
+        "titolo": "Comune di Terranuova Bracciolini - Accedere a SUAP, FAQ",
+        "verificata_il": "2026-11-24",
+        "url": "https://comune.terranuova-bracciolini.ar.it/servizi/servizio-dettaglio/2926080"
+      }
+    ]
+  },
+  "diritti": [
+    {
+      "voce": "Procedura SUAP soggetta a SCIA",
+      "euro": 40,
+      "fonte": {
+        "titolo": "Comune di Terranuova Bracciolini - Diritti di istruttoria e tariffe SUAP dal 1/1/2024 (Allegato B)",
+        "verificata_il": "2026-11-24",
+        "url": "https://mycity.s3.sbg.io.cloud.ovh.net/4175453/Diritti-di-istruttoria-e-tariffe-per-le-prestazioni-dello-Sportello-Unico-per-le-Attivit%C3%A0-dal-1.1.24.pdf"
+      }
+    },
+    {
+      "voce": "Singolo endoprocedimento in una procedura SUAP",
+      "euro": 10,
+      "fonte": {
+        "titolo": "Comune di Terranuova Bracciolini - Diritti di istruttoria e tariffe SUAP dal 1/1/2024 (Allegato B)",
+        "verificata_il": "2026-11-24",
+        "url": "https://mycity.s3.sbg.io.cloud.ovh.net/4175453/Diritti-di-istruttoria-e-tariffe-per-le-prestazioni-dello-Sportello-Unico-per-le-Attivit%C3%A0-dal-1.1.24.pdf"
+      }
+    },
+    {
+      "voce": "Variazioni soggettive e dati impresa",
+      "euro": 25,
+      "fonte": {
+        "titolo": "Comune di Terranuova Bracciolini - Diritti di istruttoria e tariffe SUAP dal 1/1/2024 (Allegato B)",
+        "verificata_il": "2026-11-24",
+        "url": "https://mycity.s3.sbg.io.cloud.ovh.net/4175453/Diritti-di-istruttoria-e-tariffe-per-le-prestazioni-dello-Sportello-Unico-per-le-Attivit%C3%A0-dal-1.1.24.pdf"
+      }
+    }
+  ],
+  "procedure": {
+    "somministrazione.apertura": {
+      "stato": "bozza",
+      "versione": "0.1.0",
+      "ultima_verifica": "2026-11-24",
+      "passaggi": {
+        "scia_somministrazione": {
+          "fonti_aggiunte": [
+            {
+              "titolo": "Comune di Terranuova Bracciolini - Accedere a SUAP, FAQ",
+              "verificata_il": "2026-11-24",
+              "url": "https://comune.terranuova-bracciolini.ar.it/servizi/servizio-dettaglio/2926080"
+            },
+            {
+              "titolo": "Comune di Terranuova Bracciolini - Diritti di istruttoria e tariffe SUAP dal 1/1/2024 (Allegato B)",
+              "verificata_il": "2026-11-24",
+              "url": "https://mycity.s3.sbg.io.cloud.ovh.net/4175453/Diritti-di-istruttoria-e-tariffe-per-le-prestazioni-dello-Sportello-Unico-per-le-Attivit%C3%A0-dal-1.1.24.pdf"
+            }
+          ],
+          "costi": [
+            {
+              "voce": "Diritti SUAP del Comune di Terranuova Bracciolini",
+              "min_euro": 40,
+              "max_euro": 40
+            },
+            {
+              "voce": "Imposta di bollo"
+            }
+          ]
+        }
+      }
+    },
+    "somministrazione.subingresso": {
+      "stato": "bozza",
+      "versione": "0.1.0",
+      "ultima_verifica": "2026-11-24",
+      "passaggi": {
+        "comunicazione_subingresso": {
+          "fonti_aggiunte": [
+            {
+              "titolo": "Comune di Terranuova Bracciolini - Accedere a SUAP, FAQ",
+              "verificata_il": "2026-11-24",
+              "url": "https://comune.terranuova-bracciolini.ar.it/servizi/servizio-dettaglio/2926080"
+            },
+            {
+              "titolo": "Comune di Terranuova Bracciolini - Diritti di istruttoria e tariffe SUAP dal 1/1/2024 (Allegato B)",
+              "verificata_il": "2026-11-24",
+              "url": "https://mycity.s3.sbg.io.cloud.ovh.net/4175453/Diritti-di-istruttoria-e-tariffe-per-le-prestazioni-dello-Sportello-Unico-per-le-Attivit%C3%A0-dal-1.1.24.pdf"
+            }
+          ],
+          "costi": [
+            {
+              "voce": "Diritti SUAP del Comune di Terranuova Bracciolini: tariffa per variazioni soggettive, da confermare che si applichi al subingresso",
+              "min_euro": 25,
+              "max_euro": 25
+            }
+          ]
+        }
+      }
+    },
+    "commercio.vicinato": {
+      "stato": "bozza",
+      "versione": "0.1.0",
+      "ultima_verifica": "2026-11-24",
+      "passaggi": {
+        "scia_vicinato": {
+          "fonti_aggiunte": [
+            {
+              "titolo": "Comune di Terranuova Bracciolini - Accedere a SUAP, FAQ",
+              "verificata_il": "2026-11-24",
+              "url": "https://comune.terranuova-bracciolini.ar.it/servizi/servizio-dettaglio/2926080"
+            },
+            {
+              "titolo": "Comune di Terranuova Bracciolini - Diritti di istruttoria e tariffe SUAP dal 1/1/2024 (Allegato B)",
+              "verificata_il": "2026-11-24",
+              "url": "https://mycity.s3.sbg.io.cloud.ovh.net/4175453/Diritti-di-istruttoria-e-tariffe-per-le-prestazioni-dello-Sportello-Unico-per-le-Attivit%C3%A0-dal-1.1.24.pdf"
+            }
+          ],
+          "costi": [
+            {
+              "voce": "Diritti SUAP del Comune di Terranuova Bracciolini",
+              "min_euro": 40,
+              "max_euro": 40
+            },
+            {
+              "voce": "Imposta di bollo"
+            }
+          ]
+        }
+      }
+    },
+    "servizi.acconciatore-estetista": {
+      "stato": "bozza",
+      "versione": "0.1.0",
+      "ultima_verifica": "2026-11-24",
+      "passaggi": {
+        "scia_acconciatore_estetista": {
+          "fonti_aggiunte": [
+            {
+              "titolo": "Comune di Terranuova Bracciolini - Accedere a SUAP, FAQ",
+              "verificata_il": "2026-11-24",
+              "url": "https://comune.terranuova-bracciolini.ar.it/servizi/servizio-dettaglio/2926080"
+            },
+            {
+              "titolo": "Comune di Terranuova Bracciolini - Diritti di istruttoria e tariffe SUAP dal 1/1/2024 (Allegato B)",
+              "verificata_il": "2026-11-24",
+              "url": "https://mycity.s3.sbg.io.cloud.ovh.net/4175453/Diritti-di-istruttoria-e-tariffe-per-le-prestazioni-dello-Sportello-Unico-per-le-Attivit%C3%A0-dal-1.1.24.pdf"
+            }
+          ],
+          "costi": [
+            {
+              "voce": "Diritti SUAP del Comune di Terranuova Bracciolini",
+              "min_euro": 40,
+              "max_euro": 40
+            },
+            {
+              "voce": "Imposta di bollo"
+            }
+          ]
+        }
+      }
+    },
+    "turismo.locazione-imprenditoriale": {
+      "stato": "bozza",
+      "versione": "0.1.0",
+      "ultima_verifica": "2026-11-24",
+      "passaggi": {
+        "scia_locazione": {
+          "fonti_aggiunte": [
+            {
+              "titolo": "Comune di Terranuova Bracciolini - Accedere a SUAP, FAQ",
+              "verificata_il": "2026-11-24",
+              "url": "https://comune.terranuova-bracciolini.ar.it/servizi/servizio-dettaglio/2926080"
+            },
+            {
+              "titolo": "Comune di Terranuova Bracciolini - Diritti di istruttoria e tariffe SUAP dal 1/1/2024 (Allegato B)",
+              "verificata_il": "2026-11-24",
+              "url": "https://mycity.s3.sbg.io.cloud.ovh.net/4175453/Diritti-di-istruttoria-e-tariffe-per-le-prestazioni-dello-Sportello-Unico-per-le-Attivit%C3%A0-dal-1.1.24.pdf"
+            }
+          ],
+          "costi": [
+            {
+              "voce": "Diritti SUAP del Comune di Terranuova Bracciolini",
+              "min_euro": 40,
+              "max_euro": 40
+            },
+            {
+              "voce": "Imposta di bollo"
+            }
+          ]
+        }
+      }
+    },
+    "turismo.locazione-privata": {
+      "stato": "bozza",
+      "versione": "0.1.0",
+      "ultima_verifica": "2026-11-24",
+      "passaggi": {
+        "comunicazione_comune": {
+          "fonti_aggiunte": [
+            {
+              "titolo": "Comune di Terranuova Bracciolini - Accedere a SUAP, FAQ",
+              "verificata_il": "2026-11-24",
+              "url": "https://comune.terranuova-bracciolini.ar.it/servizi/servizio-dettaglio/2926080"
+            },
+            {
+              "titolo": "Comune di Terranuova Bracciolini - Diritti di istruttoria e tariffe SUAP dal 1/1/2024 (Allegato B)",
+              "verificata_il": "2026-11-24",
+              "url": "https://mycity.s3.sbg.io.cloud.ovh.net/4175453/Diritti-di-istruttoria-e-tariffe-per-le-prestazioni-dello-Sportello-Unico-per-le-Attivit%C3%A0-dal-1.1.24.pdf"
+            }
+          ]
+        }
+      }
+    }
+  }
+}

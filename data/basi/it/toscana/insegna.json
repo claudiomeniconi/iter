@@ -1,13 +1,12 @@
 {
-  "id": "montevarchi.spazi.insegna",
+  "id": "toscana.base.spazi.insegna",
   "modello": "spazi.insegna",
   "titolo": "Installare un'insegna o un impianto pubblicitario",
-  "descrizione": "Autorizzazione per insegne d'esercizio, cartelli e altri mezzi pubblicitari a Montevarchi. Bozza della Fase 0: ogni passaggio va confermato con l'ente competente o con un professionista.",
+  "descrizione": "Autorizzazione per insegne d'esercizio, cartelli e altri mezzi pubblicitari a {comune}. Bozza della Fase 0: ogni passaggio va confermato con l'ente competente o con un professionista.",
   "territorio": {
-    "livello": "comunale",
-    "nome": "Montevarchi (AR)",
-    "codice_istat": "051026",
-    "percorso": "it/toscana/ar/montevarchi"
+    "livello": "regionale",
+    "nome": "Toscana",
+    "percorso": "it/toscana"
   },
   "categoria": "impresa",
   "stato": "bozza",
@@ -30,13 +29,13 @@
       "id": "richiedente"
     },
     {
-      "id": "soprintendenza.si-gr-ar"
+      "id": "@soprintendenza"
     },
     {
-      "id": "suap.051026"
+      "id": "@suap"
     },
     {
-      "id": "polizia-municipale.051026"
+      "id": "@polizia-municipale"
     }
   ],
   "passaggi": [
@@ -50,9 +49,10 @@
       "canale": "misto",
       "fonti": [
         {
-          "titolo": "Comune di Montevarchi - Piano degli impianti pubblicitari",
-          "verificata_il": "2026-11-24",
-          "url": "https://www.sitmontevarchi.it/piano_pubblicita"
+          "titolo": "D.Lgs. 285/1992 - Codice della strada",
+          "riferimento": "art. 23 (pubblicità sulle strade)",
+          "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:1992-04-30;285",
+          "verificata_il": "2026-11-24"
         }
       ],
       "stato_verifica": "bozza"
@@ -61,7 +61,7 @@
       "id": "soprintendenza",
       "titolo": "Autorizzazione della Soprintendenza",
       "tipo": "autorizzazione",
-      "ente": "soprintendenza.si-gr-ar",
+      "ente": "@soprintendenza",
       "attore": "professionista",
       "dipende_da": [
         "progetto_insegna"
@@ -87,7 +87,7 @@
       "id": "domanda_insegna",
       "titolo": "Presentare la domanda di autorizzazione",
       "tipo": "autorizzazione",
-      "ente": "suap.051026",
+      "ente": "@suap",
       "attore": "richiedente",
       "costi": [
         {
@@ -121,7 +121,7 @@
       "id": "nulla_osta_strada",
       "titolo": "Nulla osta dell'ente proprietario della strada",
       "tipo": "autorizzazione",
-      "ente": "polizia-municipale.051026",
+      "ente": "@polizia-municipale",
       "attore": "ente",
       "dipende_da": [
         "domanda_insegna"
@@ -147,7 +147,7 @@
       "id": "installazione",
       "titolo": "Installare l'insegna e pagare il canone ogni anno",
       "tipo": "pagamento",
-      "ente": "suap.051026",
+      "ente": "@suap",
       "attore": "richiedente",
       "dipende_da": [
         "domanda_insegna",

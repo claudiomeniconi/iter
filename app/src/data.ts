@@ -1,13 +1,64 @@
-import type { Ente, InProgramma, NodoTerritorio, Procedura, StatoVerifica, Territorio, TipoEnte } from './types'
+import type { Comune, Ente, Passaggio, InProgramma, NodoTerritorio, Procedura, StatoVerifica, Territorio, TipoEnte } from './types'
 import alberoItalia from '../../data/territori/it.json'
 import inProgrammaJson from '../../data/procedure-in-programma.json'
 
 const fileProcedure = import.meta.glob<Procedura>('../../data/procedure/**/*.json', { eager: true, import: 'default' })
 const fileEnti = import.meta.glob<Ente[]>('../../data/enti/*.json', { eager: true, import: 'default' })
 
+const fileBasi = import.meta.glob<Procedura>('../../data/basi/**/*.json', { eager: true, import: 'default' })
+const fileComuni = import.meta.glob<Comune>('../../data/comuni/**/*.json', { eager: true, import: 'default' })
+
+/* Base toscana + differenze comunali: stessa logica di scripts/iter_dati.py */
+const RUOLI_LOCALI = new Set(['@suap', '@edilizia', '@polizia-municipale'])
+const conComune = <T,>(o: T, nome: string): T => JSON.parse(JSON.stringify(o).split('{comune}').join(nome))
+
+function componi(base: Procedura, c: Comune): Procedura {
+  const diff = c.procedure[base.modello]
+  const ente = (e: string) => c.ruoli[e] ?? e
+  const p = conComune(base, c.nome)
+  const rimossi = new Set(diff.rimuovi ?? [])
+  const ereditati: Passaggio[] = p.passaggi
+    .filter((s) => !rimossi.has(s.id))
+    .map((s) => {
+      const d = { ...(diff.passaggi?.[s.id] ?? {}) }
+      const locale = RUOLI_LOCALI.has(s.ente)
+      const { fonti_aggiunte, ...resto } = d
+      return {
+        ...s,
+        ente: ente(s.ente),
+        ...(locale && !('stato_verifica' in d) ? { stato_verifica: 'bozza' as const } : {}),
+        ...resto,
+        fonti: [...s.fonti, ...(fonti_aggiunte ?? [])],
+        dipende_da: (s.dipende_da ?? []).filter((x) => !rimossi.has(x)),
+      }
+    })
+  const passaggi: Passaggio[] = [...ereditati, ...(diff.aggiungi ?? []).map((s) => ({ ...s, ente: ente(s.ente) }))]
+  return {
+    ...p,
+    id: `${c.id}.${base.modello}`,
+    territorio: { livello: 'comunale', nome: c.nome_esteso, codice_istat: c.codice_istat, percorso: c.percorso },
+    ...(diff.stato ? { stato: diff.stato } : {}),
+    ...(diff.versione ? { versione: diff.versione } : {}),
+    ...(diff.ultima_verifica ? { ultima_verifica: diff.ultima_verifica } : {}),
+    ...(diff.titolo ? { titolo: diff.titolo } : {}),
+    ...(diff.descrizione ? { descrizione: diff.descrizione } : {}),
+    base: { modello: base.modello, versione: base.versione },
+    enti: [...new Set(passaggi.map((s) => s.ente))].map((id) => ({ id })),
+    passaggi,
+  }
+}
+
+const basi = new Map(Object.values(fileBasi).map((b) => [b.modello, b]))
+const composte = Object.values(fileComuni).flatMap((c) =>
+  Object.keys(c.procedure)
+    .filter((m) => basi.has(m))
+    .map((m) => componi(basi.get(m)!, c)),
+)
+
 export const procedure: Procedura[] = Object.entries(fileProcedure)
   .filter(([path]) => !path.endsWith('_template.json'))
   .map(([, p]) => p)
+  .concat(composte)
   .sort((a, b) => a.titolo.localeCompare(b.titolo, 'it'))
 
 export const enti = new Map<string, Ente>(Object.values(fileEnti).flat().map((e) => [e.id, e]))

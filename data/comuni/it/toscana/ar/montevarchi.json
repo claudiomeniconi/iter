@@ -1,0 +1,273 @@
+{
+  "id": "montevarchi",
+  "nome": "Montevarchi",
+  "nome_esteso": "Montevarchi (AR)",
+  "codice_istat": "051026",
+  "percorso": "it/toscana/ar/montevarchi",
+  "ruoli": {
+    "@suap": "suap.051026",
+    "@edilizia": "comune.051026.edilizia",
+    "@polizia-municipale": "polizia-municipale.051026",
+    "@asl": "asl.toscana-sud-est",
+    "@cciaa": "cciaa.arezzo-siena",
+    "@vvf": "vvf.arezzo",
+    "@questura": "questura.arezzo",
+    "@soprintendenza": "soprintendenza.si-gr-ar"
+  },
+  "sportello": {
+    "ente": "suap.051026",
+    "canale": "STAR (portale regionale)",
+    "fonti": [
+      {
+        "titolo": "Comune di Montevarchi - Accedere allo Sportello SUAP (STAR)",
+        "verificata_il": "2026-11-24",
+        "url": "https://www.comune.montevarchi.ar.it/servizi/servizio-dettaglio/2246471"
+      }
+    ]
+  },
+  "diritti": [],
+  "procedure": {
+    "somministrazione.apertura": {
+      "stato": "bozza",
+      "versione": "0.1.0",
+      "ultima_verifica": "2026-11-24",
+      "passaggi": {
+        "pratica_edilizia": {
+          "fonti_aggiunte": [
+            {
+              "titolo": "Comune di Montevarchi - Modulistica edilizia",
+              "verificata_il": "2026-11-24",
+              "url": "https://www.sitmontevarchi.it/modulistica_edilizia"
+            }
+          ]
+        },
+        "scia_somministrazione": {
+          "fonti_aggiunte": [
+            {
+              "titolo": "Comune di Montevarchi - Accedere allo Sportello SUAP (STAR)",
+              "verificata_il": "2026-11-24",
+              "url": "https://www.comune.montevarchi.ar.it/servizi/servizio-dettaglio/2246471"
+            },
+            {
+              "titolo": "Comune di Montevarchi - Tariffe diritti SUAP",
+              "verificata_il": "2026-11-24",
+              "url": "https://www.comune.montevarchi.ar.it/documenti/2246544/tariffe-diritti-suap"
+            }
+          ],
+          "stato_verifica": "verificato_fonti"
+        },
+        "insegna": {
+          "fonti_aggiunte": [
+            {
+              "titolo": "Comune di Montevarchi - Piano degli impianti pubblicitari",
+              "verificata_il": "2026-11-24",
+              "url": "https://www.sitmontevarchi.it/piano_pubblicita"
+            }
+          ]
+        },
+        "dehors": {
+          "fonti_aggiunte": [
+            {
+              "titolo": "Comune di Montevarchi - Regolamento manomissioni suolo pubblico",
+              "verificata_il": "2026-11-24",
+              "url": "https://www.sitmontevarchi.it/reg_man_suolo"
+            }
+          ]
+        },
+        "controlli_suap": {
+          "stato_verifica": "verificato_fonti"
+        }
+      }
+    },
+    "somministrazione.subingresso": {
+      "stato": "bozza",
+      "versione": "0.1.0",
+      "ultima_verifica": "2026-11-24",
+      "passaggi": {
+        "comunicazione_subingresso": {
+          "fonti_aggiunte": [
+            {
+              "titolo": "Comune di Montevarchi - Accedere allo Sportello SUAP (STAR)",
+              "verificata_il": "2026-11-24",
+              "url": "https://www.comune.montevarchi.ar.it/servizi/servizio-dettaglio/2246471"
+            }
+          ],
+          "stato_verifica": "verificato_fonti"
+        },
+        "voltura_insegna_dehors": {
+          "fonti_aggiunte": [
+            {
+              "titolo": "Comune di Montevarchi - Piano degli impianti pubblicitari",
+              "verificata_il": "2026-11-24",
+              "url": "https://www.sitmontevarchi.it/piano_pubblicita"
+            }
+          ]
+        }
+      }
+    },
+    "commercio.vicinato": {
+      "stato": "bozza",
+      "versione": "0.1.0",
+      "ultima_verifica": "2026-11-24",
+      "passaggi": {
+        "scia_vicinato": {
+          "fonti_aggiunte": [
+            {
+              "titolo": "Comune di Montevarchi - Accedere allo Sportello SUAP (STAR)",
+              "verificata_il": "2026-11-24",
+              "url": "https://www.comune.montevarchi.ar.it/servizi/servizio-dettaglio/2246471"
+            },
+            {
+              "titolo": "Comune di Montevarchi - Tariffe diritti SUAP",
+              "verificata_il": "2026-11-24",
+              "url": "https://www.comune.montevarchi.ar.it/documenti/2246544/tariffe-diritti-suap"
+            }
+          ]
+        },
+        "insegna": {
+          "fonti_aggiunte": [
+            {
+              "titolo": "Comune di Montevarchi - Piano degli impianti pubblicitari",
+              "verificata_il": "2026-11-24",
+              "url": "https://www.sitmontevarchi.it/piano_pubblicita"
+            }
+          ]
+        },
+        "controlli_suap": {
+          "stato_verifica": "verificato_fonti"
+        }
+      }
+    },
+    "spazi.dehors": {
+      "stato": "bozza",
+      "versione": "0.1.0",
+      "ultima_verifica": "2026-11-24",
+      "passaggi": {
+        "domanda_concessione": {
+          "fonti_aggiunte": [
+            {
+              "titolo": "Comune di Montevarchi - Catalogo dei servizi",
+              "verificata_il": "2026-11-24",
+              "url": "https://www.comune.montevarchi.ar.it/servizi"
+            }
+          ]
+        }
+      }
+    },
+    "spazi.insegna": {
+      "stato": "bozza",
+      "versione": "0.1.0",
+      "ultima_verifica": "2026-11-24",
+      "passaggi": {
+        "progetto_insegna": {
+          "fonti_aggiunte": [
+            {
+              "titolo": "Comune di Montevarchi - Piano degli impianti pubblicitari",
+              "verificata_il": "2026-11-24",
+              "url": "https://www.sitmontevarchi.it/piano_pubblicita"
+            }
+          ]
+        }
+      }
+    },
+    "servizi.acconciatore-estetista": {
+      "stato": "bozza",
+      "versione": "0.1.0",
+      "ultima_verifica": "2026-11-24",
+      "passaggi": {
+        "scia_acconciatore_estetista": {
+          "fonti_aggiunte": [
+            {
+              "titolo": "Comune di Montevarchi - Accedere allo Sportello SUAP (STAR)",
+              "verificata_il": "2026-11-24",
+              "url": "https://www.comune.montevarchi.ar.it/servizi/servizio-dettaglio/2246471"
+            },
+            {
+              "titolo": "Comune di Montevarchi - Tariffe diritti SUAP",
+              "verificata_il": "2026-11-24",
+              "url": "https://www.comune.montevarchi.ar.it/documenti/2246544/tariffe-diritti-suap"
+            }
+          ],
+          "stato_verifica": "verificato_fonti"
+        },
+        "insegna": {
+          "fonti_aggiunte": [
+            {
+              "titolo": "Comune di Montevarchi - Piano degli impianti pubblicitari",
+              "verificata_il": "2026-11-24",
+              "url": "https://www.sitmontevarchi.it/piano_pubblicita"
+            }
+          ]
+        },
+        "controlli_suap": {
+          "stato_verifica": "verificato_fonti"
+        }
+      }
+    },
+    "edilizia.scia": {
+      "stato": "bozza",
+      "versione": "0.1.0",
+      "ultima_verifica": "2026-11-24",
+      "passaggi": {
+        "scia_edilizia": {
+          "stato_verifica": "verificato_fonti"
+        }
+      }
+    },
+    "edilizia.cila": {
+      "stato": "bozza",
+      "versione": "0.1.0",
+      "ultima_verifica": "2026-11-24",
+      "passaggi": {
+        "cila": {
+          "stato_verifica": "verificato_fonti"
+        }
+      }
+    },
+    "edilizia.agibilita": {
+      "stato": "bozza",
+      "versione": "0.1.0",
+      "ultima_verifica": "2026-11-24",
+      "passaggi": {
+        "attestazione": {
+          "stato_verifica": "verificato_fonti"
+        }
+      }
+    },
+    "turismo.locazione-imprenditoriale": {
+      "stato": "bozza",
+      "versione": "0.1.0",
+      "ultima_verifica": "2026-11-24",
+      "passaggi": {
+        "scia_locazione": {
+          "fonti_aggiunte": [
+            {
+              "titolo": "Comune di Montevarchi - Accedere allo Sportello SUAP (STAR)",
+              "verificata_il": "2026-11-24",
+              "url": "https://www.comune.montevarchi.ar.it/servizi/servizio-dettaglio/2246471"
+            },
+            {
+              "titolo": "Comune di Montevarchi - Tariffe diritti SUAP",
+              "verificata_il": "2026-11-24",
+              "url": "https://www.comune.montevarchi.ar.it/documenti/2246544/tariffe-diritti-suap"
+            }
+          ],
+          "stato_verifica": "verificato_fonti"
+        },
+        "controlli_suap": {
+          "stato_verifica": "verificato_fonti"
+        }
+      }
+    },
+    "turismo.locazione-privata": {
+      "stato": "bozza",
+      "versione": "0.1.0",
+      "ultima_verifica": "2026-11-24",
+      "passaggi": {
+        "comunicazione_comune": {
+          "stato_verifica": "verificato_fonti"
+        }
+      }
+    }
+  }
+}

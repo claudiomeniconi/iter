@@ -3,6 +3,7 @@
 import glob, json, sys
 from pathlib import Path
 import jsonschema
+from iter_dati import RUOLI_LOCALI, basi, comuni, procedure_composte
 
 R = Path(__file__).resolve().parent.parent
 load = lambda p: json.load(open(p, encoding="utf-8"))
@@ -32,10 +33,36 @@ for e in enti.values():
     if e.get("territorio") and e["territorio"] not in territori:
         errori.append(f"ente {e['id']}: territorio sconosciuto {e['territorio']}")
 
+# Basi regionali: possono usare ruoli ("@suap") e lasciare a un comune le fonti locali
+tutte_basi = basi()
+for modello, (f, b) in tutte_basi.items():
+    for x in b["passaggi"]:
+        if not x.get("fonti") and x["ente"] not in RUOLI_LOCALI:
+            errori.append(f"{f}: {x['id']} senza fonti e non gestito da un ufficio comunale")
+
+# Comuni: ogni ruolo usato dalle basi adottate deve avere un ente, ogni differenza un passaggio
+for f, c in comuni():
+    if c["percorso"] not in territori: errori.append(f"{f}: territorio sconosciuto {c['percorso']}")
+    for r, e in c["ruoli"].items():
+        if e not in enti: errori.append(f"{f}: il ruolo {r} punta all'ente {e} non nel registro")
+    for modello, d in c.get("procedure", {}).items():
+        if modello not in tutte_basi: errori.append(f"{f}: nessuna base per {modello}"); continue
+        b = tutte_basi[modello][1]
+        passi_base = {x["id"] for x in b["passaggi"]}
+        for pid in list(d.get("passaggi", {})) + d.get("rimuovi", []):
+            if pid not in passi_base: errori.append(f"{f}: {modello} modifica il passaggio {pid} che non esiste nella base")
+        for x in b["passaggi"]:
+            if x["ente"].startswith("@") and x["id"] not in d.get("rimuovi", []) and x["ente"] not in c["ruoli"]:
+                errori.append(f"{f}: {modello} usa il ruolo {x['ente']} che il comune non assegna")
+
+def procedure_da_validare():
+    for f in sorted(glob.glob(str(R / "data/procedure/**/*.json"), recursive=True)):
+        if f.endswith("_template.json"): continue
+        yield f, load(f)
+    yield from procedure_composte()
+
 ids = set()
-for f in sorted(glob.glob(str(R / "data/procedure/**/*.json"), recursive=True)):
-    if f.endswith("_template.json"): continue
-    d = load(f)
+for f, d in procedure_da_validare():
     try: jsonschema.validate(d, schema("procedura.schema.json"))
     except jsonschema.ValidationError as e: errori.append(f"{f}: {e.message}"); continue
     if d["id"] in ids: errori.append(f"{f}: id procedura duplicato")

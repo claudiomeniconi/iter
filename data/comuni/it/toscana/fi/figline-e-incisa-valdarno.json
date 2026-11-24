@@ -1,0 +1,185 @@
+{
+  "id": "figline-e-incisa-valdarno",
+  "nome": "Figline e Incisa Valdarno",
+  "nome_esteso": "Figline e Incisa Valdarno (FI)",
+  "codice_istat": "048052",
+  "percorso": "it/toscana/fi/figline-e-incisa-valdarno",
+  "ruoli": {
+    "@suap": "suap.048052",
+    "@edilizia": "comune.048052.edilizia",
+    "@polizia-municipale": "polizia-municipale.048052",
+    "@asl": "asl.toscana-centro",
+    "@cciaa": "cciaa.firenze",
+    "@vvf": "vvf.firenze",
+    "@questura": "questura.firenze",
+    "@soprintendenza": "soprintendenza.fi-pt-po"
+  },
+  "sportello": {
+    "ente": "suap.048052",
+    "canale": "STAR (portale regionale)",
+    "pagamento": "PagoPA (IRIS)",
+    "fonti": [
+      {
+        "titolo": "Comune di Figline e Incisa Valdarno - Ufficio Sportello ai cittadini e alle imprese",
+        "verificata_il": "2026-11-24",
+        "url": "https://www.comunefiv.it/amministrazione/unita_organizzativa/ufficio-sportello-ai-cittadini-e-alle-imprese/"
+      }
+    ]
+  },
+  "diritti": [
+    {
+      "voce": "Ogni pratica SUAP",
+      "euro": 30,
+      "fonte": {
+        "titolo": "Comune di Figline e Incisa Valdarno - Ufficio Sportello ai cittadini e alle imprese",
+        "verificata_il": "2026-11-24",
+        "url": "https://www.comunefiv.it/amministrazione/unita_organizzativa/ufficio-sportello-ai-cittadini-e-alle-imprese/"
+      }
+    }
+  ],
+  "procedure": {
+    "somministrazione.apertura": {
+      "stato": "bozza",
+      "versione": "0.1.0",
+      "ultima_verifica": "2026-11-24",
+      "passaggi": {
+        "scia_somministrazione": {
+          "fonti_aggiunte": [
+            {
+              "titolo": "Comune di Figline e Incisa Valdarno - Ufficio Sportello ai cittadini e alle imprese",
+              "verificata_il": "2026-11-24",
+              "url": "https://www.comunefiv.it/amministrazione/unita_organizzativa/ufficio-sportello-ai-cittadini-e-alle-imprese/"
+            }
+          ],
+          "costi": [
+            {
+              "voce": "Diritti SUAP del Comune di Figline e Incisa Valdarno",
+              "min_euro": 30,
+              "max_euro": 30
+            },
+            {
+              "voce": "Imposta di bollo"
+            }
+          ]
+        }
+      }
+    },
+    "somministrazione.subingresso": {
+      "stato": "bozza",
+      "versione": "0.1.0",
+      "ultima_verifica": "2026-11-24",
+      "passaggi": {
+        "comunicazione_subingresso": {
+          "fonti_aggiunte": [
+            {
+              "titolo": "Comune di Figline e Incisa Valdarno - Ufficio Sportello ai cittadini e alle imprese",
+              "verificata_il": "2026-11-24",
+              "url": "https://www.comunefiv.it/amministrazione/unita_organizzativa/ufficio-sportello-ai-cittadini-e-alle-imprese/"
+            }
+          ],
+          "costi": [
+            {
+              "voce": "Diritti SUAP del Comune di Figline e Incisa Valdarno",
+              "min_euro": 30,
+              "max_euro": 30
+            }
+          ]
+        }
+      }
+    },
+    "commercio.vicinato": {
+      "stato": "bozza",
+      "versione": "0.1.0",
+      "ultima_verifica": "2026-11-24",
+      "passaggi": {
+        "scia_vicinato": {
+          "fonti_aggiunte": [
+            {
+              "titolo": "Comune di Figline e Incisa Valdarno - Ufficio Sportello ai cittadini e alle imprese",
+              "verificata_il": "2026-11-24",
+              "url": "https://www.comunefiv.it/amministrazione/unita_organizzativa/ufficio-sportello-ai-cittadini-e-alle-imprese/"
+            }
+          ],
+          "costi": [
+            {
+              "voce": "Diritti SUAP del Comune di Figline e Incisa Valdarno",
+              "min_euro": 30,
+              "max_euro": 30
+            },
+            {
+              "voce": "Imposta di bollo"
+            }
+          ]
+        }
+      }
+    },
+    "servizi.acconciatore-estetista": {
+      "stato": "bozza",
+      "versione": "0.1.0",
+      "ultima_verifica": "2026-11-24",
+      "passaggi": {
+        "scia_acconciatore_estetista": {
+          "fonti_aggiunte": [
+            {
+              "titolo": "Comune di Figline e Incisa Valdarno - Ufficio Sportello ai cittadini e alle imprese",
+              "verificata_il": "2026-11-24",
+              "url": "https://www.comunefiv.it/amministrazione/unita_organizzativa/ufficio-sportello-ai-cittadini-e-alle-imprese/"
+            }
+          ],
+          "costi": [
+            {
+              "voce": "Diritti SUAP del Comune di Figline e Incisa Valdarno",
+              "min_euro": 30,
+              "max_euro": 30
+            },
+            {
+              "voce": "Imposta di bollo"
+            }
+          ]
+        }
+      }
+    },
+    "turismo.locazione-imprenditoriale": {
+      "stato": "bozza",
+      "versione": "0.1.0",
+      "ultima_verifica": "2026-11-24",
+      "passaggi": {
+        "scia_locazione": {
+          "fonti_aggiunte": [
+            {
+              "titolo": "Comune di Figline e Incisa Valdarno - Ufficio Sportello ai cittadini e alle imprese",
+              "verificata_il": "2026-11-24",
+              "url": "https://www.comunefiv.it/amministrazione/unita_organizzativa/ufficio-sportello-ai-cittadini-e-alle-imprese/"
+            }
+          ],
+          "costi": [
+            {
+              "voce": "Diritti SUAP del Comune di Figline e Incisa Valdarno",
+              "min_euro": 30,
+              "max_euro": 30
+            },
+            {
+              "voce": "Imposta di bollo"
+            }
+          ]
+        }
+      }
+    },
+    "turismo.locazione-privata": {
+      "stato": "bozza",
+      "versione": "0.1.0",
+      "ultima_verifica": "2026-11-24",
+      "passaggi": {
+        "comunicazione_comune": {
+          "fonti_aggiunte": [
+            {
+              "titolo": "Comune di Figline e Incisa Valdarno - Ufficio Sportello ai cittadini e alle imprese",
+              "verificata_il": "2026-11-24",
+              "url": "https://www.comunefiv.it/amministrazione/unita_organizzativa/ufficio-sportello-ai-cittadini-e-alle-imprese/"
+            }
+          ]
+        }
+      }
+    }
+  }
+}

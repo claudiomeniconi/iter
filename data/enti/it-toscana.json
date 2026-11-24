@@ -69,5 +69,11 @@
     "nome": "Agenzia delle Dogane e dei Monopoli",
     "tipo": "statale",
     "territorio": "it/toscana"
+  },
+  {
+    "id": "asl.toscana-centro",
+    "nome": "Azienda USL Toscana centro",
+    "tipo": "sanitario",
+    "territorio": "it/toscana"
   }
 ]

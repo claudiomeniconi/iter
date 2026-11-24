@@ -1,0 +1,248 @@
+{
+  "id": "san-giovanni-valdarno",
+  "nome": "San Giovanni Valdarno",
+  "nome_esteso": "San Giovanni Valdarno (AR)",
+  "codice_istat": "051033",
+  "percorso": "it/toscana/ar/san-giovanni-valdarno",
+  "ruoli": {
+    "@suap": "suap.051033",
+    "@edilizia": "comune.051033.edilizia",
+    "@polizia-municipale": "polizia-municipale.051033",
+    "@asl": "asl.toscana-sud-est",
+    "@cciaa": "cciaa.arezzo-siena",
+    "@vvf": "vvf.arezzo",
+    "@questura": "questura.arezzo",
+    "@soprintendenza": "soprintendenza.si-gr-ar"
+  },
+  "sportello": {
+    "ente": "suap.051033",
+    "canale": "STAR (portale regionale)",
+    "pagamento": "PagoPA",
+    "fonti": [
+      {
+        "titolo": "Comune di San Giovanni Valdarno - Accedere al SUAP (diritti SUAP)",
+        "verificata_il": "2026-11-24",
+        "url": "https://comune.san-giovanni-valdarno.ar.it/servizi/servizio-dettaglio/2671247"
+      }
+    ]
+  },
+  "diritti": [
+    {
+      "voce": "SCIA, per ogni endoprocedimento",
+      "euro": 45,
+      "fonte": {
+        "titolo": "Comune di San Giovanni Valdarno - Accedere al SUAP (diritti SUAP)",
+        "verificata_il": "2026-11-24",
+        "url": "https://comune.san-giovanni-valdarno.ar.it/servizi/servizio-dettaglio/2671247"
+      }
+    },
+    {
+      "voce": "Autorizzazione o atto unico",
+      "euro": 85,
+      "fonte": {
+        "titolo": "Comune di San Giovanni Valdarno - Accedere al SUAP (diritti SUAP)",
+        "verificata_il": "2026-11-24",
+        "url": "https://comune.san-giovanni-valdarno.ar.it/servizi/servizio-dettaglio/2671247"
+      }
+    },
+    {
+      "voce": "Variazioni soggettive e dati impresa",
+      "euro": 25,
+      "fonte": {
+        "titolo": "Comune di San Giovanni Valdarno - Accedere al SUAP (diritti SUAP)",
+        "verificata_il": "2026-11-24",
+        "url": "https://comune.san-giovanni-valdarno.ar.it/servizi/servizio-dettaglio/2671247"
+      }
+    },
+    {
+      "voce": "Parere preventivo",
+      "euro": 75,
+      "fonte": {
+        "titolo": "Comune di San Giovanni Valdarno - Accedere al SUAP (diritti SUAP)",
+        "verificata_il": "2026-11-24",
+        "url": "https://comune.san-giovanni-valdarno.ar.it/servizi/servizio-dettaglio/2671247"
+      }
+    },
+    {
+      "voce": "Conferenza dei servizi",
+      "euro": 120,
+      "fonte": {
+        "titolo": "Comune di San Giovanni Valdarno - Accedere al SUAP (diritti SUAP)",
+        "verificata_il": "2026-11-24",
+        "url": "https://comune.san-giovanni-valdarno.ar.it/servizi/servizio-dettaglio/2671247"
+      }
+    },
+    {
+      "voce": "Insegna fino a 1 mq",
+      "euro": 70,
+      "fonte": {
+        "titolo": "Comune di San Giovanni Valdarno - Accedere al SUAP (diritti SUAP)",
+        "verificata_il": "2026-11-24",
+        "url": "https://comune.san-giovanni-valdarno.ar.it/servizi/servizio-dettaglio/2671247"
+      }
+    },
+    {
+      "voce": "Insegna da 1 a 5 mq",
+      "euro": 80,
+      "fonte": {
+        "titolo": "Comune di San Giovanni Valdarno - Accedere al SUAP (diritti SUAP)",
+        "verificata_il": "2026-11-24",
+        "url": "https://comune.san-giovanni-valdarno.ar.it/servizi/servizio-dettaglio/2671247"
+      }
+    },
+    {
+      "voce": "Insegna oltre 5 mq",
+      "euro": 100,
+      "fonte": {
+        "titolo": "Comune di San Giovanni Valdarno - Accedere al SUAP (diritti SUAP)",
+        "verificata_il": "2026-11-24",
+        "url": "https://comune.san-giovanni-valdarno.ar.it/servizi/servizio-dettaglio/2671247"
+      }
+    }
+  ],
+  "procedure": {
+    "somministrazione.apertura": {
+      "stato": "bozza",
+      "versione": "0.1.0",
+      "ultima_verifica": "2026-11-24",
+      "passaggi": {
+        "scia_somministrazione": {
+          "fonti_aggiunte": [
+            {
+              "titolo": "Comune di San Giovanni Valdarno - Accedere al SUAP (diritti SUAP)",
+              "verificata_il": "2026-11-24",
+              "url": "https://comune.san-giovanni-valdarno.ar.it/servizi/servizio-dettaglio/2671247"
+            }
+          ],
+          "costi": [
+            {
+              "voce": "Diritti SUAP del Comune di San Giovanni Valdarno per ogni endoprocedimento: la pratica può contenerne più di uno",
+              "min_euro": 45,
+              "max_euro": 45
+            },
+            {
+              "voce": "Imposta di bollo"
+            }
+          ]
+        }
+      }
+    },
+    "somministrazione.subingresso": {
+      "stato": "bozza",
+      "versione": "0.1.0",
+      "ultima_verifica": "2026-11-24",
+      "passaggi": {
+        "comunicazione_subingresso": {
+          "fonti_aggiunte": [
+            {
+              "titolo": "Comune di San Giovanni Valdarno - Accedere al SUAP (diritti SUAP)",
+              "verificata_il": "2026-11-24",
+              "url": "https://comune.san-giovanni-valdarno.ar.it/servizi/servizio-dettaglio/2671247"
+            }
+          ],
+          "costi": [
+            {
+              "voce": "Diritti SUAP del Comune di San Giovanni Valdarno: tariffa per variazioni soggettive, da confermare che si applichi al subingresso",
+              "min_euro": 25,
+              "max_euro": 25
+            }
+          ]
+        }
+      }
+    },
+    "commercio.vicinato": {
+      "stato": "bozza",
+      "versione": "0.1.0",
+      "ultima_verifica": "2026-11-24",
+      "passaggi": {
+        "scia_vicinato": {
+          "fonti_aggiunte": [
+            {
+              "titolo": "Comune di San Giovanni Valdarno - Accedere al SUAP (diritti SUAP)",
+              "verificata_il": "2026-11-24",
+              "url": "https://comune.san-giovanni-valdarno.ar.it/servizi/servizio-dettaglio/2671247"
+            }
+          ],
+          "costi": [
+            {
+              "voce": "Diritti SUAP del Comune di San Giovanni Valdarno per ogni endoprocedimento: la pratica può contenerne più di uno",
+              "min_euro": 45,
+              "max_euro": 45
+            },
+            {
+              "voce": "Imposta di bollo"
+            }
+          ]
+        }
+      }
+    },
+    "servizi.acconciatore-estetista": {
+      "stato": "bozza",
+      "versione": "0.1.0",
+      "ultima_verifica": "2026-11-24",
+      "passaggi": {
+        "scia_acconciatore_estetista": {
+          "fonti_aggiunte": [
+            {
+              "titolo": "Comune di San Giovanni Valdarno - Accedere al SUAP (diritti SUAP)",
+              "verificata_il": "2026-11-24",
+              "url": "https://comune.san-giovanni-valdarno.ar.it/servizi/servizio-dettaglio/2671247"
+            }
+          ],
+          "costi": [
+            {
+              "voce": "Diritti SUAP del Comune di San Giovanni Valdarno per ogni endoprocedimento: la pratica può contenerne più di uno",
+              "min_euro": 45,
+              "max_euro": 45
+            },
+            {
+              "voce": "Imposta di bollo"
+            }
+          ]
+        }
+      }
+    },
+    "turismo.locazione-imprenditoriale": {
+      "stato": "bozza",
+      "versione": "0.1.0",
+      "ultima_verifica": "2026-11-24",
+      "passaggi": {
+        "scia_locazione": {
+          "fonti_aggiunte": [
+            {
+              "titolo": "Comune di San Giovanni Valdarno - Accedere al SUAP (diritti SUAP)",
+              "verificata_il": "2026-11-24",
+              "url": "https://comune.san-giovanni-valdarno.ar.it/servizi/servizio-dettaglio/2671247"
+            }
+          ],
+          "costi": [
+            {
+              "voce": "Diritti SUAP del Comune di San Giovanni Valdarno per ogni endoprocedimento: la pratica può contenerne più di uno",
+              "min_euro": 45,
+              "max_euro": 45
+            },
+            {
+              "voce": "Imposta di bollo"
+            }
+          ]
+        }
+      }
+    },
+    "turismo.locazione-privata": {
+      "stato": "bozza",
+      "versione": "0.1.0",
+      "ultima_verifica": "2026-11-24",
+      "passaggi": {
+        "comunicazione_comune": {
+          "fonti_aggiunte": [
+            {
+              "titolo": "Comune di San Giovanni Valdarno - Accedere al SUAP (diritti SUAP)",
+              "verificata_il": "2026-11-24",
+              "url": "https://comune.san-giovanni-valdarno.ar.it/servizi/servizio-dettaglio/2671247"
+            }
+          ]
+        }
+      }
+    }
+  }
+}

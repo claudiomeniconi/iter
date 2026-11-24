@@ -1,0 +1,32 @@
+[
+  {
+    "id": "suap.048052",
+    "nome": "Sportello ai cittadini e alle imprese (SUAP) - Comune di Figline e Incisa Valdarno",
+    "tipo": "comunale",
+    "territorio": "it/toscana/fi/figline-e-incisa-valdarno",
+    "sito": "https://www.comunefiv.it/amministrazione/unita_organizzativa/ufficio-sportello-ai-cittadini-e-alle-imprese/",
+    "contatti": {
+      "indirizzo": "Piazza IV Novembre 3, 50063 Figline e Incisa Valdarno (FI)",
+      "telefono": "055 9125213",
+      "email": "suap@comunefiv.it",
+      "pec": "comune.figlineincisa@postacert.toscana.it"
+    },
+    "fonte": {
+      "titolo": "Comune di Figline e Incisa Valdarno - Ufficio Sportello ai cittadini e alle imprese",
+      "verificata_il": "2026-11-24",
+      "url": "https://www.comunefiv.it/amministrazione/unita_organizzativa/ufficio-sportello-ai-cittadini-e-alle-imprese/"
+    }
+  },
+  {
+    "id": "comune.048052.edilizia",
+    "nome": "Comune di Figline e Incisa Valdarno - Edilizia e urbanistica",
+    "tipo": "comunale",
+    "territorio": "it/toscana/fi/figline-e-incisa-valdarno"
+  },
+  {
+    "id": "polizia-municipale.048052",
+    "nome": "Polizia Municipale di Figline e Incisa Valdarno",
+    "tipo": "comunale",
+    "territorio": "it/toscana/fi/figline-e-incisa-valdarno"
+  }
+]

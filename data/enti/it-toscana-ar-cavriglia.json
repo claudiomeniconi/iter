@@ -1,0 +1,31 @@
+[
+  {
+    "id": "suap.051013",
+    "nome": "SUAP - Comune di Cavriglia",
+    "tipo": "comunale",
+    "territorio": "it/toscana/ar/cavriglia",
+    "sito": "https://www.comune.cavriglia.ar.it/come-fare-per/suap-sportello-unico-attivita-produttive.html",
+    "contatti": {
+      "indirizzo": "Viale Principe di Piemonte 9, 52022 Cavriglia (AR)",
+      "telefono": "055 9669732, 055 9669738, 055 9669762",
+      "pec": "suap.cavriglia@postacert.toscana.it"
+    },
+    "fonte": {
+      "titolo": "Comune di Cavriglia - SUAP Sportello unico attività produttive",
+      "verificata_il": "2026-11-24",
+      "url": "https://www.comune.cavriglia.ar.it/come-fare-per/suap-sportello-unico-attivita-produttive.html"
+    }
+  },
+  {
+    "id": "comune.051013.edilizia",
+    "nome": "Comune di Cavriglia - Edilizia e urbanistica",
+    "tipo": "comunale",
+    "territorio": "it/toscana/ar/cavriglia"
+  },
+  {
+    "id": "polizia-municipale.051013",
+    "nome": "Polizia Municipale di Cavriglia",
+    "tipo": "comunale",
+    "territorio": "it/toscana/ar/cavriglia"
+  }
+]

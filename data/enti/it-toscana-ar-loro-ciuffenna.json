@@ -1,0 +1,14 @@
+[
+  {
+    "id": "comune.051020.edilizia",
+    "nome": "Comune di Loro Ciuffenna - Edilizia e urbanistica",
+    "tipo": "comunale",
+    "territorio": "it/toscana/ar/loro-ciuffenna"
+  },
+  {
+    "id": "polizia-municipale.051020",
+    "nome": "Polizia Municipale di Loro Ciuffenna",
+    "tipo": "comunale",
+    "territorio": "it/toscana/ar/loro-ciuffenna"
+  }
+]

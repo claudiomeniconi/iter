@@ -1,0 +1,248 @@
+{
+  "id": "loro-ciuffenna",
+  "nome": "Loro Ciuffenna",
+  "nome_esteso": "Loro Ciuffenna (AR)",
+  "codice_istat": "051020",
+  "percorso": "it/toscana/ar/loro-ciuffenna",
+  "ruoli": {
+    "@suap": "suap.unione-pratomagno",
+    "@edilizia": "comune.051020.edilizia",
+    "@polizia-municipale": "polizia-municipale.051020",
+    "@asl": "asl.toscana-sud-est",
+    "@cciaa": "cciaa.arezzo-siena",
+    "@vvf": "vvf.arezzo",
+    "@questura": "questura.arezzo",
+    "@soprintendenza": "soprintendenza.si-gr-ar"
+  },
+  "sportello": {
+    "ente": "suap.unione-pratomagno",
+    "canale": "STAR (portale regionale)",
+    "pagamento": "Bonifico all'Unione dei Comuni del Pratomagno",
+    "fonti": [
+      {
+        "titolo": "Unione dei Comuni del Pratomagno - Sportello unico attività produttive associato",
+        "verificata_il": "2026-11-24",
+        "url": "https://www.unionepratomagno.it/uffici/sportello-unico-attivita-produttive-associato"
+      }
+    ]
+  },
+  "diritti": [
+    {
+      "voce": "Procedura SUAP soggetta a SCIA",
+      "euro": 40,
+      "fonte": {
+        "titolo": "Unione dei Comuni del Pratomagno - Tariffario SUAP 2024-2025",
+        "verificata_il": "2026-11-24",
+        "url": "https://www.unionepratomagno.it/sites/unionepratomagno/files/roles/redattori/uffici/sportello-unico-attivita-produttive-associato/tariffario-suap-ucp-2024-2025.pdf"
+      }
+    },
+    {
+      "voce": "Procedura SUAP soggetta ad autorizzazione",
+      "euro": 80,
+      "fonte": {
+        "titolo": "Unione dei Comuni del Pratomagno - Tariffario SUAP 2024-2025",
+        "verificata_il": "2026-11-24",
+        "url": "https://www.unionepratomagno.it/sites/unionepratomagno/files/roles/redattori/uffici/sportello-unico-attivita-produttive-associato/tariffario-suap-ucp-2024-2025.pdf"
+      }
+    },
+    {
+      "voce": "Singolo endoprocedimento in una procedura SUAP",
+      "euro": 20,
+      "fonte": {
+        "titolo": "Unione dei Comuni del Pratomagno - Tariffario SUAP 2024-2025",
+        "verificata_il": "2026-11-24",
+        "url": "https://www.unionepratomagno.it/sites/unionepratomagno/files/roles/redattori/uffici/sportello-unico-attivita-produttive-associato/tariffario-suap-ucp-2024-2025.pdf"
+      }
+    },
+    {
+      "voce": "Comunicazioni varie (variazioni soggettive, dati impresa)",
+      "euro": 10,
+      "fonte": {
+        "titolo": "Unione dei Comuni del Pratomagno - Tariffario SUAP 2024-2025",
+        "verificata_il": "2026-11-24",
+        "url": "https://www.unionepratomagno.it/sites/unionepratomagno/files/roles/redattori/uffici/sportello-unico-attivita-produttive-associato/tariffario-suap-ucp-2024-2025.pdf"
+      }
+    }
+  ],
+  "procedure": {
+    "somministrazione.apertura": {
+      "stato": "bozza",
+      "versione": "0.1.0",
+      "ultima_verifica": "2026-11-24",
+      "passaggi": {
+        "scia_somministrazione": {
+          "fonti_aggiunte": [
+            {
+              "titolo": "Unione dei Comuni del Pratomagno - Sportello unico attività produttive associato",
+              "verificata_il": "2026-11-24",
+              "url": "https://www.unionepratomagno.it/uffici/sportello-unico-attivita-produttive-associato"
+            },
+            {
+              "titolo": "Unione dei Comuni del Pratomagno - Tariffario SUAP 2024-2025",
+              "verificata_il": "2026-11-24",
+              "url": "https://www.unionepratomagno.it/sites/unionepratomagno/files/roles/redattori/uffici/sportello-unico-attivita-produttive-associato/tariffario-suap-ucp-2024-2025.pdf"
+            }
+          ],
+          "costi": [
+            {
+              "voce": "Diritti SUAP del Comune di Loro Ciuffenna",
+              "min_euro": 40,
+              "max_euro": 40
+            },
+            {
+              "voce": "Imposta di bollo"
+            }
+          ],
+          "note": "Sportello associato dell'Unione dei Comuni del Pratomagno: pratiche solo tramite STAR, diritti pagati con bonifico all'Unione."
+        }
+      }
+    },
+    "somministrazione.subingresso": {
+      "stato": "bozza",
+      "versione": "0.1.0",
+      "ultima_verifica": "2026-11-24",
+      "passaggi": {
+        "comunicazione_subingresso": {
+          "fonti_aggiunte": [
+            {
+              "titolo": "Unione dei Comuni del Pratomagno - Sportello unico attività produttive associato",
+              "verificata_il": "2026-11-24",
+              "url": "https://www.unionepratomagno.it/uffici/sportello-unico-attivita-produttive-associato"
+            },
+            {
+              "titolo": "Unione dei Comuni del Pratomagno - Tariffario SUAP 2024-2025",
+              "verificata_il": "2026-11-24",
+              "url": "https://www.unionepratomagno.it/sites/unionepratomagno/files/roles/redattori/uffici/sportello-unico-attivita-produttive-associato/tariffario-suap-ucp-2024-2025.pdf"
+            }
+          ],
+          "costi": [
+            {
+              "voce": "Diritti SUAP del Comune di Loro Ciuffenna: tariffa per variazioni soggettive, da confermare che si applichi al subingresso",
+              "min_euro": 10,
+              "max_euro": 10
+            }
+          ],
+          "note": "Sportello associato dell'Unione dei Comuni del Pratomagno: pratiche solo tramite STAR, diritti pagati con bonifico all'Unione."
+        }
+      }
+    },
+    "commercio.vicinato": {
+      "stato": "bozza",
+      "versione": "0.1.0",
+      "ultima_verifica": "2026-11-24",
+      "passaggi": {
+        "scia_vicinato": {
+          "fonti_aggiunte": [
+            {
+              "titolo": "Unione dei Comuni del Pratomagno - Sportello unico attività produttive associato",
+              "verificata_il": "2026-11-24",
+              "url": "https://www.unionepratomagno.it/uffici/sportello-unico-attivita-produttive-associato"
+            },
+            {
+              "titolo": "Unione dei Comuni del Pratomagno - Tariffario SUAP 2024-2025",
+              "verificata_il": "2026-11-24",
+              "url": "https://www.unionepratomagno.it/sites/unionepratomagno/files/roles/redattori/uffici/sportello-unico-attivita-produttive-associato/tariffario-suap-ucp-2024-2025.pdf"
+            }
+          ],
+          "costi": [
+            {
+              "voce": "Diritti SUAP del Comune di Loro Ciuffenna",
+              "min_euro": 40,
+              "max_euro": 40
+            },
+            {
+              "voce": "Imposta di bollo"
+            }
+          ],
+          "note": "Sportello associato dell'Unione dei Comuni del Pratomagno: pratiche solo tramite STAR, diritti pagati con bonifico all'Unione."
+        }
+      }
+    },
+    "servizi.acconciatore-estetista": {
+      "stato": "bozza",
+      "versione": "0.1.0",
+      "ultima_verifica": "2026-11-24",
+      "passaggi": {
+        "scia_acconciatore_estetista": {
+          "fonti_aggiunte": [
+            {
+              "titolo": "Unione dei Comuni del Pratomagno - Sportello unico attività produttive associato",
+              "verificata_il": "2026-11-24",
+              "url": "https://www.unionepratomagno.it/uffici/sportello-unico-attivita-produttive-associato"
+            },
+            {
+              "titolo": "Unione dei Comuni del Pratomagno - Tariffario SUAP 2024-2025",
+              "verificata_il": "2026-11-24",
+              "url": "https://www.unionepratomagno.it/sites/unionepratomagno/files/roles/redattori/uffici/sportello-unico-attivita-produttive-associato/tariffario-suap-ucp-2024-2025.pdf"
+            }
+          ],
+          "costi": [
+            {
+              "voce": "Diritti SUAP del Comune di Loro Ciuffenna",
+              "min_euro": 40,
+              "max_euro": 40
+            },
+            {
+              "voce": "Imposta di bollo"
+            }
+          ],
+          "note": "Sportello associato dell'Unione dei Comuni del Pratomagno: pratiche solo tramite STAR, diritti pagati con bonifico all'Unione."
+        }
+      }
+    },
+    "turismo.locazione-imprenditoriale": {
+      "stato": "bozza",
+      "versione": "0.1.0",
+      "ultima_verifica": "2026-11-24",
+      "passaggi": {
+        "scia_locazione": {
+          "fonti_aggiunte": [
+            {
+              "titolo": "Unione dei Comuni del Pratomagno - Sportello unico attività produttive associato",
+              "verificata_il": "2026-11-24",
+              "url": "https://www.unionepratomagno.it/uffici/sportello-unico-attivita-produttive-associato"
+            },
+            {
+              "titolo": "Unione dei Comuni del Pratomagno - Tariffario SUAP 2024-2025",
+              "verificata_il": "2026-11-24",
+              "url": "https://www.unionepratomagno.it/sites/unionepratomagno/files/roles/redattori/uffici/sportello-unico-attivita-produttive-associato/tariffario-suap-ucp-2024-2025.pdf"
+            }
+          ],
+          "costi": [
+            {
+              "voce": "Diritti SUAP del Comune di Loro Ciuffenna",
+              "min_euro": 40,
+              "max_euro": 40
+            },
+            {
+              "voce": "Imposta di bollo"
+            }
+          ],
+          "note": "Sportello associato dell'Unione dei Comuni del Pratomagno: pratiche solo tramite STAR, diritti pagati con bonifico all'Unione."
+        }
+      }
+    },
+    "turismo.locazione-privata": {
+      "stato": "bozza",
+      "versione": "0.1.0",
+      "ultima_verifica": "2026-11-24",
+      "passaggi": {
+        "comunicazione_comune": {
+          "fonti_aggiunte": [
+            {
+              "titolo": "Unione dei Comuni del Pratomagno - Sportello unico attività produttive associato",
+              "verificata_il": "2026-11-24",
+              "url": "https://www.unionepratomagno.it/uffici/sportello-unico-attivita-produttive-associato"
+            },
+            {
+              "titolo": "Unione dei Comuni del Pratomagno - Tariffario SUAP 2024-2025",
+              "verificata_il": "2026-11-24",
+              "url": "https://www.unionepratomagno.it/sites/unionepratomagno/files/roles/redattori/uffici/sportello-unico-attivita-produttive-associato/tariffario-suap-ucp-2024-2025.pdf"
+            }
+          ],
+          "note": "Sportello associato dell'Unione dei Comuni del Pratomagno: pratiche solo tramite STAR, diritti pagati con bonifico all'Unione."
+        }
+      }
+    }
+  }
+}

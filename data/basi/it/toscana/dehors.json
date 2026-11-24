@@ -1,13 +1,12 @@
 {
-  "id": "montevarchi.spazi.dehors",
+  "id": "toscana.base.spazi.dehors",
   "modello": "spazi.dehors",
   "titolo": "Chiedere suolo pubblico per un dehors",
-  "descrizione": "Concessione di suolo pubblico per tavoli e sedie all'aperto di un bar o ristorante a Montevarchi. Bozza della Fase 0: ogni passaggio va confermato con l'ente competente o con un professionista.",
+  "descrizione": "Concessione di suolo pubblico per tavoli e sedie all'aperto di un bar o ristorante a {comune}. Bozza della Fase 0: ogni passaggio va confermato con l'ente competente o con un professionista.",
   "territorio": {
-    "livello": "comunale",
-    "nome": "Montevarchi (AR)",
-    "codice_istat": "051026",
-    "percorso": "it/toscana/ar/montevarchi"
+    "livello": "regionale",
+    "nome": "Toscana",
+    "percorso": "it/toscana"
   },
   "categoria": "impresa",
   "stato": "bozza",
@@ -30,16 +29,16 @@
       "id": "richiedente"
     },
     {
-      "id": "soprintendenza.si-gr-ar"
+      "id": "@soprintendenza"
     },
     {
-      "id": "comune.051026.edilizia"
+      "id": "@edilizia"
     },
     {
-      "id": "suap.051026"
+      "id": "@suap"
     },
     {
-      "id": "polizia-municipale.051026"
+      "id": "@polizia-municipale"
     }
   ],
   "passaggi": [
@@ -59,13 +58,13 @@
         }
       ],
       "stato_verifica": "bozza",
-      "note": "Sui marciapiedi va lasciato un passaggio libero per i pedoni. Da verificare le regole del regolamento di Montevarchi."
+      "note": "Sui marciapiedi va lasciato un passaggio libero per i pedoni. Da verificare le regole del regolamento di {comune}."
     },
     {
       "id": "soprintendenza",
       "titolo": "Autorizzazione della Soprintendenza",
       "tipo": "autorizzazione",
-      "ente": "soprintendenza.si-gr-ar",
+      "ente": "@soprintendenza",
       "attore": "professionista",
       "dipende_da": [
         "progetto_dehors"
@@ -91,7 +90,7 @@
       "id": "pratica_edilizia",
       "titolo": "Titolo edilizio per strutture e coperture",
       "tipo": "presentazione",
-      "ente": "comune.051026.edilizia",
+      "ente": "@edilizia",
       "attore": "professionista",
       "dipende_da": [
         "progetto_dehors"
@@ -116,7 +115,7 @@
       "id": "domanda_concessione",
       "titolo": "Chiedere la concessione di suolo pubblico",
       "tipo": "autorizzazione",
-      "ente": "suap.051026",
+      "ente": "@suap",
       "attore": "richiedente",
       "costi": [
         {
@@ -136,11 +135,6 @@
           "verificata_il": "2026-11-24",
           "riferimento": "art. 1, commi 816-847",
           "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:legge:2019-12-27;160"
-        },
-        {
-          "titolo": "Comune di Montevarchi - Catalogo dei servizi",
-          "verificata_il": "2026-11-24",
-          "url": "https://www.comune.montevarchi.ar.it/servizi"
         }
       ],
       "stato_verifica": "bozza"
@@ -149,7 +143,7 @@
       "id": "parere_pm",
       "titolo": "Parere della Polizia Municipale sulla viabilità",
       "tipo": "controllo",
-      "ente": "polizia-municipale.051026",
+      "ente": "@polizia-municipale",
       "attore": "ente",
       "dipende_da": [
         "domanda_concessione"
@@ -169,7 +163,7 @@
       "id": "rilascio",
       "titolo": "Rilascio della concessione e pagamento del canone",
       "tipo": "autorizzazione",
-      "ente": "suap.051026",
+      "ente": "@suap",
       "attore": "ente",
       "dipende_da": [
         "parere_pm",

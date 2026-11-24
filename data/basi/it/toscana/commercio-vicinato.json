@@ -1,13 +1,12 @@
 {
-  "id": "montevarchi.commercio.vicinato",
+  "id": "toscana.base.commercio.vicinato",
   "modello": "commercio.vicinato",
   "titolo": "Aprire un negozio di vicinato",
-  "descrizione": "Apertura di un esercizio di vendita al dettaglio di piccole dimensioni a Montevarchi, alimentare o non alimentare. Bozza della Fase 0: ogni passaggio va confermato con l'ente competente o con un professionista.",
+  "descrizione": "Apertura di un esercizio di vendita al dettaglio di piccole dimensioni a {comune}, alimentare o non alimentare. Bozza della Fase 0: ogni passaggio va confermato con l'ente competente o con un professionista.",
   "territorio": {
-    "livello": "comunale",
-    "nome": "Montevarchi (AR)",
-    "codice_istat": "051026",
-    "percorso": "it/toscana/ar/montevarchi"
+    "livello": "regionale",
+    "nome": "Toscana",
+    "percorso": "it/toscana"
   },
   "categoria": "impresa",
   "stato": "bozza",
@@ -40,16 +39,16 @@
       "id": "richiedente"
     },
     {
-      "id": "comune.051026.edilizia"
+      "id": "@edilizia"
     },
     {
-      "id": "cciaa.arezzo-siena"
+      "id": "@cciaa"
     },
     {
-      "id": "suap.051026"
+      "id": "@suap"
     },
     {
-      "id": "asl.toscana-sud-est"
+      "id": "@asl"
     },
     {
       "id": "agenzia-entrate"
@@ -79,7 +78,7 @@
       "id": "verifica_locale",
       "titolo": "Verificare che il locale sia idoneo (destinazione d'uso, agibilità, requisiti igienici)",
       "tipo": "requisito",
-      "ente": "comune.051026.edilizia",
+      "ente": "@edilizia",
       "attore": "professionista",
       "documenti_richiesti": [
         {
@@ -108,7 +107,7 @@
       "id": "pratica_edilizia",
       "titolo": "Presentare la pratica edilizia per lavori o cambio d'uso",
       "tipo": "presentazione",
-      "ente": "comune.051026.edilizia",
+      "ente": "@edilizia",
       "attore": "professionista",
       "dipende_da": [
         "verifica_locale"
@@ -135,7 +134,7 @@
       "id": "iscrizione_impresa",
       "titolo": "Aprire la partita IVA e iscrivere l'impresa (Comunicazione Unica)",
       "tipo": "iscrizione",
-      "ente": "cciaa.arezzo-siena",
+      "ente": "@cciaa",
       "attore": "professionista",
       "documenti_prodotti": [
         {
@@ -198,7 +197,7 @@
       "id": "scia_vicinato",
       "titolo": "Presentare la SCIA per l'esercizio di vicinato",
       "tipo": "presentazione",
-      "ente": "suap.051026",
+      "ente": "@suap",
       "attore": "richiedente",
       "documenti_richiesti": [],
       "documenti_prodotti": [
@@ -209,7 +208,7 @@
       ],
       "costi": [
         {
-          "voce": "Diritti SUAP del Comune di Montevarchi"
+          "voce": "Diritti SUAP del Comune di {comune}"
         },
         {
           "voce": "Imposta di bollo"
@@ -236,16 +235,6 @@
           "verificata_il": "2026-11-24",
           "riferimento": "SCIA per l'esercizio di vicinato - d.d. 9698/2020",
           "url": "https://www.regione.toscana.it/documents/d/guest/elenco-della-modulistica-unica-in-uso-al-7-ottobre-2026-pdf"
-        },
-        {
-          "titolo": "Comune di Montevarchi - Accedere allo Sportello SUAP (STAR)",
-          "verificata_il": "2026-11-24",
-          "url": "https://www.comune.montevarchi.ar.it/servizi/servizio-dettaglio/2246471"
-        },
-        {
-          "titolo": "Comune di Montevarchi - Tariffe diritti SUAP",
-          "verificata_il": "2026-11-24",
-          "url": "https://www.comune.montevarchi.ar.it/documenti/2246544/tariffe-diritti-suap"
         }
       ],
       "stato_verifica": "bozza",
@@ -255,7 +244,7 @@
       "id": "notifica_sanitaria",
       "titolo": "Notifica sanitaria per la registrazione dell'attività alimentare",
       "tipo": "comunicazione",
-      "ente": "asl.toscana-sud-est",
+      "ente": "@asl",
       "attore": "richiedente",
       "dipende_da": [
         "scia_vicinato",
@@ -289,7 +278,7 @@
       "id": "insegna",
       "titolo": "Autorizzazione per l'insegna",
       "tipo": "autorizzazione",
-      "ente": "suap.051026",
+      "ente": "@suap",
       "attore": "richiedente",
       "costi": [
         {
@@ -307,11 +296,6 @@
       ],
       "canale": "online",
       "fonti": [
-        {
-          "titolo": "Comune di Montevarchi - Piano degli impianti pubblicitari",
-          "verificata_il": "2026-11-24",
-          "url": "https://www.sitmontevarchi.it/piano_pubblicita"
-        },
         {
           "titolo": "D.Lgs. 285/1992 - Codice della strada",
           "verificata_il": "2026-11-24",
@@ -346,7 +330,7 @@
       "id": "controlli_suap",
       "titolo": "Controlli del Comune sulla SCIA",
       "tipo": "controllo",
-      "ente": "suap.051026",
+      "ente": "@suap",
       "attore": "ente",
       "tempi": {
         "previsto_giorni": 60

@@ -1,0 +1,14 @@
+[
+  {
+    "id": "comune.051040.edilizia",
+    "nome": "Comune di Castelfranco Piandiscò - Edilizia e urbanistica",
+    "tipo": "comunale",
+    "territorio": "it/toscana/ar/castelfranco-piandisco"
+  },
+  {
+    "id": "polizia-municipale.051040",
+    "nome": "Polizia Municipale di Castelfranco Piandiscò",
+    "tipo": "comunale",
+    "territorio": "it/toscana/ar/castelfranco-piandisco"
+  }
+]
