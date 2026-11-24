@@ -8,4 +8,4 @@ npm install
 npm run dev
 ```
 
-Si apre su http://localhost:5173. Ogni file JSON aggiunto in `data/procedure` compare automaticamente nell'app.
+Su macOS basta un doppio clic su `avvia-iter.command` nella cartella principale. Si apre su http://localhost:5173. Ogni file JSON aggiunto in `data/procedure` compare automaticamente nell'app.
