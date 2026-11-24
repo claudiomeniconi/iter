@@ -55,7 +55,9 @@ iter/
 │   └── procedure/
 │       ├── _template.json          # modello vuoto di una procedura
 │       └── it/toscana/ar/montevarchi/
+│           └── somministrazione-apertura.json
 ├── docs/
+│   ├── montevarchi/                # note di lavoro, fonti e domande aperte
 │   ├── piano.md                    # piano del progetto e fasi
 │   └── modello-dati.md             # descrizione del modello dati
 ├── schema/
