@@ -1,0 +1,152 @@
+{
+  "id": "montevarchi.socio.prima-infanzia",
+  "modello": "socio.prima-infanzia",
+  "titolo": "Aprire un servizio educativo per la prima infanzia",
+  "descrizione": "Nidi, spazi gioco e centri per bambini e famiglie privati. Bozza della Fase 0: ogni passaggio va confermato con l'ente competente o con un professionista.",
+  "territorio": {
+    "livello": "comunale",
+    "nome": "Montevarchi (AR)",
+    "codice_istat": "051026",
+    "percorso": "it/toscana/ar/montevarchi"
+  },
+  "categoria": "impresa",
+  "stato": "bozza",
+  "versione": "0.1.0",
+  "ultima_verifica": "2026-11-24",
+  "domande": [],
+  "enti": [
+    {
+      "id": "richiedente"
+    },
+    {
+      "id": "comune.051026.edilizia"
+    },
+    {
+      "id": "suap.051026"
+    },
+    {
+      "id": "asl.toscana-sud-est"
+    }
+  ],
+  "passaggi": [
+    {
+      "id": "requisiti_soggettivi",
+      "titolo": "Verificare i requisiti morali",
+      "tipo": "requisito",
+      "ente": "richiedente",
+      "attore": "richiedente",
+      "dipende_da": [],
+      "canale": "misto",
+      "fonti": [
+        {
+          "titolo": "L.R. Toscana 32/2002",
+          "verificata_il": "2026-11-24"
+        }
+      ],
+      "stato_verifica": "bozza"
+    },
+    {
+      "id": "verifica_locale",
+      "titolo": "Verificare che il locale sia idoneo (destinazione d'uso, agibilità, requisiti igienici)",
+      "tipo": "requisito",
+      "ente": "comune.051026.edilizia",
+      "attore": "professionista",
+      "documenti_richiesti": [
+        {
+          "id": "planimetria_locale",
+          "nome": "Planimetria del locale"
+        }
+      ],
+      "dipende_da": [],
+      "canale": "misto",
+      "fonti": [
+        {
+          "titolo": "L.R. Toscana 65/2014 - Norme per il governo del territorio",
+          "verificata_il": "2026-11-24",
+          "url": "https://raccoltanormativa.consiglio.regione.toscana.it/articolo?urndoc=urn:nir:regione.toscana:legge:2014-11-10;65"
+        }
+      ],
+      "stato_verifica": "bozza",
+      "note": "Destinazione d'uso e agibilità vanno controllate prima di firmare un contratto d'affitto."
+    },
+    {
+      "id": "requisiti_organizzativi",
+      "titolo": "Requisiti strutturali, organizzativi e di personale",
+      "tipo": "requisito",
+      "ente": "richiedente",
+      "attore": "professionista",
+      "dipende_da": [
+        "verifica_locale"
+      ],
+      "canale": "misto",
+      "fonti": [
+        {
+          "titolo": "L.R. Toscana 32/2002",
+          "verificata_il": "2026-11-24"
+        }
+      ],
+      "stato_verifica": "bozza"
+    },
+    {
+      "id": "domanda",
+      "titolo": "Domanda di autorizzazione al SUAP",
+      "tipo": "autorizzazione",
+      "ente": "suap.051026",
+      "attore": "richiedente",
+      "dipende_da": [
+        "requisiti_soggettivi",
+        "requisiti_organizzativi"
+      ],
+      "canale": "online",
+      "fonti": [
+        {
+          "titolo": "L.R. Toscana 32/2002",
+          "verificata_il": "2026-11-24"
+        },
+        {
+          "titolo": "Regione Toscana - Modulistica unica per attività produttive ed edilizia",
+          "verificata_il": "2026-11-24",
+          "riferimento": "Modulo unico regionale servizi educativi della prima infanzia",
+          "url": "https://www.regione.toscana.it/-/modulistica-unica-regionale-per-le-attivita-produttive-e-l-attivita-edilizia"
+        }
+      ],
+      "stato_verifica": "bozza"
+    },
+    {
+      "id": "parere_asl",
+      "titolo": "Parere e verifica dell'ASL",
+      "tipo": "controllo",
+      "ente": "asl.toscana-sud-est",
+      "attore": "ente",
+      "dipende_da": [
+        "domanda"
+      ],
+      "canale": "online",
+      "fonti": [
+        {
+          "titolo": "L.R. Toscana 32/2002",
+          "verificata_il": "2026-11-24"
+        }
+      ],
+      "stato_verifica": "bozza"
+    },
+    {
+      "id": "rilascio",
+      "titolo": "Rilascio dell'autorizzazione",
+      "tipo": "autorizzazione",
+      "ente": "suap.051026",
+      "attore": "ente",
+      "dipende_da": [
+        "parere_asl"
+      ],
+      "canale": "online",
+      "fonti": [
+        {
+          "titolo": "L.R. Toscana 32/2002",
+          "verificata_il": "2026-11-24"
+        }
+      ],
+      "stato_verifica": "bozza"
+    }
+  ]
+}

@@ -1,0 +1,78 @@
+{
+  "id": "montevarchi.carburanti.contenitore-mobile",
+  "modello": "carburanti.contenitore-mobile",
+  "titolo": "Attivare un contenitore-distributore mobile di carburante",
+  "descrizione": "Attivazione di un contenitore-distributore mobile ad uso privato. Bozza della Fase 0: ogni passaggio va confermato con l'ente competente o con un professionista.",
+  "territorio": {
+    "livello": "comunale",
+    "nome": "Montevarchi (AR)",
+    "codice_istat": "051026",
+    "percorso": "it/toscana/ar/montevarchi"
+  },
+  "categoria": "impresa",
+  "stato": "bozza",
+  "versione": "0.1.0",
+  "ultima_verifica": "2026-11-24",
+  "domande": [],
+  "enti": [
+    {
+      "id": "vvf.arezzo"
+    },
+    {
+      "id": "suap.051026"
+    }
+  ],
+  "passaggi": [
+    {
+      "id": "prevenzione_incendi",
+      "titolo": "Verifiche di prevenzione incendi",
+      "tipo": "requisito",
+      "ente": "vvf.arezzo",
+      "attore": "professionista",
+      "dipende_da": [],
+      "canale": "misto",
+      "fonti": [
+        {
+          "titolo": "D.P.R. 151/2011",
+          "verificata_il": "2026-11-24",
+          "riferimento": "Allegato I"
+        }
+      ],
+      "stato_verifica": "bozza"
+    },
+    {
+      "id": "titolo",
+      "titolo": "Presentare la SCIA al SUAP",
+      "tipo": "presentazione",
+      "ente": "suap.051026",
+      "attore": "richiedente",
+      "dipende_da": [
+        "prevenzione_incendi"
+      ],
+      "canale": "online",
+      "fonti": [
+        {
+          "titolo": "L.R. Toscana 38/2022",
+          "verificata_il": "2026-11-24"
+        },
+        {
+          "titolo": "D.Lgs. 32/1998 - Distribuzione carburanti",
+          "verificata_il": "2026-11-24",
+          "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:1998-02-11;32"
+        },
+        {
+          "titolo": "Elenco modulistica unica regionale in uso al 7 ottobre 2026",
+          "verificata_il": "2026-11-24",
+          "riferimento": "SCIA per l'attivazione di contenitore-distributore mobile di carburante - DGR 391/2023",
+          "url": "https://www.regione.toscana.it/documents/d/guest/elenco-della-modulistica-unica-in-uso-al-7-ottobre-2026-pdf"
+        },
+        {
+          "titolo": "Comune di Montevarchi - Accedere allo Sportello SUAP (STAR)",
+          "verificata_il": "2026-11-24",
+          "url": "https://www.comune.montevarchi.ar.it/servizi/servizio-dettaglio/2246471"
+        }
+      ],
+      "stato_verifica": "bozza"
+    }
+  ]
+}

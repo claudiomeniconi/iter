@@ -1,0 +1,258 @@
+{
+  "id": "montevarchi.somministrazione.circolo-commerciale-tutelata",
+  "modello": "somministrazione.circolo-commerciale-tutelata",
+  "titolo": "Somministrazione in un circolo commerciale, in zona tutelata",
+  "descrizione": "Circoli e associazioni di natura commerciale in zona tutelata. Bozza della Fase 0: ogni passaggio va confermato con l'ente competente o con un professionista.",
+  "territorio": {
+    "livello": "comunale",
+    "nome": "Montevarchi (AR)",
+    "codice_istat": "051026",
+    "percorso": "it/toscana/ar/montevarchi"
+  },
+  "categoria": "impresa",
+  "stato": "bozza",
+  "versione": "0.1.0",
+  "ultima_verifica": "2026-11-24",
+  "domande": [
+    {
+      "id": "impresa_gia_attiva",
+      "testo": "Hai già un'impresa attiva (partita IVA e iscrizione al Registro Imprese)?",
+      "tipo": "si_no"
+    },
+    {
+      "id": "servono_lavori",
+      "testo": "Servono lavori edilizi o un cambio di destinazione d'uso?",
+      "tipo": "si_no"
+    }
+  ],
+  "enti": [
+    {
+      "id": "richiedente"
+    },
+    {
+      "id": "comune.051026.edilizia"
+    },
+    {
+      "id": "cciaa.arezzo-siena"
+    },
+    {
+      "id": "suap.051026"
+    },
+    {
+      "id": "asl.toscana-sud-est"
+    }
+  ],
+  "passaggi": [
+    {
+      "id": "requisiti_soggettivi",
+      "titolo": "Verificare i requisiti morali e professionali",
+      "tipo": "requisito",
+      "ente": "richiedente",
+      "attore": "richiedente",
+      "dipende_da": [],
+      "canale": "misto",
+      "fonti": [
+        {
+          "titolo": "D.P.R. 235/2001",
+          "verificata_il": "2026-11-24",
+          "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:presidente.repubblica:2001-04-04;235"
+        },
+        {
+          "titolo": "L.R. Toscana 62/2018 - Codice del Commercio",
+          "verificata_il": "2026-11-24",
+          "riferimento": "artt. 11-12",
+          "url": "https://raccoltanormativa.consiglio.regione.toscana.it/class/download_doc.php?file_path=legge/2018/legge_2018_62_s1/legge_2018_62_s1_v1.pdf"
+        }
+      ],
+      "stato_verifica": "bozza",
+      "note": "Da verificare se Montevarchi ha zone tutelate."
+    },
+    {
+      "id": "verifica_locale",
+      "titolo": "Verificare che il locale sia idoneo (destinazione d'uso, agibilità, requisiti igienici)",
+      "tipo": "requisito",
+      "ente": "comune.051026.edilizia",
+      "attore": "professionista",
+      "documenti_richiesti": [
+        {
+          "id": "planimetria_locale",
+          "nome": "Planimetria del locale"
+        }
+      ],
+      "dipende_da": [],
+      "canale": "misto",
+      "fonti": [
+        {
+          "titolo": "L.R. Toscana 65/2014 - Norme per il governo del territorio",
+          "verificata_il": "2026-11-24",
+          "url": "https://raccoltanormativa.consiglio.regione.toscana.it/articolo?urndoc=urn:nir:regione.toscana:legge:2014-11-10;65"
+        }
+      ],
+      "stato_verifica": "bozza",
+      "note": "Destinazione d'uso e agibilità vanno controllate prima di firmare un contratto d'affitto."
+    },
+    {
+      "id": "pratica_edilizia",
+      "titolo": "Presentare la pratica edilizia per lavori o cambio d'uso",
+      "tipo": "presentazione",
+      "ente": "comune.051026.edilizia",
+      "attore": "professionista",
+      "dipende_da": [
+        "verifica_locale"
+      ],
+      "condizioni": [
+        {
+          "domanda": "servono_lavori",
+          "valore": true
+        }
+      ],
+      "canale": "online",
+      "fonti": [
+        {
+          "titolo": "Regione Toscana - Modulistica unica per attività produttive ed edilizia",
+          "verificata_il": "2026-11-24",
+          "riferimento": "CILA, SCIA edilizia o permesso di costruire",
+          "url": "https://www.regione.toscana.it/-/modulistica-unica-regionale-per-le-attivita-produttive-e-l-attivita-edilizia"
+        }
+      ],
+      "stato_verifica": "bozza",
+      "note": "Vedi le procedure edilizie di Iter (CILA, SCIA edilizia)."
+    },
+    {
+      "id": "iscrizione_impresa",
+      "titolo": "Aprire la partita IVA e iscrivere l'impresa (Comunicazione Unica)",
+      "tipo": "iscrizione",
+      "ente": "cciaa.arezzo-siena",
+      "attore": "professionista",
+      "documenti_prodotti": [
+        {
+          "id": "partita_iva",
+          "nome": "Partita IVA"
+        },
+        {
+          "id": "iscrizione_registro_imprese",
+          "nome": "Iscrizione al Registro Imprese"
+        }
+      ],
+      "dipende_da": [
+        "requisiti_soggettivi"
+      ],
+      "condizioni": [
+        {
+          "domanda": "impresa_gia_attiva",
+          "valore": false
+        }
+      ],
+      "canale": "online",
+      "fonti": [
+        {
+          "titolo": "D.L. 7/2007 - Comunicazione Unica",
+          "verificata_il": "2026-11-24",
+          "riferimento": "art. 9",
+          "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legge:2007-01-31;7~art9"
+        }
+      ],
+      "stato_verifica": "bozza",
+      "note": "Vedi anche la procedura «Aprire una ditta individuale»."
+    },
+    {
+      "id": "piano_autocontrollo",
+      "titolo": "Predisporre il piano di autocontrollo HACCP",
+      "tipo": "requisito",
+      "ente": "richiedente",
+      "attore": "professionista",
+      "dipende_da": [
+        "verifica_locale"
+      ],
+      "canale": "misto",
+      "fonti": [
+        {
+          "titolo": "Reg. (CE) 852/2004 sull'igiene dei prodotti alimentari",
+          "verificata_il": "2026-11-24",
+          "riferimento": "art. 5",
+          "url": "https://eur-lex.europa.eu/legal-content/IT/TXT/?uri=CELEX:32004R0852"
+        }
+      ],
+      "stato_verifica": "bozza"
+    },
+    {
+      "id": "titolo",
+      "titolo": "Presentare la domanda di autorizzazione al SUAP",
+      "tipo": "autorizzazione",
+      "ente": "suap.051026",
+      "attore": "richiedente",
+      "dipende_da": [
+        "requisiti_soggettivi",
+        "verifica_locale",
+        "iscrizione_impresa"
+      ],
+      "canale": "online",
+      "fonti": [
+        {
+          "titolo": "D.P.R. 235/2001",
+          "verificata_il": "2026-11-24",
+          "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:presidente.repubblica:2001-04-04;235"
+        },
+        {
+          "titolo": "Elenco modulistica unica regionale in uso al 7 ottobre 2026",
+          "verificata_il": "2026-11-24",
+          "riferimento": "Domanda di autorizzazione per la somministrazione in associazioni e circoli di natura commerciale (zone tutelate) - DGR 1250/2019",
+          "url": "https://www.regione.toscana.it/documents/d/guest/elenco-della-modulistica-unica-in-uso-al-7-ottobre-2026-pdf"
+        },
+        {
+          "titolo": "Comune di Montevarchi - Accedere allo Sportello SUAP (STAR)",
+          "verificata_il": "2026-11-24",
+          "url": "https://www.comune.montevarchi.ar.it/servizi/servizio-dettaglio/2246471"
+        }
+      ],
+      "stato_verifica": "bozza"
+    },
+    {
+      "id": "istruttoria",
+      "titolo": "Istruttoria e rilascio dell'autorizzazione",
+      "tipo": "autorizzazione",
+      "ente": "suap.051026",
+      "attore": "ente",
+      "dipende_da": [
+        "titolo"
+      ],
+      "canale": "online",
+      "fonti": [
+        {
+          "titolo": "D.P.R. 235/2001",
+          "verificata_il": "2026-11-24",
+          "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:presidente.repubblica:2001-04-04;235"
+        }
+      ],
+      "stato_verifica": "bozza"
+    },
+    {
+      "id": "notifica_sanitaria",
+      "titolo": "Notifica sanitaria per la registrazione dell'attività alimentare",
+      "tipo": "comunicazione",
+      "ente": "asl.toscana-sud-est",
+      "attore": "richiedente",
+      "dipende_da": [
+        "titolo",
+        "piano_autocontrollo"
+      ],
+      "canale": "online",
+      "fonti": [
+        {
+          "titolo": "Reg. (CE) 852/2004 sull'igiene dei prodotti alimentari",
+          "verificata_il": "2026-11-24",
+          "riferimento": "art. 6",
+          "url": "https://eur-lex.europa.eu/legal-content/IT/TXT/?uri=CELEX:32004R0852"
+        },
+        {
+          "titolo": "Elenco modulistica unica regionale in uso al 7 ottobre 2026",
+          "verificata_il": "2026-11-24",
+          "riferimento": "Notifica sanitaria ai fini della registrazione - DGR 673/2024",
+          "url": "https://www.regione.toscana.it/documents/d/guest/elenco-della-modulistica-unica-in-uso-al-7-ottobre-2026-pdf"
+        }
+      ],
+      "stato_verifica": "bozza",
+      "note": "Si presenta tramite il SUAP, che la inoltra alla ASL."
+    }
+  ]
+}

@@ -1,0 +1,81 @@
+{
+  "id": "montevarchi.cittadino.sala-cerimonie",
+  "modello": "cittadino.sala-cerimonie",
+  "titolo": "Prenotare una sala per matrimonio o unione civile",
+  "descrizione": "Uso delle sale comunali per la celebrazione di matrimoni civili e unioni civili. Bozza della Fase 0: ogni passaggio va confermato con l'ente competente o con un professionista.",
+  "territorio": {
+    "livello": "comunale",
+    "nome": "Montevarchi (AR)",
+    "codice_istat": "051026",
+    "percorso": "it/toscana/ar/montevarchi"
+  },
+  "categoria": "cittadino",
+  "stato": "bozza",
+  "versione": "0.1.0",
+  "ultima_verifica": "2026-11-24",
+  "domande": [],
+  "enti": [
+    {
+      "id": "comune.051026.demografici"
+    }
+  ],
+  "passaggi": [
+    {
+      "id": "domanda",
+      "titolo": "Presentare la richiesta",
+      "tipo": "presentazione",
+      "ente": "comune.051026.demografici",
+      "attore": "richiedente",
+      "dipende_da": [],
+      "canale": "online",
+      "fonti": [
+        {
+          "titolo": "Comune di Montevarchi - Catalogo dei servizi",
+          "verificata_il": "2026-11-24",
+          "riferimento": "Richiedere l'utilizzo di una Sala per Matrimonio Civile o per Unione Civile",
+          "url": "https://www.comune.montevarchi.ar.it/servizi"
+        }
+      ],
+      "stato_verifica": "bozza"
+    },
+    {
+      "id": "esito",
+      "titolo": "Esito della richiesta",
+      "tipo": "attesa",
+      "ente": "comune.051026.demografici",
+      "attore": "ente",
+      "dipende_da": [
+        "domanda"
+      ],
+      "canale": "online",
+      "fonti": [
+        {
+          "titolo": "Comune di Montevarchi - Catalogo dei servizi",
+          "verificata_il": "2026-11-24",
+          "riferimento": "Richiedere l'utilizzo di una Sala per Matrimonio Civile o per Unione Civile",
+          "url": "https://www.comune.montevarchi.ar.it/servizi"
+        }
+      ],
+      "stato_verifica": "bozza"
+    },
+    {
+      "id": "pagamento",
+      "titolo": "Pagare la tariffa della sala",
+      "tipo": "pagamento",
+      "ente": "comune.051026.demografici",
+      "attore": "richiedente",
+      "dipende_da": [
+        "esito"
+      ],
+      "canale": "online",
+      "fonti": [
+        {
+          "titolo": "Comune di Montevarchi - Catalogo dei servizi",
+          "verificata_il": "2026-11-24",
+          "url": "https://www.comune.montevarchi.ar.it/servizi"
+        }
+      ],
+      "stato_verifica": "bozza"
+    }
+  ]
+}

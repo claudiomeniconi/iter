@@ -68,5 +68,11 @@
     "nome": "Comune di Montevarchi - Segreteria generale e URP",
     "tipo": "comunale",
     "territorio": "it/toscana/ar/montevarchi"
+  },
+  {
+    "id": "comune.051026.elettorale",
+    "nome": "Comune di Montevarchi - Ufficio elettorale",
+    "tipo": "comunale",
+    "territorio": "it/toscana/ar/montevarchi"
   }
 ]

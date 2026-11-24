@@ -1,0 +1,54 @@
+{
+  "id": "montevarchi.turismo.variazioni-ricettive",
+  "modello": "turismo.variazioni-ricettive",
+  "titolo": "Comunicare variazioni di una struttura ricettiva",
+  "descrizione": "Variazione di denominazione, classificazione, periodo di apertura, rappresentante o gestore. Bozza della Fase 0: ogni passaggio va confermato con l'ente competente o con un professionista.",
+  "territorio": {
+    "livello": "comunale",
+    "nome": "Montevarchi (AR)",
+    "codice_istat": "051026",
+    "percorso": "it/toscana/ar/montevarchi"
+  },
+  "categoria": "impresa",
+  "stato": "bozza",
+  "versione": "0.1.0",
+  "ultima_verifica": "2026-11-24",
+  "domande": [],
+  "enti": [
+    {
+      "id": "suap.051026"
+    }
+  ],
+  "passaggi": [
+    {
+      "id": "comunicazione",
+      "titolo": "Presentare la comunicazione al SUAP",
+      "tipo": "comunicazione",
+      "ente": "suap.051026",
+      "attore": "richiedente",
+      "dipende_da": [],
+      "canale": "online",
+      "fonti": [
+        {
+          "titolo": "L.R. Toscana 61/2024 - Testo unico del turismo (sintesi ANCI Toscana)",
+          "verificata_il": "2026-11-24",
+          "riferimento": "art. 48, commi 6-7",
+          "url": "https://ancitoscana.it/wp-content/uploads/2025/04/7.2.25_TU-Turismo-Norme-strutture-ricettive.pdf"
+        },
+        {
+          "titolo": "Elenco modulistica unica regionale in uso al 7 ottobre 2026",
+          "verificata_il": "2026-11-24",
+          "riferimento": "Comunicazione di variazione di strutture ricettive - d.d. 26189/2024",
+          "url": "https://www.regione.toscana.it/documents/d/guest/elenco-della-modulistica-unica-in-uso-al-7-ottobre-2026-pdf"
+        },
+        {
+          "titolo": "Comune di Montevarchi - Accedere allo Sportello SUAP (STAR)",
+          "verificata_il": "2026-11-24",
+          "url": "https://www.comune.montevarchi.ar.it/servizi/servizio-dettaglio/2246471"
+        }
+      ],
+      "stato_verifica": "bozza",
+      "note": "Le variazioni di capacità, dotazioni e servizi richiedono invece una nuova SCIA."
+    }
+  ]
+}

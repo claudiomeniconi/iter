@@ -1,0 +1,91 @@
+{
+  "id": "montevarchi.cittadino.assegno-maternita",
+  "modello": "cittadino.assegno-maternita",
+  "titolo": "Richiedere l'assegno di maternità dei Comuni",
+  "descrizione": "Assegno per le madri senza altra tutela di maternità o con tutela inferiore, in base all'ISEE. Bozza della Fase 0: ogni passaggio va confermato con l'ente competente o con un professionista.",
+  "territorio": {
+    "livello": "comunale",
+    "nome": "Montevarchi (AR)",
+    "codice_istat": "051026",
+    "percorso": "it/toscana/ar/montevarchi"
+  },
+  "categoria": "cittadino",
+  "stato": "bozza",
+  "versione": "0.1.0",
+  "ultima_verifica": "2026-11-24",
+  "domande": [],
+  "enti": [
+    {
+      "id": "comune.051026.sociale"
+    },
+    {
+      "id": "inps"
+    }
+  ],
+  "passaggi": [
+    {
+      "id": "domanda",
+      "titolo": "Presentare la richiesta",
+      "tipo": "presentazione",
+      "ente": "comune.051026.sociale",
+      "attore": "richiedente",
+      "dipende_da": [],
+      "canale": "online",
+      "fonti": [
+        {
+          "titolo": "Comune di Montevarchi - Catalogo dei servizi",
+          "verificata_il": "2026-11-24",
+          "riferimento": "Richiedere l'Assegno di maternità dei Comuni",
+          "url": "https://www.comune.montevarchi.ar.it/servizi"
+        },
+        {
+          "titolo": "D.Lgs. 151/2001",
+          "verificata_il": "2026-11-24",
+          "riferimento": "art. 74",
+          "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2001-03-26;151~art74"
+        }
+      ],
+      "stato_verifica": "bozza"
+    },
+    {
+      "id": "esito",
+      "titolo": "Esito della richiesta",
+      "tipo": "attesa",
+      "ente": "comune.051026.sociale",
+      "attore": "ente",
+      "dipende_da": [
+        "domanda"
+      ],
+      "canale": "online",
+      "fonti": [
+        {
+          "titolo": "Comune di Montevarchi - Catalogo dei servizi",
+          "verificata_il": "2026-11-24",
+          "riferimento": "Richiedere l'Assegno di maternità dei Comuni",
+          "url": "https://www.comune.montevarchi.ar.it/servizi"
+        }
+      ],
+      "stato_verifica": "bozza"
+    },
+    {
+      "id": "erogazione",
+      "titolo": "Pagamento da parte dell'INPS",
+      "tipo": "pagamento",
+      "ente": "inps",
+      "attore": "ente",
+      "dipende_da": [
+        "esito"
+      ],
+      "canale": "online",
+      "fonti": [
+        {
+          "titolo": "D.Lgs. 151/2001",
+          "verificata_il": "2026-11-24",
+          "riferimento": "art. 74",
+          "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2001-03-26;151~art74"
+        }
+      ],
+      "stato_verifica": "bozza"
+    }
+  ]
+}

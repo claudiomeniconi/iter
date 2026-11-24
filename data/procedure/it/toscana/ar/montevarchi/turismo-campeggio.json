@@ -1,0 +1,280 @@
+{
+  "id": "montevarchi.turismo.campeggio",
+  "modello": "turismo.campeggio",
+  "titolo": "Aprire un campeggio o un villaggio turistico",
+  "descrizione": "Struttura ricettiva all'aperto per turisti con mezzi di pernottamento propri o strutture fisse. Bozza della Fase 0: ogni passaggio va confermato con l'ente competente o con un professionista.",
+  "territorio": {
+    "livello": "comunale",
+    "nome": "Montevarchi (AR)",
+    "codice_istat": "051026",
+    "percorso": "it/toscana/ar/montevarchi"
+  },
+  "categoria": "impresa",
+  "stato": "bozza",
+  "versione": "0.1.0",
+  "ultima_verifica": "2026-11-24",
+  "domande": [
+    {
+      "id": "impresa_gia_attiva",
+      "testo": "Hai già un'impresa attiva (partita IVA e iscrizione al Registro Imprese)?",
+      "tipo": "si_no"
+    },
+    {
+      "id": "servono_lavori",
+      "testo": "Servono lavori edilizi o un cambio di destinazione d'uso?",
+      "tipo": "si_no"
+    }
+  ],
+  "enti": [
+    {
+      "id": "richiedente"
+    },
+    {
+      "id": "comune.051026.edilizia"
+    },
+    {
+      "id": "cciaa.arezzo-siena"
+    },
+    {
+      "id": "vvf.arezzo"
+    },
+    {
+      "id": "suap.051026"
+    }
+  ],
+  "passaggi": [
+    {
+      "id": "requisiti_soggettivi",
+      "titolo": "Verificare i requisiti morali",
+      "tipo": "requisito",
+      "ente": "richiedente",
+      "attore": "richiedente",
+      "dipende_da": [],
+      "canale": "misto",
+      "fonti": [
+        {
+          "titolo": "L.R. Toscana 61/2024 - Testo unico del turismo (sintesi ANCI Toscana)",
+          "verificata_il": "2026-11-24",
+          "riferimento": "artt. 27-28 e 48",
+          "url": "https://ancitoscana.it/wp-content/uploads/2025/04/7.2.25_TU-Turismo-Norme-strutture-ricettive.pdf"
+        },
+        {
+          "titolo": "L.R. Toscana 62/2018 - Codice del Commercio",
+          "verificata_il": "2026-11-24",
+          "riferimento": "art. 11",
+          "url": "https://raccoltanormativa.consiglio.regione.toscana.it/class/download_doc.php?file_path=legge/2018/legge_2018_62_s1/legge_2018_62_s1_v1.pdf"
+        }
+      ],
+      "stato_verifica": "bozza"
+    },
+    {
+      "id": "verifica_locale",
+      "titolo": "Verificare che il locale sia idoneo (destinazione d'uso, agibilità, requisiti igienici)",
+      "tipo": "requisito",
+      "ente": "comune.051026.edilizia",
+      "attore": "professionista",
+      "documenti_richiesti": [
+        {
+          "id": "planimetria_locale",
+          "nome": "Planimetria del locale"
+        }
+      ],
+      "dipende_da": [],
+      "canale": "misto",
+      "fonti": [
+        {
+          "titolo": "L.R. Toscana 65/2014 - Norme per il governo del territorio",
+          "verificata_il": "2026-11-24",
+          "url": "https://raccoltanormativa.consiglio.regione.toscana.it/articolo?urndoc=urn:nir:regione.toscana:legge:2014-11-10;65"
+        }
+      ],
+      "stato_verifica": "bozza",
+      "note": "Destinazione d'uso e agibilità vanno controllate prima di firmare un contratto d'affitto."
+    },
+    {
+      "id": "pratica_edilizia",
+      "titolo": "Presentare la pratica edilizia per lavori o cambio d'uso",
+      "tipo": "presentazione",
+      "ente": "comune.051026.edilizia",
+      "attore": "professionista",
+      "dipende_da": [
+        "verifica_locale"
+      ],
+      "condizioni": [
+        {
+          "domanda": "servono_lavori",
+          "valore": true
+        }
+      ],
+      "canale": "online",
+      "fonti": [
+        {
+          "titolo": "Regione Toscana - Modulistica unica per attività produttive ed edilizia",
+          "verificata_il": "2026-11-24",
+          "riferimento": "CILA, SCIA edilizia o permesso di costruire",
+          "url": "https://www.regione.toscana.it/-/modulistica-unica-regionale-per-le-attivita-produttive-e-l-attivita-edilizia"
+        }
+      ],
+      "stato_verifica": "bozza",
+      "note": "Vedi le procedure edilizie di Iter (CILA, SCIA edilizia)."
+    },
+    {
+      "id": "iscrizione_impresa",
+      "titolo": "Aprire la partita IVA e iscrivere l'impresa (Comunicazione Unica)",
+      "tipo": "iscrizione",
+      "ente": "cciaa.arezzo-siena",
+      "attore": "professionista",
+      "documenti_prodotti": [
+        {
+          "id": "partita_iva",
+          "nome": "Partita IVA"
+        },
+        {
+          "id": "iscrizione_registro_imprese",
+          "nome": "Iscrizione al Registro Imprese"
+        }
+      ],
+      "dipende_da": [
+        "requisiti_soggettivi"
+      ],
+      "condizioni": [
+        {
+          "domanda": "impresa_gia_attiva",
+          "valore": false
+        }
+      ],
+      "canale": "online",
+      "fonti": [
+        {
+          "titolo": "D.L. 7/2007 - Comunicazione Unica",
+          "verificata_il": "2026-11-24",
+          "riferimento": "art. 9",
+          "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legge:2007-01-31;7~art9"
+        }
+      ],
+      "stato_verifica": "bozza",
+      "note": "Vedi anche la procedura «Aprire una ditta individuale»."
+    },
+    {
+      "id": "classificazione",
+      "titolo": "Dichiarare la classificazione (da 1 a 5 stelle)",
+      "tipo": "requisito",
+      "ente": "richiedente",
+      "attore": "professionista",
+      "dipende_da": [
+        "verifica_locale"
+      ],
+      "canale": "misto",
+      "fonti": [
+        {
+          "titolo": "L.R. Toscana 61/2024 - Testo unico del turismo (sintesi ANCI Toscana)",
+          "verificata_il": "2026-11-24",
+          "riferimento": "art. 51",
+          "url": "https://ancitoscana.it/wp-content/uploads/2025/04/7.2.25_TU-Turismo-Norme-strutture-ricettive.pdf"
+        }
+      ],
+      "stato_verifica": "verificato_fonti"
+    },
+    {
+      "id": "prevenzione_incendi",
+      "titolo": "Prevenzione incendi per campeggi oltre 400 persone",
+      "tipo": "presentazione",
+      "ente": "vvf.arezzo",
+      "attore": "professionista",
+      "dipende_da": [
+        "verifica_locale"
+      ],
+      "canale": "online",
+      "fonti": [
+        {
+          "titolo": "D.P.R. 151/2011",
+          "verificata_il": "2026-11-24",
+          "riferimento": "Allegato I, attività 66"
+        }
+      ],
+      "stato_verifica": "bozza"
+    },
+    {
+      "id": "titolo",
+      "titolo": "Presentare la SCIA al SUAP",
+      "tipo": "presentazione",
+      "ente": "suap.051026",
+      "attore": "richiedente",
+      "documenti_richiesti": [],
+      "documenti_prodotti": [
+        {
+          "id": "ricevuta_titolo",
+          "nome": "Ricevuta SUAP della SCIA"
+        }
+      ],
+      "costi": [
+        {
+          "voce": "Diritti SUAP del Comune di Montevarchi"
+        },
+        {
+          "voce": "Imposta di bollo"
+        }
+      ],
+      "tempi": {
+        "previsto_giorni": 0,
+        "silenzio_assenso": false
+      },
+      "dipende_da": [
+        "requisiti_soggettivi",
+        "verifica_locale",
+        "iscrizione_impresa"
+      ],
+      "canale": "online",
+      "fonti": [
+        {
+          "titolo": "L.R. Toscana 61/2024 - Testo unico del turismo (sintesi ANCI Toscana)",
+          "verificata_il": "2026-11-24",
+          "riferimento": "artt. 27-28 e 48",
+          "url": "https://ancitoscana.it/wp-content/uploads/2025/04/7.2.25_TU-Turismo-Norme-strutture-ricettive.pdf"
+        },
+        {
+          "titolo": "Elenco modulistica unica regionale in uso al 7 ottobre 2026",
+          "verificata_il": "2026-11-24",
+          "riferimento": "SCIA per strutture ricettive all'aperto - d.d. 10309/2026",
+          "url": "https://www.regione.toscana.it/documents/d/guest/elenco-della-modulistica-unica-in-uso-al-7-ottobre-2026-pdf"
+        },
+        {
+          "titolo": "Comune di Montevarchi - Accedere allo Sportello SUAP (STAR)",
+          "verificata_il": "2026-11-24",
+          "url": "https://www.comune.montevarchi.ar.it/servizi/servizio-dettaglio/2246471"
+        },
+        {
+          "titolo": "Comune di Montevarchi - Tariffe diritti SUAP",
+          "verificata_il": "2026-11-24",
+          "url": "https://www.comune.montevarchi.ar.it/documenti/2246544/tariffe-diritti-suap"
+        }
+      ],
+      "stato_verifica": "bozza",
+      "note": "Si presenta online su STAR con SPID, CIE o CNS. Con la SCIA puoi iniziare dalla data di presentazione."
+    },
+    {
+      "id": "controlli_suap",
+      "titolo": "Controlli del Comune sulla SCIA",
+      "tipo": "controllo",
+      "ente": "suap.051026",
+      "attore": "ente",
+      "tempi": {
+        "previsto_giorni": 60
+      },
+      "dipende_da": [
+        "titolo"
+      ],
+      "canale": "online",
+      "fonti": [
+        {
+          "titolo": "L. 241/1990",
+          "verificata_il": "2026-11-24",
+          "riferimento": "art. 19 (SCIA)",
+          "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:legge:1990-08-07;241~art19"
+        }
+      ],
+      "stato_verifica": "verificato_fonti",
+      "note": "Entro 60 giorni il Comune può vietare la prosecuzione se mancano i requisiti."
+    }
+  ]
+}

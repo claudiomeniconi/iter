@@ -1,0 +1,83 @@
+{
+  "id": "it.lavoro.durc",
+  "modello": "lavoro.durc",
+  "titolo": "Chiedere il DURC (regolarità contributiva)",
+  "descrizione": "Documento unico di regolarità contributiva, necessario per appalti, agevolazioni e alcuni pagamenti. Vale in tutta Italia. Bozza della Fase 0: ogni passaggio va confermato con l'ente competente o con un professionista.",
+  "territorio": {
+    "livello": "nazionale",
+    "nome": "Italia",
+    "percorso": "it"
+  },
+  "categoria": "lavoro",
+  "stato": "bozza",
+  "versione": "0.1.0",
+  "ultima_verifica": "2026-11-24",
+  "domande": [],
+  "enti": [
+    {
+      "id": "inps"
+    },
+    {
+      "id": "inail"
+    }
+  ],
+  "passaggi": [
+    {
+      "id": "richiesta",
+      "titolo": "Richiedere il DURC online (INPS o INAIL)",
+      "tipo": "presentazione",
+      "ente": "inps",
+      "attore": "richiedente",
+      "dipende_da": [],
+      "canale": "online",
+      "fonti": [
+        {
+          "titolo": "D.M. Lavoro 30/01/2015 - DURC online",
+          "verificata_il": "2026-11-24"
+        }
+      ],
+      "stato_verifica": "bozza",
+      "note": "Basta il codice fiscale dell'impresa."
+    },
+    {
+      "id": "verifica",
+      "titolo": "Verifica automatica della regolarità",
+      "tipo": "controllo",
+      "ente": "inail",
+      "attore": "ente",
+      "dipende_da": [
+        "richiesta"
+      ],
+      "canale": "online",
+      "fonti": [
+        {
+          "titolo": "D.M. Lavoro 30/01/2015",
+          "verificata_il": "2026-11-24"
+        }
+      ],
+      "stato_verifica": "bozza"
+    },
+    {
+      "id": "rilascio",
+      "titolo": "Rilascio del DURC, valido 120 giorni",
+      "tipo": "autorizzazione",
+      "ente": "inps",
+      "attore": "ente",
+      "tempi": {
+        "previsto_giorni": 0
+      },
+      "dipende_da": [
+        "verifica"
+      ],
+      "canale": "online",
+      "fonti": [
+        {
+          "titolo": "D.M. Lavoro 30/01/2015",
+          "verificata_il": "2026-11-24"
+        }
+      ],
+      "stato_verifica": "bozza",
+      "note": "Se ci sono irregolarità hai 15 giorni per regolarizzare."
+    }
+  ]
+}

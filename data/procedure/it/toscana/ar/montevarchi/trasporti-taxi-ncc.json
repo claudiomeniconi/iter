@@ -1,0 +1,143 @@
+{
+  "id": "montevarchi.trasporti.taxi-ncc",
+  "modello": "trasporti.taxi-ncc",
+  "titolo": "Fare il tassista o il noleggio con conducente (NCC)",
+  "descrizione": "Licenza taxi o autorizzazione NCC, assegnate dal Comune con bando. Bozza della Fase 0: ogni passaggio va confermato con l'ente competente o con un professionista.",
+  "territorio": {
+    "livello": "comunale",
+    "nome": "Montevarchi (AR)",
+    "codice_istat": "051026",
+    "percorso": "it/toscana/ar/montevarchi"
+  },
+  "categoria": "impresa",
+  "stato": "bozza",
+  "versione": "0.1.0",
+  "ultima_verifica": "2026-11-24",
+  "domande": [
+    {
+      "id": "taxi",
+      "testo": "Vuoi la licenza taxi (e non l'NCC)?",
+      "tipo": "si_no"
+    }
+  ],
+  "enti": [
+    {
+      "id": "cciaa.arezzo-siena"
+    },
+    {
+      "id": "motorizzazione.arezzo"
+    },
+    {
+      "id": "suap.051026"
+    },
+    {
+      "id": "richiedente"
+    }
+  ],
+  "passaggi": [
+    {
+      "id": "ruolo_conducenti",
+      "titolo": "Iscriversi al ruolo dei conducenti alla Camera di Commercio",
+      "tipo": "iscrizione",
+      "ente": "cciaa.arezzo-siena",
+      "attore": "richiedente",
+      "dipende_da": [],
+      "canale": "online",
+      "fonti": [
+        {
+          "titolo": "L. 21/1992",
+          "verificata_il": "2026-11-24",
+          "riferimento": "art. 6",
+          "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:legge:1992-01-15;21~art6"
+        }
+      ],
+      "stato_verifica": "bozza"
+    },
+    {
+      "id": "cap_kb",
+      "titolo": "Patente e certificato di abilitazione professionale (CAP KB)",
+      "tipo": "requisito",
+      "ente": "motorizzazione.arezzo",
+      "attore": "richiedente",
+      "dipende_da": [],
+      "canale": "misto",
+      "fonti": [
+        {
+          "titolo": "D.Lgs. 285/1992 - Codice della strada",
+          "verificata_il": "2026-11-24",
+          "riferimento": "art. 116",
+          "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:1992-04-30;285"
+        }
+      ],
+      "stato_verifica": "bozza"
+    },
+    {
+      "id": "bando",
+      "titolo": "Partecipare al bando comunale per licenze o autorizzazioni",
+      "tipo": "presentazione",
+      "ente": "suap.051026",
+      "attore": "richiedente",
+      "dipende_da": [
+        "ruolo_conducenti",
+        "cap_kb"
+      ],
+      "canale": "online",
+      "fonti": [
+        {
+          "titolo": "L. 21/1992",
+          "verificata_il": "2026-11-24",
+          "riferimento": "art. 8",
+          "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:legge:1992-01-15;21~art8"
+        }
+      ],
+      "stato_verifica": "bozza",
+      "note": "Le licenze sono a numero chiuso: serve un bando o il subentro in una licenza esistente."
+    },
+    {
+      "id": "rimessa",
+      "titolo": "Disporre di una rimessa nel Comune (solo NCC)",
+      "tipo": "requisito",
+      "ente": "richiedente",
+      "attore": "richiedente",
+      "dipende_da": [
+        "bando"
+      ],
+      "condizioni": [
+        {
+          "domanda": "taxi",
+          "valore": false
+        }
+      ],
+      "canale": "misto",
+      "fonti": [
+        {
+          "titolo": "L. 21/1992",
+          "verificata_il": "2026-11-24",
+          "riferimento": "art. 3",
+          "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:legge:1992-01-15;21~art3"
+        }
+      ],
+      "stato_verifica": "bozza"
+    },
+    {
+      "id": "rilascio",
+      "titolo": "Rilascio di licenza o autorizzazione",
+      "tipo": "autorizzazione",
+      "ente": "suap.051026",
+      "attore": "ente",
+      "dipende_da": [
+        "bando",
+        "rimessa"
+      ],
+      "canale": "online",
+      "fonti": [
+        {
+          "titolo": "L. 21/1992",
+          "verificata_il": "2026-11-24",
+          "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:legge:1992-01-15;21"
+        }
+      ],
+      "stato_verifica": "bozza"
+    }
+  ]
+}

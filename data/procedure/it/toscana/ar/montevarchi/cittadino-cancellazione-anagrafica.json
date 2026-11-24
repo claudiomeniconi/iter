@@ -1,0 +1,85 @@
+{
+  "id": "montevarchi.cittadino.cancellazione-anagrafica",
+  "modello": "cittadino.cancellazione-anagrafica",
+  "titolo": "Segnalare una persona non più residente (cancellazione d'ufficio)",
+  "descrizione": "Segnalazione per la cancellazione anagrafica di chi non abita più all'indirizzo. Bozza della Fase 0: ogni passaggio va confermato con l'ente competente o con un professionista.",
+  "territorio": {
+    "livello": "comunale",
+    "nome": "Montevarchi (AR)",
+    "codice_istat": "051026",
+    "percorso": "it/toscana/ar/montevarchi"
+  },
+  "categoria": "cittadino",
+  "stato": "bozza",
+  "versione": "0.1.0",
+  "ultima_verifica": "2026-11-24",
+  "domande": [],
+  "enti": [
+    {
+      "id": "comune.051026.demografici"
+    },
+    {
+      "id": "polizia-municipale.051026"
+    }
+  ],
+  "passaggi": [
+    {
+      "id": "domanda",
+      "titolo": "Presentare la richiesta",
+      "tipo": "presentazione",
+      "ente": "comune.051026.demografici",
+      "attore": "richiedente",
+      "dipende_da": [],
+      "canale": "online",
+      "fonti": [
+        {
+          "titolo": "Comune di Montevarchi - Catalogo dei servizi",
+          "verificata_il": "2026-11-24",
+          "riferimento": "Richiedere la cancellazione anagrafica d'Ufficio",
+          "url": "https://www.comune.montevarchi.ar.it/servizi"
+        }
+      ],
+      "stato_verifica": "bozza"
+    },
+    {
+      "id": "esito",
+      "titolo": "Esito della richiesta",
+      "tipo": "attesa",
+      "ente": "comune.051026.demografici",
+      "attore": "ente",
+      "dipende_da": [
+        "domanda"
+      ],
+      "canale": "online",
+      "fonti": [
+        {
+          "titolo": "Comune di Montevarchi - Catalogo dei servizi",
+          "verificata_il": "2026-11-24",
+          "riferimento": "Richiedere la cancellazione anagrafica d'Ufficio",
+          "url": "https://www.comune.montevarchi.ar.it/servizi"
+        }
+      ],
+      "stato_verifica": "bozza"
+    },
+    {
+      "id": "accertamenti",
+      "titolo": "Accertamenti della Polizia Municipale",
+      "tipo": "controllo",
+      "ente": "polizia-municipale.051026",
+      "attore": "ente",
+      "dipende_da": [
+        "domanda"
+      ],
+      "canale": "online",
+      "fonti": [
+        {
+          "titolo": "D.P.R. 223/1989",
+          "verificata_il": "2026-11-24",
+          "riferimento": "art. 11",
+          "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:presidente.repubblica:1989-05-30;223~art11"
+        }
+      ],
+      "stato_verifica": "bozza"
+    }
+  ]
+}

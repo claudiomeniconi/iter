@@ -1,0 +1,65 @@
+{
+  "id": "montevarchi.edilizia.cila-superbonus",
+  "modello": "edilizia.cila-superbonus",
+  "titolo": "CILA Superbonus",
+  "descrizione": "Comunicazione per gli interventi agevolati dal Superbonus. Agevolazione ormai residuale: la procedura resta per i casi ancora in corso. Bozza della Fase 0: ogni passaggio va confermato con l'ente competente o con un professionista.",
+  "territorio": {
+    "livello": "comunale",
+    "nome": "Montevarchi (AR)",
+    "codice_istat": "051026",
+    "percorso": "it/toscana/ar/montevarchi"
+  },
+  "categoria": "edilizia",
+  "stato": "bozza",
+  "versione": "0.1.0",
+  "ultima_verifica": "2026-11-24",
+  "domande": [],
+  "enti": [
+    {
+      "id": "richiedente"
+    },
+    {
+      "id": "comune.051026.edilizia"
+    }
+  ],
+  "passaggi": [
+    {
+      "id": "verifica_agevolazione",
+      "titolo": "Verificare se l'intervento può ancora beneficiare dell'agevolazione",
+      "tipo": "requisito",
+      "ente": "richiedente",
+      "attore": "professionista",
+      "dipende_da": [],
+      "canale": "misto",
+      "fonti": [
+        {
+          "titolo": "D.L. 34/2020",
+          "verificata_il": "2026-11-24",
+          "riferimento": "art. 119",
+          "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legge:2020-05-19;34~art119"
+        }
+      ],
+      "stato_verifica": "bozza"
+    },
+    {
+      "id": "cilas",
+      "titolo": "Presentare la CILA Superbonus",
+      "tipo": "comunicazione",
+      "ente": "comune.051026.edilizia",
+      "attore": "professionista",
+      "dipende_da": [
+        "verifica_agevolazione"
+      ],
+      "canale": "online",
+      "fonti": [
+        {
+          "titolo": "Regione Toscana - Modulistica unica per attività produttive ed edilizia",
+          "verificata_il": "2026-11-24",
+          "riferimento": "CILA Superbonus - Allegato J, d.d. 1754/2023",
+          "url": "https://www.regione.toscana.it/-/modulistica-unica-regionale-per-le-attivita-produttive-e-l-attivita-edilizia"
+        }
+      ],
+      "stato_verifica": "verificato_fonti"
+    }
+  ]
+}

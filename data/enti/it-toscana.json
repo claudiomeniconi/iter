@@ -57,5 +57,17 @@
     "tipo": "regionale",
     "territorio": "it/toscana",
     "sito": "https://www.artea.toscana.it"
+  },
+  {
+    "id": "motorizzazione.arezzo",
+    "nome": "Ufficio della Motorizzazione civile di Arezzo",
+    "tipo": "statale",
+    "territorio": "it/toscana/ar"
+  },
+  {
+    "id": "adm",
+    "nome": "Agenzia delle Dogane e dei Monopoli",
+    "tipo": "statale",
+    "territorio": "it/toscana"
   }
 ]

@@ -1,0 +1,175 @@
+{
+  "id": "montevarchi.carburanti.installazione",
+  "modello": "carburanti.installazione",
+  "titolo": "Installare un impianto di distribuzione carburanti",
+  "descrizione": "Nuovo impianto stradale di distribuzione di carburanti. Bozza della Fase 0: ogni passaggio va confermato con l'ente competente o con un professionista.",
+  "territorio": {
+    "livello": "comunale",
+    "nome": "Montevarchi (AR)",
+    "codice_istat": "051026",
+    "percorso": "it/toscana/ar/montevarchi"
+  },
+  "categoria": "impresa",
+  "stato": "bozza",
+  "versione": "0.1.0",
+  "ultima_verifica": "2026-11-24",
+  "domande": [],
+  "enti": [
+    {
+      "id": "richiedente"
+    },
+    {
+      "id": "comune.051026.edilizia"
+    },
+    {
+      "id": "vvf.arezzo"
+    },
+    {
+      "id": "suap.051026"
+    },
+    {
+      "id": "adm"
+    }
+  ],
+  "passaggi": [
+    {
+      "id": "requisiti_soggettivi",
+      "titolo": "Verificare i requisiti morali",
+      "tipo": "requisito",
+      "ente": "richiedente",
+      "attore": "richiedente",
+      "dipende_da": [],
+      "canale": "misto",
+      "fonti": [
+        {
+          "titolo": "L.R. Toscana 38/2022",
+          "verificata_il": "2026-11-24"
+        },
+        {
+          "titolo": "D.Lgs. 32/1998 - Distribuzione carburanti",
+          "verificata_il": "2026-11-24",
+          "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:1998-02-11;32"
+        }
+      ],
+      "stato_verifica": "bozza"
+    },
+    {
+      "id": "progetto",
+      "titolo": "Progetto e verifica di compatibilità urbanistica",
+      "tipo": "requisito",
+      "ente": "comune.051026.edilizia",
+      "attore": "professionista",
+      "dipende_da": [],
+      "canale": "misto",
+      "fonti": [
+        {
+          "titolo": "L.R. Toscana 65/2014 - Norme per il governo del territorio",
+          "verificata_il": "2026-11-24",
+          "url": "https://raccoltanormativa.consiglio.regione.toscana.it/articolo?urndoc=urn:nir:regione.toscana:legge:2014-11-10;65"
+        },
+        {
+          "titolo": "L.R. Toscana 38/2022",
+          "verificata_il": "2026-11-24"
+        },
+        {
+          "titolo": "D.Lgs. 32/1998 - Distribuzione carburanti",
+          "verificata_il": "2026-11-24",
+          "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:1998-02-11;32"
+        }
+      ],
+      "stato_verifica": "bozza"
+    },
+    {
+      "id": "prevenzione_incendi",
+      "titolo": "Esame progetto dei Vigili del Fuoco",
+      "tipo": "controllo",
+      "ente": "vvf.arezzo",
+      "attore": "ente",
+      "dipende_da": [
+        "progetto"
+      ],
+      "canale": "online",
+      "fonti": [
+        {
+          "titolo": "D.P.R. 151/2011",
+          "verificata_il": "2026-11-24",
+          "riferimento": "Allegato I"
+        }
+      ],
+      "stato_verifica": "bozza"
+    },
+    {
+      "id": "domanda",
+      "titolo": "Domanda di autorizzazione al SUAP",
+      "tipo": "autorizzazione",
+      "ente": "suap.051026",
+      "attore": "richiedente",
+      "dipende_da": [
+        "requisiti_soggettivi",
+        "progetto"
+      ],
+      "canale": "online",
+      "fonti": [
+        {
+          "titolo": "L.R. Toscana 38/2022",
+          "verificata_il": "2026-11-24"
+        },
+        {
+          "titolo": "D.Lgs. 32/1998 - Distribuzione carburanti",
+          "verificata_il": "2026-11-24",
+          "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:1998-02-11;32"
+        },
+        {
+          "titolo": "Elenco modulistica unica regionale in uso al 7 ottobre 2026",
+          "verificata_il": "2026-11-24",
+          "riferimento": "Domanda di autorizzazione per l'installazione e l'esercizio di impianto di distribuzione carburanti - DGR 391/2023",
+          "url": "https://www.regione.toscana.it/documents/d/guest/elenco-della-modulistica-unica-in-uso-al-7-ottobre-2026-pdf"
+        }
+      ],
+      "stato_verifica": "bozza"
+    },
+    {
+      "id": "collaudo",
+      "titolo": "Collaudo dell'impianto",
+      "tipo": "controllo",
+      "ente": "suap.051026",
+      "attore": "ente",
+      "dipende_da": [
+        "domanda",
+        "prevenzione_incendi"
+      ],
+      "canale": "online",
+      "fonti": [
+        {
+          "titolo": "L.R. Toscana 38/2022",
+          "verificata_il": "2026-11-24"
+        },
+        {
+          "titolo": "D.Lgs. 32/1998 - Distribuzione carburanti",
+          "verificata_il": "2026-11-24",
+          "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:1998-02-11;32"
+        }
+      ],
+      "stato_verifica": "bozza"
+    },
+    {
+      "id": "licenza_adm",
+      "titolo": "Licenza di esercizio dell'Agenzia delle Dogane",
+      "tipo": "autorizzazione",
+      "ente": "adm",
+      "attore": "ente",
+      "dipende_da": [
+        "collaudo"
+      ],
+      "canale": "online",
+      "fonti": [
+        {
+          "titolo": "D.Lgs. 504/1995 - Testo unico accise",
+          "verificata_il": "2026-11-24",
+          "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:1995-10-26;504"
+        }
+      ],
+      "stato_verifica": "bozza"
+    }
+  ]
+}

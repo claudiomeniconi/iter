@@ -1,0 +1,68 @@
+{
+  "id": "montevarchi.edilizia.numero-civico",
+  "modello": "edilizia.numero-civico",
+  "titolo": "Chiedere l'attribuzione del numero civico",
+  "descrizione": "Assegnazione del numero civico a un nuovo accesso o edificio. Bozza della Fase 0: ogni passaggio va confermato con l'ente competente o con un professionista.",
+  "territorio": {
+    "livello": "comunale",
+    "nome": "Montevarchi (AR)",
+    "codice_istat": "051026",
+    "percorso": "it/toscana/ar/montevarchi"
+  },
+  "categoria": "edilizia",
+  "stato": "bozza",
+  "versione": "0.1.0",
+  "ultima_verifica": "2026-11-24",
+  "domande": [],
+  "enti": [
+    {
+      "id": "comune.051026.demografici"
+    }
+  ],
+  "passaggi": [
+    {
+      "id": "domanda",
+      "titolo": "Presentare la richiesta al Comune",
+      "tipo": "presentazione",
+      "ente": "comune.051026.demografici",
+      "attore": "richiedente",
+      "dipende_da": [],
+      "canale": "online",
+      "fonti": [
+        {
+          "titolo": "Comune di Montevarchi - Catalogo dei servizi",
+          "verificata_il": "2026-11-24",
+          "riferimento": "Richiedere l'attribuzione del numero civico",
+          "url": "https://www.comune.montevarchi.ar.it/servizi"
+        },
+        {
+          "titolo": "D.P.R. 223/1989",
+          "verificata_il": "2026-11-24",
+          "riferimento": "art. 43",
+          "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:presidente.repubblica:1989-05-30;223~art43"
+        }
+      ],
+      "stato_verifica": "bozza"
+    },
+    {
+      "id": "assegnazione",
+      "titolo": "Assegnazione e targhetta",
+      "tipo": "autorizzazione",
+      "ente": "comune.051026.demografici",
+      "attore": "ente",
+      "dipende_da": [
+        "domanda"
+      ],
+      "canale": "online",
+      "fonti": [
+        {
+          "titolo": "D.P.R. 223/1989",
+          "verificata_il": "2026-11-24",
+          "riferimento": "art. 43",
+          "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:presidente.repubblica:1989-05-30;223~art43"
+        }
+      ],
+      "stato_verifica": "bozza"
+    }
+  ]
+}
