@@ -1,0 +1,88 @@
+# --- Sistema operativo ---
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# --- Editor e IDE ---
+.idea/
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+*.swp
+*.swo
+*~
+.fleet/
+
+# --- Variabili d'ambiente e segreti ---
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+auth.json
+
+# --- Claude / AI locali ---
+.claude/settings.local.json
+
+# --- PHP / Laravel ---
+/vendor/
+**/vendor/
+/storage/*.key
+/storage/logs/
+/storage/framework/cache/*
+/storage/framework/sessions/*
+/storage/framework/views/*
+/storage/framework/testing/*
+/bootstrap/cache/*.php
+/public/storage
+/public/hot
+/public/build
+.phpunit.result.cache
+.phpunit.cache/
+Homestead.json
+Homestead.yaml
+npm-debug.log
+yarn-error.log
+
+# --- Node / React ---
+node_modules/
+**/node_modules/
+dist/
+build/
+.vite/
+.next/
+.turbo/
+coverage/
+*.tsbuildinfo
+pnpm-debug.log*
+yarn-debug.log*
+.pnpm-store/
+
+# --- Python (script di estrazione e analisi) ---
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.ipynb_checkpoints/
+.pytest_cache/
+
+# --- Database locali ---
+*.sqlite
+*.sqlite3
+*.db
+
+# --- Materiale di lavoro non pubblicabile ---
+# Fonti scaricate (PDF di moduli e normative): si conservano i link, non i file
+data/raw/
+# Interviste e note con dati personali: mai nel repository
+interviste/
+private/
+
+# --- Log e temporanei ---
+*.log
+tmp/
+.cache/

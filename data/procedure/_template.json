@@ -1,0 +1,33 @@
+{
+  "id": "comune.categoria.procedura",
+  "titolo": "Titolo della procedura",
+  "descrizione": "A cosa serve",
+  "territorio": { "livello": "comunale", "nome": "Nome comune", "codice_istat": "" },
+  "categoria": "impresa",
+  "versione": "0.1.0",
+  "ultima_verifica": "2026-01-01",
+  "domande": [
+    { "id": "esempio_domanda", "testo": "Domanda per il percorso guidato?", "tipo": "si_no" }
+  ],
+  "enti": [
+    { "id": "ente_esempio", "nome": "Nome dell'ente", "sito": "https://example.org" }
+  ],
+  "passaggi": [
+    {
+      "id": "passaggio_1",
+      "titolo": "Azione da compiere",
+      "tipo": "presentazione",
+      "ente": "ente_esempio",
+      "attore": "richiedente",
+      "documenti_richiesti": [{ "id": "documento_esempio", "nome": "Documento richiesto" }],
+      "documenti_prodotti": [],
+      "costi": [{ "voce": "Diritti di istruttoria", "min_euro": 0, "max_euro": 0 }],
+      "tempi": { "previsto_giorni": 0, "silenzio_assenso": false },
+      "dipende_da": [],
+      "condizioni": [{ "domanda": "esempio_domanda", "valore": true }],
+      "canale": "online",
+      "fonti": [{ "titolo": "Fonte ufficiale", "riferimento": "", "url": "https://example.org", "verificata_il": "2026-01-01" }],
+      "note": ""
+    }
+  ]
+}

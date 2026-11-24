@@ -1,0 +1,125 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/claudiomeniconi/iter/schema/procedura.schema.json",
+  "title": "Procedura Iter",
+  "type": "object",
+  "required": ["id", "titolo", "territorio", "versione", "ultima_verifica", "enti", "passaggi"],
+  "properties": {
+    "id": { "type": "string", "pattern": "^[a-z0-9_.-]+$" },
+    "titolo": { "type": "string" },
+    "descrizione": { "type": "string" },
+    "territorio": {
+      "type": "object",
+      "required": ["livello", "nome"],
+      "properties": {
+        "livello": { "enum": ["nazionale", "regionale", "provinciale", "comunale"] },
+        "nome": { "type": "string" },
+        "codice_istat": { "type": "string" }
+      }
+    },
+    "categoria": { "type": "string" },
+    "versione": { "type": "string" },
+    "ultima_verifica": { "type": "string", "format": "date" },
+    "domande": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "testo", "tipo"],
+        "properties": {
+          "id": { "type": "string" },
+          "testo": { "type": "string" },
+          "tipo": { "enum": ["si_no", "scelta", "numero"] },
+          "opzioni": { "type": "array", "items": { "type": "string" } }
+        }
+      }
+    },
+    "enti": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "nome"],
+        "properties": {
+          "id": { "type": "string" },
+          "nome": { "type": "string" },
+          "sito": { "type": "string", "format": "uri" }
+        }
+      }
+    },
+    "passaggi": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/passaggio" }
+    }
+  },
+  "$defs": {
+    "fonte": {
+      "type": "object",
+      "required": ["titolo", "verificata_il"],
+      "properties": {
+        "titolo": { "type": "string" },
+        "riferimento": { "type": "string", "description": "Es. art. 19 L. 241/1990" },
+        "url": { "type": "string", "format": "uri" },
+        "verificata_il": { "type": "string", "format": "date" }
+      }
+    },
+    "documento": {
+      "type": "object",
+      "required": ["id", "nome"],
+      "properties": {
+        "id": { "type": "string", "description": "Identificativo stabile, uguale tra enti diversi" },
+        "nome": { "type": "string" },
+        "note": { "type": "string" }
+      }
+    },
+    "passaggio": {
+      "type": "object",
+      "required": ["id", "titolo", "tipo", "ente", "fonti"],
+      "properties": {
+        "id": { "type": "string" },
+        "titolo": { "type": "string" },
+        "tipo": {
+          "enum": ["presentazione", "autorizzazione", "pagamento", "requisito", "iscrizione", "comunicazione", "controllo", "attesa"]
+        },
+        "ente": { "type": "string", "description": "id di un elemento di enti" },
+        "attore": { "enum": ["richiedente", "professionista", "ente"] },
+        "documenti_richiesti": { "type": "array", "items": { "$ref": "#/$defs/documento" } },
+        "documenti_prodotti": { "type": "array", "items": { "$ref": "#/$defs/documento" } },
+        "costi": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["voce"],
+            "properties": {
+              "voce": { "type": "string" },
+              "min_euro": { "type": "number", "minimum": 0 },
+              "max_euro": { "type": "number", "minimum": 0 }
+            }
+          }
+        },
+        "tempi": {
+          "type": "object",
+          "properties": {
+            "previsto_giorni": { "type": "number", "minimum": 0 },
+            "reale_giorni": { "type": "number", "minimum": 0 },
+            "reale_segnalazioni": { "type": "integer", "minimum": 0 },
+            "silenzio_assenso": { "type": "boolean" }
+          }
+        },
+        "dipende_da": { "type": "array", "items": { "type": "string" } },
+        "condizioni": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["domanda", "valore"],
+            "properties": {
+              "domanda": { "type": "string" },
+              "valore": {}
+            }
+          }
+        },
+        "canale": { "enum": ["online", "sportello", "pec", "misto"] },
+        "fonti": { "type": "array", "minItems": 1, "items": { "$ref": "#/$defs/fonte" } },
+        "note": { "type": "string" }
+      }
+    }
+  }
+}
