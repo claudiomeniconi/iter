@@ -1,13 +1,12 @@
 {
-  "id": "montevarchi.edilizia.cila",
+  "id": "toscana.base.edilizia.cila",
   "modello": "edilizia.cila",
   "titolo": "Lavori interni e manutenzione straordinaria con CILA",
   "descrizione": "Comunicazione di inizio lavori asseverata per interventi come manutenzione straordinaria senza parti strutturali, modifiche interne e frazionamenti senza cambio d'uso. Bozza della Fase 0: ogni passaggio va confermato con l'ente competente o con un professionista.",
   "territorio": {
-    "livello": "comunale",
-    "nome": "Montevarchi (AR)",
-    "codice_istat": "051026",
-    "percorso": "it/toscana/ar/montevarchi"
+    "livello": "regionale",
+    "nome": "Toscana",
+    "percorso": "it/toscana"
   },
   "categoria": "edilizia",
   "stato": "bozza",
@@ -30,7 +29,7 @@
       "id": "richiedente"
     },
     {
-      "id": "comune.051026.edilizia"
+      "id": "@edilizia"
     },
     {
       "id": "regione.toscana"
@@ -68,7 +67,7 @@
       "id": "autorizzazione_paesaggistica",
       "titolo": "Ottenere l'autorizzazione paesaggistica",
       "tipo": "autorizzazione",
-      "ente": "comune.051026.edilizia",
+      "ente": "@edilizia",
       "attore": "professionista",
       "dipende_da": [
         "incarico_tecnico"
@@ -126,7 +125,7 @@
       "id": "cila",
       "titolo": "Presentare la CILA",
       "tipo": "comunicazione",
-      "ente": "comune.051026.edilizia",
+      "ente": "@edilizia",
       "attore": "professionista",
       "costi": [
         {
@@ -166,7 +165,7 @@
       "id": "fine_lavori",
       "titolo": "Comunicare la fine lavori e depositare lo stato finale",
       "tipo": "comunicazione",
-      "ente": "comune.051026.edilizia",
+      "ente": "@edilizia",
       "attore": "professionista",
       "dipende_da": [
         "cila"

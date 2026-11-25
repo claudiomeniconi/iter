@@ -1,0 +1,32 @@
+[
+  {
+    "id": "suap.051033",
+    "nome": "SUAP e Commercio - Comune di San Giovanni Valdarno",
+    "tipo": "comunale",
+    "territorio": "it/toscana/ar/san-giovanni-valdarno",
+    "sito": "https://comune.san-giovanni-valdarno.ar.it/unit%C3%A0-organizzative/2488503/ufficio-suap-commercio",
+    "contatti": {
+      "indirizzo": "Via Giuseppe Garibaldi 43, 52027 San Giovanni Valdarno (AR)",
+      "telefono": "055 9126252, 055 9126281",
+      "email": "suap@comunesgv.it",
+      "pec": "protocollo@pec.comunesgv.it"
+    },
+    "fonte": {
+      "titolo": "Comune di San Giovanni Valdarno - Accedere al SUAP (diritti SUAP)",
+      "verificata_il": "2026-11-24",
+      "url": "https://comune.san-giovanni-valdarno.ar.it/servizi/servizio-dettaglio/2671247"
+    }
+  },
+  {
+    "id": "comune.051033.edilizia",
+    "nome": "Comune di San Giovanni Valdarno - Edilizia e urbanistica",
+    "tipo": "comunale",
+    "territorio": "it/toscana/ar/san-giovanni-valdarno"
+  },
+  {
+    "id": "polizia-municipale.051033",
+    "nome": "Polizia Municipale di San Giovanni Valdarno",
+    "tipo": "comunale",
+    "territorio": "it/toscana/ar/san-giovanni-valdarno"
+  }
+]

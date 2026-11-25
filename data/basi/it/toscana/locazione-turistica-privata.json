@@ -1,13 +1,12 @@
 {
-  "id": "montevarchi.turismo.locazione-privata",
+  "id": "toscana.base.turismo.locazione-privata",
   "modello": "turismo.locazione-privata",
   "titolo": "Affittare casa ai turisti come privato (locazione non imprenditoriale)",
   "descrizione": "Locazione turistica di un immobile residenziale per periodi inferiori a 30 giorni, da parte di un privato non in forma d'impresa. Bozza della Fase 0: ogni passaggio va confermato con l'ente competente o con un professionista.",
   "territorio": {
-    "livello": "comunale",
-    "nome": "Montevarchi (AR)",
-    "codice_istat": "051026",
-    "percorso": "it/toscana/ar/montevarchi"
+    "livello": "regionale",
+    "nome": "Toscana",
+    "percorso": "it/toscana"
   },
   "categoria": "cittadino",
   "stato": "bozza",
@@ -16,10 +15,10 @@
   "domande": [],
   "enti": [
     {
-      "id": "comune.051026.edilizia"
+      "id": "@edilizia"
     },
     {
-      "id": "suap.051026"
+      "id": "@suap"
     },
     {
       "id": "richiedente"
@@ -28,7 +27,7 @@
       "id": "ministero-turismo"
     },
     {
-      "id": "questura.arezzo"
+      "id": "@questura"
     },
     {
       "id": "agenzia-entrate"
@@ -39,7 +38,7 @@
       "id": "verifica_locale",
       "titolo": "Verificare che l'immobile sia ammesso dal regolamento comunale",
       "tipo": "requisito",
-      "ente": "comune.051026.edilizia",
+      "ente": "@edilizia",
       "attore": "richiedente",
       "dipende_da": [],
       "canale": "misto",
@@ -57,7 +56,7 @@
       "id": "comunicazione_comune",
       "titolo": "Comunicare al Comune l'avvio della locazione turistica",
       "tipo": "comunicazione",
-      "ente": "suap.051026",
+      "ente": "@suap",
       "attore": "richiedente",
       "dipende_da": [
         "verifica_locale"
@@ -130,7 +129,7 @@
       "id": "alloggiati",
       "titolo": "Registrarsi ad Alloggiati Web e comunicare gli ospiti",
       "tipo": "comunicazione",
-      "ente": "questura.arezzo",
+      "ente": "@questura",
       "attore": "richiedente",
       "dipende_da": [
         "cin"

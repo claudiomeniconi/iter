@@ -4,7 +4,7 @@
 
 Iter è l'atlante aperto della burocrazia italiana: ogni procedura descritta passo per passo, con enti, documenti, costi e tempi, visibile su un canvas e analizzata con l'AI per capire dove si può semplificare.
 
-Si parte in piccolo, dalle procedure per le imprese nel **Comune di Montevarchi (AR)**, per poi estendere il metodo ad altri comuni, alle regioni e a qualsiasi procedura a livello nazionale.
+Si parte in piccolo, dalle procedure per le imprese nel **Comune di Montevarchi (AR)** e nei comuni vicini del Valdarno, per poi estendere il metodo ad altri comuni, alle regioni e a qualsiasi procedura a livello nazionale.
 
 ## Perché
 
@@ -53,6 +53,8 @@ Il piano dettagliato è in [`docs/piano.md`](docs/piano.md).
 iter/
 ├── app/                            # interfaccia web (Vite + React + React Flow)
 ├── data/
+│   ├── basi/it/toscana/            # procedure uguali in tutta la Toscana, con enti come ruoli (@suap, @asl…)
+│   ├── comuni/it/toscana/          # per ogni comune: chi ricopre i ruoli, diritti e sole differenze
 │   ├── enti/                       # registro unico degli enti, un file per territorio
 │   ├── territori/it.json           # albero Italia > regioni > province > comuni
 │   ├── procedure/
@@ -61,11 +63,13 @@ iter/
 │   │       └── somministrazione-apertura.json
 │   └── procedure-in-programma.json # procedure che vogliamo mappare
 ├── docs/
+│   ├── analisi/                    # confronto di ogni procedura tra i comuni (generato)
 │   ├── montevarchi/                # note di lavoro, fonti e domande aperte
 │   ├── piano.md
 │   └── modello-dati.md
 ├── schema/                         # JSON Schema di procedure, enti e territori
 ├── scripts/valida.py               # controlla schemi e riferimenti incrociati
+├── scripts/confronta.py            # genera le schede di confronto in docs/analisi
 ├── avvia-iter.command              # avvio con doppio clic su macOS
 └── README.md
 ```
@@ -75,6 +79,8 @@ Le procedure sono organizzate per territorio: `it/<regione>/<provincia>/<comune>
 Gli enti stanno in un registro unico (`data/enti`) e le procedure li richiamano per identificativo, così lo stesso ufficio ha gli stessi contatti in ogni procedura. Il campo `modello` lega la stessa procedura in territori diversi, per poterli confrontare.
 
 ### Aggiungere un comune o una procedura
+
+Se la procedura esiste già come base toscana (`data/basi/it/toscana/`), basta il file del comune in `data/comuni/` con i ruoli e le differenze: vedi [`docs/modello-dati.md`](docs/modello-dati.md#base-regionale-e-differenze-comunali). Altrimenti:
 
 1. Aggiungi il comune in `data/territori/it.json`.
 2. Aggiungi i suoi enti in `data/enti/` (es. `suap.<codice ISTAT>`).

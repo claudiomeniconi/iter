@@ -14,10 +14,65 @@
           "livello": "provinciale",
           "figli": [
             {
+              "id": "bucine",
+              "nome": "Bucine",
+              "livello": "comunale",
+              "codice_istat": "051005"
+            },
+            {
+              "id": "castelfranco-piandisco",
+              "nome": "Castelfranco Piandiscò",
+              "livello": "comunale",
+              "codice_istat": "051040"
+            },
+            {
+              "id": "cavriglia",
+              "nome": "Cavriglia",
+              "livello": "comunale",
+              "codice_istat": "051013"
+            },
+            {
+              "id": "laterina-pergine-valdarno",
+              "nome": "Laterina Pergine Valdarno",
+              "livello": "comunale",
+              "codice_istat": "051042"
+            },
+            {
+              "id": "loro-ciuffenna",
+              "nome": "Loro Ciuffenna",
+              "livello": "comunale",
+              "codice_istat": "051020"
+            },
+            {
               "id": "montevarchi",
               "nome": "Montevarchi",
               "livello": "comunale",
               "codice_istat": "051026"
+            },
+            {
+              "id": "san-giovanni-valdarno",
+              "nome": "San Giovanni Valdarno",
+              "livello": "comunale",
+              "codice_istat": "051033"
+            },
+            {
+              "id": "terranuova-bracciolini",
+              "nome": "Terranuova Bracciolini",
+              "livello": "comunale",
+              "codice_istat": "051039"
+            }
+          ]
+        },
+        {
+          "id": "fi",
+          "nome": "Firenze",
+          "livello": "provinciale",
+          "figli": [
+            {
+              "id": "figline-e-incisa-valdarno",
+              "nome": "Figline e Incisa Valdarno",
+              "livello": "comunale",
+              "codice_istat": "048052"
             }
           ]
         }

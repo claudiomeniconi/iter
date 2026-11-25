@@ -1,13 +1,12 @@
 {
-  "id": "montevarchi.somministrazione.subingresso",
+  "id": "toscana.base.somministrazione.subingresso",
   "modello": "somministrazione.subingresso",
-  "titolo": "Rilevare un bar, ristorante o pizzeria già aperto a Montevarchi",
+  "titolo": "Rilevare un bar, ristorante o pizzeria già aperto a {comune}",
   "descrizione": "Subentrare in un esercizio di somministrazione esistente, comprandolo o prendendolo in affitto d'azienda. Bozza della Fase 0: ogni passaggio va confermato con il SUAP e con un professionista.",
   "territorio": {
-    "livello": "comunale",
-    "nome": "Montevarchi (AR)",
-    "codice_istat": "051026",
-    "percorso": "it/toscana/ar/montevarchi"
+    "livello": "regionale",
+    "nome": "Toscana",
+    "percorso": "it/toscana"
   },
   "categoria": "impresa",
   "stato": "bozza",
@@ -46,13 +45,13 @@
       "id": "agenzia-entrate"
     },
     {
-      "id": "cciaa.arezzo-siena"
+      "id": "@cciaa"
     },
     {
-      "id": "suap.051026"
+      "id": "@suap"
     },
     {
-      "id": "asl.toscana-sud-est"
+      "id": "@asl"
     }
   ],
   "passaggi": [
@@ -190,7 +189,7 @@
       "id": "deposito_registro_imprese",
       "titolo": "Deposito dell'atto al Registro Imprese",
       "tipo": "iscrizione",
-      "ente": "cciaa.arezzo-siena",
+      "ente": "@cciaa",
       "attore": "professionista",
       "tempi": {
         "previsto_giorni": 30
@@ -234,7 +233,7 @@
       "id": "apertura_partita_iva",
       "titolo": "Aprire la partita IVA e iscrivere l'impresa (Comunicazione Unica)",
       "tipo": "iscrizione",
-      "ente": "cciaa.arezzo-siena",
+      "ente": "@cciaa",
       "attore": "professionista",
       "documenti_prodotti": [
         {
@@ -321,7 +320,7 @@
       "id": "comunicazione_subingresso",
       "titolo": "Comunicare il subingresso al SUAP tramite STAR",
       "tipo": "comunicazione",
-      "ente": "suap.051026",
+      "ente": "@suap",
       "attore": "richiedente",
       "documenti_richiesti": [
         {
@@ -335,7 +334,7 @@
       ],
       "costi": [
         {
-          "voce": "Diritti SUAP del Comune di Montevarchi"
+          "voce": "Diritti SUAP del Comune di {comune}"
         }
       ],
       "tempi": {
@@ -359,11 +358,6 @@
           "verificata_il": "2026-11-24",
           "riferimento": "Comunicazione per il subingresso in attività - d.d. 10309/2026",
           "url": "https://www.regione.toscana.it/documents/d/guest/elenco-della-modulistica-unica-in-uso-al-7-ottobre-2026-pdf"
-        },
-        {
-          "titolo": "Comune di Montevarchi - Accedere allo Sportello SUAP (STAR)",
-          "verificata_il": "2026-11-24",
-          "url": "https://www.comune.montevarchi.ar.it/servizi/servizio-dettaglio/2246471"
         }
       ],
       "stato_verifica": "verificato_fonti",
@@ -373,7 +367,7 @@
       "id": "aggiornamento_notifica_sanitaria",
       "titolo": "Aggiornare la registrazione sanitaria con il nuovo titolare",
       "tipo": "comunicazione",
-      "ente": "asl.toscana-sud-est",
+      "ente": "@asl",
       "attore": "richiedente",
       "dipende_da": [
         "piano_autocontrollo"
@@ -405,7 +399,7 @@
       "id": "verifica_modifiche_locale",
       "titolo": "Pratiche per le modifiche al locale",
       "tipo": "presentazione",
-      "ente": "suap.051026",
+      "ente": "@suap",
       "attore": "professionista",
       "dipende_da": [
         "atto_cessione"
@@ -432,7 +426,7 @@
       "id": "voltura_insegna_dehors",
       "titolo": "Intestare a te insegna e concessione del dehors",
       "tipo": "comunicazione",
-      "ente": "suap.051026",
+      "ente": "@suap",
       "attore": "richiedente",
       "costi": [
         {
@@ -451,9 +445,10 @@
       "canale": "online",
       "fonti": [
         {
-          "titolo": "Comune di Montevarchi - Piano degli impianti pubblicitari",
+          "titolo": "L. 160/2019 - Canone unico patrimoniale",
+          "riferimento": "art. 1, commi 816-847",
           "verificata_il": "2026-11-24",
-          "url": "https://www.sitmontevarchi.it/piano_pubblicita"
+          "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:legge:2019-12-27;160"
         }
       ],
       "stato_verifica": "bozza"
@@ -482,7 +477,7 @@
       "id": "controlli_suap",
       "titolo": "Verifiche del Comune sulla comunicazione",
       "tipo": "controllo",
-      "ente": "suap.051026",
+      "ente": "@suap",
       "attore": "ente",
       "dipende_da": [
         "comunicazione_subingresso"

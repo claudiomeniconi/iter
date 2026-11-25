@@ -1,0 +1,27 @@
+[
+  {
+    "id": "cciaa.firenze",
+    "nome": "Camera di Commercio di Firenze",
+    "tipo": "camerale",
+    "territorio": "it/toscana/fi",
+    "sito": "https://www.fi.camcom.gov.it"
+  },
+  {
+    "id": "vvf.firenze",
+    "nome": "Comando Vigili del Fuoco di Firenze",
+    "tipo": "sicurezza",
+    "territorio": "it/toscana/fi"
+  },
+  {
+    "id": "questura.firenze",
+    "nome": "Questura di Firenze",
+    "tipo": "sicurezza",
+    "territorio": "it/toscana/fi"
+  },
+  {
+    "id": "soprintendenza.fi-pt-po",
+    "nome": "Soprintendenza Archeologia, Belle Arti e Paesaggio per la città metropolitana di Firenze e le province di Pistoia e Prato",
+    "tipo": "statale",
+    "territorio": "it/toscana/fi"
+  }
+]

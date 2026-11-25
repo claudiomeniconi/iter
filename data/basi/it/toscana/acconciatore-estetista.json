@@ -1,13 +1,12 @@
 {
-  "id": "montevarchi.servizi.acconciatore-estetista",
+  "id": "toscana.base.servizi.acconciatore-estetista",
   "modello": "servizi.acconciatore-estetista",
   "titolo": "Aprire un salone di acconciatore o un centro estetico",
-  "descrizione": "Apertura di un'attività di acconciatore o di estetista a Montevarchi, in negozio o presso il proprio domicilio. Bozza della Fase 0: ogni passaggio va confermato con l'ente competente o con un professionista.",
+  "descrizione": "Apertura di un'attività di acconciatore o di estetista a {comune}, in negozio o presso il proprio domicilio. Bozza della Fase 0: ogni passaggio va confermato con l'ente competente o con un professionista.",
   "territorio": {
-    "livello": "comunale",
-    "nome": "Montevarchi (AR)",
-    "codice_istat": "051026",
-    "percorso": "it/toscana/ar/montevarchi"
+    "livello": "regionale",
+    "nome": "Toscana",
+    "percorso": "it/toscana"
   },
   "categoria": "impresa",
   "stato": "bozza",
@@ -40,13 +39,13 @@
       "id": "richiedente"
     },
     {
-      "id": "comune.051026.edilizia"
+      "id": "@edilizia"
     },
     {
-      "id": "cciaa.arezzo-siena"
+      "id": "@cciaa"
     },
     {
-      "id": "suap.051026"
+      "id": "@suap"
     }
   ],
   "passaggi": [
@@ -124,7 +123,7 @@
       "id": "verifica_locale",
       "titolo": "Verificare che il locale sia idoneo (destinazione d'uso, agibilità, requisiti igienici)",
       "tipo": "requisito",
-      "ente": "comune.051026.edilizia",
+      "ente": "@edilizia",
       "attore": "professionista",
       "documenti_richiesti": [
         {
@@ -153,7 +152,7 @@
       "id": "pratica_edilizia",
       "titolo": "Presentare la pratica edilizia per lavori o cambio d'uso",
       "tipo": "presentazione",
-      "ente": "comune.051026.edilizia",
+      "ente": "@edilizia",
       "attore": "professionista",
       "dipende_da": [
         "verifica_locale"
@@ -180,7 +179,7 @@
       "id": "iscrizione_impresa",
       "titolo": "Aprire la partita IVA e iscrivere l'impresa (Comunicazione Unica)",
       "tipo": "iscrizione",
-      "ente": "cciaa.arezzo-siena",
+      "ente": "@cciaa",
       "attore": "professionista",
       "documenti_prodotti": [
         {
@@ -217,7 +216,7 @@
       "id": "scia_acconciatore_estetista",
       "titolo": "Presentare la SCIA di acconciatore o estetista",
       "tipo": "presentazione",
-      "ente": "suap.051026",
+      "ente": "@suap",
       "attore": "richiedente",
       "documenti_richiesti": [],
       "documenti_prodotti": [
@@ -228,7 +227,7 @@
       ],
       "costi": [
         {
-          "voce": "Diritti SUAP del Comune di Montevarchi"
+          "voce": "Diritti SUAP del Comune di {comune}"
         },
         {
           "voce": "Imposta di bollo"
@@ -255,16 +254,6 @@
           "titolo": "Comune di Arezzo - Vademecum acconciatori ed estetiste (prassi toscana)",
           "verificata_il": "2026-11-24",
           "url": "https://www.comune.arezzo.it/sites/default/files/vademecum_acconciatori_ed_estetiste_v1.0.pdf"
-        },
-        {
-          "titolo": "Comune di Montevarchi - Accedere allo Sportello SUAP (STAR)",
-          "verificata_il": "2026-11-24",
-          "url": "https://www.comune.montevarchi.ar.it/servizi/servizio-dettaglio/2246471"
-        },
-        {
-          "titolo": "Comune di Montevarchi - Tariffe diritti SUAP",
-          "verificata_il": "2026-11-24",
-          "url": "https://www.comune.montevarchi.ar.it/documenti/2246544/tariffe-diritti-suap"
         }
       ],
       "stato_verifica": "verificato_fonti",
@@ -274,7 +263,7 @@
       "id": "albo_artigiani",
       "titolo": "Iscriversi come impresa artigiana (se ne hai i requisiti)",
       "tipo": "iscrizione",
-      "ente": "cciaa.arezzo-siena",
+      "ente": "@cciaa",
       "attore": "professionista",
       "dipende_da": [
         "scia_acconciatore_estetista"
@@ -298,7 +287,7 @@
       "id": "insegna",
       "titolo": "Autorizzazione per l'insegna",
       "tipo": "autorizzazione",
-      "ente": "suap.051026",
+      "ente": "@suap",
       "attore": "richiedente",
       "costi": [
         {
@@ -317,11 +306,6 @@
       "canale": "online",
       "fonti": [
         {
-          "titolo": "Comune di Montevarchi - Piano degli impianti pubblicitari",
-          "verificata_il": "2026-11-24",
-          "url": "https://www.sitmontevarchi.it/piano_pubblicita"
-        },
-        {
           "titolo": "D.Lgs. 285/1992 - Codice della strada",
           "verificata_il": "2026-11-24",
           "riferimento": "art. 23",
@@ -335,7 +319,7 @@
       "id": "controlli_suap",
       "titolo": "Controlli del Comune sulla SCIA",
       "tipo": "controllo",
-      "ente": "suap.051026",
+      "ente": "@suap",
       "attore": "ente",
       "tempi": {
         "previsto_giorni": 60

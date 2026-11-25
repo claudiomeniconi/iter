@@ -49,6 +49,33 @@ export type Procedura = {
   domande?: Domanda[]
   enti: { id: string }[]
   passaggi: Passaggio[]
+  /** Presente se la procedura è composta da una base regionale e dalle differenze di un comune */
+  base?: { modello: string; versione: string }
+}
+
+/** Differenze di un comune rispetto alla base regionale di una procedura */
+export type Differenze = {
+  stato?: Procedura['stato']
+  versione?: string
+  ultima_verifica?: string
+  titolo?: string
+  descrizione?: string
+  passaggi?: Record<string, Partial<Passaggio> & { fonti_aggiunte?: Fonte[] }>
+  aggiungi?: Passaggio[]
+  rimuovi?: string[]
+}
+
+/** Un comune: chi ricopre i ruoli usati nelle basi (es. "@suap") e le procedure adottate */
+export type Comune = {
+  id: string
+  nome: string
+  nome_esteso: string
+  codice_istat: string
+  percorso: string
+  ruoli: Record<string, string>
+  sportello?: unknown
+  diritti?: unknown[]
+  procedure: Record<string, Differenze>
 }
 
 export type NodoTerritorio = {
