@@ -23,9 +23,56 @@
         "verificata_il": "2026-11-24",
         "url": "https://www.comune.montevarchi.ar.it/servizi/servizio-dettaglio/2246471"
       }
-    ]
+    ],
+    "pagamento": "da trovare"
   },
-  "diritti": [],
+  "diritti": [
+    {
+      "voce": "Procedura SUAP soggetta a SCIA, per ogni endoprocedimento",
+      "euro": 40,
+      "fonte": {
+        "titolo": "Comune di Montevarchi - Tariffe diritti SUAP (Allegato B, file diritti-suap.doc)",
+        "verificata_il": "2026-11-25",
+        "url": "https://www.comune.montevarchi.ar.it/documenti/2246544/tariffe-diritti-suap"
+      }
+    },
+    {
+      "voce": "Procedura SUAP soggetta ad autorizzazione, per domanda unica",
+      "euro": 80,
+      "fonte": {
+        "titolo": "Comune di Montevarchi - Tariffe diritti SUAP (Allegato B, file diritti-suap.doc)",
+        "verificata_il": "2026-11-25",
+        "url": "https://www.comune.montevarchi.ar.it/documenti/2246544/tariffe-diritti-suap"
+      }
+    },
+    {
+      "voce": "Autorizzazione manifestazioni e concessione suolo pubblico",
+      "euro": 30,
+      "fonte": {
+        "titolo": "Comune di Montevarchi - Tariffe diritti SUAP (Allegato B, file diritti-suap.doc)",
+        "verificata_il": "2026-11-25",
+        "url": "https://www.comune.montevarchi.ar.it/documenti/2246544/tariffe-diritti-suap"
+      }
+    },
+    {
+      "voce": "Parere preventivo",
+      "euro": 70,
+      "fonte": {
+        "titolo": "Comune di Montevarchi - Tariffe diritti SUAP (Allegato B, file diritti-suap.doc)",
+        "verificata_il": "2026-11-25",
+        "url": "https://www.comune.montevarchi.ar.it/documenti/2246544/tariffe-diritti-suap"
+      }
+    },
+    {
+      "voce": "Conferenza dei servizi",
+      "euro": 120,
+      "fonte": {
+        "titolo": "Comune di Montevarchi - Tariffe diritti SUAP (Allegato B, file diritti-suap.doc)",
+        "verificata_il": "2026-11-25",
+        "url": "https://www.comune.montevarchi.ar.it/documenti/2246544/tariffe-diritti-suap"
+      }
+    }
+  ],
   "procedure": {
     "somministrazione.apertura": {
       "stato": "bozza",
@@ -54,7 +101,17 @@
               "url": "https://www.comune.montevarchi.ar.it/documenti/2246544/tariffe-diritti-suap"
             }
           ],
-          "stato_verifica": "verificato_fonti"
+          "stato_verifica": "verificato_fonti",
+          "costi": [
+            {
+              "voce": "Diritti SUAP del Comune di Montevarchi per ogni endoprocedimento: la pratica può contenerne più di uno",
+              "min_euro": 40,
+              "max_euro": 40
+            },
+            {
+              "voce": "Imposta di bollo"
+            }
+          ]
         },
         "insegna": {
           "fonti_aggiunte": [
@@ -122,6 +179,16 @@
               "verificata_il": "2026-11-24",
               "url": "https://www.comune.montevarchi.ar.it/documenti/2246544/tariffe-diritti-suap"
             }
+          ],
+          "costi": [
+            {
+              "voce": "Diritti SUAP del Comune di Montevarchi per ogni endoprocedimento: la pratica può contenerne più di uno",
+              "min_euro": 40,
+              "max_euro": 40
+            },
+            {
+              "voce": "Imposta di bollo"
+            }
           ]
         },
         "insegna": {
@@ -188,7 +255,17 @@
               "url": "https://www.comune.montevarchi.ar.it/documenti/2246544/tariffe-diritti-suap"
             }
           ],
-          "stato_verifica": "verificato_fonti"
+          "stato_verifica": "verificato_fonti",
+          "costi": [
+            {
+              "voce": "Diritti SUAP del Comune di Montevarchi per ogni endoprocedimento: la pratica può contenerne più di uno",
+              "min_euro": 40,
+              "max_euro": 40
+            },
+            {
+              "voce": "Imposta di bollo"
+            }
+          ]
         },
         "insegna": {
           "fonti_aggiunte": [
@@ -252,7 +329,17 @@
               "url": "https://www.comune.montevarchi.ar.it/documenti/2246544/tariffe-diritti-suap"
             }
           ],
-          "stato_verifica": "verificato_fonti"
+          "stato_verifica": "verificato_fonti",
+          "costi": [
+            {
+              "voce": "Diritti SUAP del Comune di Montevarchi per ogni endoprocedimento: la pratica può contenerne più di uno",
+              "min_euro": 40,
+              "max_euro": 40
+            },
+            {
+              "voce": "Imposta di bollo"
+            }
+          ]
         },
         "controlli_suap": {
           "stato_verifica": "verificato_fonti"

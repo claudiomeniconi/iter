@@ -1,0 +1,20 @@
+[
+  {
+    "id": "suap.unione-valdarno-valdisieve",
+    "nome": "SUAP associato - Unione di Comuni Valdarno e Valdisieve",
+    "tipo": "comunale",
+    "territorio": "it/toscana/fi",
+    "descrizione": "Sportello unico associato dal 27/09/2010 per Londa, Pelago, Pontassieve, Reggello, Rufina e San Godenzo.",
+    "sito": "https://www.uc-valdarnoevaldisieve.fi.it/servizi/imprese-e-commercio/sportello-unico-attivita-produttive-suap-associato",
+    "contatti": {
+      "telefono": "055 0105411 (informazioni telefoniche tutti i giorni 12:30-13:30)",
+      "email": "suap@ucvv.it",
+      "pec": "suap.ucvv@postacert.toscana.it"
+    },
+    "fonte": {
+      "titolo": "Unione di Comuni Valdarno e Valdisieve - Sportello Unico Attività Produttive associato",
+      "verificata_il": "2026-11-24",
+      "url": "https://www.uc-valdarnoevaldisieve.fi.it/servizi/imprese-e-commercio/sportello-unico-attivita-produttive-suap-associato"
+    }
+  }
+]

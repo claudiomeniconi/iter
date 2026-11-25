@@ -6,25 +6,35 @@ Modello `commercio.vicinato`. Generato da `scripts/confronta.py` a partire dalla
 
 | Comune | Sportello | Pagamento diritti | Diritti SUAP | Passaggi | Verificati | Differenze dichiarate |
 |---|---|---|---|---|---|---|
+| Bucine | SUAP - Comune di Bucine | da trovare (tariffario e modalità in allegato alla pagina SUAP) | 30 € per endoprocedimento | 10 | 0 di 10 | 1 |
 | Castelfranco Piandiscò | SUAP associato - Unione dei Comuni del Pratomagno | Bonifico all'Unione dei Comuni del Pratomagno | 40 € | 10 | 0 di 10 | 1 |
+| Castiglion Fibocchi | SUAP associato - Unione dei Comuni del Pratomagno | Bonifico all'Unione dei Comuni del Pratomagno | 40 € | 10 | 0 di 10 | 1 |
 | Cavriglia | SUAP - Comune di Cavriglia | PagoPA | 40 € per endoprocedimento | 10 | 0 di 10 | 1 |
+| Laterina Pergine Valdarno | SUAP - Comune di Laterina Pergine Valdarno | PagoPA | 50 € (primo endoprocedimento; 10 € per ogni endoprocedimento in più) | 10 | 0 di 10 | 1 |
 | Loro Ciuffenna | SUAP associato - Unione dei Comuni del Pratomagno | Bonifico all'Unione dei Comuni del Pratomagno | 40 € | 10 | 0 di 10 | 1 |
-| Montevarchi | SUAP - Comune di Montevarchi | da trovare | da trovare | 10 | 1 di 10 | 3 |
+| Montevarchi | SUAP - Comune di Montevarchi | da trovare | 40 € per endoprocedimento | 10 | 1 di 10 | 3 |
 | San Giovanni Valdarno | SUAP e Commercio - Comune di San Giovanni Valdarno | PagoPA | 45 € per endoprocedimento | 10 | 0 di 10 | 1 |
 | Terranuova Bracciolini | SUAP - Comune di Terranuova Bracciolini | PagoPA | 40 € | 10 | 0 di 10 | 1 |
 | Figline e Incisa Valdarno | Sportello ai cittadini e alle imprese (SUAP) - Comune di Figline e Incisa Valdarno | PagoPA (IRIS) | 30 € | 10 | 0 di 10 | 1 |
+| Reggello | SUAP associato - Unione di Comuni Valdarno e Valdisieve | PagoPA | 40 € per endoprocedimento | 10 | 0 di 10 | 1 |
+| Rignano sull'Arno | SUAP - Comune di Rignano sull'Arno | da trovare | 40 € | 10 | 0 di 10 | 1 |
 
 ## Enti che cambiano da comune a comune
 
 | Comune | @asl | @cciaa | @edilizia | @suap |
 |---|---|---|---|---|
+| Bucine | Azienda USL Toscana sud est | Camera di Commercio Arezzo-Siena | Comune di Bucine - Edilizia e urbanistica | SUAP - Comune di Bucine |
 | Castelfranco Piandiscò | Azienda USL Toscana sud est | Camera di Commercio Arezzo-Siena | Comune di Castelfranco Piandiscò - Edilizia e urbanistica | SUAP associato - Unione dei Comuni del Pratomagno |
+| Castiglion Fibocchi | Azienda USL Toscana sud est | Camera di Commercio Arezzo-Siena | Comune di Castiglion Fibocchi - Edilizia e urbanistica | SUAP associato - Unione dei Comuni del Pratomagno |
 | Cavriglia | Azienda USL Toscana sud est | Camera di Commercio Arezzo-Siena | Comune di Cavriglia - Edilizia e urbanistica | SUAP - Comune di Cavriglia |
+| Laterina Pergine Valdarno | Azienda USL Toscana sud est | Camera di Commercio Arezzo-Siena | Comune di Laterina Pergine Valdarno - Edilizia e urbanistica | SUAP - Comune di Laterina Pergine Valdarno |
 | Loro Ciuffenna | Azienda USL Toscana sud est | Camera di Commercio Arezzo-Siena | Comune di Loro Ciuffenna - Edilizia e urbanistica | SUAP associato - Unione dei Comuni del Pratomagno |
 | Montevarchi | Azienda USL Toscana sud est | Camera di Commercio Arezzo-Siena | Comune di Montevarchi - Edilizia e urbanistica | SUAP - Comune di Montevarchi |
 | San Giovanni Valdarno | Azienda USL Toscana sud est | Camera di Commercio Arezzo-Siena | Comune di San Giovanni Valdarno - Edilizia e urbanistica | SUAP e Commercio - Comune di San Giovanni Valdarno |
 | Terranuova Bracciolini | Azienda USL Toscana sud est | Camera di Commercio Arezzo-Siena | Comune di Terranuova Bracciolini - Edilizia e urbanistica | SUAP - Comune di Terranuova Bracciolini |
 | Figline e Incisa Valdarno | Azienda USL Toscana centro | Camera di Commercio di Firenze | Comune di Figline e Incisa Valdarno - Edilizia e urbanistica | Sportello ai cittadini e alle imprese (SUAP) - Comune di Figline e Incisa Valdarno |
+| Reggello | Azienda USL Toscana centro | Camera di Commercio di Firenze | Comune di Reggello - Edilizia e urbanistica | SUAP associato - Unione di Comuni Valdarno e Valdisieve |
+| Rignano sull'Arno | Azienda USL Toscana centro | Camera di Commercio di Firenze | Comune di Rignano sull'Arno - Edilizia e urbanistica | SUAP - Comune di Rignano sull'Arno |
 
 ## Indicatori per la semplificazione
 

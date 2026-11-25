@@ -1,0 +1,187 @@
+{
+  "id": "bucine",
+  "nome": "Bucine",
+  "nome_esteso": "Bucine (AR)",
+  "codice_istat": "051005",
+  "percorso": "it/toscana/ar/bucine",
+  "ruoli": {
+    "@suap": "suap.051005",
+    "@edilizia": "comune.051005.edilizia",
+    "@polizia-municipale": "polizia-municipale.051005",
+    "@asl": "asl.toscana-sud-est",
+    "@cciaa": "cciaa.arezzo-siena",
+    "@vvf": "vvf.arezzo",
+    "@questura": "questura.arezzo",
+    "@soprintendenza": "soprintendenza.si-gr-ar"
+  },
+  "sportello": {
+    "ente": "suap.051005",
+    "canale": "STAR (portale regionale)",
+    "pagamento": "da trovare (tariffario e modalità in allegato alla pagina SUAP)",
+    "fonti": [
+      {
+        "titolo": "Comune di Bucine - Sportello Unico Attività produttive (SUAP)",
+        "verificata_il": "2026-11-24",
+        "url": "https://www.halleyweb.com/c051005/zf/index.php/servizi-aggiuntivi/index/index/idtesto/118"
+      }
+    ]
+  },
+  "diritti": [
+    {
+      "voce": "Ogni endoprocedimento",
+      "euro": 30,
+      "fonte": {
+        "titolo": "Comune di Bucine - Sportello Unico Attività produttive (SUAP)",
+        "verificata_il": "2026-11-24",
+        "url": "https://www.halleyweb.com/c051005/zf/index.php/servizi-aggiuntivi/index/index/idtesto/118"
+      }
+    },
+    {
+      "voce": "Pubblico evento con più endoprocedimenti (forfait)",
+      "euro": 40,
+      "fonte": {
+        "titolo": "Comune di Bucine - Sportello Unico Attività produttive (SUAP)",
+        "verificata_il": "2026-11-24",
+        "url": "https://www.halleyweb.com/c051005/zf/index.php/servizi-aggiuntivi/index/index/idtesto/118"
+      }
+    }
+  ],
+  "procedure": {
+    "somministrazione.apertura": {
+      "stato": "bozza",
+      "versione": "0.1.0",
+      "ultima_verifica": "2026-11-24",
+      "passaggi": {
+        "scia_somministrazione": {
+          "fonti_aggiunte": [
+            {
+              "titolo": "Comune di Bucine - Sportello Unico Attività produttive (SUAP)",
+              "verificata_il": "2026-11-24",
+              "url": "https://www.halleyweb.com/c051005/zf/index.php/servizi-aggiuntivi/index/index/idtesto/118"
+            }
+          ],
+          "costi": [
+            {
+              "voce": "Diritti SUAP del Comune di Bucine per ogni endoprocedimento: la pratica può contenerne più di uno",
+              "min_euro": 30,
+              "max_euro": 30
+            },
+            {
+              "voce": "Imposta di bollo"
+            }
+          ]
+        }
+      }
+    },
+    "somministrazione.subingresso": {
+      "stato": "bozza",
+      "versione": "0.1.0",
+      "ultima_verifica": "2026-11-24",
+      "passaggi": {
+        "comunicazione_subingresso": {
+          "fonti_aggiunte": [
+            {
+              "titolo": "Comune di Bucine - Sportello Unico Attività produttive (SUAP)",
+              "verificata_il": "2026-11-24",
+              "url": "https://www.halleyweb.com/c051005/zf/index.php/servizi-aggiuntivi/index/index/idtesto/118"
+            }
+          ]
+        }
+      }
+    },
+    "commercio.vicinato": {
+      "stato": "bozza",
+      "versione": "0.1.0",
+      "ultima_verifica": "2026-11-24",
+      "passaggi": {
+        "scia_vicinato": {
+          "fonti_aggiunte": [
+            {
+              "titolo": "Comune di Bucine - Sportello Unico Attività produttive (SUAP)",
+              "verificata_il": "2026-11-24",
+              "url": "https://www.halleyweb.com/c051005/zf/index.php/servizi-aggiuntivi/index/index/idtesto/118"
+            }
+          ],
+          "costi": [
+            {
+              "voce": "Diritti SUAP del Comune di Bucine per ogni endoprocedimento: la pratica può contenerne più di uno",
+              "min_euro": 30,
+              "max_euro": 30
+            },
+            {
+              "voce": "Imposta di bollo"
+            }
+          ]
+        }
+      }
+    },
+    "servizi.acconciatore-estetista": {
+      "stato": "bozza",
+      "versione": "0.1.0",
+      "ultima_verifica": "2026-11-24",
+      "passaggi": {
+        "scia_acconciatore_estetista": {
+          "fonti_aggiunte": [
+            {
+              "titolo": "Comune di Bucine - Sportello Unico Attività produttive (SUAP)",
+              "verificata_il": "2026-11-24",
+              "url": "https://www.halleyweb.com/c051005/zf/index.php/servizi-aggiuntivi/index/index/idtesto/118"
+            }
+          ],
+          "costi": [
+            {
+              "voce": "Diritti SUAP del Comune di Bucine per ogni endoprocedimento: la pratica può contenerne più di uno",
+              "min_euro": 30,
+              "max_euro": 30
+            },
+            {
+              "voce": "Imposta di bollo"
+            }
+          ]
+        }
+      }
+    },
+    "turismo.locazione-imprenditoriale": {
+      "stato": "bozza",
+      "versione": "0.1.0",
+      "ultima_verifica": "2026-11-24",
+      "passaggi": {
+        "scia_locazione": {
+          "fonti_aggiunte": [
+            {
+              "titolo": "Comune di Bucine - Sportello Unico Attività produttive (SUAP)",
+              "verificata_il": "2026-11-24",
+              "url": "https://www.halleyweb.com/c051005/zf/index.php/servizi-aggiuntivi/index/index/idtesto/118"
+            }
+          ],
+          "costi": [
+            {
+              "voce": "Diritti SUAP del Comune di Bucine per ogni endoprocedimento: la pratica può contenerne più di uno",
+              "min_euro": 30,
+              "max_euro": 30
+            },
+            {
+              "voce": "Imposta di bollo"
+            }
+          ]
+        }
+      }
+    },
+    "turismo.locazione-privata": {
+      "stato": "bozza",
+      "versione": "0.1.0",
+      "ultima_verifica": "2026-11-24",
+      "passaggi": {
+        "comunicazione_comune": {
+          "fonti_aggiunte": [
+            {
+              "titolo": "Comune di Bucine - Sportello Unico Attività produttive (SUAP)",
+              "verificata_il": "2026-11-24",
+              "url": "https://www.halleyweb.com/c051005/zf/index.php/servizi-aggiuntivi/index/index/idtesto/118"
+            }
+          ]
+        }
+      }
+    }
+  }
+}

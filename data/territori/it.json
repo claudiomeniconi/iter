@@ -26,6 +26,12 @@
               "codice_istat": "051040"
             },
             {
+              "id": "castiglion-fibocchi",
+              "nome": "Castiglion Fibocchi",
+              "livello": "comunale",
+              "codice_istat": "051011"
+            },
+            {
               "id": "cavriglia",
               "nome": "Cavriglia",
               "livello": "comunale",
@@ -73,6 +79,18 @@
               "nome": "Figline e Incisa Valdarno",
               "livello": "comunale",
               "codice_istat": "048052"
+            },
+            {
+              "id": "reggello",
+              "nome": "Reggello",
+              "livello": "comunale",
+              "codice_istat": "048035"
+            },
+            {
+              "id": "rignano-sull-arno",
+              "nome": "Rignano sull'Arno",
+              "livello": "comunale",
+              "codice_istat": "048036"
             }
           ]
         }

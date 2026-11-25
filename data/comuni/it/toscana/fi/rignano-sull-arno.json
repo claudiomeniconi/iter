@@ -1,0 +1,211 @@
+{
+  "id": "rignano-sull-arno",
+  "nome": "Rignano sull'Arno",
+  "nome_esteso": "Rignano sull'Arno (FI)",
+  "codice_istat": "048036",
+  "percorso": "it/toscana/fi/rignano-sull-arno",
+  "ruoli": {
+    "@suap": "suap.048036",
+    "@edilizia": "comune.048036.edilizia",
+    "@polizia-municipale": "polizia-municipale.048036",
+    "@asl": "asl.toscana-centro",
+    "@cciaa": "cciaa.firenze",
+    "@vvf": "vvf.firenze",
+    "@questura": "questura.firenze",
+    "@soprintendenza": "soprintendenza.fi-pt-po"
+  },
+  "sportello": {
+    "ente": "suap.048036",
+    "canale": "Sportello telematico del Comune (non STAR)",
+    "pagamento": "da trovare",
+    "fonti": [
+      {
+        "titolo": "Comune di Rignano sull'Arno - Accesso ai servizi del SUAP",
+        "verificata_il": "2026-11-24",
+        "url": "https://sportellotelematico.comune.rignano-sullarno.fi.it/procedure:c_h286:accedere.servizi.suap"
+      }
+    ]
+  },
+  "diritti": [
+    {
+      "voce": "Procedimento SUAP soggetto a SCIA, per procedimento",
+      "euro": 40,
+      "fonte": {
+        "titolo": "Comune di Rignano sull'Arno - Accesso ai servizi del SUAP",
+        "verificata_il": "2026-11-24",
+        "url": "https://sportellotelematico.comune.rignano-sullarno.fi.it/procedure:c_h286:accedere.servizi.suap"
+      }
+    },
+    {
+      "voce": "Procedimento SUAP soggetto ad autorizzazione",
+      "euro": 60,
+      "fonte": {
+        "titolo": "Comune di Rignano sull'Arno - Accesso ai servizi del SUAP",
+        "verificata_il": "2026-11-24",
+        "url": "https://sportellotelematico.comune.rignano-sullarno.fi.it/procedure:c_h286:accedere.servizi.suap"
+      }
+    },
+    {
+      "voce": "Parere preventivo, per endoprocedimento",
+      "euro": 60,
+      "fonte": {
+        "titolo": "Comune di Rignano sull'Arno - Accesso ai servizi del SUAP",
+        "verificata_il": "2026-11-24",
+        "url": "https://sportellotelematico.comune.rignano-sullarno.fi.it/procedure:c_h286:accedere.servizi.suap"
+      }
+    },
+    {
+      "voce": "Richiesta collaudo",
+      "euro": 100,
+      "fonte": {
+        "titolo": "Comune di Rignano sull'Arno - Accesso ai servizi del SUAP",
+        "verificata_il": "2026-11-24",
+        "url": "https://sportellotelematico.comune.rignano-sullarno.fi.it/procedure:c_h286:accedere.servizi.suap"
+      }
+    }
+  ],
+  "procedure": {
+    "somministrazione.apertura": {
+      "stato": "bozza",
+      "versione": "0.1.0",
+      "ultima_verifica": "2026-11-24",
+      "passaggi": {
+        "scia_somministrazione": {
+          "fonti_aggiunte": [
+            {
+              "titolo": "Comune di Rignano sull'Arno - Accesso ai servizi del SUAP",
+              "verificata_il": "2026-11-24",
+              "url": "https://sportellotelematico.comune.rignano-sullarno.fi.it/procedure:c_h286:accedere.servizi.suap"
+            }
+          ],
+          "costi": [
+            {
+              "voce": "Diritti SUAP del Comune di Rignano sull'Arno",
+              "min_euro": 40,
+              "max_euro": 40
+            },
+            {
+              "voce": "Imposta di bollo"
+            }
+          ],
+          "note": "Il Comune indica un proprio sportello telematico per le pratiche SUAP, non il portale regionale STAR."
+        }
+      }
+    },
+    "somministrazione.subingresso": {
+      "stato": "bozza",
+      "versione": "0.1.0",
+      "ultima_verifica": "2026-11-24",
+      "passaggi": {
+        "comunicazione_subingresso": {
+          "fonti_aggiunte": [
+            {
+              "titolo": "Comune di Rignano sull'Arno - Accesso ai servizi del SUAP",
+              "verificata_il": "2026-11-24",
+              "url": "https://sportellotelematico.comune.rignano-sullarno.fi.it/procedure:c_h286:accedere.servizi.suap"
+            }
+          ],
+          "note": "Il Comune indica un proprio sportello telematico per le pratiche SUAP, non il portale regionale STAR."
+        }
+      }
+    },
+    "commercio.vicinato": {
+      "stato": "bozza",
+      "versione": "0.1.0",
+      "ultima_verifica": "2026-11-24",
+      "passaggi": {
+        "scia_vicinato": {
+          "fonti_aggiunte": [
+            {
+              "titolo": "Comune di Rignano sull'Arno - Accesso ai servizi del SUAP",
+              "verificata_il": "2026-11-24",
+              "url": "https://sportellotelematico.comune.rignano-sullarno.fi.it/procedure:c_h286:accedere.servizi.suap"
+            }
+          ],
+          "costi": [
+            {
+              "voce": "Diritti SUAP del Comune di Rignano sull'Arno",
+              "min_euro": 40,
+              "max_euro": 40
+            },
+            {
+              "voce": "Imposta di bollo"
+            }
+          ],
+          "note": "Il Comune indica un proprio sportello telematico per le pratiche SUAP, non il portale regionale STAR."
+        }
+      }
+    },
+    "servizi.acconciatore-estetista": {
+      "stato": "bozza",
+      "versione": "0.1.0",
+      "ultima_verifica": "2026-11-24",
+      "passaggi": {
+        "scia_acconciatore_estetista": {
+          "fonti_aggiunte": [
+            {
+              "titolo": "Comune di Rignano sull'Arno - Accesso ai servizi del SUAP",
+              "verificata_il": "2026-11-24",
+              "url": "https://sportellotelematico.comune.rignano-sullarno.fi.it/procedure:c_h286:accedere.servizi.suap"
+            }
+          ],
+          "costi": [
+            {
+              "voce": "Diritti SUAP del Comune di Rignano sull'Arno",
+              "min_euro": 40,
+              "max_euro": 40
+            },
+            {
+              "voce": "Imposta di bollo"
+            }
+          ],
+          "note": "Il Comune indica un proprio sportello telematico per le pratiche SUAP, non il portale regionale STAR."
+        }
+      }
+    },
+    "turismo.locazione-imprenditoriale": {
+      "stato": "bozza",
+      "versione": "0.1.0",
+      "ultima_verifica": "2026-11-24",
+      "passaggi": {
+        "scia_locazione": {
+          "fonti_aggiunte": [
+            {
+              "titolo": "Comune di Rignano sull'Arno - Accesso ai servizi del SUAP",
+              "verificata_il": "2026-11-24",
+              "url": "https://sportellotelematico.comune.rignano-sullarno.fi.it/procedure:c_h286:accedere.servizi.suap"
+            }
+          ],
+          "costi": [
+            {
+              "voce": "Diritti SUAP del Comune di Rignano sull'Arno",
+              "min_euro": 40,
+              "max_euro": 40
+            },
+            {
+              "voce": "Imposta di bollo"
+            }
+          ],
+          "note": "Il Comune indica un proprio sportello telematico per le pratiche SUAP, non il portale regionale STAR."
+        }
+      }
+    },
+    "turismo.locazione-privata": {
+      "stato": "bozza",
+      "versione": "0.1.0",
+      "ultima_verifica": "2026-11-24",
+      "passaggi": {
+        "comunicazione_comune": {
+          "fonti_aggiunte": [
+            {
+              "titolo": "Comune di Rignano sull'Arno - Accesso ai servizi del SUAP",
+              "verificata_il": "2026-11-24",
+              "url": "https://sportellotelematico.comune.rignano-sullarno.fi.it/procedure:c_h286:accedere.servizi.suap"
+            }
+          ],
+          "note": "Il Comune indica un proprio sportello telematico per le pratiche SUAP, non il portale regionale STAR."
+        }
+      }
+    }
+  }
+}

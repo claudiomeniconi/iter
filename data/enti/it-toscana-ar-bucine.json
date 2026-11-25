@@ -1,0 +1,31 @@
+[
+  {
+    "id": "suap.051005",
+    "nome": "SUAP - Comune di Bucine",
+    "tipo": "comunale",
+    "territorio": "it/toscana/ar/bucine",
+    "sito": "https://www.halleyweb.com/c051005/zf/index.php/servizi-aggiuntivi/index/index/idtesto/118",
+    "contatti": {
+      "indirizzo": "Via Vitelli 2, 52021 Bucine (AR)",
+      "telefono": "055 9912703",
+      "pec": "info@pec.comune.bucine.ar.it"
+    },
+    "fonte": {
+      "titolo": "Comune di Bucine - Sportello Unico Attività produttive (SUAP)",
+      "verificata_il": "2026-11-24",
+      "url": "https://www.halleyweb.com/c051005/zf/index.php/servizi-aggiuntivi/index/index/idtesto/118"
+    }
+  },
+  {
+    "id": "comune.051005.edilizia",
+    "nome": "Comune di Bucine - Edilizia e urbanistica",
+    "tipo": "comunale",
+    "territorio": "it/toscana/ar/bucine"
+  },
+  {
+    "id": "polizia-municipale.051005",
+    "nome": "Polizia Municipale di Bucine",
+    "tipo": "comunale",
+    "territorio": "it/toscana/ar/bucine"
+  }
+]

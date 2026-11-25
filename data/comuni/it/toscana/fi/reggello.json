@@ -1,0 +1,257 @@
+{
+  "id": "reggello",
+  "nome": "Reggello",
+  "nome_esteso": "Reggello (FI)",
+  "codice_istat": "048035",
+  "percorso": "it/toscana/fi/reggello",
+  "ruoli": {
+    "@suap": "suap.unione-valdarno-valdisieve",
+    "@edilizia": "comune.048035.edilizia",
+    "@polizia-municipale": "polizia-municipale.048035",
+    "@asl": "asl.toscana-centro",
+    "@cciaa": "cciaa.firenze",
+    "@vvf": "vvf.firenze",
+    "@questura": "questura.firenze",
+    "@soprintendenza": "soprintendenza.fi-pt-po"
+  },
+  "sportello": {
+    "ente": "suap.unione-valdarno-valdisieve",
+    "canale": "STAR (portale regionale)",
+    "pagamento": "PagoPA",
+    "fonti": [
+      {
+        "titolo": "Unione di Comuni Valdarno e Valdisieve - Sportello Unico Attività Produttive associato",
+        "verificata_il": "2026-11-24",
+        "url": "https://www.uc-valdarnoevaldisieve.fi.it/servizi/imprese-e-commercio/sportello-unico-attivita-produttive-suap-associato"
+      }
+    ]
+  },
+  "diritti": [
+    {
+      "voce": "SCIA, per ogni endoprocedimento",
+      "euro": 40,
+      "fonte": {
+        "titolo": "Unione di Comuni Valdarno e Valdisieve - Costi e modalità pagamento diritti SUAP (dal 1/7/2016)",
+        "verificata_il": "2026-11-24",
+        "url": "https://www.uc-valdarnoevaldisieve.fi.it/system/files/2026-10/Costi%20e%20modalit%C3%A0%20pagamento%20diritti.pdf"
+      }
+    },
+    {
+      "voce": "Autorizzazione, per ogni endoprocedimento",
+      "euro": 60,
+      "fonte": {
+        "titolo": "Unione di Comuni Valdarno e Valdisieve - Costi e modalità pagamento diritti SUAP (dal 1/7/2016)",
+        "verificata_il": "2026-11-24",
+        "url": "https://www.uc-valdarnoevaldisieve.fi.it/system/files/2026-10/Costi%20e%20modalit%C3%A0%20pagamento%20diritti.pdf"
+      }
+    },
+    {
+      "voce": "Parere preventivo, per endoprocedimento",
+      "euro": 60,
+      "fonte": {
+        "titolo": "Unione di Comuni Valdarno e Valdisieve - Costi e modalità pagamento diritti SUAP (dal 1/7/2016)",
+        "verificata_il": "2026-11-24",
+        "url": "https://www.uc-valdarnoevaldisieve.fi.it/system/files/2026-10/Costi%20e%20modalit%C3%A0%20pagamento%20diritti.pdf"
+      }
+    },
+    {
+      "voce": "Conferenza dei servizi",
+      "euro": 100,
+      "fonte": {
+        "titolo": "Unione di Comuni Valdarno e Valdisieve - Costi e modalità pagamento diritti SUAP (dal 1/7/2016)",
+        "verificata_il": "2026-11-24",
+        "url": "https://www.uc-valdarnoevaldisieve.fi.it/system/files/2026-10/Costi%20e%20modalit%C3%A0%20pagamento%20diritti.pdf"
+      }
+    },
+    {
+      "voce": "Richiesta collaudo",
+      "euro": 100,
+      "fonte": {
+        "titolo": "Unione di Comuni Valdarno e Valdisieve - Costi e modalità pagamento diritti SUAP (dal 1/7/2016)",
+        "verificata_il": "2026-11-24",
+        "url": "https://www.uc-valdarnoevaldisieve.fi.it/system/files/2026-10/Costi%20e%20modalit%C3%A0%20pagamento%20diritti.pdf"
+      }
+    }
+  ],
+  "procedure": {
+    "somministrazione.apertura": {
+      "stato": "bozza",
+      "versione": "0.1.0",
+      "ultima_verifica": "2026-11-24",
+      "passaggi": {
+        "scia_somministrazione": {
+          "fonti_aggiunte": [
+            {
+              "titolo": "Unione di Comuni Valdarno e Valdisieve - Sportello Unico Attività Produttive associato",
+              "verificata_il": "2026-11-24",
+              "url": "https://www.uc-valdarnoevaldisieve.fi.it/servizi/imprese-e-commercio/sportello-unico-attivita-produttive-suap-associato"
+            },
+            {
+              "titolo": "Unione di Comuni Valdarno e Valdisieve - Costi e modalità pagamento diritti SUAP (dal 1/7/2016)",
+              "verificata_il": "2026-11-24",
+              "url": "https://www.uc-valdarnoevaldisieve.fi.it/system/files/2026-10/Costi%20e%20modalit%C3%A0%20pagamento%20diritti.pdf"
+            }
+          ],
+          "costi": [
+            {
+              "voce": "Diritti SUAP del Comune di Reggello per ogni endoprocedimento: la pratica può contenerne più di uno",
+              "min_euro": 40,
+              "max_euro": 40
+            },
+            {
+              "voce": "Imposta di bollo"
+            }
+          ],
+          "note": "Sportello associato dell'Unione di Comuni Valdarno e Valdisieve: pratiche solo su STAR, con firma digitale e PEC. Esempio dell'Unione: apertura di un bar con notifica sanitaria contestuale = 80 € di diritti SUAP più 20 € di diritti sanitari."
+        }
+      }
+    },
+    "somministrazione.subingresso": {
+      "stato": "bozza",
+      "versione": "0.1.0",
+      "ultima_verifica": "2026-11-24",
+      "passaggi": {
+        "comunicazione_subingresso": {
+          "fonti_aggiunte": [
+            {
+              "titolo": "Unione di Comuni Valdarno e Valdisieve - Sportello Unico Attività Produttive associato",
+              "verificata_il": "2026-11-24",
+              "url": "https://www.uc-valdarnoevaldisieve.fi.it/servizi/imprese-e-commercio/sportello-unico-attivita-produttive-suap-associato"
+            },
+            {
+              "titolo": "Unione di Comuni Valdarno e Valdisieve - Costi e modalità pagamento diritti SUAP (dal 1/7/2016)",
+              "verificata_il": "2026-11-24",
+              "url": "https://www.uc-valdarnoevaldisieve.fi.it/system/files/2026-10/Costi%20e%20modalit%C3%A0%20pagamento%20diritti.pdf"
+            }
+          ],
+          "costi": [
+            {
+              "voce": "Diritti SUAP del Comune di Reggello: tariffa per variazioni soggettive, da confermare che si applichi al subingresso",
+              "min_euro": 40,
+              "max_euro": 40
+            }
+          ],
+          "note": "Sportello associato dell'Unione di Comuni Valdarno e Valdisieve: pratiche solo su STAR, con firma digitale e PEC. Esempio dell'Unione: apertura di un bar con notifica sanitaria contestuale = 80 € di diritti SUAP più 20 € di diritti sanitari."
+        }
+      }
+    },
+    "commercio.vicinato": {
+      "stato": "bozza",
+      "versione": "0.1.0",
+      "ultima_verifica": "2026-11-24",
+      "passaggi": {
+        "scia_vicinato": {
+          "fonti_aggiunte": [
+            {
+              "titolo": "Unione di Comuni Valdarno e Valdisieve - Sportello Unico Attività Produttive associato",
+              "verificata_il": "2026-11-24",
+              "url": "https://www.uc-valdarnoevaldisieve.fi.it/servizi/imprese-e-commercio/sportello-unico-attivita-produttive-suap-associato"
+            },
+            {
+              "titolo": "Unione di Comuni Valdarno e Valdisieve - Costi e modalità pagamento diritti SUAP (dal 1/7/2016)",
+              "verificata_il": "2026-11-24",
+              "url": "https://www.uc-valdarnoevaldisieve.fi.it/system/files/2026-10/Costi%20e%20modalit%C3%A0%20pagamento%20diritti.pdf"
+            }
+          ],
+          "costi": [
+            {
+              "voce": "Diritti SUAP del Comune di Reggello per ogni endoprocedimento: la pratica può contenerne più di uno",
+              "min_euro": 40,
+              "max_euro": 40
+            },
+            {
+              "voce": "Imposta di bollo"
+            }
+          ],
+          "note": "Sportello associato dell'Unione di Comuni Valdarno e Valdisieve: pratiche solo su STAR, con firma digitale e PEC. Esempio dell'Unione: apertura di un bar con notifica sanitaria contestuale = 80 € di diritti SUAP più 20 € di diritti sanitari."
+        }
+      }
+    },
+    "servizi.acconciatore-estetista": {
+      "stato": "bozza",
+      "versione": "0.1.0",
+      "ultima_verifica": "2026-11-24",
+      "passaggi": {
+        "scia_acconciatore_estetista": {
+          "fonti_aggiunte": [
+            {
+              "titolo": "Unione di Comuni Valdarno e Valdisieve - Sportello Unico Attività Produttive associato",
+              "verificata_il": "2026-11-24",
+              "url": "https://www.uc-valdarnoevaldisieve.fi.it/servizi/imprese-e-commercio/sportello-unico-attivita-produttive-suap-associato"
+            },
+            {
+              "titolo": "Unione di Comuni Valdarno e Valdisieve - Costi e modalità pagamento diritti SUAP (dal 1/7/2016)",
+              "verificata_il": "2026-11-24",
+              "url": "https://www.uc-valdarnoevaldisieve.fi.it/system/files/2026-10/Costi%20e%20modalit%C3%A0%20pagamento%20diritti.pdf"
+            }
+          ],
+          "costi": [
+            {
+              "voce": "Diritti SUAP del Comune di Reggello per ogni endoprocedimento: la pratica può contenerne più di uno",
+              "min_euro": 40,
+              "max_euro": 40
+            },
+            {
+              "voce": "Imposta di bollo"
+            }
+          ],
+          "note": "Sportello associato dell'Unione di Comuni Valdarno e Valdisieve: pratiche solo su STAR, con firma digitale e PEC. Esempio dell'Unione: apertura di un bar con notifica sanitaria contestuale = 80 € di diritti SUAP più 20 € di diritti sanitari."
+        }
+      }
+    },
+    "turismo.locazione-imprenditoriale": {
+      "stato": "bozza",
+      "versione": "0.1.0",
+      "ultima_verifica": "2026-11-24",
+      "passaggi": {
+        "scia_locazione": {
+          "fonti_aggiunte": [
+            {
+              "titolo": "Unione di Comuni Valdarno e Valdisieve - Sportello Unico Attività Produttive associato",
+              "verificata_il": "2026-11-24",
+              "url": "https://www.uc-valdarnoevaldisieve.fi.it/servizi/imprese-e-commercio/sportello-unico-attivita-produttive-suap-associato"
+            },
+            {
+              "titolo": "Unione di Comuni Valdarno e Valdisieve - Costi e modalità pagamento diritti SUAP (dal 1/7/2016)",
+              "verificata_il": "2026-11-24",
+              "url": "https://www.uc-valdarnoevaldisieve.fi.it/system/files/2026-10/Costi%20e%20modalit%C3%A0%20pagamento%20diritti.pdf"
+            }
+          ],
+          "costi": [
+            {
+              "voce": "Diritti SUAP del Comune di Reggello per ogni endoprocedimento: la pratica può contenerne più di uno",
+              "min_euro": 40,
+              "max_euro": 40
+            },
+            {
+              "voce": "Imposta di bollo"
+            }
+          ],
+          "note": "Sportello associato dell'Unione di Comuni Valdarno e Valdisieve: pratiche solo su STAR, con firma digitale e PEC. Esempio dell'Unione: apertura di un bar con notifica sanitaria contestuale = 80 € di diritti SUAP più 20 € di diritti sanitari."
+        }
+      }
+    },
+    "turismo.locazione-privata": {
+      "stato": "bozza",
+      "versione": "0.1.0",
+      "ultima_verifica": "2026-11-24",
+      "passaggi": {
+        "comunicazione_comune": {
+          "fonti_aggiunte": [
+            {
+              "titolo": "Unione di Comuni Valdarno e Valdisieve - Sportello Unico Attività Produttive associato",
+              "verificata_il": "2026-11-24",
+              "url": "https://www.uc-valdarnoevaldisieve.fi.it/servizi/imprese-e-commercio/sportello-unico-attivita-produttive-suap-associato"
+            },
+            {
+              "titolo": "Unione di Comuni Valdarno e Valdisieve - Costi e modalità pagamento diritti SUAP (dal 1/7/2016)",
+              "verificata_il": "2026-11-24",
+              "url": "https://www.uc-valdarnoevaldisieve.fi.it/system/files/2026-10/Costi%20e%20modalit%C3%A0%20pagamento%20diritti.pdf"
+            }
+          ],
+          "note": "Sportello associato dell'Unione di Comuni Valdarno e Valdisieve: pratiche solo su STAR, con firma digitale e PEC. Esempio dell'Unione: apertura di un bar con notifica sanitaria contestuale = 80 € di diritti SUAP più 20 € di diritti sanitari."
+        }
+      }
+    }
+  }
+}

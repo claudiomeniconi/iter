@@ -1,0 +1,242 @@
+{
+  "id": "laterina-pergine-valdarno",
+  "nome": "Laterina Pergine Valdarno",
+  "nome_esteso": "Laterina Pergine Valdarno (AR)",
+  "codice_istat": "051042",
+  "percorso": "it/toscana/ar/laterina-pergine-valdarno",
+  "ruoli": {
+    "@suap": "suap.051042",
+    "@edilizia": "comune.051042.edilizia",
+    "@polizia-municipale": "polizia-municipale.051042",
+    "@asl": "asl.toscana-sud-est",
+    "@cciaa": "cciaa.arezzo-siena",
+    "@vvf": "vvf.arezzo",
+    "@questura": "questura.arezzo",
+    "@soprintendenza": "soprintendenza.si-gr-ar"
+  },
+  "sportello": {
+    "ente": "suap.051042",
+    "canale": "STAR (portale regionale)",
+    "pagamento": "PagoPA",
+    "fonti": [
+      {
+        "titolo": "Comune di Laterina Pergine Valdarno - SUAP",
+        "verificata_il": "2026-11-24",
+        "url": "https://www.halleyweb.com/c051042/zf/index.php/servizi-aggiuntivi/index/index/idtesto/75"
+      }
+    ]
+  },
+  "diritti": [
+    {
+      "voce": "Procedimento SUAP, primo endoprocedimento",
+      "euro": 50,
+      "fonte": {
+        "titolo": "Comune di Laterina Pergine Valdarno - Diritti di istruttoria e tariffe SUAP (DGC 157/2020, dal 1/1/2021)",
+        "verificata_il": "2026-11-24",
+        "url": "https://www.halleyweb.com/c051042/images/SUAP/tariffario%20suap%20laterina%20pergine%20-%20con%20pagamenti%20completi.pdf"
+      }
+    },
+    {
+      "voce": "Ogni endoprocedimento oltre il primo",
+      "euro": 10,
+      "fonte": {
+        "titolo": "Comune di Laterina Pergine Valdarno - Diritti di istruttoria e tariffe SUAP (DGC 157/2020, dal 1/1/2021)",
+        "verificata_il": "2026-11-24",
+        "url": "https://www.halleyweb.com/c051042/images/SUAP/tariffario%20suap%20laterina%20pergine%20-%20con%20pagamenti%20completi.pdf"
+      }
+    },
+    {
+      "voce": "Parere preventivo",
+      "euro": 100,
+      "fonte": {
+        "titolo": "Comune di Laterina Pergine Valdarno - Diritti di istruttoria e tariffe SUAP (DGC 157/2020, dal 1/1/2021)",
+        "verificata_il": "2026-11-24",
+        "url": "https://www.halleyweb.com/c051042/images/SUAP/tariffario%20suap%20laterina%20pergine%20-%20con%20pagamenti%20completi.pdf"
+      }
+    },
+    {
+      "voce": "Conferenza dei servizi",
+      "euro": 250,
+      "fonte": {
+        "titolo": "Comune di Laterina Pergine Valdarno - Diritti di istruttoria e tariffe SUAP (DGC 157/2020, dal 1/1/2021)",
+        "verificata_il": "2026-11-24",
+        "url": "https://www.halleyweb.com/c051042/images/SUAP/tariffario%20suap%20laterina%20pergine%20-%20con%20pagamenti%20completi.pdf"
+      }
+    }
+  ],
+  "procedure": {
+    "somministrazione.apertura": {
+      "stato": "bozza",
+      "versione": "0.1.0",
+      "ultima_verifica": "2026-11-24",
+      "passaggi": {
+        "scia_somministrazione": {
+          "fonti_aggiunte": [
+            {
+              "titolo": "Comune di Laterina Pergine Valdarno - SUAP",
+              "verificata_il": "2026-11-24",
+              "url": "https://www.halleyweb.com/c051042/zf/index.php/servizi-aggiuntivi/index/index/idtesto/75"
+            },
+            {
+              "titolo": "Comune di Laterina Pergine Valdarno - Diritti di istruttoria e tariffe SUAP (DGC 157/2020, dal 1/1/2021)",
+              "verificata_il": "2026-11-24",
+              "url": "https://www.halleyweb.com/c051042/images/SUAP/tariffario%20suap%20laterina%20pergine%20-%20con%20pagamenti%20completi.pdf"
+            }
+          ],
+          "costi": [
+            {
+              "voce": "Diritti SUAP del Comune di Laterina Pergine Valdarno (primo endoprocedimento; 10 € per ogni endoprocedimento in più)",
+              "min_euro": 50,
+              "max_euro": 50
+            },
+            {
+              "voce": "Imposta di bollo"
+            }
+          ]
+        }
+      }
+    },
+    "somministrazione.subingresso": {
+      "stato": "bozza",
+      "versione": "0.1.0",
+      "ultima_verifica": "2026-11-24",
+      "passaggi": {
+        "comunicazione_subingresso": {
+          "fonti_aggiunte": [
+            {
+              "titolo": "Comune di Laterina Pergine Valdarno - SUAP",
+              "verificata_il": "2026-11-24",
+              "url": "https://www.halleyweb.com/c051042/zf/index.php/servizi-aggiuntivi/index/index/idtesto/75"
+            },
+            {
+              "titolo": "Comune di Laterina Pergine Valdarno - Diritti di istruttoria e tariffe SUAP (DGC 157/2020, dal 1/1/2021)",
+              "verificata_il": "2026-11-24",
+              "url": "https://www.halleyweb.com/c051042/images/SUAP/tariffario%20suap%20laterina%20pergine%20-%20con%20pagamenti%20completi.pdf"
+            }
+          ],
+          "costi": [
+            {
+              "voce": "Diritti SUAP del Comune di Laterina Pergine Valdarno (primo endoprocedimento; 10 € per ogni endoprocedimento in più)",
+              "min_euro": 50,
+              "max_euro": 50
+            }
+          ]
+        }
+      }
+    },
+    "commercio.vicinato": {
+      "stato": "bozza",
+      "versione": "0.1.0",
+      "ultima_verifica": "2026-11-24",
+      "passaggi": {
+        "scia_vicinato": {
+          "fonti_aggiunte": [
+            {
+              "titolo": "Comune di Laterina Pergine Valdarno - SUAP",
+              "verificata_il": "2026-11-24",
+              "url": "https://www.halleyweb.com/c051042/zf/index.php/servizi-aggiuntivi/index/index/idtesto/75"
+            },
+            {
+              "titolo": "Comune di Laterina Pergine Valdarno - Diritti di istruttoria e tariffe SUAP (DGC 157/2020, dal 1/1/2021)",
+              "verificata_il": "2026-11-24",
+              "url": "https://www.halleyweb.com/c051042/images/SUAP/tariffario%20suap%20laterina%20pergine%20-%20con%20pagamenti%20completi.pdf"
+            }
+          ],
+          "costi": [
+            {
+              "voce": "Diritti SUAP del Comune di Laterina Pergine Valdarno (primo endoprocedimento; 10 € per ogni endoprocedimento in più)",
+              "min_euro": 50,
+              "max_euro": 50
+            },
+            {
+              "voce": "Imposta di bollo"
+            }
+          ]
+        }
+      }
+    },
+    "servizi.acconciatore-estetista": {
+      "stato": "bozza",
+      "versione": "0.1.0",
+      "ultima_verifica": "2026-11-24",
+      "passaggi": {
+        "scia_acconciatore_estetista": {
+          "fonti_aggiunte": [
+            {
+              "titolo": "Comune di Laterina Pergine Valdarno - SUAP",
+              "verificata_il": "2026-11-24",
+              "url": "https://www.halleyweb.com/c051042/zf/index.php/servizi-aggiuntivi/index/index/idtesto/75"
+            },
+            {
+              "titolo": "Comune di Laterina Pergine Valdarno - Diritti di istruttoria e tariffe SUAP (DGC 157/2020, dal 1/1/2021)",
+              "verificata_il": "2026-11-24",
+              "url": "https://www.halleyweb.com/c051042/images/SUAP/tariffario%20suap%20laterina%20pergine%20-%20con%20pagamenti%20completi.pdf"
+            }
+          ],
+          "costi": [
+            {
+              "voce": "Diritti SUAP del Comune di Laterina Pergine Valdarno (primo endoprocedimento; 10 € per ogni endoprocedimento in più)",
+              "min_euro": 50,
+              "max_euro": 50
+            },
+            {
+              "voce": "Imposta di bollo"
+            }
+          ]
+        }
+      }
+    },
+    "turismo.locazione-imprenditoriale": {
+      "stato": "bozza",
+      "versione": "0.1.0",
+      "ultima_verifica": "2026-11-24",
+      "passaggi": {
+        "scia_locazione": {
+          "fonti_aggiunte": [
+            {
+              "titolo": "Comune di Laterina Pergine Valdarno - SUAP",
+              "verificata_il": "2026-11-24",
+              "url": "https://www.halleyweb.com/c051042/zf/index.php/servizi-aggiuntivi/index/index/idtesto/75"
+            },
+            {
+              "titolo": "Comune di Laterina Pergine Valdarno - Diritti di istruttoria e tariffe SUAP (DGC 157/2020, dal 1/1/2021)",
+              "verificata_il": "2026-11-24",
+              "url": "https://www.halleyweb.com/c051042/images/SUAP/tariffario%20suap%20laterina%20pergine%20-%20con%20pagamenti%20completi.pdf"
+            }
+          ],
+          "costi": [
+            {
+              "voce": "Diritti SUAP del Comune di Laterina Pergine Valdarno (primo endoprocedimento; 10 € per ogni endoprocedimento in più)",
+              "min_euro": 50,
+              "max_euro": 50
+            },
+            {
+              "voce": "Imposta di bollo"
+            }
+          ]
+        }
+      }
+    },
+    "turismo.locazione-privata": {
+      "stato": "bozza",
+      "versione": "0.1.0",
+      "ultima_verifica": "2026-11-24",
+      "passaggi": {
+        "comunicazione_comune": {
+          "fonti_aggiunte": [
+            {
+              "titolo": "Comune di Laterina Pergine Valdarno - SUAP",
+              "verificata_il": "2026-11-24",
+              "url": "https://www.halleyweb.com/c051042/zf/index.php/servizi-aggiuntivi/index/index/idtesto/75"
+            },
+            {
+              "titolo": "Comune di Laterina Pergine Valdarno - Diritti di istruttoria e tariffe SUAP (DGC 157/2020, dal 1/1/2021)",
+              "verificata_il": "2026-11-24",
+              "url": "https://www.halleyweb.com/c051042/images/SUAP/tariffario%20suap%20laterina%20pergine%20-%20con%20pagamenti%20completi.pdf"
+            }
+          ]
+        }
+      }
+    }
+  }
+}
