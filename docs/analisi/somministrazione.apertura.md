@@ -6,25 +6,33 @@ Modello `somministrazione.apertura`. Generato da `scripts/confronta.py` a partir
 
 | Comune | Sportello | Pagamento diritti | Diritti SUAP | Passaggi | Verificati | Differenze dichiarate |
 |---|---|---|---|---|---|---|
+| Bucine | SUAP - Comune di Bucine | da trovare (tariffario e modalità in allegato alla pagina SUAP) | 30 € per endoprocedimento | 17 | 3 di 17 | 1 |
 | Castelfranco Piandiscò | SUAP associato - Unione dei Comuni del Pratomagno | Bonifico all'Unione dei Comuni del Pratomagno | 40 € | 17 | 3 di 17 | 1 |
 | Cavriglia | SUAP - Comune di Cavriglia | PagoPA | 40 € per endoprocedimento | 17 | 3 di 17 | 1 |
+| Laterina Pergine Valdarno | SUAP - Comune di Laterina Pergine Valdarno | PagoPA | 50 € (primo endoprocedimento; 10 € per ogni endoprocedimento in più) | 17 | 3 di 17 | 1 |
 | Loro Ciuffenna | SUAP associato - Unione dei Comuni del Pratomagno | Bonifico all'Unione dei Comuni del Pratomagno | 40 € | 17 | 3 di 17 | 1 |
-| Montevarchi | SUAP - Comune di Montevarchi | da trovare | da trovare | 17 | 5 di 17 | 5 |
+| Montevarchi | SUAP - Comune di Montevarchi | da trovare | 40 € per endoprocedimento | 17 | 5 di 17 | 5 |
 | San Giovanni Valdarno | SUAP e Commercio - Comune di San Giovanni Valdarno | PagoPA | 45 € per endoprocedimento | 17 | 3 di 17 | 1 |
 | Terranuova Bracciolini | SUAP - Comune di Terranuova Bracciolini | PagoPA | 40 € | 17 | 3 di 17 | 1 |
 | Figline e Incisa Valdarno | Sportello ai cittadini e alle imprese (SUAP) - Comune di Figline e Incisa Valdarno | PagoPA (IRIS) | 30 € | 17 | 3 di 17 | 1 |
+| Reggello | SUAP associato - Unione di Comuni Valdarno e Valdisieve | da trovare | da trovare | 17 | 3 di 17 | 1 |
+| Rignano sull'Arno | SUAP - Comune di Rignano sull'Arno | da trovare | 40 € | 17 | 3 di 17 | 1 |
 
 ## Enti che cambiano da comune a comune
 
 | Comune | @asl | @cciaa | @edilizia | @suap | @vvf |
 |---|---|---|---|---|---|
+| Bucine | Azienda USL Toscana sud est | Camera di Commercio Arezzo-Siena | Comune di Bucine - Edilizia e urbanistica | SUAP - Comune di Bucine | Comando Vigili del Fuoco di Arezzo |
 | Castelfranco Piandiscò | Azienda USL Toscana sud est | Camera di Commercio Arezzo-Siena | Comune di Castelfranco Piandiscò - Edilizia e urbanistica | SUAP associato - Unione dei Comuni del Pratomagno | Comando Vigili del Fuoco di Arezzo |
 | Cavriglia | Azienda USL Toscana sud est | Camera di Commercio Arezzo-Siena | Comune di Cavriglia - Edilizia e urbanistica | SUAP - Comune di Cavriglia | Comando Vigili del Fuoco di Arezzo |
+| Laterina Pergine Valdarno | Azienda USL Toscana sud est | Camera di Commercio Arezzo-Siena | Comune di Laterina Pergine Valdarno - Edilizia e urbanistica | SUAP - Comune di Laterina Pergine Valdarno | Comando Vigili del Fuoco di Arezzo |
 | Loro Ciuffenna | Azienda USL Toscana sud est | Camera di Commercio Arezzo-Siena | Comune di Loro Ciuffenna - Edilizia e urbanistica | SUAP associato - Unione dei Comuni del Pratomagno | Comando Vigili del Fuoco di Arezzo |
 | Montevarchi | Azienda USL Toscana sud est | Camera di Commercio Arezzo-Siena | Comune di Montevarchi - Edilizia e urbanistica | SUAP - Comune di Montevarchi | Comando Vigili del Fuoco di Arezzo |
 | San Giovanni Valdarno | Azienda USL Toscana sud est | Camera di Commercio Arezzo-Siena | Comune di San Giovanni Valdarno - Edilizia e urbanistica | SUAP e Commercio - Comune di San Giovanni Valdarno | Comando Vigili del Fuoco di Arezzo |
 | Terranuova Bracciolini | Azienda USL Toscana sud est | Camera di Commercio Arezzo-Siena | Comune di Terranuova Bracciolini - Edilizia e urbanistica | SUAP - Comune di Terranuova Bracciolini | Comando Vigili del Fuoco di Arezzo |
 | Figline e Incisa Valdarno | Azienda USL Toscana centro | Camera di Commercio di Firenze | Comune di Figline e Incisa Valdarno - Edilizia e urbanistica | Sportello ai cittadini e alle imprese (SUAP) - Comune di Figline e Incisa Valdarno | Comando Vigili del Fuoco di Firenze |
+| Reggello | Azienda USL Toscana centro | Camera di Commercio di Firenze | Comune di Reggello - Edilizia e urbanistica | SUAP associato - Unione di Comuni Valdarno e Valdisieve | Comando Vigili del Fuoco di Firenze |
+| Rignano sull'Arno | Azienda USL Toscana centro | Camera di Commercio di Firenze | Comune di Rignano sull'Arno - Edilizia e urbanistica | SUAP - Comune di Rignano sull'Arno | Comando Vigili del Fuoco di Firenze |
 
 ## Indicatori per la semplificazione
 

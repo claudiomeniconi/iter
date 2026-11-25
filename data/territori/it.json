@@ -73,6 +73,18 @@
               "nome": "Figline e Incisa Valdarno",
               "livello": "comunale",
               "codice_istat": "048052"
+            },
+            {
+              "id": "reggello",
+              "nome": "Reggello",
+              "livello": "comunale",
+              "codice_istat": "048035"
+            },
+            {
+              "id": "rignano-sull-arno",
+              "nome": "Rignano sull'Arno",
+              "livello": "comunale",
+              "codice_istat": "048036"
             }
           ]
         }

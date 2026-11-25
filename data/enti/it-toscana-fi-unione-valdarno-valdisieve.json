@@ -1,0 +1,18 @@
+[
+  {
+    "id": "suap.unione-valdarno-valdisieve",
+    "nome": "SUAP associato - Unione di Comuni Valdarno e Valdisieve",
+    "tipo": "comunale",
+    "territorio": "it/toscana/fi",
+    "descrizione": "Sportello unico associato dal 27/09/2010 per Londa, Pelago, Pontassieve, Reggello, Rufina e San Godenzo.",
+    "sito": "https://www.uc-valdarnoevaldisieve.fi.it/",
+    "contatti": {
+      "pec": "suap.ucvv@postacert.toscana.it"
+    },
+    "fonte": {
+      "titolo": "Regione Toscana - Funzioni esercitate dall'Unione Valdarno e Valdisieve",
+      "verificata_il": "2026-11-24",
+      "url": "https://www.regione.toscana.it/-/funzioni-esercitate-dall-unione-valdarno-e-valdisieve"
+    }
+  }
+]

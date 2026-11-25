@@ -1,0 +1,27 @@
+[
+  {
+    "id": "suap.051042",
+    "nome": "SUAP - Comune di Laterina Pergine Valdarno",
+    "tipo": "comunale",
+    "territorio": "it/toscana/ar/laterina-pergine-valdarno",
+    "sito": "https://www.halleyweb.com/c051042/zf/index.php/servizi-aggiuntivi/index/index/idtesto/75",
+    "contatti": {},
+    "fonte": {
+      "titolo": "Comune di Laterina Pergine Valdarno - SUAP",
+      "verificata_il": "2026-11-24",
+      "url": "https://www.halleyweb.com/c051042/zf/index.php/servizi-aggiuntivi/index/index/idtesto/75"
+    }
+  },
+  {
+    "id": "comune.051042.edilizia",
+    "nome": "Comune di Laterina Pergine Valdarno - Edilizia e urbanistica",
+    "tipo": "comunale",
+    "territorio": "it/toscana/ar/laterina-pergine-valdarno"
+  },
+  {
+    "id": "polizia-municipale.051042",
+    "nome": "Polizia Municipale di Laterina Pergine Valdarno",
+    "tipo": "comunale",
+    "territorio": "it/toscana/ar/laterina-pergine-valdarno"
+  }
+]

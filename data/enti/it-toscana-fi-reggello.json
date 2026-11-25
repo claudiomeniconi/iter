@@ -1,0 +1,14 @@
+[
+  {
+    "id": "comune.048035.edilizia",
+    "nome": "Comune di Reggello - Edilizia e urbanistica",
+    "tipo": "comunale",
+    "territorio": "it/toscana/fi/reggello"
+  },
+  {
+    "id": "polizia-municipale.048035",
+    "nome": "Polizia Municipale di Reggello",
+    "tipo": "comunale",
+    "territorio": "it/toscana/fi/reggello"
+  }
+]

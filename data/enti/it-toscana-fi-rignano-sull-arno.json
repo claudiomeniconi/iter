@@ -1,0 +1,27 @@
+[
+  {
+    "id": "suap.048036",
+    "nome": "SUAP - Comune di Rignano sull'Arno",
+    "tipo": "comunale",
+    "territorio": "it/toscana/fi/rignano-sull-arno",
+    "sito": "https://sportellotelematico.comune.rignano-sullarno.fi.it/procedure:c_h286:accedere.servizi.suap",
+    "contatti": {},
+    "fonte": {
+      "titolo": "Comune di Rignano sull'Arno - Accesso ai servizi del SUAP",
+      "verificata_il": "2026-11-24",
+      "url": "https://sportellotelematico.comune.rignano-sullarno.fi.it/procedure:c_h286:accedere.servizi.suap"
+    }
+  },
+  {
+    "id": "comune.048036.edilizia",
+    "nome": "Comune di Rignano sull'Arno - Edilizia e urbanistica",
+    "tipo": "comunale",
+    "territorio": "it/toscana/fi/rignano-sull-arno"
+  },
+  {
+    "id": "polizia-municipale.048036",
+    "nome": "Polizia Municipale di Rignano sull'Arno",
+    "tipo": "comunale",
+    "territorio": "it/toscana/fi/rignano-sull-arno"
+  }
+]

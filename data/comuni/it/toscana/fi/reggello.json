@@ -1,0 +1,134 @@
+{
+  "id": "reggello",
+  "nome": "Reggello",
+  "nome_esteso": "Reggello (FI)",
+  "codice_istat": "048035",
+  "percorso": "it/toscana/fi/reggello",
+  "ruoli": {
+    "@suap": "suap.unione-valdarno-valdisieve",
+    "@edilizia": "comune.048035.edilizia",
+    "@polizia-municipale": "polizia-municipale.048035",
+    "@asl": "asl.toscana-centro",
+    "@cciaa": "cciaa.firenze",
+    "@vvf": "vvf.firenze",
+    "@questura": "questura.firenze",
+    "@soprintendenza": "soprintendenza.fi-pt-po"
+  },
+  "sportello": {
+    "ente": "suap.unione-valdarno-valdisieve",
+    "canale": "STAR (portale regionale)",
+    "pagamento": "da trovare",
+    "fonti": [
+      {
+        "titolo": "Regione Toscana - Funzioni esercitate dall'Unione Valdarno e Valdisieve",
+        "verificata_il": "2026-11-24",
+        "url": "https://www.regione.toscana.it/-/funzioni-esercitate-dall-unione-valdarno-e-valdisieve"
+      }
+    ]
+  },
+  "diritti": [],
+  "procedure": {
+    "somministrazione.apertura": {
+      "stato": "bozza",
+      "versione": "0.1.0",
+      "ultima_verifica": "2026-11-24",
+      "passaggi": {
+        "scia_somministrazione": {
+          "fonti_aggiunte": [
+            {
+              "titolo": "Regione Toscana - Funzioni esercitate dall'Unione Valdarno e Valdisieve",
+              "verificata_il": "2026-11-24",
+              "url": "https://www.regione.toscana.it/-/funzioni-esercitate-dall-unione-valdarno-e-valdisieve"
+            }
+          ],
+          "note": "Sportello associato dell'Unione di Comuni Valdarno e Valdisieve. Canale e diritti da verificare."
+        }
+      }
+    },
+    "somministrazione.subingresso": {
+      "stato": "bozza",
+      "versione": "0.1.0",
+      "ultima_verifica": "2026-11-24",
+      "passaggi": {
+        "comunicazione_subingresso": {
+          "fonti_aggiunte": [
+            {
+              "titolo": "Regione Toscana - Funzioni esercitate dall'Unione Valdarno e Valdisieve",
+              "verificata_il": "2026-11-24",
+              "url": "https://www.regione.toscana.it/-/funzioni-esercitate-dall-unione-valdarno-e-valdisieve"
+            }
+          ],
+          "note": "Sportello associato dell'Unione di Comuni Valdarno e Valdisieve. Canale e diritti da verificare."
+        }
+      }
+    },
+    "commercio.vicinato": {
+      "stato": "bozza",
+      "versione": "0.1.0",
+      "ultima_verifica": "2026-11-24",
+      "passaggi": {
+        "scia_vicinato": {
+          "fonti_aggiunte": [
+            {
+              "titolo": "Regione Toscana - Funzioni esercitate dall'Unione Valdarno e Valdisieve",
+              "verificata_il": "2026-11-24",
+              "url": "https://www.regione.toscana.it/-/funzioni-esercitate-dall-unione-valdarno-e-valdisieve"
+            }
+          ],
+          "note": "Sportello associato dell'Unione di Comuni Valdarno e Valdisieve. Canale e diritti da verificare."
+        }
+      }
+    },
+    "servizi.acconciatore-estetista": {
+      "stato": "bozza",
+      "versione": "0.1.0",
+      "ultima_verifica": "2026-11-24",
+      "passaggi": {
+        "scia_acconciatore_estetista": {
+          "fonti_aggiunte": [
+            {
+              "titolo": "Regione Toscana - Funzioni esercitate dall'Unione Valdarno e Valdisieve",
+              "verificata_il": "2026-11-24",
+              "url": "https://www.regione.toscana.it/-/funzioni-esercitate-dall-unione-valdarno-e-valdisieve"
+            }
+          ],
+          "note": "Sportello associato dell'Unione di Comuni Valdarno e Valdisieve. Canale e diritti da verificare."
+        }
+      }
+    },
+    "turismo.locazione-imprenditoriale": {
+      "stato": "bozza",
+      "versione": "0.1.0",
+      "ultima_verifica": "2026-11-24",
+      "passaggi": {
+        "scia_locazione": {
+          "fonti_aggiunte": [
+            {
+              "titolo": "Regione Toscana - Funzioni esercitate dall'Unione Valdarno e Valdisieve",
+              "verificata_il": "2026-11-24",
+              "url": "https://www.regione.toscana.it/-/funzioni-esercitate-dall-unione-valdarno-e-valdisieve"
+            }
+          ],
+          "note": "Sportello associato dell'Unione di Comuni Valdarno e Valdisieve. Canale e diritti da verificare."
+        }
+      }
+    },
+    "turismo.locazione-privata": {
+      "stato": "bozza",
+      "versione": "0.1.0",
+      "ultima_verifica": "2026-11-24",
+      "passaggi": {
+        "comunicazione_comune": {
+          "fonti_aggiunte": [
+            {
+              "titolo": "Regione Toscana - Funzioni esercitate dall'Unione Valdarno e Valdisieve",
+              "verificata_il": "2026-11-24",
+              "url": "https://www.regione.toscana.it/-/funzioni-esercitate-dall-unione-valdarno-e-valdisieve"
+            }
+          ],
+          "note": "Sportello associato dell'Unione di Comuni Valdarno e Valdisieve. Canale e diritti da verificare."
+        }
+      }
+    }
+  }
+}

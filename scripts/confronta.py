@@ -58,7 +58,10 @@ def analizza(modello, base, adottanti):
             d = [x for x in suap_step["costi"] if x["voce"].startswith("Diritti SUAP")]
             if d:
                 dir_ = euro(d[0])
-                if "endoprocedimento" in d[0]["voce"] and dir_ != "da trovare":
+                v = d[0]["voce"]
+                if dir_ != "da trovare" and "(" in v:
+                    dir_ += " (" + v.split("(", 1)[1]
+                elif dir_ != "da trovare" and "per ogni endoprocedimento" in v:
                     dir_ += " per endoprocedimento"
         ver = sum(1 for s in p["passaggi"] if s.get("stato_verifica", "bozza") != "bozza")
         diff = c["procedure"][modello]
