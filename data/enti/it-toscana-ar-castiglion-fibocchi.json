@@ -1,0 +1,14 @@
+[
+  {
+    "id": "comune.051011.edilizia",
+    "nome": "Comune di Castiglion Fibocchi - Edilizia e urbanistica",
+    "tipo": "comunale",
+    "territorio": "it/toscana/ar/castiglion-fibocchi"
+  },
+  {
+    "id": "polizia-municipale.051011",
+    "nome": "Polizia Municipale di Castiglion Fibocchi",
+    "tipo": "comunale",
+    "territorio": "it/toscana/ar/castiglion-fibocchi"
+  }
+]

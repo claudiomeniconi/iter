@@ -26,6 +26,12 @@
               "codice_istat": "051040"
             },
             {
+              "id": "castiglion-fibocchi",
+              "nome": "Castiglion Fibocchi",
+              "livello": "comunale",
+              "codice_istat": "051011"
+            },
+            {
               "id": "cavriglia",
               "nome": "Cavriglia",
               "livello": "comunale",

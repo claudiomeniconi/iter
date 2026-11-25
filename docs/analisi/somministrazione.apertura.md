@@ -8,6 +8,7 @@ Modello `somministrazione.apertura`. Generato da `scripts/confronta.py` a partir
 |---|---|---|---|---|---|---|
 | Bucine | SUAP - Comune di Bucine | da trovare (tariffario e modalità in allegato alla pagina SUAP) | 30 € per endoprocedimento | 17 | 3 di 17 | 1 |
 | Castelfranco Piandiscò | SUAP associato - Unione dei Comuni del Pratomagno | Bonifico all'Unione dei Comuni del Pratomagno | 40 € | 17 | 3 di 17 | 1 |
+| Castiglion Fibocchi | SUAP associato - Unione dei Comuni del Pratomagno | Bonifico all'Unione dei Comuni del Pratomagno | 40 € | 17 | 3 di 17 | 1 |
 | Cavriglia | SUAP - Comune di Cavriglia | PagoPA | 40 € per endoprocedimento | 17 | 3 di 17 | 1 |
 | Laterina Pergine Valdarno | SUAP - Comune di Laterina Pergine Valdarno | PagoPA | 50 € (primo endoprocedimento; 10 € per ogni endoprocedimento in più) | 17 | 3 di 17 | 1 |
 | Loro Ciuffenna | SUAP associato - Unione dei Comuni del Pratomagno | Bonifico all'Unione dei Comuni del Pratomagno | 40 € | 17 | 3 di 17 | 1 |
@@ -15,7 +16,7 @@ Modello `somministrazione.apertura`. Generato da `scripts/confronta.py` a partir
 | San Giovanni Valdarno | SUAP e Commercio - Comune di San Giovanni Valdarno | PagoPA | 45 € per endoprocedimento | 17 | 3 di 17 | 1 |
 | Terranuova Bracciolini | SUAP - Comune di Terranuova Bracciolini | PagoPA | 40 € | 17 | 3 di 17 | 1 |
 | Figline e Incisa Valdarno | Sportello ai cittadini e alle imprese (SUAP) - Comune di Figline e Incisa Valdarno | PagoPA (IRIS) | 30 € | 17 | 3 di 17 | 1 |
-| Reggello | SUAP associato - Unione di Comuni Valdarno e Valdisieve | da trovare | da trovare | 17 | 3 di 17 | 1 |
+| Reggello | SUAP associato - Unione di Comuni Valdarno e Valdisieve | PagoPA | 40 € per endoprocedimento | 17 | 3 di 17 | 1 |
 | Rignano sull'Arno | SUAP - Comune di Rignano sull'Arno | da trovare | 40 € | 17 | 3 di 17 | 1 |
 
 ## Enti che cambiano da comune a comune
@@ -24,6 +25,7 @@ Modello `somministrazione.apertura`. Generato da `scripts/confronta.py` a partir
 |---|---|---|---|---|---|
 | Bucine | Azienda USL Toscana sud est | Camera di Commercio Arezzo-Siena | Comune di Bucine - Edilizia e urbanistica | SUAP - Comune di Bucine | Comando Vigili del Fuoco di Arezzo |
 | Castelfranco Piandiscò | Azienda USL Toscana sud est | Camera di Commercio Arezzo-Siena | Comune di Castelfranco Piandiscò - Edilizia e urbanistica | SUAP associato - Unione dei Comuni del Pratomagno | Comando Vigili del Fuoco di Arezzo |
+| Castiglion Fibocchi | Azienda USL Toscana sud est | Camera di Commercio Arezzo-Siena | Comune di Castiglion Fibocchi - Edilizia e urbanistica | SUAP associato - Unione dei Comuni del Pratomagno | Comando Vigili del Fuoco di Arezzo |
 | Cavriglia | Azienda USL Toscana sud est | Camera di Commercio Arezzo-Siena | Comune di Cavriglia - Edilizia e urbanistica | SUAP - Comune di Cavriglia | Comando Vigili del Fuoco di Arezzo |
 | Laterina Pergine Valdarno | Azienda USL Toscana sud est | Camera di Commercio Arezzo-Siena | Comune di Laterina Pergine Valdarno - Edilizia e urbanistica | SUAP - Comune di Laterina Pergine Valdarno | Comando Vigili del Fuoco di Arezzo |
 | Loro Ciuffenna | Azienda USL Toscana sud est | Camera di Commercio Arezzo-Siena | Comune di Loro Ciuffenna - Edilizia e urbanistica | SUAP associato - Unione dei Comuni del Pratomagno | Comando Vigili del Fuoco di Arezzo |
